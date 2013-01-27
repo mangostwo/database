@@ -218,8 +218,8 @@ DELETE FROM go,gt USING gameobject go LEFT JOIN gameobject_template gt ON go.id=
 DELETE FROM gi,gt USING gameobject_involvedrelation gi LEFT JOIN gameobject_template gt ON gi.id=gt.entry WHERE gt.entry IS NULL;
 DELETE FROM gqr,gt USING gameobject_questrelation gqr LEFT JOIN gameobject_template gt ON gqr.id=gt.entry WHERE gt.entry IS NULL;
 DELETE FROM ge,go USING game_event_gameobject ge LEFT JOIN gameobject go ON ge.guid=go.guid WHERE go.guid IS NULL;
-DELETE FROM gameobject_scripts WHERE id NOT IN (SELECT guid FROM gameobject);
-DELETE FROM gameobject_scripts WHERE command IN (11, 12) AND datalong!=0 AND datalong NOT IN (SELECT guid FROM gameobject);
+DELETE FROM dbscripts_on_go_use WHERE id NOT IN (SELECT guid FROM gameobject);
+DELETE FROM dbscripts_on_go_use WHERE command IN (11, 12) AND datalong!=0 AND datalong NOT IN (SELECT guid FROM gameobject);
 DELETE FROM gameobject_battleground WHERE guid NOT IN (SELECT guid FROM gameobject);
 DELETE FROM creature_battleground WHERE guid NOT IN (SELECT guid FROM creature);
 DELETE FROM creature_addon WHERE guid NOT IN (SELECT guid FROM creature);
