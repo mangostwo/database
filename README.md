@@ -10,4 +10,4 @@ you are making redistributable copies.
 
 How to Install
 -------
-Comming Soon!
+Coming Soon!
