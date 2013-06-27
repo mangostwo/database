@@ -29,72 +29,40 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `npc_vendor_template`
+-- Table structure for table `dbscripts_on_creature_death`
 --
 
-DROP TABLE IF EXISTS `npc_vendor_template`;
+DROP TABLE IF EXISTS `dbscripts_on_creature_death`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `npc_vendor_template` (
-  `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `item` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `maxcount` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `incrtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `ExtendedCost` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `condition_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`entry`,`item`,`ExtendedCost`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Npc System';
+CREATE TABLE `dbscripts_on_creature_death` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `delay` int(10) unsigned NOT NULL DEFAULT '0',
+  `command` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong2` int(10) unsigned NOT NULL DEFAULT '0',
+  `buddy_entry` int(10) unsigned NOT NULL DEFAULT '0',
+  `search_radius` int(10) unsigned NOT NULL DEFAULT '0',
+  `data_flags` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `dataint` int(11) NOT NULL DEFAULT '0',
+  `dataint2` int(11) NOT NULL DEFAULT '0',
+  `dataint3` int(11) NOT NULL DEFAULT '0',
+  `dataint4` int(11) NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `o` float NOT NULL DEFAULT '0',
+  `comments` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `npc_vendor_template`
+-- Dumping data for table `dbscripts_on_creature_death`
 --
 
-LOCK TABLES `npc_vendor_template` WRITE;
-/*!40000 ALTER TABLE `npc_vendor_template` DISABLE KEYS */;
-INSERT INTO `npc_vendor_template` (`entry`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `condition_id`) VALUES
-(5,17402,0,0,0,0),
-(5,17403,0,0,0,0),
-(5,17404,0,0,0,0),
-(5,17405,0,0,0,0),
-(5,17406,0,0,0,0),
-(5,17407,0,0,0,0),
-(5,17408,0,0,0,0),
-(5,34410,0,0,0,0),
-(5,34412,0,0,0,0),
-(6,17194,0,0,0,0),
-(6,17196,0,0,0,0),
-(6,17200,0,0,0,0),
-(6,17201,0,0,0,0),
-(6,17202,0,0,0,0),
-(6,17303,0,0,0,0),
-(6,17304,0,0,0,0),
-(6,17307,0,0,0,0),
-(6,17344,0,0,0,0),
-(33238,44605,0,0,0,0),
-(33238,33451,0,0,0,0),
-(33238,33454,0,0,0,0),
-(33238,35954,0,0,0,0),
-(33238,33443,0,0,0,0),
-(33238,33449,0,0,0,0),
-(33238,33452,0,0,0,0),
-(33238,35949,0,0,0,0),
-(33238,22148,0,0,0,0),
-(33238,16583,0,0,0,0),
-(33238,21177,0,0,0,0),
-(33238,17026,0,0,0,0),
-(33238,17020,0,0,0,0),
-(33238,5565,0,0,0,0),
-(33238,37201,0,0,0,0),
-(33238,17021,0,0,0,0),
-(33238,17028,0,0,0,0),
-(33238,17032,0,0,0,0),
-(33238,17030,0,0,0,0),
-(33238,17033,0,0,0,0),
-(33238,17034,0,0,0,0),
-(33238,17031,0,0,0,0),
-(33238,4470,0,0,0,0);
-/*!40000 ALTER TABLE `npc_vendor_template` ENABLE KEYS */;
+LOCK TABLES `dbscripts_on_creature_death` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_creature_death` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dbscripts_on_creature_death` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
