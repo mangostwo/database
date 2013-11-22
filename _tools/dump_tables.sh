@@ -131,7 +131,7 @@ reputation_reward_rate \
 reputation_spillover_template \
 reserved_name \
 scripted_areatrigger \
-scripted_event_id \
+scripted_event \
 skill_discovery_template \
 skill_extra_item_template \
 skill_fishing_base_level \
