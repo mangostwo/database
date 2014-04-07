@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -14123,8 +14123,6 @@ INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES
 (3791,0,-4396,3187),
 (3792,0,-4396,3187),
 (3801,0,-7714,-1134),
-(3802,0,-7359,-1115),
-(3802,1,-7365,-1111),
 (3803,0,10179,2564),
 (3804,0,-1088,-225),
 (3821,0,-7917,-2610),
@@ -49875,10 +49873,10 @@ INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES
 (12963,21,-49,-4884),
 (12963,21,-116,-4949),
 (12963,21,-185,-5086),
-(12963,21,-212,-5143);
-INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES
+(12963,21,-212,-5143),
 (12963,21,-149,-5181),
-(12963,21,-119,-5183),
+(12963,21,-119,-5183);
+INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES
 (12963,22,2116,-3382),
 (12963,22,2147,-3374),
 (12963,22,2177,-3306),
@@ -56426,6 +56424,8 @@ INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES
 (24879,1,4619,2792),
 (24880,0,4407,2483),
 (24880,1,3511,252),
+(3802,0,-7359,-1115),
+(3802,1,-7365,-1111),
 (25199,2,-5424,-638),
 (25199,3,-5471,-675),
 (25212,0,-5350,649),

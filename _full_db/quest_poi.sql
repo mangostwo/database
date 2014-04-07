@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -4158,8 +4158,6 @@ INSERT INTO `quest_poi` (`questId`, `poiId`, `objIndex`, `mapId`, `mapAreaId`, `
 (3791,0,-1,1,121,0,0,1),
 (3792,0,-1,1,121,0,0,1),
 (3801,0,-1,0,29,0,0,7),
-(3802,0,-1,0,28,0,0,7),
-(3802,1,4,0,28,0,0,7),
 (3803,0,-1,1,41,0,0,1),
 (3804,0,-1,1,9,0,0,1),
 (3821,0,-1,0,29,0,0,5),
@@ -18516,6 +18514,8 @@ INSERT INTO `quest_poi` (`questId`, `poiId`, `objIndex`, `mapId`, `mapAreaId`, `
 (24879,1,0,631,604,6,0,3),
 (24880,0,4,631,604,4,0,3),
 (24880,1,-1,571,488,0,0,3),
+(3802,0,-1,0,28,0,0,7),
+(3802,1,4,0,28,0,0,7),
 (25199,3,-1,0,27,0,0,3),
 (25199,2,2,0,27,0,0,1),
 (25212,1,-1,0,27,0,0,1),

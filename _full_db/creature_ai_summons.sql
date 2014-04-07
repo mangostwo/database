@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@ CREATE TABLE `creature_ai_summons` (
   `spawntimesecs` int(11) unsigned NOT NULL DEFAULT '120',
   `comment` varchar(255) NOT NULL DEFAULT '' COMMENT 'Summon Comment',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='EventAI Summoning Locations';
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='EventAI Summoning Locations';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,10 +74,7 @@ INSERT INTO `creature_ai_summons` (`id`, `position_x`, `position_y`, `position_z
 (18,-1227.86,1479.93,68.5529,3.54404,18000000,'17280'),
 (19,-1226.47,1476.96,68.5558,3.46079,18000000,'17280'),
 (20,-169.839,-324.961,64.4014,3.12472,300000,'10268'),
-(21,28.067,61.875,-123.405,4.67,600000,'12238'),
-(22,2540.95,4032.21,136.18,4.44,60000,'20287'),
-(23,2507.12,4010.69,133.87,5.99,60000,'20287'),
-(24,2547.05,3980.34,131.04,2.29,60000,'20287');
+(21,28.067,61.875,-123.405,4.67,600000,'12238');
 /*!40000 ALTER TABLE `creature_ai_summons` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

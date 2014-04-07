@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -52,7 +52,6 @@ CREATE TABLE `pool_creature` (
 LOCK TABLES `pool_creature` WRITE;
 /*!40000 ALTER TABLE `pool_creature` DISABLE KEYS */;
 INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES
-(79179,1499,30,'The Deadmines - Defias Miner'),
 (83351,1506,0,'Auchenai Vindicator - Group 7'),
 (83352,1505,0,'Auchenai Soulpriest - Group 6'),
 (83353,1504,0,'Auchenai Soulpriest - Group 5'),
@@ -73,10 +72,11 @@ INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALU
 (83368,1508,0,'Auchenai Soulpriest - Group 9'),
 (83370,1509,0,'Auchenai Vindicator - Group 10'),
 (83371,1509,0,'Auchenai Soulpriest - Group 10'),
-(84079,1499,0,'The Deadmines - Miner Johnson'),
 (105955,1601,70,'Tormented Officer'),
 (134515,1047,0,'Hematos (8976) - Spawn 1'),
-(134517,1601,30,'Deathsworn Captain');
+(134517,1601,30,'Deathsworn Captain'),
+(84079,1499,0,'The Deadmines - Miner Johnson'),
+(79179,1499,30,'The Deadmines - Defias Miner');
 /*!40000 ALTER TABLE `pool_creature` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

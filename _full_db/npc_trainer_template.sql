@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -553,6 +553,7 @@ INSERT INTO `npc_trainer_template` (`entry`, `spell`, `spellcost`, `reqskill`, `
 (40,1784,10,0,0,0),
 (41,53,100,0,0,0),
 (41,408,10000,0,0,0),
+(2000,7733,100,0,0,5),
 (41,703,1200,0,0,0),
 (41,921,100,0,0,0),
 (41,1725,4000,0,0,0),
@@ -2341,7 +2342,10 @@ INSERT INTO `npc_trainer_template` (`entry`, `spell`, `spellcost`, `reqskill`, `
 (1004,30563,50000,202,350,0),
 (1004,30565,100000,202,375,0),
 (1004,30566,100000,202,375,0),
-(1004,13240,1500,202,205,0),
+(2000,7734,500,356,50,10),
+(2000,54083,10000,356,125,10),
+(2000,18249,25000,356,200,10),
+(2000,54084,100000,356,275,10),
 (1090,2581,10,0,0,0),
 (1090,2582,500,186,50,0),
 (1090,2659,200,186,65,0),
@@ -2407,11 +2411,7 @@ INSERT INTO `npc_trainer_template` (`entry`, `spell`, `spellcost`, `reqskill`, `
 (1092,50309,350000,186,350,55),
 (1092,55208,200000,186,450,0),
 (1092,55211,200000,186,450,0),
-(2000,7733,100,0,0,5),
-(2000,7734,500,356,50,10),
-(2000,54083,10000,356,125,10),
-(2000,18249,25000,356,200,10),
-(2000,54084,100000,356,275,10);
+(1004,13240,1500,202,205,0);
 /*!40000 ALTER TABLE `npc_trainer_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

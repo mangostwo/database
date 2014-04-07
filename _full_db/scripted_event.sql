@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,40 +49,44 @@ CREATE TABLE `scripted_event` (
 LOCK TABLES `scripted_event` WRITE;
 /*!40000 ALTER TABLE `scripted_event` DISABLE KEYS */;
 INSERT INTO `scripted_event` (`id`, `ScriptName`) VALUES
+(11225,'event_taxi_stormcrow'),
 (2228,'event_spell_altar_boss_aggro'),
 (2268,'event_spell_altar_boss_aggro'),
-(2488,'event_go_zulfarrak_gong'),
-(3094,'event_antalarion_statue_activation'),
-(3095,'event_antalarion_statue_activation'),
-(3097,'event_antalarion_statue_activation'),
-(3098,'event_antalarion_statue_activation'),
-(3099,'event_antalarion_statue_activation'),
-(3100,'event_antalarion_statue_activation'),
-(4884,'event_spell_altar_emberseer'),
-(5618,'event_spell_gandling_shadow_portal'),
-(5619,'event_spell_gandling_shadow_portal'),
-(5620,'event_spell_gandling_shadow_portal'),
-(5621,'event_spell_gandling_shadow_portal'),
-(5622,'event_spell_gandling_shadow_portal'),
-(5623,'event_spell_gandling_shadow_portal'),
 (8328,'npc_kroshius'),
-(8502,'event_avatar_of_hakkar'),
-(9735,'event_spell_saronite_barrier'),
-(10591,'event_spell_summon_nightbane'),
-(10951,'event_spell_medivh_journal'),
-(11111,'event_go_barrel_old_hillsbrad'),
-(11225,'event_taxi_stormcrow'),
+(2488,'event_go_zulfarrak_gong'),
 (13513,'event_spell_soul_captured_credit'),
 (13514,'event_spell_soul_captured_credit'),
 (13515,'event_spell_soul_captured_credit'),
 (13516,'event_spell_soul_captured_credit'),
-(14797,'event_spell_summon_raven_god'),
-(16547,'event_go_scrying_orb'),
-(17728,'event_spell_gortok_event'),
-(20651,'event_achiev_kings_bane'),
-(20711,'event_go_focusing_iris'),
+(5623,'event_spell_gandling_shadow_portal'),
+(5622,'event_spell_gandling_shadow_portal'),
+(5621,'event_spell_gandling_shadow_portal'),
+(5620,'event_spell_gandling_shadow_portal'),
+(5619,'event_spell_gandling_shadow_portal'),
+(5618,'event_spell_gandling_shadow_portal'),
+(3100,'event_antalarion_statue_activation'),
+(3099,'event_antalarion_statue_activation'),
+(3098,'event_antalarion_statue_activation'),
+(3097,'event_antalarion_statue_activation'),
+(3095,'event_antalarion_statue_activation'),
+(3094,'event_antalarion_statue_activation'),
+(8502,'event_avatar_of_hakkar'),
+(9735,'event_spell_saronite_barrier'),
+(4884,'event_spell_altar_emberseer'),
 (23426,'event_gameobject_citadel_valve'),
-(23438,'event_gameobject_citadel_valve');
+(23438,'event_gameobject_citadel_valve'),
+(16547,'event_go_scrying_orb'),
+(20651,'event_achiev_kings_bane'),
+(17728,'event_spell_gortok_event'),
+(14797,'event_spell_summon_raven_god'),
+(20711,'event_go_focusing_iris'),
+(11111,'event_go_barrel_old_hillsbrad'),
+(10951,'event_spell_medivh_journal'),
+(10591,'event_spell_summon_nightbane'),
+(10665,'event_spell_call_captain'),
+(12229,'event_spell_call_captain'),
+(18454,'event_spell_call_captain'),
+(18455,'event_spell_call_captain');
 /*!40000 ALTER TABLE `scripted_event` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

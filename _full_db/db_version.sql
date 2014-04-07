@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ CREATE TABLE `db_version` (
   `version` varchar(120) DEFAULT NULL,
   `creature_ai_version` varchar(120) DEFAULT NULL,
   `cache_id` int(10) DEFAULT '0',
-  `required_12523_01_mangos_db_script_string` bit(1) DEFAULT NULL
+  `required_12545_01_mangos_command` bit(1) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Used DB version notes';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -49,8 +49,8 @@ CREATE TABLE `db_version` (
 
 LOCK TABLES `db_version` WRITE;
 /*!40000 ALTER TABLE `db_version` DISABLE KEYS */;
-INSERT INTO `db_version` (`version`, `creature_ai_version`, `cache_id`, `required_12523_01_mangos_db_script_string`) VALUES
-('TwoDatabase 1.0.0 for MaNGOSTwo 12348+ and ScriptDev2 z2784+','MaNGOSTwo Artificial Creature Intelligence Database',100,NULL);
+INSERT INTO `db_version` (`version`, `creature_ai_version`, `cache_id`, `required_12545_01_mangos_command`) VALUES
+('UDB 0.12.2 (406) for MaNGOS 12444 with SD2 SQL for rev. 2857','ACID 3.1.0 \'Another Wild Adventure\' - Full Release for MaNGOS (3.3.5a Client)',406,NULL);
 /*!40000 ALTER TABLE `db_version` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

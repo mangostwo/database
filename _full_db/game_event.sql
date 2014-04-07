@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -62,30 +62,29 @@ INSERT INTO `game_event` (`entry`, `start_time`, `end_time`, `occurence`, `lengt
 (6,'2010-12-31 11:00:00','2020-12-30 22:00:00',525600,1080,0,'New Year\'s Eve'),
 (7,'2011-01-22 23:01:00','2020-12-29 22:00:00',525600,30240,327,'Lunar Festival'),
 (8,'2011-02-05 23:01:00','2020-12-30 22:00:00',525600,20160,335,'Love is in the Air'),
-(9,'2010-12-25 07:00:00','2020-12-31 07:00:00',525600,11520,0,'Feast of Winter Veil - Presents'),
 (10,'2011-04-30 23:00:00','2020-12-30 22:00:00',525600,10080,201,'Children\'s Week '),
 (11,'2011-09-05 23:00:00','2020-12-30 22:00:00',525600,10080,321,'Harvest Festival'),
 (12,'2007-10-17 20:00:00','2020-12-30 22:00:00',525600,20160,324,'Hallow\'s End'),
+(22,'0000-00-00 00:00:00','0000-00-00 00:00:00',525600,1,0,'AQ War Effort'),
+(17,'0000-00-00 00:00:00','0000-00-00 00:00:00',525600,1,0,'Scourge Invasion'),
 (13,'0000-00-00 00:00:00','0000-00-00 00:00:00',525600,1,0,'Elemental Invasions'),
 (14,'2009-01-04 09:00:00','2020-12-30 22:00:00',10080,240,0,'Fishing Extravaganza Announce'),
-(15,'2009-01-04 13:00:00','2020-12-30 22:00:00',10080,120,301,'Fishing Extravaganza'),
 (16,'2007-08-04 20:00:00','2020-12-30 22:00:00',180,120,0,'Gurubashi Arena Booty Run'),
-(17,'0000-00-00 00:00:00','0000-00-00 00:00:00',525600,1,0,'Scourge Invasion'),
+(15,'2009-01-04 13:00:00','2020-12-30 22:00:00',10080,120,301,'Fishing Extravaganza'),
 (18,'2009-12-31 23:01:00','2020-12-30 22:00:00',60480,5758,283,'Call to Arms: Alterac Valley!'),
 (19,'2010-01-07 23:01:00','2020-12-30 22:00:00',60480,5758,284,'Call to Arms: Warsong Gulch!'),
 (20,'2010-01-28 23:01:00','2020-12-30 22:00:00',60480,5758,285,'Call to Arms: Arathi Basin!'),
 (21,'2010-02-04 23:01:00','2020-12-30 22:00:00',60480,5758,353,'Call to Arms: Eye of the Storm!'),
-(22,'0000-00-00 00:00:00','0000-00-00 00:00:00',525600,1,0,'AQ War Effort'),
 (23,'2010-12-02 23:01:00','2020-12-30 22:00:00',131040,2880,0,'Darkmoon Faire Building 2 (Elwynn Forest)'),
 (24,'2010-01-02 13:00:00','2020-12-30 22:00:00',10080,60,424,'Kalu\'ak Fishing Derby'),
 (25,'2010-01-14 23:01:00','2020-12-30 22:00:00',60480,5758,400,'Call to Arms: Strand of the Ancients!'),
 (26,'2007-10-02 20:00:00','2020-12-30 22:00:00',525600,20160,372,'Brewfest'),
 (27,'2010-01-01 20:00:00','2020-12-30 22:00:00',1440,510,0,'Nights'),
-(28,'2011-04-23 22:01:00','2020-12-30 22:00:00',525600,10078,181,'Noblegarden'),
 (29,'2010-12-27 20:00:00','2020-12-30 22:00:00',80640,20160,0,'Edge of Madness, Gri\'lek'),
 (30,'2011-01-10 20:00:00','2020-12-30 22:00:00',80640,20160,0,'Edge of Madness, Hazza\'rah'),
 (31,'2011-01-24 20:00:00','2020-12-30 22:00:00',80640,20160,0,'Edge of Madness, Renataki'),
 (32,'2010-12-13 20:00:00','2020-12-30 22:00:00',80640,20160,0,'Edge of Madness, Wushoolay'),
+(28,'2011-04-23 22:01:00','2020-12-30 22:00:00',525600,10078,181,'Noblegarden'),
 (33,'0000-00-00 00:00:00','0000-00-00 00:00:00',5184000,2592000,0,'Arena Tournament'),
 (34,'2008-05-15 12:00:00','2008-05-22 12:00:00',10080,5,0,'L70ETC Concert'),
 (35,'2010-10-31 23:00:00','2020-12-30 22:00:00',525600,2880,409,'Day of the Dead'),
@@ -97,6 +96,7 @@ INSERT INTO `game_event` (`entry`, `start_time`, `end_time`, `occurence`, `lengt
 (41,'2010-12-05 23:10:00','2020-12-30 22:00:00',30,10,0,'Leader of Jin\'Alai, Kutube\'sa'),
 (42,'2010-12-05 23:20:00','2020-12-30 22:00:00',30,10,0,'Leader of Jin\'Alai, Gawanil'),
 (43,'2010-12-05 23:30:00','2020-12-30 22:00:00',30,10,0,'Leader of Jin\'Alai, Chulo'),
+(9,'2010-12-25 08:00:00','2020-12-31 08:00:00',525600,11520,0,'Feast of Winter Veil - Presents'),
 (45,'2010-12-31 23:00:00','2020-12-30 22:00:00',525600,44640,0,'Brew of the Month, January'),
 (46,'2011-01-31 23:00:00','2020-12-30 22:00:00',525600,40320,0,'Brew of the Month, February'),
 (47,'2011-02-28 23:00:00','2020-12-30 22:00:00',525600,44640,0,'Brew of the Month, March'),
@@ -109,16 +109,16 @@ INSERT INTO `game_event` (`entry`, `start_time`, `end_time`, `occurence`, `lengt
 (54,'2011-09-30 22:00:00','2020-12-30 22:00:00',525600,44640,0,'Brew of the Month, October'),
 (55,'2011-10-31 23:00:00','2020-12-30 22:00:00',525600,43200,0,'Brew of the Month, November'),
 (56,'2011-11-30 23:00:00','2020-12-30 22:00:00',525600,44640,0,'Brew of the Month, December'),
+(61,'2010-12-31 23:58:00','2020-12-30 23:00:00',30,10,0,'Stormwind City - Stockades Jail Break'),
+(64,'2011-01-05 23:01:00','2020-12-30 22:00:00',131040,4320,0,'Darkmoon Faire Building 1 (Mulgore)'),
+(65,'2011-01-06 23:01:00','2020-12-30 22:00:00',131040,2880,0,'Darkmoon Faire Building 2 (Mulgore)'),
+(66,'2010-12-01 23:01:00','2020-12-30 22:00:00',131040,4320,0,'Darkmoon Faire Building 1 (Elwynn Forest)'),
+(62,'2010-10-27 22:01:00','2020-12-30 22:00:00',131040,4320,0,'Darkmoon Faire Building 1 (Terokkar Forest)'),
+(63,'2010-10-28 22:01:00','2020-12-30 22:00:00',131040,2880,0,'Darkmoon Faire Building 2 (Terokkar Forest)'),
 (57,'2011-01-01 01:48:00','2020-12-30 23:00:00',180,24,0,'World\'s End Tavern - Perry Gatner Announce'),
 (58,'2011-01-01 02:00:00','2020-12-30 23:00:00',180,5,0,'World\'s End Tavern - Perry Gatner Standup Comedy'),
 (59,'2011-01-01 02:48:00','2020-12-30 23:00:00',180,24,0,'World\'s End Tavern - L70ETC Concert Announce'),
-(60,'2011-01-01 03:00:00','2020-12-30 23:00:00',180,5,0,'World\'s End Tavern - L70ETC Concert'),
-(61,'2010-12-31 23:58:00','2020-12-30 23:00:00',30,10,0,'Stormwind City - Stockades Jail Break'),
-(62,'2010-10-27 22:01:00','2020-12-30 22:00:00',131040,4320,0,'Darkmoon Faire Building 1 (Terokkar Forest)'),
-(63,'2010-10-28 22:01:00','2020-12-30 22:00:00',131040,2880,0,'Darkmoon Faire Building 2 (Terokkar Forest)'),
-(64,'2011-01-05 23:01:00','2020-12-30 22:00:00',131040,4320,0,'Darkmoon Faire Building 1 (Mulgore)'),
-(65,'2011-01-06 23:01:00','2020-12-30 22:00:00',131040,2880,0,'Darkmoon Faire Building 2 (Mulgore)'),
-(66,'2010-12-01 23:01:00','2020-12-30 22:00:00',131040,4320,0,'Darkmoon Faire Building 1 (Elwynn Forest)');
+(60,'2011-01-01 03:00:00','2020-12-30 23:00:00',180,5,0,'World\'s End Tavern - L70ETC Concert');
 /*!40000 ALTER TABLE `game_event` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

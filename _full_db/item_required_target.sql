@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -94,6 +94,8 @@ INSERT INTO `item_required_target` (`entry`, `type`, `targetEntry`) VALUES
 (22432,1,6500),
 (22473,1,15941),
 (22473,1,15945),
+(22783,1,16329),
+(22784,1,16329),
 (22962,1,16518),
 (23337,1,16880),
 (23394,1,16847),
@@ -147,6 +149,8 @@ INSERT INTO `item_required_target` (`entry`, `type`, `targetEntry`) VALUES
 (34127,1,24804),
 (34255,1,24922),
 (34368,2,24972),
+(34711,1,25321),
+(34711,1,25322),
 (34869,2,25430),
 (34973,2,25814),
 (35116,2,25752),

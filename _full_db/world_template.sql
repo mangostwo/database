@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,9 +49,9 @@ CREATE TABLE `world_template` (
 LOCK TABLES `world_template` WRITE;
 /*!40000 ALTER TABLE `world_template` DISABLE KEYS */;
 INSERT INTO `world_template` (`map`, `ScriptName`) VALUES
-(0,'world_map_eastern_kingdoms'),
-(1,'world_map_kalimdor'),
 (530,'world_map_outland'),
+(1,'world_map_kalimdor'),
+(0,'world_map_eastern_kingdoms'),
 (571,'world_map_northrend'),
 (609,'world_map_ebon_hold');
 /*!40000 ALTER TABLE `world_template` ENABLE KEYS */;

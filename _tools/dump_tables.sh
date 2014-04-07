@@ -47,6 +47,7 @@ creature_template_addon \
 creature_template_spells \
 db_script_string \
 db_version \
+dbscripts_on_creature_death \
 dbscripts_on_creature_movement \
 dbscripts_on_event \
 dbscripts_on_go_template_use \
@@ -132,6 +133,7 @@ reputation_spillover_template \
 reserved_name \
 scripted_areatrigger \
 scripted_event \
+scripted_event_id \
 skill_discovery_template \
 skill_extra_item_template \
 skill_fishing_base_level \
@@ -154,11 +156,11 @@ vehicle_accessory \
 world_template \
 ; do
 
-echo "Dumping ${i}/137 ${TABLE}..."
+echo "Dumping ${i}/139 ${TABLE}..."
 
 echo "--
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by

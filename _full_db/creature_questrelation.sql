@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -7349,6 +7349,7 @@ INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES
 (32497,13362),
 (32497,13400),
 (32497,13401),
+(32516,13571),
 (32540,13559),
 (32548,13413),
 (32548,13414),

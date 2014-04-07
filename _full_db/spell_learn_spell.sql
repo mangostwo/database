@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -50,24 +50,24 @@ CREATE TABLE `spell_learn_spell` (
 LOCK TABLES `spell_learn_spell` WRITE;
 /*!40000 ALTER TABLE `spell_learn_spell` DISABLE KEYS */;
 INSERT INTO `spell_learn_spell` (`entry`, `SpellID`, `Active`) VALUES
+(53428,53341,1),
 (5784,33388,1),
 (13819,33388,1),
-(17002,24867,0),
-(20271,21084,1),
 (23161,33391,1),
 (23214,33391,1),
+(34767,33391,1),
+(34769,33388,1),
+(53428,53343,1),
+(17002,24867,0),
 (24866,24864,0),
 (33872,47179,0),
 (33873,47180,0),
 (33943,34090,1),
-(34767,33391,1),
-(34769,33388,1),
-(53407,21084,1),
-(53408,21084,1),
-(53428,53341,1),
-(53428,53343,1),
+(58984,21009,1),
 (56815,56816,0),
-(58984,21009,1);
+(20271,21084,1),
+(53407,21084,1),
+(53408,21084,1);
 /*!40000 ALTER TABLE `spell_learn_spell` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

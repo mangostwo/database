@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,11 +49,11 @@ CREATE TABLE `item_expire_convert` (
 LOCK TABLES `item_expire_convert` WRITE;
 /*!40000 ALTER TABLE `item_expire_convert` DISABLE KEYS */;
 INSERT INTO `item_expire_convert` (`entry`, `item`) VALUES
-(39878,39883),
 (44623,44625),
+(39878,39883),
 (44625,44627),
-(44626,44629),
 (44632,44626),
+(44626,44629),
 (44717,44718);
 /*!40000 ALTER TABLE `item_expire_convert` ENABLE KEYS */;
 UNLOCK TABLES;

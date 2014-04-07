@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -52,7 +52,6 @@ CREATE TABLE `instance_template` (
 LOCK TABLES `instance_template` WRITE;
 /*!40000 ALTER TABLE `instance_template` DISABLE KEYS */;
 INSERT INTO `instance_template` (`map`, `parent`, `levelMin`, `levelMax`, `ScriptName`) VALUES
-(30,0,10,0,''),
 (33,0,14,30,'instance_shadowfang_keep'),
 (34,0,15,32,''),
 (36,0,10,20,'instance_deadmines'),
@@ -77,12 +76,10 @@ INSERT INTO `instance_template` (`map`, `parent`, `levelMin`, `levelMax`, `Scrip
 (409,230,50,0,'instance_molten_core'),
 (429,0,45,60,'instance_dire_maul'),
 (469,229,60,0,'instance_blackwing_lair'),
-(489,0,10,0,''),
 (509,0,50,0,'instance_ruins_of_ahnqiraj'),
-(529,0,10,0,''),
 (531,0,50,0,'instance_temple_of_ahnqiraj'),
 (532,0,68,0,'instance_karazhan'),
-(533,0,80,0,'instance_naxxramas'),
+(615,0,80,0,'instance_obsidian_sanctum'),
 (534,0,70,0,'instance_hyjal'),
 (540,0,55,0,'instance_shattered_halls'),
 (542,0,55,0,'instance_blood_furnace'),
@@ -100,41 +97,44 @@ INSERT INTO `instance_template` (`map`, `parent`, `levelMin`, `levelMax`, `Scrip
 (556,0,55,0,'instance_sethekk_halls'),
 (557,0,55,0,''),
 (558,0,55,0,''),
-(559,0,10,0,''),
 (560,0,66,0,'instance_old_hillsbrad'),
-(562,0,10,0,''),
 (564,0,70,0,'instance_black_temple'),
 (565,0,65,0,'instance_gruuls_lair'),
-(566,0,10,0,''),
 (568,0,68,70,'instance_zulaman'),
+(580,0,70,0,'instance_sunwell_plateau'),
+(585,0,65,0,'instance_magisters_terrace'),
+(489,0,10,0,''),
+(30,0,10,0,''),
+(529,0,10,0,''),
+(566,0,10,0,''),
+(559,0,10,0,''),
+(562,0,10,0,''),
 (572,0,10,0,''),
 (574,0,65,0,'instance_utgarde_keep'),
 (575,0,75,0,'instance_pinnacle'),
 (576,0,66,0,'instance_nexus'),
 (578,0,75,0,'instance_oculus'),
-(580,0,70,0,'instance_sunwell_plateau'),
-(585,0,65,0,'instance_magisters_terrace'),
-(595,0,75,0,'instance_culling_of_stratholme'),
-(599,0,72,0,'instance_halls_of_stone'),
-(600,0,69,0,'instance_draktharon_keep'),
-(601,0,67,0,'instance_azjol-nerub'),
-(602,0,75,0,'instance_halls_of_lightning'),
-(603,0,80,0,'instance_ulduar'),
-(604,0,71,0,'instance_gundrak'),
+(533,0,80,0,'instance_naxxramas'),
 (608,0,70,0,'instance_violet_hold'),
-(615,0,80,0,'instance_obsidian_sanctum'),
-(616,0,80,0,'instance_eye_of_eternity'),
-(617,0,80,80,''),
-(618,0,80,80,''),
+(604,0,71,0,'instance_gundrak'),
+(602,0,75,0,'instance_halls_of_lightning'),
+(599,0,72,0,'instance_halls_of_stone'),
+(601,0,67,0,'instance_azjol-nerub'),
 (619,0,68,0,'instance_ahnkahet'),
+(600,0,69,0,'instance_draktharon_keep'),
+(595,0,75,0,'instance_culling_of_stratholme'),
+(616,0,80,0,'instance_eye_of_eternity'),
 (624,0,80,0,''),
-(631,0,80,0,'instance_icecrown_citadel'),
+(603,0,80,0,'instance_ulduar'),
+(650,0,80,0,''),
 (632,0,80,0,'instance_forge_of_souls'),
 (649,0,80,0,'instance_trial_of_the_crusader'),
-(650,0,80,0,''),
+(631,0,80,0,'instance_icecrown_citadel'),
 (658,0,75,0,'instance_pit_of_saron'),
 (668,0,75,0,''),
-(724,0,80,0,'instance_ruby_sanctum');
+(724,0,80,0,'instance_ruby_sanctum'),
+(617,0,80,80,''),
+(618,0,80,80,'');
 /*!40000 ALTER TABLE `instance_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSTwo <https://github.com/mangostwo>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,14 +49,14 @@ CREATE TABLE `item_convert` (
 LOCK TABLES `item_convert` WRITE;
 /*!40000 ALTER TABLE `item_convert` DISABLE KEYS */;
 INSERT INTO `item_convert` (`entry`, `item`) VALUES
+(50338,44135),
+(50337,44136),
 (50335,44133),
 (50336,44134),
-(50337,44136),
-(50338,44135),
+(50370,44152),
 (50367,44149),
 (50368,44159),
 (50369,44150),
-(50370,44152),
 (50372,44701),
 (50373,44702);
 /*!40000 ALTER TABLE `item_convert` ENABLE KEYS */;
