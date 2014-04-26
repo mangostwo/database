@@ -281,5 +281,8 @@ INSERT INTO dbscripts_on_spell (id, delay, command, datalong, data_flags, datain
 (46702, 5, 0, 0, 2, 2000005626, 0, 0, 'say text'),
 (46693, 0, 14, 46691, 2, 0, 0, 0, 'remove Drake Hatchling Subdued aura');
 
+-- Quest 10309 (by tbayart)
+update creature_template set faction_A = 16, faction_H = 16 where entry = 20287;
+
 --UPDATE Database Version
 UPDATE db_version set version = 'TwoDatabase 1.0.1 for MaNGOSTwo XXXXX+ and ScriptDev2 XXXXX+';
