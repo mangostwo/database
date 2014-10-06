@@ -1,21 +1,8 @@
+-- MySQL dump 10.13  Distrib 5.5.39, for FreeBSD10.0 (i386)
 --
--- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: localhost    Database: m2_world
+-- ------------------------------------------------------
+-- Server version	5.5.39
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -52,48 +39,7 @@ CREATE TABLE `npc_vendor_template` (
 
 LOCK TABLES `npc_vendor_template` WRITE;
 /*!40000 ALTER TABLE `npc_vendor_template` DISABLE KEYS */;
-INSERT INTO `npc_vendor_template` (`entry`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `condition_id`) VALUES
-(33238,4470,0,0,0,0),
-(33238,17031,0,0,0,0),
-(33238,17034,0,0,0,0),
-(33238,17033,0,0,0,0),
-(33238,17030,0,0,0,0),
-(33238,17032,0,0,0,0),
-(33238,17028,0,0,0,0),
-(33238,17021,0,0,0,0),
-(33238,37201,0,0,0,0),
-(33238,5565,0,0,0,0),
-(33238,17020,0,0,0,0),
-(33238,17026,0,0,0,0),
-(33238,21177,0,0,0,0),
-(33238,16583,0,0,0,0),
-(33238,22148,0,0,0,0),
-(33238,35949,0,0,0,0),
-(33238,33452,0,0,0,0),
-(33238,33449,0,0,0,0),
-(33238,33443,0,0,0,0),
-(33238,35954,0,0,0,0),
-(33238,33454,0,0,0,0),
-(33238,33451,0,0,0,0),
-(33238,44605,0,0,0,0),
-(5,17402,0,0,0,0),
-(5,17403,0,0,0,0),
-(5,17404,0,0,0,0),
-(5,17405,0,0,0,0),
-(5,17406,0,0,0,0),
-(5,17407,0,0,0,0),
-(5,17408,0,0,0,0),
-(5,34410,0,0,0,0),
-(5,34412,0,0,0,0),
-(6,17194,0,0,0,0),
-(6,17196,0,0,0,0),
-(6,17200,0,0,0,0),
-(6,17201,0,0,0,0),
-(6,17202,0,0,0,0),
-(6,17303,0,0,0,0),
-(6,17304,0,0,0,0),
-(6,17307,0,0,0,0),
-(6,17344,0,0,0,0);
+INSERT INTO `npc_vendor_template` VALUES (33238,44605,0,0,0,0),(33238,33451,0,0,0,0),(33238,33454,0,0,0,0),(33238,35954,0,0,0,0),(33238,33443,0,0,0,0),(33238,33449,0,0,0,0),(33238,33452,0,0,0,0),(33238,35949,0,0,0,0),(33238,22148,0,0,0,0),(33238,16583,0,0,0,0),(33238,21177,0,0,0,0),(33238,17026,0,0,0,0),(33238,17020,0,0,0,0),(33238,5565,0,0,0,0),(33238,37201,0,0,0,0),(33238,17021,0,0,0,0),(33238,17028,0,0,0,0),(33238,17032,0,0,0,0),(33238,17030,0,0,0,0),(33238,17033,0,0,0,0),(33238,17034,0,0,0,0),(33238,17031,0,0,0,0),(33238,4470,0,0,0,0),(5,17402,0,0,0,0),(5,17403,0,0,0,0),(5,17404,0,0,0,0),(5,17405,0,0,0,0),(5,17406,0,0,0,0),(5,17407,0,0,0,0),(5,17408,0,0,0,0),(5,34410,0,0,0,0),(5,34412,0,0,0,0),(6,17194,0,0,0,0),(6,17196,0,0,0,0),(6,17200,0,0,0,0),(6,17201,0,0,0,0),(6,17202,0,0,0,0),(6,17303,0,0,0,0),(6,17304,0,0,0,0),(6,17307,0,0,0,0),(6,17344,0,0,0,0);
 /*!40000 ALTER TABLE `npc_vendor_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -106,3 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2014-10-06 17:48:07

@@ -1,21 +1,8 @@
+-- MySQL dump 10.13  Distrib 5.5.39, for FreeBSD10.0 (i386)
 --
--- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: localhost    Database: m2_world
+-- ------------------------------------------------------
+-- Server version	5.5.39
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -51,31 +38,7 @@ CREATE TABLE `game_event_mail` (
 
 LOCK TABLES `game_event_mail` WRITE;
 /*!40000 ALTER TABLE `game_event_mail` DISABLE KEYS */;
-INSERT INTO `game_event_mail` (`event`, `raceMask`, `quest`, `mailTemplateId`, `senderEntry`) VALUES
-(45,1101,12278,197,27487),
-(46,1101,12278,198,27487),
-(47,1101,12278,199,27487),
-(48,1101,12278,200,27487),
-(49,1101,12278,201,27487),
-(50,1101,12278,202,27487),
-(51,1101,12278,203,27487),
-(52,1101,12278,204,27487),
-(53,1101,12278,205,27487),
-(54,1101,12278,206,27487),
-(55,1101,12278,207,27487),
-(56,1101,12278,208,27487),
-(45,690,12306,212,27487),
-(46,690,12306,213,27487),
-(47,690,12306,214,27487),
-(48,690,12306,215,27487),
-(49,690,12306,216,27487),
-(50,690,12306,217,27487),
-(51,690,12306,218,27487),
-(52,690,12306,219,27487),
-(53,690,12306,220,27487),
-(54,690,12306,221,27487),
-(55,690,12306,222,27487),
-(56,690,12306,223,27487);
+INSERT INTO `game_event_mail` VALUES (45,1101,12278,197,27487),(46,1101,12278,198,27487),(47,1101,12278,199,27487),(48,1101,12278,200,27487),(49,1101,12278,201,27487),(50,1101,12278,202,27487),(51,1101,12278,203,27487),(52,1101,12278,204,27487),(53,1101,12278,205,27487),(54,1101,12278,206,27487),(55,1101,12278,207,27487),(56,1101,12278,208,27487),(45,690,12306,212,27487),(46,690,12306,213,27487),(47,690,12306,214,27487),(48,690,12306,215,27487),(49,690,12306,216,27487),(50,690,12306,217,27487),(51,690,12306,218,27487),(52,690,12306,219,27487),(53,690,12306,220,27487),(54,690,12306,221,27487),(55,690,12306,222,27487),(56,690,12306,223,27487);
 /*!40000 ALTER TABLE `game_event_mail` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -88,3 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2014-10-06 17:48:04

@@ -1,21 +1,8 @@
+-- MySQL dump 10.13  Distrib 5.5.39, for FreeBSD10.0 (i386)
 --
--- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: localhost    Database: m2_world
+-- ------------------------------------------------------
+-- Server version	5.5.39
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -48,15 +35,7 @@ CREATE TABLE `spell_proc_item_enchant` (
 
 LOCK TABLES `spell_proc_item_enchant` WRITE;
 /*!40000 ALTER TABLE `spell_proc_item_enchant` DISABLE KEYS */;
-INSERT INTO `spell_proc_item_enchant` (`entry`, `ppmRate`) VALUES
-(8034,9),
-(8680,8.5714),
-(13218,21.4286),
-(13897,6),
-(20004,6),
-(20005,1.6),
-(44525,3.4),
-(44578,3.4);
+INSERT INTO `spell_proc_item_enchant` VALUES (8034,9),(8680,8.5714),(13218,21.4286),(13897,6),(20004,6),(20005,1.6),(44525,3.4),(44578,3.4);
 /*!40000 ALTER TABLE `spell_proc_item_enchant` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -69,3 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2014-10-06 17:48:09

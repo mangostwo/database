@@ -1,21 +1,8 @@
+-- MySQL dump 10.13  Distrib 5.5.39, for FreeBSD10.0 (i386)
 --
--- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2014 MaNGOSTwo <https://github.com/mangostwo>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: localhost    Database: m2_world
+-- ------------------------------------------------------
+-- Server version	5.5.39
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -59,42 +46,7 @@ CREATE TABLE `game_weather` (
 
 LOCK TABLES `game_weather` WRITE;
 /*!40000 ALTER TABLE `game_weather` DISABLE KEYS */;
-INSERT INTO `game_weather` (`zone`, `spring_rain_chance`, `spring_snow_chance`, `spring_storm_chance`, `summer_rain_chance`, `summer_snow_chance`, `summer_storm_chance`, `fall_rain_chance`, `fall_snow_chance`, `fall_storm_chance`, `winter_rain_chance`, `winter_snow_chance`, `winter_storm_chance`) VALUES
-(3,0,0,20,0,0,20,0,0,20,0,0,15),
-(45,23,0,0,15,0,0,23,0,0,23,0,0),
-(3358,10,0,0,10,0,0,10,0,0,10,0,0),
-(148,15,0,0,10,0,0,20,0,0,15,0,0),
-(85,20,0,0,15,0,0,20,0,0,20,0,0),
-(405,10,0,0,5,0,0,5,0,0,5,0,0),
-(41,15,0,0,5,0,0,15,0,0,15,0,0),
-(15,25,0,0,20,0,0,25,0,0,25,0,0),
-(10,15,0,0,15,0,0,20,0,0,15,0,0),
-(139,10,0,0,15,0,0,15,0,0,10,0,0),
-(28,10,0,0,15,0,0,15,0,0,10,0,0),
-(2017,5,0,0,5,0,0,5,0,0,5,0,0),
-(12,20,0,0,15,0,0,20,0,0,20,0,0),
-(357,15,0,0,15,0,0,15,0,0,15,0,0),
-(267,15,0,0,10,0,0,15,0,0,15,0,0),
-(47,10,0,0,10,0,0,15,0,0,10,0,0),
-(38,15,0,0,15,0,0,15,0,0,15,0,0),
-(215,15,0,0,10,0,0,20,0,0,15,0,0),
-(44,15,0,0,15,0,0,15,0,0,15,0,0),
-(33,20,0,0,25,0,0,25,0,0,20,0,0),
-(1977,15,0,0,5,0,0,15,0,0,15,0,0),
-(141,15,0,0,5,0,0,15,0,0,15,0,0),
-(796,5,0,0,10,0,0,25,0,0,5,0,0),
-(490,15,0,0,10,0,0,20,0,0,15,0,0),
-(11,25,0,0,15,0,0,25,0,0,25,0,0),
-(36,0,20,0,0,20,0,0,25,0,0,30,0),
-(1,0,25,0,0,15,0,0,25,0,0,25,0),
-(618,0,25,0,0,20,0,0,20,0,0,25,0),
-(2597,0,15,0,0,15,0,0,20,0,0,25,0),
-(1377,0,0,20,0,0,25,0,0,20,0,0,15),
-(3429,0,0,20,0,0,20,0,0,20,0,0,20),
-(3428,0,0,20,0,0,20,0,0,20,0,0,20),
-(440,0,0,15,0,0,15,0,0,15,0,0,15),
-(3521,10,0,0,15,0,0,20,0,0,10,0,0),
-(4080,20,0,0,20,0,0,20,0,0,10,0,0);
+INSERT INTO `game_weather` VALUES (3,0,0,20,0,0,20,0,0,20,0,0,15),(45,23,0,0,15,0,0,23,0,0,23,0,0),(3358,10,0,0,10,0,0,10,0,0,10,0,0),(148,15,0,0,10,0,0,20,0,0,15,0,0),(85,20,0,0,15,0,0,20,0,0,20,0,0),(405,10,0,0,5,0,0,5,0,0,5,0,0),(41,15,0,0,5,0,0,15,0,0,15,0,0),(15,25,0,0,20,0,0,25,0,0,25,0,0),(10,15,0,0,15,0,0,20,0,0,15,0,0),(139,10,0,0,15,0,0,15,0,0,10,0,0),(28,10,0,0,15,0,0,15,0,0,10,0,0),(2017,5,0,0,5,0,0,5,0,0,5,0,0),(12,20,0,0,15,0,0,20,0,0,20,0,0),(357,15,0,0,15,0,0,15,0,0,15,0,0),(267,15,0,0,10,0,0,15,0,0,15,0,0),(47,10,0,0,10,0,0,15,0,0,10,0,0),(38,15,0,0,15,0,0,15,0,0,15,0,0),(215,15,0,0,10,0,0,20,0,0,15,0,0),(44,15,0,0,15,0,0,15,0,0,15,0,0),(33,20,0,0,25,0,0,25,0,0,20,0,0),(1977,15,0,0,5,0,0,15,0,0,15,0,0),(141,15,0,0,5,0,0,15,0,0,15,0,0),(796,5,0,0,10,0,0,25,0,0,5,0,0),(490,15,0,0,10,0,0,20,0,0,15,0,0),(11,25,0,0,15,0,0,25,0,0,25,0,0),(36,0,20,0,0,20,0,0,25,0,0,30,0),(1,0,25,0,0,15,0,0,25,0,0,25,0),(618,0,25,0,0,20,0,0,20,0,0,25,0),(2597,0,15,0,0,15,0,0,20,0,0,25,0),(1377,0,0,20,0,0,25,0,0,20,0,0,15),(3429,0,0,20,0,0,20,0,0,20,0,0,20),(3428,0,0,20,0,0,20,0,0,20,0,0,20),(440,0,0,15,0,0,15,0,0,15,0,0,15),(3521,10,0,0,15,0,0,20,0,0,10,0,0),(4080,20,0,0,20,0,0,20,0,0,10,0,0);
 /*!40000 ALTER TABLE `game_weather` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -107,3 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2014-10-06 17:48:04
