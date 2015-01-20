@@ -33,7 +33,12 @@ CREATE TABLE `item_expire_convert` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Item Convert System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `item_expire_convert` VALUES (44623,44625),(39878,39883),(44625,44627),(44632,44626),(44626,44629),(44717,44718);
+INSERT INTO `item_expire_convert` VALUES (44623,44625),
+(39878,39883),
+(44625,44627),
+(44632,44626),
+(44626,44629),
+(44717,44718);
 
 /*!40000 ALTER TABLE `item_expire_convert` ENABLE KEYS */;
 UNLOCK TABLES;
