@@ -10,7 +10,7 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_20000_01_Quest_Template_change';
+  SET @cOldRev = 'required_20000_01_Quest_Template_changes';
 
   -- Set the new revision string
   SET @cNewRev = 'required_20000_02_Tutenkash_Gong_scripted';

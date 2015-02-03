@@ -15,9 +15,6 @@ MySQL - 5.5.37 : Database - mangos
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Add the Revision update into the revision column
-INSERT IGNORE INTO db_version SET `Version` = 'MaNGOSTwo Database 2.0.11 Rev 20000_06';
-
 --
 -- Table structure for table `dbdocsfields` 
 --
