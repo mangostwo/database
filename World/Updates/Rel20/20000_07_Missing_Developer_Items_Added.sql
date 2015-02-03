@@ -10,7 +10,7 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_20000_06_DbDocs_update';
+  SET @cOldRev = 'required_20000_05_creature_template_updates';
 
   -- Set the new revision string
   SET @cNewRev = 'required_20000_07_Missing_Developer_Items_Added';
