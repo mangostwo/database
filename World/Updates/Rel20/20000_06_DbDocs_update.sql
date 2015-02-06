@@ -23,15 +23,15 @@ DROP TABLE IF EXISTS `dbdocsfields`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dbdocsfields` (
-  `fieldId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Unique Id for this field',
-  `languageId` int(11) NOT NULL DEFAULT '0' COMMENT 'dbdocsLanguageId to link to. (Normallu 0 = English)',
-  `tableName` varchar(80) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Name of the table to link to',
-  `fieldName` varchar(80) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Name of the field to link the note to',
-  `fieldComment` varchar(80) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Main field Note',
-  `fieldNotes` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'Additional Field Notes',
+  `fieldId` INT(11) NOT NULL AUTO_INCREMENT COMMENT 'Unique Id for this field',
+  `languageId` INT(11) NOT NULL DEFAULT '0' COMMENT 'dbdocsLanguageId to link to. (Normally 0 = English)',
+  `tableName` VARCHAR(80) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Name of the table to link to',
+  `fieldName` VARCHAR(80) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Name of the field to link the note to',
+  `fieldComment` VARCHAR(80) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Main field Note',
+  `fieldNotes` TEXT COLLATE utf8_unicode_ci NOT NULL COMMENT 'Additional Field Notes',
   PRIMARY KEY (`fieldId`,`languageId`),
   KEY `fieldId` (`fieldId`)
-) ENGINE=InnoDB AUTO_INCREMENT=1764 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=INNODB AUTO_INCREMENT=1764 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

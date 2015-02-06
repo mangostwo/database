@@ -1,6 +1,6 @@
 SET Username=root
 SET Password=mangos
-SET DB=mangosd
+SET DB=mangos2
 SET SERVER=localhost
 md _full_db
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% achievement_criteria_requirement >  _full_db\achievement_criteria_requirement.sql
@@ -32,6 +32,7 @@ mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_onkill
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_questrelation >  _full_db\creature_questrelation.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_template >  _full_db\creature_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_template_addon >  _full_db\creature_template_addon.sql
+mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_template_classlevelstats >  _full_db\creature_template_classlevelstats.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_template_spells >  _full_db\creature_template_spells.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% db_script_string >  _full_db\db_script_string.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% db_version >  _full_db\db_version.sql
@@ -52,6 +53,9 @@ mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% dbscripts_on_qu
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% dbscripts_on_quest_start >  _full_db\dbscripts_on_quest_start.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% dbscripts_on_spell >  _full_db\dbscripts_on_spell.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% disenchant_loot_template >  _full_db\disenchant_loot_template.sql
+mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% dungeonfinder_item_rewards >  _full_db\dungeonfinder_item_rewards.sql
+mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% dungeonfinder_requirements >  _full_db\dungeonfinder_requirements.sql
+mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% dungeonfinder_rewards >  _full_db\dungeonfinder_rewards.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% exploration_basexp >  _full_db\exploration_basexp.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% fishing_loot_template >  _full_db\fishing_loot_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% game_event >  _full_db\game_event.sql
@@ -141,7 +145,7 @@ mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_bonus_dat
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_chain >  _full_db\spell_chain.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_elixir >  _full_db\spell_elixir.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_learn_spell >  _full_db\spell_learn_spell.sql
-mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_linked >  _full_db\spell_linked.sql
+REM mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_linked >  _full_db\spell_linked.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_loot_template >  _full_db\spell_loot_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_pet_auras >  _full_db\spell_pet_auras.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_proc_event >  _full_db\spell_proc_event.sql
