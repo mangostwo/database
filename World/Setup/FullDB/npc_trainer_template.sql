@@ -37,7 +37,14 @@ CREATE TABLE `npc_trainer_template` (
   UNIQUE KEY `entry_spell` (`entry`,`spell`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `npc_trainer_template` VALUES (10,6673,10,0,0,0),
+
+--
+-- Dumping data for table `npc_trainer_template`
+--
+
+LOCK TABLES `npc_trainer_template` WRITE;
+/*!40000 ALTER TABLE `npc_trainer_template` DISABLE KEYS */;
+INSERT INTO `npc_trainer_template` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES (10,6673,10,0,0,0),
 (10,100,100,0,0,0),
 (10,772,100,0,0,0),
 (10,3127,100,0,0,6),
@@ -2396,7 +2403,6 @@ INSERT INTO `npc_trainer_template` VALUES (10,6673,10,0,0,0),
 (1092,55208,200000,186,450,0),
 (1092,55211,200000,186,450,0),
 (1004,13240,1500,202,205,0);
-
 /*!40000 ALTER TABLE `npc_trainer_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

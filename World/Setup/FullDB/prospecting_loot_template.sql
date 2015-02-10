@@ -38,7 +38,14 @@ CREATE TABLE `prospecting_loot_template` (
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `prospecting_loot_template` VALUES (2770,24186,100,0,1,1,0),
+
+--
+-- Dumping data for table `prospecting_loot_template`
+--
+
+LOCK TABLES `prospecting_loot_template` WRITE;
+/*!40000 ALTER TABLE `prospecting_loot_template` DISABLE KEYS */;
+INSERT INTO `prospecting_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (2770,24186,100,0,1,1,0),
 (2770,1210,10,1,1,1,0),
 (2770,818,50,2,1,1,0),
 (2770,774,50,2,1,1,0),
@@ -141,7 +148,6 @@ INSERT INTO `prospecting_loot_template` VALUES (2770,24186,100,0,1,1,0),
 (36910,36927,4,2,1,1,0),
 (36910,36933,4,2,1,1,0),
 (36910,36921,4,2,1,1,0);
-
 /*!40000 ALTER TABLE `prospecting_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

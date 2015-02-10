@@ -35,7 +35,14 @@ CREATE TABLE `spell_script_target` (
   UNIQUE KEY `entry_type_target` (`entry`,`type`,`targetEntry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Spell System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_script_target` VALUES (802,1,15316,0),
+
+--
+-- Dumping data for table `spell_script_target`
+--
+
+LOCK TABLES `spell_script_target` WRITE;
+/*!40000 ALTER TABLE `spell_script_target` DISABLE KEYS */;
+INSERT INTO `spell_script_target` (`entry`, `type`, `targetEntry`, `inverseEffectMask`) VALUES (802,1,15316,0),
 (802,1,15317,0),
 (804,1,15316,0),
 (804,1,15317,0),
@@ -3152,7 +3159,6 @@ INSERT INTO `spell_script_target` VALUES (802,1,15316,0),
 (51516,1,28394,0),
 (47184,1,26590,0),
 (42436,1,24108,0);
-
 /*!40000 ALTER TABLE `spell_script_target` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

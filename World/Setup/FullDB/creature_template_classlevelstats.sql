@@ -50,7 +50,14 @@ CREATE TABLE `creature_template_classlevelstats` (
   PRIMARY KEY (`Level`,`Class`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_template_classlevelstats` VALUES (1,1,42,42,42,0,0.1321,0.1321,0.1321,9,0,7),
+
+--
+-- Dumping data for table `creature_template_classlevelstats`
+--
+
+LOCK TABLES `creature_template_classlevelstats` WRITE;
+/*!40000 ALTER TABLE `creature_template_classlevelstats` DISABLE KEYS */;
+INSERT INTO `creature_template_classlevelstats` (`Level`, `Class`, `BaseHealthExp0`, `BaseHealthExp1`, `BaseHealthExp2`, `BaseMana`, `BaseDamageExp0`, `BaseDamageExp1`, `BaseDamageExp2`, `BaseMeleeAttackPower`, `BaseRangedAttackPower`, `BaseArmor`) VALUES (1,1,42,42,42,0,0.1321,0.1321,0.1321,9,0,7),
 (2,1,55,55,55,0,0.2888,0.2888,0.2888,11,0,8),
 (3,1,71,71,71,0,0.5547,0.5547,0.5547,13,0,33),
 (4,1,86,86,86,0,0.9435,0.9435,0.9435,15,0,68),

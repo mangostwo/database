@@ -36,7 +36,14 @@ CREATE TABLE `creature_linking_template` (
   PRIMARY KEY (`entry`,`map`)
 ) ENGINE=MyISAM AUTO_INCREMENT=30683 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Creature Linking System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_linking_template` VALUES (14892,1,14857,512,0),
+
+--
+-- Dumping data for table `creature_linking_template`
+--
+
+LOCK TABLES `creature_linking_template` WRITE;
+/*!40000 ALTER TABLE `creature_linking_template` DISABLE KEYS */;
+INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES (14892,1,14857,512,0),
 (2532,0,2533,656,0),
 (12119,409,12118,519,0),
 (11673,409,11982,1024,0),
@@ -435,7 +442,6 @@ INSERT INTO `creature_linking_template` VALUES (14892,1,14857,512,0),
 (28201,595,26499,8208,0),
 (28249,595,26499,8208,0),
 (27737,595,26499,8208,0);
-
 /*!40000 ALTER TABLE `creature_linking_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

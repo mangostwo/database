@@ -41,7 +41,14 @@ CREATE TABLE `spell_area` (
   PRIMARY KEY (`spell`,`area`,`quest_start`,`quest_start_active`,`aura_spell`,`racemask`,`gender`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_area` VALUES (55164,4161,0,0,0,0,8326,65527,2,1),
+
+--
+-- Dumping data for table `spell_area`
+--
+
+LOCK TABLES `spell_area` WRITE;
+/*!40000 ALTER TABLE `spell_area` DISABLE KEYS */;
+INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `condition_id`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (55164,4161,0,0,0,0,8326,65527,2,1),
 (55173,67,0,0,0,0,8326,8,2,1),
 (55173,4161,0,0,0,0,8326,8,2,1),
 (55164,210,0,0,0,0,8326,65527,2,1),
@@ -293,7 +300,6 @@ INSERT INTO `spell_area` VALUES (55164,4161,0,0,0,0,8326,65527,2,1),
 (69127,4812,0,0,0,0,0,0,2,1),
 (40214,3965,11013,1,0,0,0,0,2,1),
 (40214,3967,11013,1,0,0,0,0,2,1);
-
 /*!40000 ALTER TABLE `spell_area` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -34,7 +34,14 @@ CREATE TABLE `command` (
   PRIMARY KEY (`name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Chat System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `command` VALUES ('account delete',4,'Syntax: .account delete $account\r\n\r\nDelete account with all characters.'),
+
+--
+-- Dumping data for table `command`
+--
+
+LOCK TABLES `command` WRITE;
+/*!40000 ALTER TABLE `command` DISABLE KEYS */;
+INSERT INTO `command` (`name`, `security`, `help`) VALUES ('account delete',4,'Syntax: .account delete $account\r\n\r\nDelete account with all characters.'),
 ('quest remove',3,'Syntax: .quest remove #quest_id\r\n\r\nSet quest #quest_id state to not completed and not active (and remove from active quest list) for selected player.'),
 ('additem',3,'Syntax: .additem #itemid/[#itemname]/#shift-click-item-link #itemcount\r\n\r\nAdds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added.\r\n.'),
 ('additemset',3,'Syntax: .additemset #itemsetid\r\n\r\nAdd items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.'),
@@ -362,7 +369,6 @@ INSERT INTO `command` VALUES ('account delete',4,'Syntax: .account delete $accou
 ('ahbot reload',3,'Syntax: .ahbot reload\r\n\r\nReload AHBot settings from configuration file.'),
 ('ahbot status',3,'Syntax: .ahbot status [all]\r\n\r\nShow current ahbot state data in short form, and with \"all\" with details.'),
 ('gearscore',3,'Syntax: .gearscore [#withBags] [#withBank]\r\n\r\nShow selected player\'s gear score. Check items in bags if #withBags != 0 and check items in Bank if #withBank != 0. Default: 1 for bags and 0 for bank');
-
 /*!40000 ALTER TABLE `command` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

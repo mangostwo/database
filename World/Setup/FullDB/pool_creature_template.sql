@@ -36,7 +36,14 @@ CREATE TABLE `pool_creature_template` (
   KEY `pool_idx` (`pool_entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `pool_creature_template` VALUES (28362,1700,0,'Glinting Dirt'),
+
+--
+-- Dumping data for table `pool_creature_template`
+--
+
+LOCK TABLES `pool_creature_template` WRITE;
+/*!40000 ALTER TABLE `pool_creature_template` DISABLE KEYS */;
+INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES (28362,1700,0,'Glinting Dirt'),
 (472,1000,0,'RARE Fedfennel - 472'),
 (100,1001,0,'RARE Gruff Swiftbite - 100'),
 (61,1002,0,'RARE Thuros Lightfingers - 61'),
@@ -123,7 +130,6 @@ INSERT INTO `pool_creature_template` VALUES (28362,1700,0,'Glinting Dirt'),
 (35189,1084,0,'RARE Skoll - 35189'),
 (32495,1085,0,'RARE Hildana Deathstealer - 32495'),
 (32517,1086,0,'RARE Loque\'nahak - 32517');
-
 /*!40000 ALTER TABLE `pool_creature_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

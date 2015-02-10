@@ -35,7 +35,14 @@ CREATE TABLE `gossip_menu` (
   PRIMARY KEY (`entry`,`text_id`,`script_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `gossip_menu` VALUES (64,565,0,0),
+
+--
+-- Dumping data for table `gossip_menu`
+--
+
+LOCK TABLES `gossip_menu` WRITE;
+/*!40000 ALTER TABLE `gossip_menu` DISABLE KEYS */;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (64,565,0,0),
 (83,580,0,0),
 (265,764,0,0),
 (342,820,0,0),
@@ -3935,7 +3942,6 @@ INSERT INTO `gossip_menu` VALUES (64,565,0,0),
 (5502,6553,0,0),
 (5502,6555,0,975),
 (1661,2314,0,0);
-
 /*!40000 ALTER TABLE `gossip_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -35,7 +35,14 @@ CREATE TABLE `skill_discovery_template` (
   PRIMARY KEY (`spellId`,`reqSpell`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Skill Discovery System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `skill_discovery_template` VALUES (28590,0,0,0.1),
+
+--
+-- Dumping data for table `skill_discovery_template`
+--
+
+LOCK TABLES `skill_discovery_template` WRITE;
+/*!40000 ALTER TABLE `skill_discovery_template` DISABLE KEYS */;
+INSERT INTO `skill_discovery_template` (`spellId`, `reqSpell`, `reqSkillValue`, `chance`) VALUES (28590,0,0,0.1),
 (28587,0,0,0.1),
 (28588,0,0,0.1),
 (28591,0,0,0.1),
@@ -383,7 +390,6 @@ INSERT INTO `skill_discovery_template` VALUES (28590,0,0,0.1),
 (64295,64323,0,100),
 (64309,64323,0,100),
 (62410,60893,400,100);
-
 /*!40000 ALTER TABLE `skill_discovery_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

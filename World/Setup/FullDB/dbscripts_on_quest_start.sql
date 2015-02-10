@@ -47,7 +47,14 @@ CREATE TABLE `dbscripts_on_quest_start` (
   `comments` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `dbscripts_on_quest_start` VALUES (9962,13,0,0,0,0,0,0,2000000003,0,0,0,0,0,0,0,''),
+
+--
+-- Dumping data for table `dbscripts_on_quest_start`
+--
+
+LOCK TABLES `dbscripts_on_quest_start` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_quest_start` DISABLE KEYS */;
+INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES (9962,13,0,0,0,0,0,0,2000000003,0,0,0,0,0,0,0,''),
 (9962,9,0,0,0,0,0,0,2000000002,0,0,0,0,0,0,0,''),
 (9962,0,0,0,0,0,0,0,2000000001,0,0,0,0,0,0,0,''),
 (993,4,1,1,0,0,0,0,0,0,0,0,0,0,0,0,''),
@@ -427,7 +434,6 @@ INSERT INTO `dbscripts_on_quest_start` VALUES (9962,13,0,0,0,0,0,0,2000000003,0,
 (8447,149,29,3,1,0,0,0,0,0,0,0,0,0,0,0,'22832 - npc_flag added'),
 (8447,149,21,0,0,0,0,0,0,0,0,0,0,0,0,0,'Remulos unactive'),
 (1064,3,15,6657,0,0,0,0,0,0,0,0,0,0,0,0,'');
-
 /*!40000 ALTER TABLE `dbscripts_on_quest_start` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

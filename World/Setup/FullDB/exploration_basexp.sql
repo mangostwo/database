@@ -33,7 +33,14 @@ CREATE TABLE `exploration_basexp` (
   PRIMARY KEY (`level`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Exploration System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `exploration_basexp` VALUES (0,0),
+
+--
+-- Dumping data for table `exploration_basexp`
+--
+
+LOCK TABLES `exploration_basexp` WRITE;
+/*!40000 ALTER TABLE `exploration_basexp` DISABLE KEYS */;
+INSERT INTO `exploration_basexp` (`level`, `basexp`) VALUES (0,0),
 (1,5),
 (2,15),
 (3,25),
@@ -104,7 +111,6 @@ INSERT INTO `exploration_basexp` VALUES (0,0),
 (68,1200),
 (69,1230),
 (70,1300);
-
 /*!40000 ALTER TABLE `exploration_basexp` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

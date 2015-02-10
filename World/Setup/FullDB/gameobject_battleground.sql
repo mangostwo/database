@@ -34,7 +34,14 @@ CREATE TABLE `gameobject_battleground` (
   PRIMARY KEY (`guid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='GameObject battleground indexing system';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `gameobject_battleground` VALUES (90000,0,0),
+
+--
+-- Dumping data for table `gameobject_battleground`
+--
+
+LOCK TABLES `gameobject_battleground` WRITE;
+/*!40000 ALTER TABLE `gameobject_battleground` DISABLE KEYS */;
+INSERT INTO `gameobject_battleground` (`guid`, `event1`, `event2`) VALUES (90000,0,0),
 (90001,1,0),
 (90008,254,0),
 (90009,254,0),
@@ -362,7 +369,6 @@ INSERT INTO `gameobject_battleground` VALUES (90000,0,0),
 (90445,64,0),
 (90446,64,0),
 (90447,64,0);
-
 /*!40000 ALTER TABLE `gameobject_battleground` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

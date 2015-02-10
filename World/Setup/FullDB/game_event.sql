@@ -38,7 +38,14 @@ CREATE TABLE `game_event` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `game_event` VALUES (1,'2007-06-20 20:00:00','2020-12-30 22:00:00',525600,20160,341,'Midsummer Fire Festival'),
+
+--
+-- Dumping data for table `game_event`
+--
+
+LOCK TABLES `game_event` WRITE;
+/*!40000 ALTER TABLE `game_event` DISABLE KEYS */;
+INSERT INTO `game_event` (`entry`, `start_time`, `end_time`, `occurence`, `length`, `holiday`, `description`) VALUES (1,'2007-06-20 20:00:00','2020-12-30 22:00:00',525600,20160,341,'Midsummer Fire Festival'),
 (2,'2010-12-15 06:00:00','2020-12-30 22:00:00',525600,25920,141,'Winter Veil'),
 (3,'2010-10-30 22:01:00','2020-12-30 22:00:00',131040,8639,376,'Darkmoon Faire (Terokkar Forest)'),
 (4,'2010-12-04 23:01:00','2020-12-30 22:00:00',131040,8639,374,'Darkmoon Faire (Elwynn Forest)'),
@@ -103,7 +110,6 @@ INSERT INTO `game_event` VALUES (1,'2007-06-20 20:00:00','2020-12-30 22:00:00',5
 (58,'2011-01-01 02:00:00','2020-12-30 23:00:00',180,5,0,'World\'s End Tavern - Perry Gatner Standup Comedy'),
 (59,'2011-01-01 02:48:00','2020-12-30 23:00:00',180,24,0,'World\'s End Tavern - L70ETC Concert Announce'),
 (60,'2011-01-01 03:00:00','2020-12-30 23:00:00',180,5,0,'World\'s End Tavern - L70ETC Concert');
-
 /*!40000 ALTER TABLE `game_event` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

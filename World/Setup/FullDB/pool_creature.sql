@@ -36,7 +36,14 @@ CREATE TABLE `pool_creature` (
   KEY `pool_idx` (`pool_entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `pool_creature` VALUES (83351,1506,0,'Auchenai Vindicator - Group 7'),
+
+--
+-- Dumping data for table `pool_creature`
+--
+
+LOCK TABLES `pool_creature` WRITE;
+/*!40000 ALTER TABLE `pool_creature` DISABLE KEYS */;
+INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES (83351,1506,0,'Auchenai Vindicator - Group 7'),
 (83352,1505,0,'Auchenai Soulpriest - Group 6'),
 (83353,1504,0,'Auchenai Soulpriest - Group 5'),
 (83354,1505,0,'Auchenai Vindicator - Group 6'),
@@ -109,7 +116,6 @@ INSERT INTO `pool_creature` VALUES (83351,1506,0,'Auchenai Vindicator - Group 7'
 (140416,25454,0,'Arcatraz - Spiteful Temptress - Pool'),
 (140390,25455,0,'Arcatraz - Entropic Eye - Pool 2'),
 (140391,25455,0,'Arcatraz - Death Watcher - Pool 2');
-
 /*!40000 ALTER TABLE `pool_creature` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

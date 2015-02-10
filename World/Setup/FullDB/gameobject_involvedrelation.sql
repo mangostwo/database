@@ -33,7 +33,14 @@ CREATE TABLE `gameobject_involvedrelation` (
   PRIMARY KEY (`id`,`quest`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `gameobject_involvedrelation` VALUES (31,94),
+
+--
+-- Dumping data for table `gameobject_involvedrelation`
+--
+
+LOCK TABLES `gameobject_involvedrelation` WRITE;
+/*!40000 ALTER TABLE `gameobject_involvedrelation` DISABLE KEYS */;
+INSERT INTO `gameobject_involvedrelation` (`id`, `quest`) VALUES (31,94),
 (33,140),
 (34,139),
 (35,136),
@@ -377,7 +384,6 @@ INSERT INTO `gameobject_involvedrelation` VALUES (31,94),
 (194555,13629),
 (194555,13817),
 (194555,13818);
-
 /*!40000 ALTER TABLE `gameobject_involvedrelation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

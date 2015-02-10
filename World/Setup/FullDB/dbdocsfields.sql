@@ -36,7 +36,7 @@ DROP TABLE IF EXISTS `dbdocsfields`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dbdocsfields` (
   `fieldId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Unique Id for this field',
-  `languageId` int(11) NOT NULL DEFAULT '0' COMMENT 'dbdocsLanguageId to link to. (Normallu 0 = English)',
+  `languageId` int(11) NOT NULL DEFAULT '0' COMMENT 'dbdocsLanguageId to link to. (Normally 0 = English)',
   `tableName` varchar(80) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Name of the table to link to',
   `fieldName` varchar(80) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Name of the field to link the note to',
   `fieldComment` varchar(80) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Main field Note',

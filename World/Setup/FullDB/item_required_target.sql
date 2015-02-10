@@ -34,7 +34,14 @@ CREATE TABLE `item_required_target` (
   UNIQUE KEY `entry_type_target` (`entry`,`type`,`targetEntry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `item_required_target` VALUES (3912,1,2530),
+
+--
+-- Dumping data for table `item_required_target`
+--
+
+LOCK TABLES `item_required_target` WRITE;
+/*!40000 ALTER TABLE `item_required_target` DISABLE KEYS */;
+INSERT INTO `item_required_target` (`entry`, `type`, `targetEntry`) VALUES (3912,1,2530),
 (4479,1,2762),
 (4480,1,2761),
 (4481,1,2760),
@@ -209,7 +216,6 @@ INSERT INTO `item_required_target` VALUES (3912,1,2530),
 (46954,1,34925),
 (46954,1,35092),
 (47033,1,32149);
-
 /*!40000 ALTER TABLE `item_required_target` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

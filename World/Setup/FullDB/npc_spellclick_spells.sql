@@ -37,7 +37,14 @@ CREATE TABLE `npc_spellclick_spells` (
   `condition_id` mediumint(8) unsigned NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `npc_spellclick_spells` VALUES (28162,51026,12519,1,12519,1,0),
+
+--
+-- Dumping data for table `npc_spellclick_spells`
+--
+
+LOCK TABLES `npc_spellclick_spells` WRITE;
+/*!40000 ALTER TABLE `npc_spellclick_spells` DISABLE KEYS */;
+INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `quest_start`, `quest_start_active`, `quest_end`, `cast_flags`, `condition_id`) VALUES (28162,51026,12519,1,12519,1,0),
 (26477,61832,12000,1,12000,1,0),
 (29488,54568,12670,1,0,3,0),
 (29501,54575,12670,1,0,3,0),
@@ -100,7 +107,6 @@ INSERT INTO `npc_spellclick_spells` VALUES (28162,51026,12519,1,12519,1,0),
 (33498,63125,0,0,0,1,964),
 (30066,62503,12953,1,12953,1,0),
 (36558,67830,0,0,0,1,0);
-
 /*!40000 ALTER TABLE `npc_spellclick_spells` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

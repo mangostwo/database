@@ -33,7 +33,14 @@ CREATE TABLE `item_convert` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Npc System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `item_convert` VALUES (50338,44135),
+
+--
+-- Dumping data for table `item_convert`
+--
+
+LOCK TABLES `item_convert` WRITE;
+/*!40000 ALTER TABLE `item_convert` DISABLE KEYS */;
+INSERT INTO `item_convert` (`entry`, `item`) VALUES (50338,44135),
 (50337,44136),
 (50335,44133),
 (50336,44134),
@@ -43,7 +50,6 @@ INSERT INTO `item_convert` VALUES (50338,44135),
 (50369,44150),
 (50372,44701),
 (50373,44702);
-
 /*!40000 ALTER TABLE `item_convert` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -46,7 +46,14 @@ CREATE TABLE `areatrigger_teleport` (
   FULLTEXT KEY `name` (`name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Trigger System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `areatrigger_teleport` VALUES (45,'Scarlet Monastery - Graveyard (Entrance)',20,0,0,0,0,0,0,189,1688.99,1053.48,18.6775,0.00117),
+
+--
+-- Dumping data for table `areatrigger_teleport`
+--
+
+LOCK TABLES `areatrigger_teleport` WRITE;
+/*!40000 ALTER TABLE `areatrigger_teleport` DISABLE KEYS */;
+INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_item`, `required_item2`, `heroic_key`, `heroic_key2`, `required_quest_done`, `required_quest_done_heroic`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES (45,'Scarlet Monastery - Graveyard (Entrance)',20,0,0,0,0,0,0,189,1688.99,1053.48,18.6775,0.00117),
 (78,'DeadMines Entrance',10,0,0,0,0,0,0,36,-16.4,-383.07,61.78,1.86),
 (101,'Stormwind Stockades Entrance',15,0,0,0,0,0,0,34,54.23,0.28,-18.34,6.26),
 (107,'Stormwind Vault Entrance',0,0,0,0,0,0,0,35,-0.91,40.57,-24.23,0),
@@ -276,7 +283,6 @@ INSERT INTO `areatrigger_teleport` VALUES (45,'Scarlet Monastery - Graveyard (En
 (5187,'Teleportation pad, Garm\'s Rise -> K3',77,0,0,0,0,12821,0,571,6153.08,-1074.07,403.478,2.04995),
 (4612,'The Botanica (Atrium Exit)',0,0,0,0,0,0,0,530,3409.85,1486.26,182.837,2.53073),
 (4614,'The Mechanar (Boss Exit)',0,0,0,0,0,0,0,530,2862.41,1546.09,252.161,0.805457);
-
 /*!40000 ALTER TABLE `areatrigger_teleport` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

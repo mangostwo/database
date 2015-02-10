@@ -40,7 +40,14 @@ CREATE TABLE `creature_onkill_reputation` (
   PRIMARY KEY (`creature_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Creature OnKill Reputation gain';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_onkill_reputation` VALUES (674,21,0,5,0,25,0,0,0,0),
+
+--
+-- Dumping data for table `creature_onkill_reputation`
+--
+
+LOCK TABLES `creature_onkill_reputation` WRITE;
+/*!40000 ALTER TABLE `creature_onkill_reputation` DISABLE KEYS */;
+INSERT INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (674,21,0,5,0,25,0,0,0,0),
 (675,21,0,5,0,25,0,0,0,0),
 (677,21,0,5,0,25,0,0,0,0),
 (737,87,21,5,0,5,7,0,-25,0),
@@ -1704,7 +1711,6 @@ INSERT INTO `creature_onkill_reputation` VALUES (674,21,0,5,0,25,0,0,0,0),
 (35325,1037,0,7,0,3,0,0,0,1),
 (35323,1037,0,7,0,3,0,0,0,1),
 (35314,1037,0,7,0,3,0,0,0,1);
-
 /*!40000 ALTER TABLE `creature_onkill_reputation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

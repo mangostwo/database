@@ -33,7 +33,14 @@ CREATE TABLE `areatrigger_tavern` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Trigger System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `areatrigger_tavern` VALUES (71,'Westfall - Sentinel Hill Inn'),
+
+--
+-- Dumping data for table `areatrigger_tavern`
+--
+
+LOCK TABLES `areatrigger_tavern` WRITE;
+/*!40000 ALTER TABLE `areatrigger_tavern` DISABLE KEYS */;
+INSERT INTO `areatrigger_tavern` (`id`, `name`) VALUES (71,'Westfall - Sentinel Hill Inn'),
 (562,'Elwynn Forest - Goldshire - Lion\'s Pride Inn'),
 (682,'Redridge Mountains - Lakeshire Inn'),
 (707,'Duskwood - Darkshire - Scarlet Raven Inn'),
@@ -146,7 +153,6 @@ INSERT INTO `areatrigger_tavern` VALUES (71,'Westfall - Sentinel Hill Inn'),
 (5316,'Wyrmrest Temple'),
 (5317,'Wyrmrest Temple'),
 (4265,'Fairbreeze Village Inn');
-
 /*!40000 ALTER TABLE `areatrigger_tavern` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

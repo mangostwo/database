@@ -35,7 +35,14 @@ CREATE TABLE `skill_extra_item_template` (
   PRIMARY KEY (`spellId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Skill Specialization System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `skill_extra_item_template` VALUES (26751,26798,100,1),
+
+--
+-- Dumping data for table `skill_extra_item_template`
+--
+
+LOCK TABLES `skill_extra_item_template` WRITE;
+/*!40000 ALTER TABLE `skill_extra_item_template` DISABLE KEYS */;
+INSERT INTO `skill_extra_item_template` (`spellId`, `requiredSpecialization`, `additionalCreateChance`, `additionalMaxNum`) VALUES (26751,26798,100,1),
 (36686,26801,100,1),
 (31373,26797,100,1),
 (32765,28672,16,4),
@@ -241,7 +248,6 @@ INSERT INTO `skill_extra_item_template` VALUES (26751,26798,100,1),
 (60355,28677,17,4),
 (60365,28677,17,4),
 (60354,28677,17,4);
-
 /*!40000 ALTER TABLE `skill_extra_item_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

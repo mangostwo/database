@@ -38,7 +38,14 @@ CREATE TABLE `pickpocketing_loot_template` (
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `pickpocketing_loot_template` VALUES (3,929,2.449,0,1,1,0),
+
+--
+-- Dumping data for table `pickpocketing_loot_template`
+--
+
+LOCK TABLES `pickpocketing_loot_template` WRITE;
+/*!40000 ALTER TABLE `pickpocketing_loot_template` DISABLE KEYS */;
+INSERT INTO `pickpocketing_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (3,929,2.449,0,1,1,0),
 (3,1206,0.8163,0,1,1,0),
 (3,4606,5.7143,0,1,1,0),
 (3,5376,8.9796,0,1,1,0),
@@ -11039,7 +11046,6 @@ INSERT INTO `pickpocketing_loot_template` VALUES (3,929,2.449,0,1,1,0),
 (17301,29569,30,0,1,1,0),
 (17301,27854,15,0,1,1,0),
 (17301,22829,10,0,1,1,0);
-
 /*!40000 ALTER TABLE `pickpocketing_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

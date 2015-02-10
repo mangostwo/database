@@ -36,7 +36,14 @@ CREATE TABLE `gameobject_addon` (
   PRIMARY KEY (`guid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Gameobject System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `gameobject_addon` VALUES (6945,0,0,1,-0.0000000437114),
+
+--
+-- Dumping data for table `gameobject_addon`
+--
+
+LOCK TABLES `gameobject_addon` WRITE;
+/*!40000 ALTER TABLE `gameobject_addon` DISABLE KEYS */;
+INSERT INTO `gameobject_addon` (`guid`, `path_rotation0`, `path_rotation1`, `path_rotation2`, `path_rotation3`) VALUES (6945,0,0,1,-0.0000000437114),
 (6946,0,0,1,-0.0000000437114),
 (9290,0,0,0.95502,0.296542),
 (9411,0,0,0.678801,0.734323),
@@ -130,7 +137,6 @@ INSERT INTO `gameobject_addon` VALUES (6945,0,0,1,-0.0000000437114),
 (67874,0.00544418,-0.00290476,0.918772,0.394739),
 (67875,-0.00276125,-0.00551835,-0.370553,0.928791),
 (67876,0.00544418,-0.00290476,0.918772,0.394739);
-
 /*!40000 ALTER TABLE `gameobject_addon` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

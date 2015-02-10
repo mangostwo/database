@@ -28,7 +28,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `creature_ai_summons`
+-- Table structure for table `creature_ai_texts`
 --
 
 DROP TABLE IF EXISTS `creature_ai_texts`;
@@ -53,7 +53,14 @@ CREATE TABLE `creature_ai_texts` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Script Texts';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_ai_texts` VALUES (-1,'I see those fools at the Abbey sent some fresh meat for us.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'103'),
+
+--
+-- Dumping data for table `creature_ai_texts`
+--
+
+LOCK TABLES `creature_ai_texts` WRITE;
+/*!40000 ALTER TABLE `creature_ai_texts` DISABLE KEYS */;
+INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1,'I see those fools at the Abbey sent some fresh meat for us.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'103'),
 (-2,'The Brotherhood will not tolerate your actions.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Defias Text'),
 (-3,'Ah, a chance to use this freshly sharpened blade.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Defias Text'),
 (-4,'Feel the power of the Brotherhood!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Defias Text'),
@@ -1344,8 +1351,19 @@ INSERT INTO `creature_ai_texts` VALUES (-1,'I see those fools at the Abbey sent 
 (-1323,'It is you who have invaded our home. Gorefiend will avenge us!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
 (-1324,'We will never dissipate, mortal... Our fate is tied to Gorefiend...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
 (-1325,'We are bound here... eternally. It is the will of Gorefiend.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
-(-1326,'Gorefiend will have your head, interloper!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795');
-
+(-1326,'Gorefiend will have your head, interloper!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
+(-749,'SMOTTS! HEY, SMOTTS! COME OUT AND PLAY!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-750,'DON\'T LET THIS STATUE BE MY ONLY COMPANY, COME OUT AND PLAY!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-751,'COME OUT TO JANEIRO\'S POINT. I\'M WAITING FOR YOU, SMOTTS...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-752,'I PROMISE I WON\'T KILL YOUR CREW THIS TIME. HAH! BUT MY BROTHER MIGHT EAT THEM!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-753,'HAVE YOU RUN OUT OF SHIPS TO SEND? WHERE IS YOUR COURAGE?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-754,'YOU WERE SUCH GOOD SPORT THE LAST TIME...COME OUT!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-755,'I HAVE YOUR LITTLE BELT TIED AROUND MY FINGER, SMOTTS. DON\'T YOU WANT IT BACK?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-756,'SMOTTS, I HAVE YOUR LITTLE BELT....COME GET IT!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-757,'Begone foul demon!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'28529'),
+(-758,'Scourge! Do not let it escape!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'28529'),
+(-759,'\'Tis the work of the Scourge!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'28529'),
+(-760,'Death stalks us! Destroy it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'28529');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

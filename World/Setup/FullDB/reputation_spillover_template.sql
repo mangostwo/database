@@ -44,7 +44,14 @@ CREATE TABLE `reputation_spillover_template` (
   PRIMARY KEY (`faction`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Reputation spillover reputation gain';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `reputation_spillover_template` VALUES (72,47,0.25,7,54,0.25,7,69,0.25,7,930,0.25,7),
+
+--
+-- Dumping data for table `reputation_spillover_template`
+--
+
+LOCK TABLES `reputation_spillover_template` WRITE;
+/*!40000 ALTER TABLE `reputation_spillover_template` DISABLE KEYS */;
+INSERT INTO `reputation_spillover_template` (`faction`, `faction1`, `rate_1`, `rank_1`, `faction2`, `rate_2`, `rank_2`, `faction3`, `rate_3`, `rank_3`, `faction4`, `rate_4`, `rank_4`) VALUES (72,47,0.25,7,54,0.25,7,69,0.25,7,930,0.25,7),
 (47,72,0.25,7,54,0.25,7,69,0.25,7,930,0.25,7),
 (54,47,0.25,7,72,0.25,7,69,0.25,7,930,0.25,7),
 (69,47,0.25,7,54,0.25,7,72,0.25,7,930,0.25,7),
@@ -70,7 +77,6 @@ INSERT INTO `reputation_spillover_template` VALUES (72,47,0.25,7,54,0.25,7,69,0.
 (1124,1052,0.5,7,1064,0.5,7,1067,0.5,7,1085,0.5,7),
 (1104,1105,-2.2,7,0,0,0,0,0,0,0,0,0),
 (1105,1104,-2.2,7,0,0,0,0,0,0,0,0,0);
-
 /*!40000 ALTER TABLE `reputation_spillover_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

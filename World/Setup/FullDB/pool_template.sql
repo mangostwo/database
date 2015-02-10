@@ -34,7 +34,14 @@ CREATE TABLE `pool_template` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `pool_template` VALUES (1,1,''),
+
+--
+-- Dumping data for table `pool_template`
+--
+
+LOCK TABLES `pool_template` WRITE;
+/*!40000 ALTER TABLE `pool_template` DISABLE KEYS */;
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES (1,1,''),
 (2,1,''),
 (3,1,''),
 (4,1,''),
@@ -6132,7 +6139,6 @@ INSERT INTO `pool_template` VALUES (1,1,''),
 (25458,1,'Veil Lithic - Cursed Eggs - Pool 3'),
 (25457,1,'Veil Lithic - Cursed Eggs - Pool 2'),
 (25456,1,'Veil Lithic - Cursed Eggs - Pool 1');
-
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

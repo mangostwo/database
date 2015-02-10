@@ -46,7 +46,14 @@ CREATE TABLE `db_script_string` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `db_script_string` VALUES (2000005386,'Grimclaw?! Easy there, my friend... where is your master Volcor?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+
+--
+-- Dumping data for table `db_script_string`
+--
+
+LOCK TABLES `db_script_string` WRITE;
+/*!40000 ALTER TABLE `db_script_string` DISABLE KEYS */;
+INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (2000005386,'Grimclaw?! Easy there, my friend... where is your master Volcor?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000005385,'Grimclaw roars at Terenthis to get his attention.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,NULL),
 (2000005384,'What was that noise? It sounded like a roar.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000005378,'There you have it. Our lesson on summoning has come to an end. A new class will begin shortly, so if you wish to brush up, feel free to stay around.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,33,0,NULL),
@@ -1247,7 +1254,6 @@ INSERT INTO `db_script_string` VALUES (2000005386,'Grimclaw?! Easy there, my fri
 (2000000401,'Help the children of Stormwind... victims of the war and plague!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'John Turner  - Say 4'),
 (2000000402,'%s calls upon the mighty armies of the Scourge!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,NULL),
 (2000000403,'Armies of the Scourge, hear my call! The scarlet apocalypse has begun! Tear this land asunder and leave only death in your wake!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,6,0,22,NULL);
-
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

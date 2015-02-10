@@ -49,7 +49,14 @@ CREATE TABLE `creature_movement_template` (
   PRIMARY KEY (`entry`,`point`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Creature waypoint system';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_movement_template` VALUES (7318,1,9847.94,1512.5,1257.04,0,0,0,0,0,0,0,0,0,0,1.10845,0,0),
+
+--
+-- Dumping data for table `creature_movement_template`
+--
+
+LOCK TABLES `creature_movement_template` WRITE;
+/*!40000 ALTER TABLE `creature_movement_template` DISABLE KEYS */;
+INSERT INTO `creature_movement_template` (`entry`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (7318,1,9847.94,1512.5,1257.04,0,0,0,0,0,0,0,0,0,0,1.10845,0,0),
 (7318,2,9867.72,1521.7,1257.66,0,0,0,0,0,0,0,0,0,0,3.51726,0,0),
 (7318,3,9876.72,1505.79,1258.35,0,0,0,0,0,0,0,0,0,0,4.9938,0,0),
 (7318,4,9875.94,1493.79,1258.61,0,0,0,0,0,0,0,0,0,0,4.53356,0,0),
@@ -5635,7 +5642,6 @@ INSERT INTO `creature_movement_template` VALUES (7318,1,9847.94,1512.5,1257.04,0
 (9099,15,-4732.99,-1106.31,502.219,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (9099,16,-4741.4,-1139.08,502.201,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (9099,17,-4756.99,-1154.73,502.212,0,0,0,0,0,0,0,0,0,0,0,0,0);
-
 /*!40000 ALTER TABLE `creature_movement_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

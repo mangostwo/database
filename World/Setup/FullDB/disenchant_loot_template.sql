@@ -38,7 +38,14 @@ CREATE TABLE `disenchant_loot_template` (
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `disenchant_loot_template` VALUES (1,10940,80,1,1,2,0),
+
+--
+-- Dumping data for table `disenchant_loot_template`
+--
+
+LOCK TABLES `disenchant_loot_template` WRITE;
+/*!40000 ALTER TABLE `disenchant_loot_template` DISABLE KEYS */;
+INSERT INTO `disenchant_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (1,10940,80,1,1,2,0),
 (1,10938,0,1,1,2,0),
 (2,10940,75,1,2,3,0),
 (2,10939,20,1,1,2,0),
@@ -161,7 +168,6 @@ INSERT INTO `disenchant_loot_template` VALUES (1,10940,80,1,1,2,0),
 (54,34057,0,1,1,1,0),
 (67,44012,67,1,-44012,1,0),
 (60,11139,100,0,2,4,0);
-
 /*!40000 ALTER TABLE `disenchant_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

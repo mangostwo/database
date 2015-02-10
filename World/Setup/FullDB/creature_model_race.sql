@@ -45,7 +45,14 @@ CREATE TABLE `creature_model_race` (
   PRIMARY KEY (`modelid`,`racemask`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Model system';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_model_race` VALUES (892,690,0,8571),
+
+--
+-- Dumping data for table `creature_model_race`
+--
+
+LOCK TABLES `creature_model_race` WRITE;
+/*!40000 ALTER TABLE `creature_model_race` DISABLE KEYS */;
+INSERT INTO `creature_model_race` (`modelid`, `racemask`, `creature_entry`, `modelid_racial`) VALUES (892,690,0,8571),
 (2281,690,0,2289),
 (21243,690,0,21244),
 (20857,690,0,20872),
@@ -65,7 +72,6 @@ INSERT INTO `creature_model_race` VALUES (892,690,0,8571),
 (4588,4,37750,0),
 (4589,4,37751,0),
 (4590,4,37749,0);
-
 /*!40000 ALTER TABLE `creature_model_race` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

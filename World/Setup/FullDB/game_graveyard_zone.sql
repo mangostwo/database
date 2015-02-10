@@ -34,7 +34,14 @@ CREATE TABLE `game_graveyard_zone` (
   PRIMARY KEY (`id`,`ghost_zone`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Trigger System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `game_graveyard_zone` VALUES (100,1,469),
+
+--
+-- Dumping data for table `game_graveyard_zone`
+--
+
+LOCK TABLES `game_graveyard_zone` WRITE;
+/*!40000 ALTER TABLE `game_graveyard_zone` DISABLE KEYS */;
+INSERT INTO `game_graveyard_zone` (`id`, `ghost_zone`, `faction`) VALUES (100,1,469),
 (101,1,469),
 (103,3,67),
 (104,10,67),
@@ -739,7 +746,6 @@ INSERT INTO `game_graveyard_zone` VALUES (100,1,469),
 (940,3702,0),
 (971,3702,0),
 (1469,2677,0);
-
 /*!40000 ALTER TABLE `game_graveyard_zone` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

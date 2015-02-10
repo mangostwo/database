@@ -39,7 +39,14 @@ CREATE TABLE `quest_poi` (
   PRIMARY KEY (`questId`,`poiId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `quest_poi` VALUES (1,0,-1,0,23,0,0,1),
+
+--
+-- Dumping data for table `quest_poi`
+--
+
+LOCK TABLES `quest_poi` WRITE;
+/*!40000 ALTER TABLE `quest_poi` DISABLE KEYS */;
+INSERT INTO `quest_poi` (`questId`, `poiId`, `objIndex`, `mapId`, `mapAreaId`, `floorId`, `unk3`, `unk4`) VALUES (1,0,-1,0,23,0,0,1),
 (2,0,4,1,43,0,0,1),
 (2,1,-1,1,43,0,0,1),
 (5,0,-1,0,34,0,0,1),
@@ -18522,7 +18529,6 @@ INSERT INTO `quest_poi` VALUES (1,0,-1,0,23,0,0,1),
 (25393,0,0,0,27,0,0,1),
 (25393,1,-1,0,27,0,0,1),
 (26012,0,-1,571,488,0,0,1);
-
 /*!40000 ALTER TABLE `quest_poi` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

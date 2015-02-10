@@ -35,7 +35,14 @@ CREATE TABLE `pet_name_generation` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=314 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `pet_name_generation` VALUES (1,'Aba',416,0),
+
+--
+-- Dumping data for table `pet_name_generation`
+--
+
+LOCK TABLES `pet_name_generation` WRITE;
+/*!40000 ALTER TABLE `pet_name_generation` DISABLE KEYS */;
+INSERT INTO `pet_name_generation` (`id`, `word`, `entry`, `half`) VALUES (1,'Aba',416,0),
 (2,'Az',416,0),
 (3,'Bel',416,0),
 (4,'Biz',416,0),
@@ -348,7 +355,6 @@ INSERT INTO `pet_name_generation` VALUES (1,'Aba',416,0),
 (311,'catcher',26125,1),
 (312,'drinker',26125,1),
 (313,'slicer',26125,1);
-
 /*!40000 ALTER TABLE `pet_name_generation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

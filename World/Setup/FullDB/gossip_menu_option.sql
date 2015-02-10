@@ -44,7 +44,14 @@ CREATE TABLE `gossip_menu_option` (
   PRIMARY KEY (`menu_id`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `gossip_menu_option` VALUES (0,0,0,'GOSSIP_OPTION_QUESTGIVER',2,2,0,0,0,0,0,NULL,0),
+
+--
+-- Dumping data for table `gossip_menu_option`
+--
+
+LOCK TABLES `gossip_menu_option` WRITE;
+/*!40000 ALTER TABLE `gossip_menu_option` DISABLE KEYS */;
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `condition_id`) VALUES (0,0,0,'GOSSIP_OPTION_QUESTGIVER',2,2,0,0,0,0,0,NULL,0),
 (0,1,1,'I want to browse your goods.',3,128,0,0,0,0,0,NULL,0),
 (0,2,2,'I need a ride.',4,8192,0,0,0,0,0,NULL,0),
 (0,3,3,'Train me.',5,16,0,0,0,0,0,NULL,0),
@@ -3186,7 +3193,6 @@ INSERT INTO `gossip_menu_option` VALUES (0,0,0,'GOSSIP_OPTION_QUESTGIVER',2,2,0,
 (2907,0,0,'Perhaps there exists a way?',1,1,2908,0,0,0,0,'',0),
 (2908,0,0,'As you wish, Eitrigg.',1,1,-1,0,2908,0,0,'',0),
 (1701,0,1,'I\'d like to purchase more Tharlendris seeds.',3,128,0,0,0,0,0,NULL,974);
-
 /*!40000 ALTER TABLE `gossip_menu_option` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

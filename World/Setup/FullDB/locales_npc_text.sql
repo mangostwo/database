@@ -161,6 +161,12 @@ CREATE TABLE `locales_npc_text` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `locales_npc_text`
+--
+
+LOCK TABLES `locales_npc_text` WRITE;
+/*!40000 ALTER TABLE `locales_npc_text` DISABLE KEYS */;
 /*!40000 ALTER TABLE `locales_npc_text` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -33,7 +33,14 @@ CREATE TABLE `spell_elixir` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Spell System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_elixir` VALUES (41608,11),
+
+--
+-- Dumping data for table `spell_elixir`
+--
+
+LOCK TABLES `spell_elixir` WRITE;
+/*!40000 ALTER TABLE `spell_elixir` DISABLE KEYS */;
+INSERT INTO `spell_elixir` (`entry`, `mask`) VALUES (41608,11),
 (41609,11),
 (41610,11),
 (41611,11),
@@ -166,7 +173,6 @@ INSERT INTO `spell_elixir` VALUES (41608,11),
 (67017,3),
 (67018,3),
 (63729,1);
-
 /*!40000 ALTER TABLE `spell_elixir` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

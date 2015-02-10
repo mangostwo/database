@@ -33,7 +33,14 @@ CREATE TABLE `battlemaster_entry` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `battlemaster_entry` VALUES (347,1),
+
+--
+-- Dumping data for table `battlemaster_entry`
+--
+
+LOCK TABLES `battlemaster_entry` WRITE;
+/*!40000 ALTER TABLE `battlemaster_entry` DISABLE KEYS */;
+INSERT INTO `battlemaster_entry` (`entry`, `bg_template`) VALUES (347,1),
 (5118,1),
 (7410,1),
 (7427,1),
@@ -169,7 +176,6 @@ INSERT INTO `battlemaster_entry` VALUES (347,1),
 (32330,10),
 (32332,10),
 (29533,10);
-
 /*!40000 ALTER TABLE `battlemaster_entry` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

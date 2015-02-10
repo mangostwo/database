@@ -36,7 +36,14 @@ CREATE TABLE `conditions` (
   UNIQUE KEY `unique_conditions` (`type`,`value1`,`value2`)
 ) ENGINE=MyISAM AUTO_INCREMENT=976 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Condition System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `conditions` VALUES (1,9,11668,0),
+
+--
+-- Dumping data for table `conditions`
+--
+
+LOCK TABLES `conditions` WRITE;
+/*!40000 ALTER TABLE `conditions` DISABLE KEYS */;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES (1,9,11668,0),
 (2,2,11511,1),
 (3,7,165,1),
 (4,7,197,1),
@@ -1011,7 +1018,6 @@ INSERT INTO `conditions` VALUES (1,9,11668,0),
 (965,8,3785,0),
 (974,8,3786,0),
 (975,8,1029,0);
-
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -38,7 +38,14 @@ CREATE TABLE `mail_loot_template` (
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `mail_loot_template` VALUES (87,6529,100,0,1,1,0),
+
+--
+-- Dumping data for table `mail_loot_template`
+--
+
+LOCK TABLES `mail_loot_template` WRITE;
+/*!40000 ALTER TABLE `mail_loot_template` DISABLE KEYS */;
+INSERT INTO `mail_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (87,6529,100,0,1,1,0),
 (119,15564,100,0,1,1,0),
 (120,15564,100,0,1,1,0),
 (180,24132,100,0,1,1,0),
@@ -110,7 +117,6 @@ INSERT INTO `mail_loot_template` VALUES (87,6529,100,0,1,1,0),
 (161,21216,100,0,1,1,0),
 (108,17712,100,0,1,1,0),
 (117,17712,100,0,1,1,0);
-
 /*!40000 ALTER TABLE `mail_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

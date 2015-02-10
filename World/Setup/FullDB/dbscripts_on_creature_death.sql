@@ -47,7 +47,14 @@ CREATE TABLE `dbscripts_on_creature_death` (
   `comments` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `dbscripts_on_creature_death` VALUES (21419,2,20,2,0,0,0,0,0,0,0,0,0,0,0,0,'movement chenged to 2:waypoint'),
+
+--
+-- Dumping data for table `dbscripts_on_creature_death`
+--
+
+LOCK TABLES `dbscripts_on_creature_death` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_creature_death` DISABLE KEYS */;
+INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES (21419,2,20,2,0,0,0,0,0,0,0,0,0,0,0,0,'movement chenged to 2:waypoint'),
 (27654,6,3,0,0,27658,75,0,0,0,0,0,939.73,1044.25,359.96,0,'Belgaristrasz - move out of the cage'),
 (27654,6,3,0,0,27657,75,0,0,0,0,0,948.57,1032.11,359.96,0,'Verdisa - move out of the cage'),
 (27654,6,3,0,0,27659,75,0,0,0,0,0,941.93,1060.08,359.96,0,'Eternos - move out of the cage'),
@@ -158,7 +165,6 @@ INSERT INTO `dbscripts_on_creature_death` VALUES (21419,2,20,2,0,0,0,0,0,0,0,0,0
 (32273,0,14,60451,0,32281,50,0,0,0,0,0,0,0,0,0,'Guardian of Life - remove aura Corruption of Time'),
 (32273,2,0,0,0,32281,50,0,2000005821,0,0,0,0,0,0,0,'Guardian of Life - say thank you'),
 (32273,2,18,10000,0,32281,50,2,0,0,0,0,0,0,0,0,'Guardian of Life - Despawn');
-
 /*!40000 ALTER TABLE `dbscripts_on_creature_death` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

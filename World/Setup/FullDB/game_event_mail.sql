@@ -36,7 +36,14 @@ CREATE TABLE `game_event_mail` (
   PRIMARY KEY (`event`,`raceMask`,`quest`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Game event system';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `game_event_mail` VALUES (45,1101,12278,197,27487),
+
+--
+-- Dumping data for table `game_event_mail`
+--
+
+LOCK TABLES `game_event_mail` WRITE;
+/*!40000 ALTER TABLE `game_event_mail` DISABLE KEYS */;
+INSERT INTO `game_event_mail` (`event`, `raceMask`, `quest`, `mailTemplateId`, `senderEntry`) VALUES (45,1101,12278,197,27487),
 (46,1101,12278,198,27487),
 (47,1101,12278,199,27487),
 (48,1101,12278,200,27487),
@@ -60,7 +67,6 @@ INSERT INTO `game_event_mail` VALUES (45,1101,12278,197,27487),
 (54,690,12306,221,27487),
 (55,690,12306,222,27487),
 (56,690,12306,223,27487);
-
 /*!40000 ALTER TABLE `game_event_mail` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

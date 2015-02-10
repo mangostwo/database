@@ -35,7 +35,14 @@ CREATE TABLE `creature_equip_template` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Creature System (Equipment)';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_equip_template` VALUES (1,1896,0,0),
+
+--
+-- Dumping data for table `creature_equip_template`
+--
+
+LOCK TABLES `creature_equip_template` WRITE;
+/*!40000 ALTER TABLE `creature_equip_template` DISABLE KEYS */;
+INSERT INTO `creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES (1,1896,0,0),
 (2,1903,0,0),
 (3,1899,143,0),
 (4,2184,0,0),
@@ -2544,7 +2551,6 @@ INSERT INTO `creature_equip_template` VALUES (1,1896,0,0),
 (2511,5956,24322,0),
 (4824,12294,0,30452),
 (2512,2028,11589,0);
-
 /*!40000 ALTER TABLE `creature_equip_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

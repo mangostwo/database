@@ -1,1 +1,0 @@
-The scripts need to be applied to the mangosDB and the latest redumped

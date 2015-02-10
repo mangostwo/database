@@ -35,7 +35,14 @@ CREATE TABLE `battleground_events` (
   PRIMARY KEY (`map`,`event1`,`event2`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `battleground_events` VALUES (489,0,0,'Alliance Flag'),
+
+--
+-- Dumping data for table `battleground_events`
+--
+
+LOCK TABLES `battleground_events` WRITE;
+/*!40000 ALTER TABLE `battleground_events` DISABLE KEYS */;
+INSERT INTO `battleground_events` (`map`, `event1`, `event2`, `description`) VALUES (489,0,0,'Alliance Flag'),
 (489,1,0,'Horde Flag'),
 (489,2,0,'Spirit Guides'),
 (489,254,0,'Doors'),
@@ -226,7 +233,6 @@ INSERT INTO `battleground_events` VALUES (489,0,0,'Alliance Flag'),
 (30,62,0,'Horde - Boss'),
 (30,63,0,'Alliance - Captain Dead'),
 (30,64,0,'Horde - Captain Dead');
-
 /*!40000 ALTER TABLE `battleground_events` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

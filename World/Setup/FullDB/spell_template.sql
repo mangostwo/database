@@ -48,7 +48,14 @@ CREATE TABLE `spell_template` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='MaNGOS server side spells';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_template` VALUES (37365,384,0,4,0,0,101,21,28,18,0,1,0,21757,64,0,'Power Converters: Summon Big Flavor Electromental (from cata)'),
+
+--
+-- Dumping data for table `spell_template`
+--
+
+LOCK TABLES `spell_template` WRITE;
+/*!40000 ALTER TABLE `spell_template` DISABLE KEYS */;
+INSERT INTO `spell_template` (`id`, `attr`, `attr_ex`, `attr_ex2`, `attr_ex3`, `proc_flags`, `proc_chance`, `duration_index`, `effect0`, `effect0_implicit_target_a`, `effect0_implicit_target_b`, `effect0_radius_idx`, `effect0_apply_aura_name`, `effect0_misc_value`, `effect0_misc_value_b`, `effect0_trigger_spell`, `comments`) VALUES (37365,384,0,4,0,0,101,21,28,18,0,1,0,21757,64,0,'Power Converters: Summon Big Flavor Electromental (from cata)'),
 (62388,0,0,0,0,0,101,21,6,1,0,0,4,0,0,0,'Aura required for Demonic Circle 48020'),
 (37278,384,0,4,0,0,101,21,28,18,0,1,0,21737,64,0,'Power Converters: Summon Mini-Electromental (from cata)'),
 (37264,384,0,4,0,0,101,21,28,18,0,7,0,21729,64,0,'Power Converters: Summon Electromental (from cata)'),
@@ -87,7 +94,6 @@ INSERT INTO `spell_template` VALUES (37365,384,0,4,0,0,101,21,28,18,0,1,0,21757,
 (33242,384,0,4,0,0,101,21,28,18,0,7,0,19259,64,0,'summon Infernal Invader'),
 (11756,384,268435456,0,0,0,101,4,76,47,0,15,0,144064,0,0,'Summon Gordunni chest (COBALT)'),
 (19394,384,268435456,0,0,0,101,4,76,47,0,15,0,177681,0,0,'Summon Gordunni chest (JUNK)');
-
 /*!40000 ALTER TABLE `spell_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

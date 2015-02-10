@@ -33,7 +33,14 @@ CREATE TABLE `gameobject_questrelation` (
   PRIMARY KEY (`id`,`quest`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `gameobject_questrelation` VALUES (31,248),
+
+--
+-- Dumping data for table `gameobject_questrelation`
+--
+
+LOCK TABLES `gameobject_questrelation` WRITE;
+/*!40000 ALTER TABLE `gameobject_questrelation` DISABLE KEYS */;
+INSERT INTO `gameobject_questrelation` (`id`, `quest`) VALUES (31,248),
 (31,249),
 (34,140),
 (35,138),
@@ -446,7 +453,6 @@ INSERT INTO `gameobject_questrelation` VALUES (31,248),
 (194071,13463),
 (194072,13472),
 (194555,13629);
-
 /*!40000 ALTER TABLE `gameobject_questrelation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

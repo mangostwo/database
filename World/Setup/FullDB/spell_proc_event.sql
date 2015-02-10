@@ -48,7 +48,14 @@ CREATE TABLE `spell_proc_event` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_proc_event` VALUES (324,127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3),
+
+--
+-- Dumping data for table `spell_proc_event`
+--
+
+LOCK TABLES `spell_proc_event` WRITE;
+/*!40000 ALTER TABLE `spell_proc_event` DISABLE KEYS */;
+INSERT INTO `spell_proc_event` (`entry`, `SchoolMask`, `SpellFamilyName`, `SpellFamilyMaskA0`, `SpellFamilyMaskA1`, `SpellFamilyMaskA2`, `SpellFamilyMaskB0`, `SpellFamilyMaskB1`, `SpellFamilyMaskB2`, `SpellFamilyMaskC0`, `SpellFamilyMaskC1`, `SpellFamilyMaskC2`, `procFlags`, `procEx`, `ppmRate`, `CustomChance`, `Cooldown`) VALUES (324,127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3),
 (974,127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3),
 (3232,127,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0),
 (5952,0,8,0,0,0,0,1,0,0,0,0,0,0,0,0,0),
@@ -716,7 +723,6 @@ INSERT INTO `spell_proc_event` VALUES (324,127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3),
 (72413,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,60),
 (67712,127,0,0,0,0,0,0,0,0,0,0,0,2,0,0,2),
 (67758,127,0,0,0,0,0,0,0,0,0,0,0,2,0,0,2);
-
 /*!40000 ALTER TABLE `spell_proc_event` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

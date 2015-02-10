@@ -47,7 +47,14 @@ CREATE TABLE `dbscripts_on_creature_movement` (
   `comments` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `dbscripts_on_creature_movement` VALUES (1,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,'despawn self, this script is used by many creatures'),
+
+--
+-- Dumping data for table `dbscripts_on_creature_movement`
+--
+
+LOCK TABLES `dbscripts_on_creature_movement` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_creature_movement` DISABLE KEYS */;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES (1,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,'despawn self, this script is used by many creatures'),
 (143301,1,0,0,0,0,0,0,2000000141,2000000142,0,0,0,0,0,0,'corbett wp 1'),
 (143302,5,0,0,0,0,0,0,2000000143,2000000144,0,0,0,0,0,0,'corbett wp 7'),
 (143303,0,0,0,0,1427,10,1,2000000145,2000000146,0,0,0,0,0,0,'corbett at harlan'),
@@ -2111,7 +2118,6 @@ INSERT INTO `dbscripts_on_creature_movement` VALUES (1,0,18,0,0,0,0,0,0,0,0,0,0,
 (1685607,3,1,66,0,0,0,0,0,0,0,0,0,0,0,0,''),
 (1685607,6,1,16,0,0,0,0,0,0,0,0,0,0,0,0,''),
 (1685607,7,9,21210,180,0,0,0,0,0,0,0,0,0,0,0,'respawn gobject');
-
 /*!40000 ALTER TABLE `dbscripts_on_creature_movement` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

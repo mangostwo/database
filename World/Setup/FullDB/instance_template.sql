@@ -36,7 +36,14 @@ CREATE TABLE `instance_template` (
   PRIMARY KEY (`map`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `instance_template` VALUES (33,0,14,30,'instance_shadowfang_keep'),
+
+--
+-- Dumping data for table `instance_template`
+--
+
+LOCK TABLES `instance_template` WRITE;
+/*!40000 ALTER TABLE `instance_template` DISABLE KEYS */;
+INSERT INTO `instance_template` (`map`, `parent`, `levelMin`, `levelMax`, `ScriptName`) VALUES (33,0,14,30,'instance_shadowfang_keep'),
 (34,0,15,32,''),
 (36,0,10,20,'instance_deadmines'),
 (43,0,10,21,'instance_wailing_caverns'),
@@ -119,7 +126,6 @@ INSERT INTO `instance_template` VALUES (33,0,14,30,'instance_shadowfang_keep'),
 (724,0,80,0,'instance_ruby_sanctum'),
 (617,0,80,80,''),
 (618,0,80,80,'');
-
 /*!40000 ALTER TABLE `instance_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

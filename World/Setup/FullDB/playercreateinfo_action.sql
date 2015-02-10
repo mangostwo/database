@@ -36,7 +36,14 @@ CREATE TABLE `playercreateinfo_action` (
   PRIMARY KEY (`race`,`class`,`button`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `playercreateinfo_action` VALUES (1,1,0,6603,0),
+
+--
+-- Dumping data for table `playercreateinfo_action`
+--
+
+LOCK TABLES `playercreateinfo_action` WRITE;
+/*!40000 ALTER TABLE `playercreateinfo_action` DISABLE KEYS */;
+INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES (1,1,0,6603,0),
 (1,1,72,6603,0),
 (1,1,73,78,0),
 (1,1,82,59752,0),
@@ -391,7 +398,6 @@ INSERT INTO `playercreateinfo_action` VALUES (1,1,0,6603,0),
 (1,1,9,59752,0),
 (1,1,1,78,0),
 (11,6,11,41751,128);
-
 /*!40000 ALTER TABLE `playercreateinfo_action` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -39,7 +39,14 @@ CREATE TABLE `player_levelstats` (
   PRIMARY KEY (`race`,`class`,`level`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 PACK_KEYS=0 COMMENT='Stores levels stats.';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `player_levelstats` VALUES (1,1,1,23,20,22,20,20),
+
+--
+-- Dumping data for table `player_levelstats`
+--
+
+LOCK TABLES `player_levelstats` WRITE;
+/*!40000 ALTER TABLE `player_levelstats` DISABLE KEYS */;
+INSERT INTO `player_levelstats` (`race`, `class`, `level`, `str`, `agi`, `sta`, `inte`, `spi`) VALUES (1,1,1,23,20,22,20,20),
 (1,1,2,24,21,23,20,20),
 (1,1,3,26,22,24,20,21),
 (1,1,4,27,22,26,20,21),
@@ -4999,7 +5006,6 @@ INSERT INTO `player_levelstats` VALUES (1,1,1,23,20,22,20,20),
 (11,8,78,36,39,56,176,170),
 (11,8,79,36,40,57,179,173),
 (11,8,80,37,40,58,182,176);
-
 /*!40000 ALTER TABLE `player_levelstats` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

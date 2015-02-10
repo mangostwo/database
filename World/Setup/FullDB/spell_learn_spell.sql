@@ -34,7 +34,14 @@ CREATE TABLE `spell_learn_spell` (
   PRIMARY KEY (`entry`,`SpellID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Item System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_learn_spell` VALUES (53428,53341,1),
+
+--
+-- Dumping data for table `spell_learn_spell`
+--
+
+LOCK TABLES `spell_learn_spell` WRITE;
+/*!40000 ALTER TABLE `spell_learn_spell` DISABLE KEYS */;
+INSERT INTO `spell_learn_spell` (`entry`, `SpellID`, `Active`) VALUES (53428,53341,1),
 (5784,33388,1),
 (13819,33388,1),
 (23161,33391,1),
@@ -52,7 +59,6 @@ INSERT INTO `spell_learn_spell` VALUES (53428,53341,1),
 (20271,21084,1),
 (53407,21084,1),
 (53408,21084,1);
-
 /*!40000 ALTER TABLE `spell_learn_spell` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

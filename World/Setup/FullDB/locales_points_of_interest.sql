@@ -41,6 +41,12 @@ CREATE TABLE `locales_points_of_interest` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `locales_points_of_interest`
+--
+
+LOCK TABLES `locales_points_of_interest` WRITE;
+/*!40000 ALTER TABLE `locales_points_of_interest` DISABLE KEYS */;
 /*!40000 ALTER TABLE `locales_points_of_interest` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

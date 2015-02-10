@@ -37,7 +37,14 @@ CREATE TABLE `spell_target_position` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Spell System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_target_position` VALUES (442,129,2592.55,1107.5,51.29,4.74),
+
+--
+-- Dumping data for table `spell_target_position`
+--
+
+LOCK TABLES `spell_target_position` WRITE;
+/*!40000 ALTER TABLE `spell_target_position` DISABLE KEYS */;
+INSERT INTO `spell_target_position` (`id`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES (442,129,2592.55,1107.5,51.29,4.74),
 (444,1,-4658.12,-2526.35,82.9671,0),
 (446,109,-319.24,99.9,-131.85,3.19),
 (3561,0,-8998.14,861.254,29.6206,5.28),
@@ -650,7 +657,6 @@ INSERT INTO `spell_target_position` VALUES (442,129,2592.55,1107.5,51.29,4.74),
 (25871,531,-7997.19,979.192,-41.653,4.896),
 (25884,531,-8015.24,976.553,-41.647,4.947),
 (25004,1,7738.52,-2314.8,452.679,0);
-
 /*!40000 ALTER TABLE `spell_target_position` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -38,7 +38,14 @@ CREATE TABLE `skinning_loot_template` (
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `skinning_loot_template` VALUES (113,2318,39.2962,1,1,1,0),
+
+--
+-- Dumping data for table `skinning_loot_template`
+--
+
+LOCK TABLES `skinning_loot_template` WRITE;
+/*!40000 ALTER TABLE `skinning_loot_template` DISABLE KEYS */;
+INSERT INTO `skinning_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (113,2318,39.2962,1,1,1,0),
 (113,2934,60.7038,1,1,1,0),
 (118,2318,39.9457,1,1,1,0),
 (118,2934,60.0374,1,1,1,0),
@@ -3420,7 +3427,6 @@ INSERT INTO `skinning_loot_template` VALUES (113,2318,39.2962,1,1,1,0),
 (32517,33568,0,1,1,3,0),
 (32517,44128,2,1,1,1,0),
 (70201,38558,25,1,1,5,0);
-
 /*!40000 ALTER TABLE `skinning_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

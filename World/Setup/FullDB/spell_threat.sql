@@ -35,7 +35,14 @@ CREATE TABLE `spell_threat` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_threat` VALUES (78,20,1,0),
+
+--
+-- Dumping data for table `spell_threat`
+--
+
+LOCK TABLES `spell_threat` WRITE;
+/*!40000 ALTER TABLE `spell_threat` DISABLE KEYS */;
+INSERT INTO `spell_threat` (`entry`, `Threat`, `multiplier`, `ap_bonus`) VALUES (78,20,1,0),
 (284,39,1,0),
 (285,59,1,0),
 (770,108,1,0),
@@ -145,7 +152,6 @@ INSERT INTO `spell_threat` VALUES (78,20,1,0),
 (99,15,1,0),
 (48567,409,0.5,0),
 (33745,182,0.5,0);
-
 /*!40000 ALTER TABLE `spell_threat` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

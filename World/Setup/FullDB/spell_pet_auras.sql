@@ -35,7 +35,14 @@ CREATE TABLE `spell_pet_auras` (
   PRIMARY KEY (`spell`,`effectId`,`pet`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_pet_auras` VALUES (19028,0,0,25228),
+
+--
+-- Dumping data for table `spell_pet_auras`
+--
+
+LOCK TABLES `spell_pet_auras` WRITE;
+/*!40000 ALTER TABLE `spell_pet_auras` DISABLE KEYS */;
+INSERT INTO `spell_pet_auras` (`spell`, `effectId`, `pet`, `aura`) VALUES (19028,0,0,25228),
 (19578,0,0,19579),
 (20895,0,0,24529),
 (28757,0,0,28758),
@@ -80,7 +87,6 @@ INSERT INTO `spell_pet_auras` VALUES (19028,0,0,25228),
 (56318,0,0,57458),
 (56318,1,0,57475),
 (58228,0,19668,57989);
-
 /*!40000 ALTER TABLE `spell_pet_auras` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

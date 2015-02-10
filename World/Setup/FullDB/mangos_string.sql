@@ -41,7 +41,14 @@ CREATE TABLE `mangos_string` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `mangos_string` VALUES (1,'You should select a character or a creature.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
+--
+-- Dumping data for table `mangos_string`
+--
+
+LOCK TABLES `mangos_string` WRITE;
+/*!40000 ALTER TABLE `mangos_string` DISABLE KEYS */;
+INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES (1,'You should select a character or a creature.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (2,'You should select a creature.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (5,'There is no help for that command',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (6,'There is no such command',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -906,7 +913,6 @@ INSERT INTO `mangos_string` VALUES (1,'You should select a character or a creatu
 (1194,'Current State Information: GOState %u, LootState %u. Collision %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1195,'Current State Information: GOState %u, LootState %u. Collision %s, (door %s by default)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1509,'Pool %u not found (Maximal pool entry is %u)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-
 /*!40000 ALTER TABLE `mangos_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

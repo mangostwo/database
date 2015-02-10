@@ -33,7 +33,14 @@ CREATE TABLE `game_event_quest` (
   PRIMARY KEY (`quest`,`event`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Game event system';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `game_event_quest` VALUES (171,10),
+
+--
+-- Dumping data for table `game_event_quest`
+--
+
+LOCK TABLES `game_event_quest` WRITE;
+/*!40000 ALTER TABLE `game_event_quest` DISABLE KEYS */;
+INSERT INTO `game_event_quest` (`quest`, `event`) VALUES (171,10),
 (172,10),
 (1468,10),
 (8356,12),
@@ -71,7 +78,6 @@ INSERT INTO `game_event_quest` VALUES (171,10),
 (24803,24),
 (24806,24),
 (24806,40);
-
 /*!40000 ALTER TABLE `game_event_quest` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

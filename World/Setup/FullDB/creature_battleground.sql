@@ -34,7 +34,14 @@ CREATE TABLE `creature_battleground` (
   PRIMARY KEY (`guid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Creature battleground indexing system';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_battleground` VALUES (150000,2,0),
+
+--
+-- Dumping data for table `creature_battleground`
+--
+
+LOCK TABLES `creature_battleground` WRITE;
+/*!40000 ALTER TABLE `creature_battleground` DISABLE KEYS */;
+INSERT INTO `creature_battleground` (`guid`, `event1`, `event2`) VALUES (150000,2,0),
 (150001,2,0),
 (150002,0,3),
 (150003,0,4),
@@ -942,7 +949,6 @@ INSERT INTO `creature_battleground` VALUES (150000,2,0),
 (151029,46,2),
 (151030,46,0),
 (151031,46,1);
-
 /*!40000 ALTER TABLE `creature_battleground` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

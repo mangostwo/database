@@ -35,7 +35,14 @@ CREATE TABLE `dungeonfinder_rewards` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `dungeonfinder_rewards` VALUES (1,15,155,1750),
+
+--
+-- Dumping data for table `dungeonfinder_rewards`
+--
+
+LOCK TABLES `dungeonfinder_rewards` WRITE;
+/*!40000 ALTER TABLE `dungeonfinder_rewards` DISABLE KEYS */;
+INSERT INTO `dungeonfinder_rewards` (`id`, `level`, `base_xp_reward`, `base_monetary_reward`) VALUES (1,15,155,1750),
 (2,16,1525,7650),
 (3,17,1525,7650),
 (4,18,1525,7650),
@@ -101,8 +108,7 @@ INSERT INTO `dungeonfinder_rewards` VALUES (1,15,155,1750),
 (64,78,16550,74000),
 (65,79,16550,74000),
 (66,80,0,99300);
-
-/*!40000 ALTER TABLE `dungeonfinder_requirements` ENABLE KEYS */;
+/*!40000 ALTER TABLE `dungeonfinder_rewards` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

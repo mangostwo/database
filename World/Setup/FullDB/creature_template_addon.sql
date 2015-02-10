@@ -39,7 +39,14 @@ CREATE TABLE `creature_template_addon` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_template_addon` VALUES (1356,0,0,1,1,0,0,NULL),
+
+--
+-- Dumping data for table `creature_template_addon`
+--
+
+LOCK TABLES `creature_template_addon` WRITE;
+/*!40000 ALTER TABLE `creature_template_addon` DISABLE KEYS */;
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES (1356,0,0,1,1,0,0,NULL),
 (6,0,0,1,0,0,0,NULL),
 (30,0,0,1,0,0,0,NULL),
 (38,0,0,1,0,0,0,NULL),
@@ -13696,7 +13703,6 @@ INSERT INTO `creature_template_addon` VALUES (1356,0,0,1,1,0,0,NULL),
 (35323,29261,0,1,0,0,0,'64100'),
 (35325,29259,0,1,0,0,0,'64100'),
 (35327,29257,0,1,0,0,0,'64100');
-
 /*!40000 ALTER TABLE `creature_template_addon` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

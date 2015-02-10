@@ -47,7 +47,14 @@ CREATE TABLE `dbscripts_on_go_use` (
   `comments` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `dbscripts_on_go_use` VALUES (35843,2,10,11142,900000,0,0,0,0,0,0,0,3496.26,-3295.4,130.98,5.34,''),
+
+--
+-- Dumping data for table `dbscripts_on_go_use`
+--
+
+LOCK TABLES `dbscripts_on_go_use` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_go_use` DISABLE KEYS */;
+INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES (35843,2,10,11142,900000,0,0,0,0,0,0,0,3496.26,-3295.4,130.98,5.34,''),
 (35843,2,10,11142,900000,0,0,0,0,0,0,0,3503.16,-3294.9,131.09,4.28,''),
 (35843,2,10,11142,900000,0,0,0,0,0,0,0,34.93,-3300.28,130.47,0.07,''),
 (35844,2,10,11142,900000,0,0,0,0,0,0,0,3568.5,-3356.91,131.06,2.07,''),
@@ -66,7 +73,6 @@ INSERT INTO `dbscripts_on_go_use` VALUES (35843,2,10,11142,900000,0,0,0,0,0,0,0,
 (21608,5,10,15083,900000,0,0,0,0,0,0,0,-11901.3,-1906.52,65.36,0.87,''),
 (21609,5,10,15084,900000,0,0,0,0,0,0,0,-11901.3,-1906.52,65.36,0.87,''),
 (21610,5,10,15085,900000,0,0,0,0,0,0,0,-11901.3,-1906.52,65.36,0.87,'');
-
 /*!40000 ALTER TABLE `dbscripts_on_go_use` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

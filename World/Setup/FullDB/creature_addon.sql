@@ -39,7 +39,14 @@ CREATE TABLE `creature_addon` (
   PRIMARY KEY (`guid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_addon` VALUES (46,0,0,1,16,0,0,'1244'),
+
+--
+-- Dumping data for table `creature_addon`
+--
+
+LOCK TABLES `creature_addon` WRITE;
+/*!40000 ALTER TABLE `creature_addon` DISABLE KEYS */;
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES (46,0,0,1,16,0,0,'1244'),
 (133,0,0,1,16,0,0,'1243'),
 (518,0,1536,1,40,0,0,'24529'),
 (132582,0,65536,1,0,0,0,'37411'),
@@ -17380,7 +17387,6 @@ INSERT INTO `creature_addon` VALUES (46,0,0,1,16,0,0,'1244'),
 (83201,0,0,1,0,28,0,NULL),
 (83182,0,0,1,0,28,0,NULL),
 (83183,0,0,1,0,28,0,NULL);
-
 /*!40000 ALTER TABLE `creature_addon` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

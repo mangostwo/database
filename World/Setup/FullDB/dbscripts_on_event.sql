@@ -47,7 +47,14 @@ CREATE TABLE `dbscripts_on_event` (
   `comments` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `dbscripts_on_event` VALUES (259,2,10,1770,300000,0,0,0,0,0,0,0,881.63,1230.37,47.83,3.1,''),
+
+--
+-- Dumping data for table `dbscripts_on_event`
+--
+
+LOCK TABLES `dbscripts_on_event` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_event` DISABLE KEYS */;
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES (259,2,10,1770,300000,0,0,0,0,0,0,0,881.63,1230.37,47.83,3.1,''),
 (2488,2,10,7273,300000,0,0,0,0,0,0,0,1665.56,1187.32,6.64,3.9,''),
 (1785,0,10,5676,180000,0,0,0,0,0,0,0,1704.61,41.9147,-63.8433,0.435896,'quest 1471'),
 (1787,0,10,5676,180000,0,0,0,0,0,0,0,1806.13,-4372.67,-17.4888,4.41785,'quest 1504'),
@@ -895,7 +902,6 @@ INSERT INTO `dbscripts_on_event` VALUES (259,2,10,1770,300000,0,0,0,0,0,0,0,881.
 (13256,102,20,0,0,20617,72896,23,0,0,0,0,0,0,0,0,'movement chenged to 0:idle'),
 (13256,102,20,0,0,20617,72886,23,0,0,0,0,0,0,0,0,'movement chenged to 0:idle'),
 (13256,105,21,0,0,20781,73426,16,0,0,0,0,0,0,0,0,'20781 - unactive');
-
 /*!40000 ALTER TABLE `dbscripts_on_event` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

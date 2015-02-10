@@ -35,7 +35,14 @@ CREATE TABLE `vehicle_accessory` (
   PRIMARY KEY (`vehicle_entry`,`seat`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Vehicle Accessory (passengers that are auto-boarded onto a vehicle)';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `vehicle_accessory` VALUES (27241,0,27268,'Risen Gryphon'),
+
+--
+-- Dumping data for table `vehicle_accessory`
+--
+
+LOCK TABLES `vehicle_accessory` WRITE;
+/*!40000 ALTER TABLE `vehicle_accessory` DISABLE KEYS */;
+INSERT INTO `vehicle_accessory` (`vehicle_entry`, `seat`, `accessory_entry`, `comment`) VALUES (27241,0,27268,'Risen Gryphon'),
 (27626,0,27627,'Tatjana\'s Horse'),
 (27661,0,27662,'Wintergarde Gryphon'),
 (28018,0,28006,'Thiassi the Light Bringer'),
@@ -157,7 +164,6 @@ INSERT INTO `vehicle_accessory` VALUES (27241,0,27268,'Risen Gryphon'),
 (30174,0,30175,'Hyldsmeet Bear Rider'),
 (40081,0,40083,'Orb Carrier'),
 (40081,1,40100,'Orb Carrier');
-
 /*!40000 ALTER TABLE `vehicle_accessory` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

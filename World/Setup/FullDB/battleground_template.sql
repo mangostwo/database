@@ -38,7 +38,14 @@ CREATE TABLE `battleground_template` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `battleground_template` VALUES (1,40,40,611,2.72532,610,2.27452),
+
+--
+-- Dumping data for table `battleground_template`
+--
+
+LOCK TABLES `battleground_template` WRITE;
+/*!40000 ALTER TABLE `battleground_template` DISABLE KEYS */;
+INSERT INTO `battleground_template` (`id`, `MinPlayersPerTeam`, `MaxPlayersPerTeam`, `AllianceStartLoc`, `AllianceStartO`, `HordeStartLoc`, `HordeStartO`) VALUES (1,40,40,611,2.72532,610,2.27452),
 (2,10,10,769,3.14159,770,0.00391),
 (3,15,15,890,3.91992,889,0.88828),
 (4,5,5,929,0,936,3.14159),
@@ -51,7 +58,6 @@ INSERT INTO `battleground_template` VALUES (1,40,40,611,2.72532,610,2.27452),
 (11,5,5,1364,0,1365,0),
 (30,40,40,1485,0,1486,0),
 (32,5,40,0,0,0,0);
-
 /*!40000 ALTER TABLE `battleground_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

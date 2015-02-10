@@ -21,7 +21,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `player_xp_for_level`
+-- Table structure for table `playercreateinfo`
 --
 
 DROP TABLE IF EXISTS `playercreateinfo`;
@@ -39,7 +39,14 @@ CREATE TABLE `playercreateinfo` (
   PRIMARY KEY (`race`,`class`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `playercreateinfo` VALUES (1,1,0,12,-8949.95,-132.493,83.5312,0),
+
+--
+-- Dumping data for table `playercreateinfo`
+--
+
+LOCK TABLES `playercreateinfo` WRITE;
+/*!40000 ALTER TABLE `playercreateinfo` DISABLE KEYS */;
+INSERT INTO `playercreateinfo` (`race`, `class`, `map`, `zone`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (1,1,0,12,-8949.95,-132.493,83.5312,0),
 (1,2,0,12,-8949.95,-132.493,83.5312,0),
 (1,4,0,12,-8949.95,-132.493,83.5312,0),
 (1,5,0,12,-8949.95,-132.493,83.5312,0),
@@ -101,7 +108,6 @@ INSERT INTO `playercreateinfo` VALUES (1,1,0,12,-8949.95,-132.493,83.5312,0),
 (8,6,609,4298,2355.05,-5661.7,426.026,3.65997),
 (10,6,609,4298,2355.84,-5664.77,426.028,3.65997),
 (11,6,609,4298,2358.17,-5663.21,426.027,3.65997);
-
 /*!40000 ALTER TABLE `playercreateinfo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

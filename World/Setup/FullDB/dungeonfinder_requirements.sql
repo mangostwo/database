@@ -41,7 +41,14 @@ CREATE TABLE `dungeonfinder_requirements` (
   PRIMARY KEY (`mapId`,`difficulty`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Dungeon Finder Requirements';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `dungeonfinder_requirements` VALUES (269,0,0,0,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" before entering the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
+
+--
+-- Dumping data for table `dungeonfinder_requirements`
+--
+
+LOCK TABLES `dungeonfinder_requirements` WRITE;
+/*!40000 ALTER TABLE `dungeonfinder_requirements` DISABLE KEYS */;
+INSERT INTO `dungeonfinder_requirements` (`mapId`, `difficulty`, `min_item_level`, `item`, `item_2`, `alliance_quest`, `horde_quest`, `achievement`, `quest_incomplete_text`, `comment`) VALUES (269,0,0,0,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" before entering the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
 (269,1,0,30635,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" and be level 70 before entering the Heroic difficulty of the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
 (540,1,0,30637,30622,0,0,0,NULL,'The Shattered Halls (Entrance)'),
 (542,1,0,30637,30622,0,0,0,NULL,'The Blood Furnace (Entrance)'),
@@ -81,7 +88,6 @@ INSERT INTO `dungeonfinder_requirements` VALUES (269,0,0,0,0,10285,10285,0,'You 
 (658,1,200,0,0,24499,24511,0,NULL,'Pit of Saron (Entrance)'),
 (668,0,219,0,0,24710,24712,0,NULL,'Halls of Reflection (Entrance)'),
 (668,1,219,0,0,24710,24712,0,NULL,'Halls of Reflection (Entrance)');
-
 /*!40000 ALTER TABLE `dungeonfinder_requirements` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

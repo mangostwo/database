@@ -47,7 +47,14 @@ CREATE TABLE `dbscripts_on_spell` (
   `comments` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `dbscripts_on_spell` VALUES (25650,0,6,530,0,0,0,0,0,0,0,0,-589.976,4078.31,143.258,4.48305,''),
+
+--
+-- Dumping data for table `dbscripts_on_spell`
+--
+
+LOCK TABLES `dbscripts_on_spell` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_spell` DISABLE KEYS */;
+INSERT INTO `dbscripts_on_spell` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES (25650,0,6,530,0,0,0,0,0,0,0,0,-589.976,4078.31,143.258,4.48305,''),
 (25652,0,6,530,0,0,0,0,0,0,0,0,-594,4079.26,93.85,5.28,''),
 (25652,0,6,530,0,0,0,0,0,0,0,0,-589.976,4078.31,143.258,4.48305,''),
 (25650,0,6,530,0,0,0,0,0,0,0,0,-593.429,4077.95,93.8245,5.32893,''),
@@ -220,7 +227,6 @@ INSERT INTO `dbscripts_on_spell` VALUES (25650,0,6,530,0,0,0,0,0,0,0,0,-589.976,
 (42436,1,15,43126,0,0,0,10,0,0,0,0,0,0,0,0,'Cast Mug Target Practice'),
 (42436,1,15,43073,0,0,0,10,0,0,0,0,0,0,0,0,'Cast Mug Target Practice'),
 (53435,0,15,53436,0,0,0,6,0,0,0,0,0,0,0,0,'Cast Teleport to CoT Stratholme Phase 4');
-
 /*!40000 ALTER TABLE `dbscripts_on_spell` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

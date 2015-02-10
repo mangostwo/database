@@ -39,7 +39,8 @@ CREATE TABLE `areatrigger_involvedrelation` (
 --
 
 LOCK TABLES `areatrigger_involvedrelation` WRITE;
-INSERT INTO `areatrigger_involvedrelation` VALUES (2946,6421),
+/*!40000 ALTER TABLE `areatrigger_involvedrelation` DISABLE KEYS */;
+INSERT INTO `areatrigger_involvedrelation` (`id`, `quest`) VALUES (2946,6421),
 (3367,6025),
 (2327,4842),
 (2486,4811),
@@ -94,7 +95,6 @@ INSERT INTO `areatrigger_involvedrelation` VALUES (2946,6421),
 (5401,13607),
 (822,2240),
 (3991,1658);
-
 /*!40000 ALTER TABLE `areatrigger_involvedrelation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

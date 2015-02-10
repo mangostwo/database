@@ -33,7 +33,14 @@ CREATE TABLE `game_event_creature` (
   PRIMARY KEY (`guid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `game_event_creature` VALUES (86166,2),
+
+--
+-- Dumping data for table `game_event_creature`
+--
+
+LOCK TABLES `game_event_creature` WRITE;
+/*!40000 ALTER TABLE `game_event_creature` DISABLE KEYS */;
+INSERT INTO `game_event_creature` (`guid`, `event`) VALUES (86166,2),
 (86167,2),
 (54704,18),
 (86180,2),
@@ -3425,7 +3432,6 @@ INSERT INTO `game_event_creature` VALUES (86166,2),
 (140591,1),
 (140592,1),
 (140593,1);
-
 /*!40000 ALTER TABLE `game_event_creature` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

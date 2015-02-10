@@ -37,7 +37,14 @@ CREATE TABLE `creature_model_info` (
   PRIMARY KEY (`modelid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Creature System (Model related info)';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_model_info` VALUES (4,2,3,2,0,0),
+
+--
+-- Dumping data for table `creature_model_info`
+--
+
+LOCK TABLES `creature_model_info` WRITE;
+/*!40000 ALTER TABLE `creature_model_info` DISABLE KEYS */;
+INSERT INTO `creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`, `gender`, `modelid_other_gender`, `modelid_alternative`) VALUES (4,2,3,2,0,0),
 (13,0,0,2,0,0),
 (14,0,0,2,0,0),
 (15,0,0,2,0,0),
@@ -24192,7 +24199,6 @@ INSERT INTO `creature_model_info` VALUES (4,2,3,2,0,0),
 (31661,1,1.5,0,0,0),
 (31662,1,1.5,0,0,0),
 (29205,1,1.5,0,0,0);
-
 /*!40000 ALTER TABLE `creature_model_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

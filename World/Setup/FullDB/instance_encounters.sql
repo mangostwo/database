@@ -35,7 +35,14 @@ CREATE TABLE `instance_encounters` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `instance_encounters` VALUES (161,0,644,0),
+
+--
+-- Dumping data for table `instance_encounters`
+--
+
+LOCK TABLES `instance_encounters` WRITE;
+/*!40000 ALTER TABLE `instance_encounters` DISABLE KEYS */;
+INSERT INTO `instance_encounters` (`entry`, `creditType`, `creditEntry`, `lastEncounterDungeon`) VALUES (161,0,644,0),
 (162,0,643,0),
 (163,0,1763,0),
 (164,0,646,0),
@@ -647,7 +654,6 @@ INSERT INTO `instance_encounters` VALUES (161,0,644,0),
 (892,0,39747,0),
 (893,0,39746,0),
 (894,0,39746,0);
-
 /*!40000 ALTER TABLE `instance_encounters` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

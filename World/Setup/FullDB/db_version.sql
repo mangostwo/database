@@ -31,11 +31,17 @@ CREATE TABLE `db_version` (
   `version` varchar(120) DEFAULT NULL,
   `creature_ai_version` varchar(120) DEFAULT NULL,
   `cache_id` int(10) DEFAULT '0',
-  `required_20141028_mangos_spell_template` bit(1) DEFAULT NULL
+  `required_20000_11_Creature_Template_repair` bit(1) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Used DB version notes';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `db_version` VALUES ('UDB 0.12.2 (407) for CMaNGOS 12735 with SD2 SQL for rev. 3041','ACID 3.3.5a (Wrath of the Lich King) for CMaNGOS-WOTLK (3.3.5a Client)',407,NULL);
 
+--
+-- Dumping data for table `db_version`
+--
+
+LOCK TABLES `db_version` WRITE;
+/*!40000 ALTER TABLE `db_version` DISABLE KEYS */;
+INSERT INTO `db_version` (`version`, `creature_ai_version`, `cache_id`, `required_20000_11_Creature_Template_repair`) VALUES ('Based on UDB 0.12.2 (407), with Scripting SQL','ACID 3.3.5a (Wrath of the Lich King)',407,NULL);
 /*!40000 ALTER TABLE `db_version` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -33,7 +33,14 @@ CREATE TABLE `creature_involvedrelation` (
   PRIMARY KEY (`id`,`quest`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Creature System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_involvedrelation` VALUES (196,33),
+
+--
+-- Dumping data for table `creature_involvedrelation`
+--
+
+LOCK TABLES `creature_involvedrelation` WRITE;
+/*!40000 ALTER TABLE `creature_involvedrelation` DISABLE KEYS */;
+INSERT INTO `creature_involvedrelation` (`id`, `quest`) VALUES (196,33),
 (196,5261),
 (197,7),
 (197,15),
@@ -7933,7 +7940,6 @@ INSERT INTO `creature_involvedrelation` VALUES (196,33),
 (40391,25470),
 (40391,25480),
 (40429,26013);
-
 /*!40000 ALTER TABLE `creature_involvedrelation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -33,7 +33,14 @@ CREATE TABLE `player_xp_for_level` (
   PRIMARY KEY (`lvl`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `player_xp_for_level` VALUES (1,400),
+
+--
+-- Dumping data for table `player_xp_for_level`
+--
+
+LOCK TABLES `player_xp_for_level` WRITE;
+/*!40000 ALTER TABLE `player_xp_for_level` DISABLE KEYS */;
+INSERT INTO `player_xp_for_level` (`lvl`, `xp_for_next_level`) VALUES (1,400),
 (2,900),
 (3,1400),
 (4,2100),
@@ -112,7 +119,6 @@ INSERT INTO `player_xp_for_level` VALUES (1,400),
 (77,1637400),
 (78,1653900),
 (79,1670800);
-
 /*!40000 ALTER TABLE `player_xp_for_level` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

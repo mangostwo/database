@@ -33,7 +33,14 @@ CREATE TABLE `npc_gossip` (
   PRIMARY KEY (`npc_guid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `npc_gossip` VALUES (29,5054),
+
+--
+-- Dumping data for table `npc_gossip`
+--
+
+LOCK TABLES `npc_gossip` WRITE;
+/*!40000 ALTER TABLE `npc_gossip` DISABLE KEYS */;
+INSERT INTO `npc_gossip` (`npc_guid`, `textid`) VALUES (29,5054),
 (31,5031),
 (32,5118),
 (36,2137),
@@ -3397,7 +3404,6 @@ INSERT INTO `npc_gossip` VALUES (29,5054),
 (116139,12795),
 (105877,12846),
 (37096,3214);
-
 /*!40000 ALTER TABLE `npc_gossip` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

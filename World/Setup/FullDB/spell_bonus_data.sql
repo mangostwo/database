@@ -37,7 +37,14 @@ CREATE TABLE `spell_bonus_data` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_bonus_data` VALUES (5185,1.6104,0,0,0,'Druid - Healing Touch'),
+
+--
+-- Dumping data for table `spell_bonus_data`
+--
+
+LOCK TABLES `spell_bonus_data` WRITE;
+/*!40000 ALTER TABLE `spell_bonus_data` DISABLE KEYS */;
+INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`, `ap_dot_bonus`, `comments`) VALUES (5185,1.6104,0,0,0,'Druid - Healing Touch'),
 (33763,0,0.09518,0,0,'Druid - Lifebloom'),
 (8936,0.539,0.188,0,0,'Druid - Regrowth'),
 (18562,0,0,0,0,'Druid - Swiftmend'),
@@ -184,7 +191,6 @@ INSERT INTO `spell_bonus_data` VALUES (5185,1.6104,0,0,0,'Druid - Healing Touch'
 (11538,0,0,0,0,'Item - Six Demon Bag - Frostbolt'),
 (21179,0,0,0,0,'Item - Six Demon Bag - Chain Lightning'),
 (64569,0,0,0,0,'Item - Blood Reserve');
-
 /*!40000 ALTER TABLE `spell_bonus_data` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

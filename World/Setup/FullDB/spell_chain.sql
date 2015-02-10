@@ -36,7 +36,14 @@ CREATE TABLE `spell_chain` (
   PRIMARY KEY (`spell_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Spell Additinal Data';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_chain` VALUES (10,0,10,1,0),
+
+--
+-- Dumping data for table `spell_chain`
+--
+
+LOCK TABLES `spell_chain` WRITE;
+/*!40000 ALTER TABLE `spell_chain` DISABLE KEYS */;
+INSERT INTO `spell_chain` (`spell_id`, `prev_spell`, `first_spell`, `rank`, `req_spell`) VALUES (10,0,10,1,0),
 (6141,10,10,2,0),
 (8427,6141,10,3,0),
 (10185,8427,10,4,0),
@@ -1681,7 +1688,6 @@ INSERT INTO `spell_chain` VALUES (10,0,10,1,0),
 (58765,58764,5672,9,0),
 (53672,0,53672,1,0),
 (54149,53672,53672,2,0);
-
 /*!40000 ALTER TABLE `spell_chain` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

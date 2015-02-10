@@ -36,7 +36,14 @@ CREATE TABLE `pool_gameobject` (
   KEY `pool_idx` (`pool_entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `pool_gameobject` VALUES (21,975,0,'Ragveil zone 3521, node 1'),
+
+--
+-- Dumping data for table `pool_gameobject`
+--
+
+LOCK TABLES `pool_gameobject` WRITE;
+/*!40000 ALTER TABLE `pool_gameobject` DISABLE KEYS */;
+INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES (21,975,0,'Ragveil zone 3521, node 1'),
 (96,1,0,''),
 (456,951,0,'Silverleaf zone 40, node 1'),
 (458,961,0,'Silverleaf zone 148, node 1'),
@@ -22136,9 +22143,9 @@ INSERT INTO `pool_gameobject` VALUES (21,975,0,'Ragveil zone 3521, node 1'),
 (78409,6579,10,'Mineral Spawn Point 63 - Iron'),
 (78410,6579,10,'Mineral Spawn Point 63 - Gold'),
 (78411,6579,7,'Mineral Spawn Point 63 - Truesilver'),
-(78412,6579,3,'Mineral Spawn Point 63 - Silver'),
-(78413,6580,0,'Mineral Spawn Point 64 - Mithril');
-INSERT INTO `pool_gameobject` VALUES (78414,6580,30,'Mineral Spawn Point 64 - Small Thorium'),
+(78412,6579,3,'Mineral Spawn Point 63 - Silver');
+INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES (78413,6580,0,'Mineral Spawn Point 64 - Mithril'),
+(78414,6580,30,'Mineral Spawn Point 64 - Small Thorium'),
 (78415,6580,10,'Mineral Spawn Point 64 - Iron'),
 (78416,6580,10,'Mineral Spawn Point 64 - Gold'),
 (78417,6580,7,'Mineral Spawn Point 64 - Truesilver'),
@@ -34797,7 +34804,6 @@ INSERT INTO `pool_gameobject` VALUES (78414,6580,30,'Mineral Spawn Point 64 - Sm
 (39914,25466,0,'185210 - Cursed Egg #22'),
 (39916,25467,0,'185211 - Cursed Egg #23'),
 (39917,25467,0,'185210 - Cursed Egg #24');
-
 /*!40000 ALTER TABLE `pool_gameobject` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

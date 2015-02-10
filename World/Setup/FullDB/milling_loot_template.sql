@@ -38,7 +38,14 @@ CREATE TABLE `milling_loot_template` (
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `milling_loot_template` VALUES (2449,11900,100,0,-11900,1,0),
+
+--
+-- Dumping data for table `milling_loot_template`
+--
+
+LOCK TABLES `milling_loot_template` WRITE;
+/*!40000 ALTER TABLE `milling_loot_template` DISABLE KEYS */;
+INSERT INTO `milling_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (2449,11900,100,0,-11900,1,0),
 (2447,11900,100,0,-11900,1,0),
 (765,11900,100,0,-11900,1,0),
 (2450,11901,100,0,-11901,1,0),
@@ -83,7 +90,6 @@ INSERT INTO `milling_loot_template` VALUES (2449,11900,100,0,-11900,1,0),
 (36904,11907,100,0,-11907,1,0),
 (39970,11907,100,0,-11907,1,0),
 (39969,11907,100,0,-11907,1,0);
-
 /*!40000 ALTER TABLE `milling_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -38,7 +38,14 @@ CREATE TABLE `fishing_loot_template` (
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `fishing_loot_template` VALUES (3496,11002,100,1,-11002,1,0),
+
+--
+-- Dumping data for table `fishing_loot_template`
+--
+
+LOCK TABLES `fishing_loot_template` WRITE;
+/*!40000 ALTER TABLE `fishing_loot_template` DISABLE KEYS */;
+INSERT INTO `fishing_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (3496,11002,100,1,-11002,1,0),
 (3489,11002,100,1,-11002,1,0),
 (115,11003,100,1,-11003,1,0),
 (2,11003,100,1,-11003,1,0),
@@ -294,7 +301,6 @@ INSERT INTO `fishing_loot_template` VALUES (3496,11002,100,1,-11002,1,0),
 (0,45197,5,1,1,1,0),
 (0,45202,5,1,1,1,0),
 (3479,11002,100,1,-11002,1,0);
-
 /*!40000 ALTER TABLE `fishing_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

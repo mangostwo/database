@@ -47,7 +47,14 @@ CREATE TABLE `dbscripts_on_gossip` (
   `comments` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `dbscripts_on_gossip` VALUES (10371,0,15,63624,0,0,0,6,0,0,0,0,0,0,0,0,'purchase dual cast'),
+
+--
+-- Dumping data for table `dbscripts_on_gossip`
+--
+
+LOCK TABLES `dbscripts_on_gossip` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_gossip` DISABLE KEYS */;
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES (10371,0,15,63624,0,0,0,6,0,0,0,0,0,0,0,0,'purchase dual cast'),
 (10025,0,15,58349,0,0,0,0,0,0,0,0,0,0,0,0,''),
 (10948,0,15,70648,0,0,0,0,0,0,0,0,0,0,0,0,''),
 (10976,0,15,71450,0,0,0,0,0,0,0,0,0,0,0,0,''),
@@ -623,7 +630,6 @@ INSERT INTO `dbscripts_on_gossip` VALUES (10371,0,15,63624,0,0,0,6,0,0,0,0,0,0,0
 (8081,6,22,17,2,0,0,0,0,0,0,0,0,0,0,0,'Faction change'),
 (8081,8,26,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
 (476402,1,0,0,0,0,0,0,2000000259,0,0,0,0,0,0,0,'');
-
 /*!40000 ALTER TABLE `dbscripts_on_gossip` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

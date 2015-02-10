@@ -34,7 +34,14 @@ CREATE TABLE `transports` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Transports';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `transports` VALUES (176495,'Undercity, Tirisfal Glades and Grom\'gol Base Camp, Stranglethorn Vale (\"The Purple Princess\")',315026),
+
+--
+-- Dumping data for table `transports`
+--
+
+LOCK TABLES `transports` WRITE;
+/*!40000 ALTER TABLE `transports` DISABLE KEYS */;
+INSERT INTO `transports` (`entry`, `name`, `period`) VALUES (176495,'Undercity, Tirisfal Glades and Grom\'gol Base Camp, Stranglethorn Vale (\"The Purple Princess\")',315026),
 (176310,'Stormwind Harbor and Auberdine, Darkshore (\"Ship (The Bravery)\")',234510),
 (176244,'Rut\'theran Village, Teldrassil and Auberdine, Darkshore (\"The Moonspray\")',312317),
 (176231,'Menethil Harbor, Wetlands and Theramore Isle, Dustwallow Marsh (\"The Lady Mehley\")',230162),
@@ -60,7 +67,6 @@ INSERT INTO `transports` VALUES (176495,'Undercity, Tirisfal Glades and Grom\'go
 (201598,'The Skybreaker',23970),
 (195121,'IOC - Alliance Gunship',118797),
 (195276,'IOC - Horde Gunship',115661);
-
 /*!40000 ALTER TABLE `transports` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -35,7 +35,14 @@ CREATE TABLE `quest_poi_points` (
   KEY `idx_poip` (`questId`,`poiId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `quest_poi_points` VALUES (1,0,2148,-5252),
+
+--
+-- Dumping data for table `quest_poi_points`
+--
+
+LOCK TABLES `quest_poi_points` WRITE;
+/*!40000 ALTER TABLE `quest_poi_points` DISABLE KEYS */;
+INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES (1,0,2148,-5252),
 (2,0,2148,-2816),
 (2,1,2311,-2555),
 (5,0,-10499,-1158),
@@ -49859,9 +49866,9 @@ INSERT INTO `quest_poi_points` VALUES (1,0,2148,-5252),
 (12963,21,-185,-5086),
 (12963,21,-212,-5143),
 (12963,21,-149,-5181),
-(12963,21,-119,-5183),
-(12963,22,2116,-3382);
-INSERT INTO `quest_poi_points` VALUES (12963,22,2147,-3374),
+(12963,21,-119,-5183);
+INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES (12963,22,2116,-3382),
+(12963,22,2147,-3374),
 (12963,22,2177,-3306),
 (12963,22,2148,-3221),
 (12963,22,2134,-3189),
@@ -56448,7 +56455,6 @@ INSERT INTO `quest_poi_points` VALUES (12963,22,2147,-3374),
 (25393,0,-5162,715),
 (25393,1,-4828,-1257),
 (26012,0,3529,274);
-
 /*!40000 ALTER TABLE `quest_poi_points` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

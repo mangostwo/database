@@ -39,7 +39,14 @@ CREATE TABLE `achievement_reward` (
   PRIMARY KEY (`entry`,`gender`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `achievement_reward` VALUES (45,2,0,0,43348,28070,'You\'ve Been Around!','Well, look at ye!\n\nAnd I thought I had seen some things in this icy place! It seems obvious to this dwarf that you have the fire of the explorer burning in your eyes.\n\nWear this tabard with pride. That way your friends will know who to ask for directions when the time comes!\n\nKeep on the move!\n\nBrann Bronzebeard'),
+
+--
+-- Dumping data for table `achievement_reward`
+--
+
+LOCK TABLES `achievement_reward` WRITE;
+/*!40000 ALTER TABLE `achievement_reward` DISABLE KEYS */;
+INSERT INTO `achievement_reward` (`entry`, `gender`, `title_A`, `title_H`, `item`, `sender`, `subject`, `text`) VALUES (45,2,0,0,43348,28070,'You\'ve Been Around!','Well, look at ye!\n\nAnd I thought I had seen some things in this icy place! It seems obvious to this dwarf that you have the fire of the explorer burning in your eyes.\n\nWear this tabard with pride. That way your friends will know who to ask for directions when the time comes!\n\nKeep on the move!\n\nBrann Bronzebeard'),
 (46,2,78,78,0,0,'',''),
 (230,2,72,72,0,0,'',''),
 (456,2,139,139,0,0,'',''),
@@ -141,7 +148,6 @@ INSERT INTO `achievement_reward` VALUES (45,2,0,0,43348,28070,'You\'ve Been Arou
 (4603,2,0,0,51955,37120,'Heroic: Glory of the Icecrown Raider','$N,\n\nAs the Lich King\'s influence wanes, some of his more powerful, minions have wrested free of his grasp.\n\nThis frost wyrm drake my men captured is a prime example. She has a will of her own and then some.\n\nOne of my men lost an arm breaking her in, but she how takes to riders fairly well -- provided they themselves are skilled and strong willed.\n\nPlease accept this magnificent beast as a gift from the knights of the Ebon Blade. It was a honor to fight along your side in this greatest of battles.\n\nWith honor,\nDarion Mograine'),
 (4079,2,0,0,49098,36095,'A Tribute to Immortality','Dear $N.\n\nTales of your recent performance in the Trial of the Grand Crusader will be told, and retold, for ages to come. As the Argent Crusade issued its call for the greatest champions of Azeroth to test their mettle in the crucible of the Coliseum. I hoped against hope that beacons of light such as you and your companions might emerge from the fray.\n\nWe will need your direly in the coming battle against the Lich King. But on this day, rejoice and celebrate your glorious accomplishment, and accept this gift of one of our very finest warhorses. When the Scourge see its banner looming on thee horizon. Hero, their end shall be nigh!\n\nYours with Honor.\nTirion Fordring'),
 (4156,2,0,0,49096,36095,'A Tribute to Immortality','Dear $N.\n\nTales of your recent performance in the Trial of the Grand Crusader will be told, and retold, for ages to come. As the Argent Crusade issued its call for the greatest champions of Azeroth to test their mettle in the crucible of the Coliseum. I hoped against hope that beacons of light such as you and your companions might emerge from the fray.\n\nWe will need your direly in the coming battle against the Lich King. But on this day, rejoice and celebrate your glorious accomplishment, and accept this gift of one of our very finest warhorses. When the Scourge see its banner looming on thee horizon. Hero, their end shall be nigh!\n\nYours with Honor.\nTirion Fordring');
-
 /*!40000 ALTER TABLE `achievement_reward` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

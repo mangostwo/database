@@ -35,7 +35,14 @@ CREATE TABLE `reputation_reward_rate` (
   PRIMARY KEY (`faction`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `reputation_reward_rate` VALUES (529,2,1,2),
+
+--
+-- Dumping data for table `reputation_reward_rate`
+--
+
+LOCK TABLES `reputation_reward_rate` WRITE;
+/*!40000 ALTER TABLE `reputation_reward_rate` DISABLE KEYS */;
+INSERT INTO `reputation_reward_rate` (`faction`, `quest_rate`, `creature_rate`, `spell_rate`) VALUES (529,2,1,2),
 (609,2,1,2),
 (576,4,1,4),
 (1073,2,2,2),
@@ -49,7 +56,6 @@ INSERT INTO `reputation_reward_rate` VALUES (529,2,1,2),
 (941,2,1,2),
 (1105,2,2,2),
 (1104,2,2,2);
-
 /*!40000 ALTER TABLE `reputation_reward_rate` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -38,7 +38,14 @@ CREATE TABLE `spell_loot_template` (
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `spell_loot_template` VALUES (61898,15924,-100,0,1,1,0),
+
+--
+-- Dumping data for table `spell_loot_template`
+--
+
+LOCK TABLES `spell_loot_template` WRITE;
+/*!40000 ALTER TABLE `spell_loot_template` DISABLE KEYS */;
+INSERT INTO `spell_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (61898,15924,-100,0,1,1,0),
 (61288,39349,0,1,1,1,0),
 (61288,38682,0,1,1,1,0),
 (61288,37118,0,1,1,1,0),
@@ -209,7 +216,6 @@ INSERT INTO `spell_loot_template` VALUES (61898,15924,-100,0,1,1,0),
 (62941,23119,0,1,1,1,0),
 (62941,23120,0,1,1,1,0),
 (62941,28595,0,1,1,1,0);
-
 /*!40000 ALTER TABLE `spell_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

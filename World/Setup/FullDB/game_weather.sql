@@ -44,7 +44,14 @@ CREATE TABLE `game_weather` (
   PRIMARY KEY (`zone`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Weather System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `game_weather` VALUES (3,0,0,20,0,0,20,0,0,20,0,0,15),
+
+--
+-- Dumping data for table `game_weather`
+--
+
+LOCK TABLES `game_weather` WRITE;
+/*!40000 ALTER TABLE `game_weather` DISABLE KEYS */;
+INSERT INTO `game_weather` (`zone`, `spring_rain_chance`, `spring_snow_chance`, `spring_storm_chance`, `summer_rain_chance`, `summer_snow_chance`, `summer_storm_chance`, `fall_rain_chance`, `fall_snow_chance`, `fall_storm_chance`, `winter_rain_chance`, `winter_snow_chance`, `winter_storm_chance`) VALUES (3,0,0,20,0,0,20,0,0,20,0,0,15),
 (45,23,0,0,15,0,0,23,0,0,23,0,0),
 (3358,10,0,0,10,0,0,10,0,0,10,0,0),
 (148,15,0,0,10,0,0,20,0,0,15,0,0),
@@ -79,7 +86,6 @@ INSERT INTO `game_weather` VALUES (3,0,0,20,0,0,20,0,0,20,0,0,15),
 (440,0,0,15,0,0,15,0,0,15,0,0,15),
 (3521,10,0,0,15,0,0,20,0,0,10,0,0),
 (4080,20,0,0,20,0,0,20,0,0,10,0,0);
-
 /*!40000 ALTER TABLE `game_weather` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

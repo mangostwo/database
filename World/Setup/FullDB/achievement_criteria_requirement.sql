@@ -45,7 +45,14 @@ CREATE TABLE `achievement_criteria_requirement` (
   PRIMARY KEY (`criteria_id`,`type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Achievment system';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `achievement_criteria_requirement` VALUES (2379,4,0,0),
+
+--
+-- Dumping data for table `achievement_criteria_requirement`
+--
+
+LOCK TABLES `achievement_criteria_requirement` WRITE;
+/*!40000 ALTER TABLE `achievement_criteria_requirement` DISABLE KEYS */;
+INSERT INTO `achievement_criteria_requirement` (`criteria_id`, `type`, `value1`, `value2`) VALUES (2379,4,0,0),
 (3615,1,1412,0),
 (3739,1,25679,0),
 (3741,1,25677,0),
@@ -1051,8 +1058,8 @@ INSERT INTO `achievement_criteria_requirement` VALUES (2379,4,0,0),
 (10099,12,1,0),
 (10099,18,0,0),
 (10133,12,1,0),
-(10173,12,0,0),
-(10173,18,0,0),
+(10306,18,0,0),
+(10306,12,1,0),
 (10184,18,0,0),
 (10184,12,1,0),
 (10296,12,1,0),
@@ -1095,8 +1102,8 @@ INSERT INTO `achievement_criteria_requirement` VALUES (2379,4,0,0),
 (10294,12,1,0),
 (10185,12,0,0),
 (10414,18,0,0),
-(10306,12,1,0),
-(10306,18,0,0),
+(10173,18,0,0),
+(10173,12,0,0),
 (10311,12,1,0),
 (10312,12,1,0),
 (10414,12,1,0),
@@ -2157,7 +2164,6 @@ INSERT INTO `achievement_criteria_requirement` VALUES (2379,4,0,0),
 (10599,18,0,0),
 (10719,12,1,0),
 (10719,18,0,0);
-
 /*!40000 ALTER TABLE `achievement_criteria_requirement` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -33,7 +33,14 @@ CREATE TABLE `creature_questrelation` (
   PRIMARY KEY (`id`,`quest`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Creature System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_questrelation` VALUES (196,33),
+
+--
+-- Dumping data for table `creature_questrelation`
+--
+
+LOCK TABLES `creature_questrelation` WRITE;
+/*!40000 ALTER TABLE `creature_questrelation` DISABLE KEYS */;
+INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES (196,33),
 (197,7),
 (197,15),
 (197,21),
@@ -7715,8 +7722,7 @@ INSERT INTO `creature_questrelation` VALUES (196,33),
 (40253,25495),
 (40391,25480),
 (40429,26034);
-
-/*!40000 ALTER TABLE `creature_onkill_reputation` ENABLE KEYS */;
+/*!40000 ALTER TABLE `creature_questrelation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

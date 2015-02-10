@@ -37,7 +37,14 @@ CREATE TABLE `npc_vendor_template` (
   PRIMARY KEY (`entry`,`item`,`ExtendedCost`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Npc System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `npc_vendor_template` VALUES (33238,44605,0,0,0,0),
+
+--
+-- Dumping data for table `npc_vendor_template`
+--
+
+LOCK TABLES `npc_vendor_template` WRITE;
+/*!40000 ALTER TABLE `npc_vendor_template` DISABLE KEYS */;
+INSERT INTO `npc_vendor_template` (`entry`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `condition_id`) VALUES (33238,44605,0,0,0,0),
 (33238,33451,0,0,0,0),
 (33238,33454,0,0,0,0),
 (33238,35954,0,0,0,0),
@@ -78,7 +85,6 @@ INSERT INTO `npc_vendor_template` VALUES (33238,44605,0,0,0,0),
 (6,17304,0,0,0,0),
 (6,17307,0,0,0,0),
 (6,17344,0,0,0,0);
-
 /*!40000 ALTER TABLE `npc_vendor_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

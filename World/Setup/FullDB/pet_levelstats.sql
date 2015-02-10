@@ -41,7 +41,14 @@ CREATE TABLE `pet_levelstats` (
   PRIMARY KEY (`creature_entry`,`level`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 PACK_KEYS=0 COMMENT='Stores pet levels stats.';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `pet_levelstats` VALUES (1,1,42,1,20,22,20,22,20,20),
+
+--
+-- Dumping data for table `pet_levelstats`
+--
+
+LOCK TABLES `pet_levelstats` WRITE;
+/*!40000 ALTER TABLE `pet_levelstats` DISABLE KEYS */;
+INSERT INTO `pet_levelstats` (`creature_entry`, `level`, `hp`, `mana`, `armor`, `str`, `agi`, `sta`, `inte`, `spi`) VALUES (1,1,42,1,20,22,20,22,20,20),
 (1,2,55,1,21,23,21,23,20,20),
 (1,3,71,1,46,24,21,24,20,21),
 (1,4,86,1,82,25,22,25,21,21),
@@ -2601,7 +2608,6 @@ INSERT INTO `pet_levelstats` VALUES (1,1,42,1,20,22,20,22,20,20),
 (32751,78,1,0,1,1,1,1,1,1),
 (32751,79,1,0,1,1,1,1,1,1),
 (32751,80,1,0,1,1,1,1,1,1);
-
 /*!40000 ALTER TABLE `pet_levelstats` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -21,7 +21,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `creature_questrelation`
+-- Table structure for table `creature_template_spells`
 --
 
 DROP TABLE IF EXISTS `creature_template_spells`;
@@ -40,7 +40,14 @@ CREATE TABLE `creature_template_spells` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Creature System (Spells used by creature)';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `creature_template_spells` VALUES (30,744,0,0,0,0,0,0,0),
+
+--
+-- Dumping data for table `creature_template_spells`
+--
+
+LOCK TABLES `creature_template_spells` WRITE;
+/*!40000 ALTER TABLE `creature_template_spells` DISABLE KEYS */;
+INSERT INTO `creature_template_spells` (`entry`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`) VALUES (30,744,0,0,0,0,0,0,0),
 (40,6016,0,0,0,0,0,0,0),
 (43,744,0,0,0,0,0,0,0),
 (46,3368,0,0,0,0,0,0,0),
@@ -4618,7 +4625,6 @@ INSERT INTO `creature_template_spells` VALUES (30,744,0,0,0,0,0,0,0),
 (28319,57609,0,0,0,0,0,0,0),
 (32629,57609,0,0,0,0,0,0,0),
 (30066,55812,0,0,0,0,0,0,0);
-
 /*!40000 ALTER TABLE `creature_template_spells` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

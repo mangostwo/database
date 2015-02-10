@@ -34,7 +34,14 @@ CREATE TABLE `item_enchantment_template` (
   PRIMARY KEY (`entry`,`ench`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Item Random Enchantment System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `item_enchantment_template` VALUES (61,6,7.73),
+
+--
+-- Dumping data for table `item_enchantment_template`
+--
+
+LOCK TABLES `item_enchantment_template` WRITE;
+/*!40000 ALTER TABLE `item_enchantment_template` DISABLE KEYS */;
+INSERT INTO `item_enchantment_template` (`entry`, `ench`, `chance`) VALUES (61,6,7.73),
 (61,8,7.31),
 (61,9,8.02),
 (61,15,3.01),
@@ -28641,7 +28648,6 @@ INSERT INTO `item_enchantment_template` VALUES (61,6,7.73),
 (382,36,19.8),
 (382,58,17.4),
 (382,53,18.8);
-
 /*!40000 ALTER TABLE `item_enchantment_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

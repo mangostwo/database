@@ -121,6 +121,12 @@ CREATE TABLE `locales_quest` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `locales_quest`
+--
+
+LOCK TABLES `locales_quest` WRITE;
+/*!40000 ALTER TABLE `locales_quest` DISABLE KEYS */;
 /*!40000 ALTER TABLE `locales_quest` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

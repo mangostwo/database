@@ -36,7 +36,14 @@ CREATE TABLE `pool_pool` (
   KEY `pool_idx` (`mother_pool`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `pool_pool` VALUES (1603,1602,0,'Dire Maul pod, 1603'),
+
+--
+-- Dumping data for table `pool_pool`
+--
+
+LOCK TABLES `pool_pool` WRITE;
+/*!40000 ALTER TABLE `pool_pool` DISABLE KEYS */;
+INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES (1603,1602,0,'Dire Maul pod, 1603'),
 (1604,1602,0,'Dire Maul pod, 1604'),
 (1605,1602,0,'Dire Maul pod, 1605'),
 (1606,1602,0,'Dire Maul pod, 1606'),
@@ -5537,7 +5544,6 @@ INSERT INTO `pool_pool` VALUES (1603,1602,0,'Dire Maul pod, 1603'),
 (25450,25430,0,'Arcatraz - Warder/Defender Corpses - Pool 20'),
 (25451,25430,0,'Arcatraz - Warder/Defender Corpses - Pool 21'),
 (25452,25430,0,'Arcatraz - Warder/Defender Corpses - Pool 22');
-
 /*!40000 ALTER TABLE `pool_pool` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

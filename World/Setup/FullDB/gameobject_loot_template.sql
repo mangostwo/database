@@ -38,7 +38,14 @@ CREATE TABLE `gameobject_loot_template` (
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `gameobject_loot_template` VALUES (1683,1309,-100,0,1,1,0),
+
+--
+-- Dumping data for table `gameobject_loot_template`
+--
+
+LOCK TABLES `gameobject_loot_template` WRITE;
+/*!40000 ALTER TABLE `gameobject_loot_template` DISABLE KEYS */;
+INSERT INTO `gameobject_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (1683,1309,-100,0,1,1,0),
 (1691,2007,-100,0,1,1,0),
 (20530,29434,100,0,1,1,0),
 (1692,2008,-100,0,1,1,0),
@@ -17775,8 +17782,10 @@ INSERT INTO `gameobject_loot_template` VALUES (1683,1309,-100,0,1,1,0),
 (27356,47242,100,0,1,1,0),
 (27356,27029,100,0,-27029,3,0),
 (27356,27016,35,0,-27016,1,0),
-(24589,47241,100,0,1,1,0);
-
+(24589,47241,100,0,1,1,0),
+(164884,11950,100,0,1,3,0),
+(164881,11952,100,0,1,3,0),
+(164883,11951,100,0,1,3,0);
 /*!40000 ALTER TABLE `gameobject_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

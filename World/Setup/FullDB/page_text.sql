@@ -34,7 +34,14 @@ CREATE TABLE `page_text` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Item System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `page_text` VALUES (15,'Hello Morgan,\r\n\r\nBusiness in Goldshire is brisk, so brisk that I haven\'t had time to send you any shipments!  \r\n\r\nI commissioned the person bearing this note to bring you a package of large wax candles (you know, the ones the Kobolds like to wear on their heads?). \r\n\r\nPlease give this person our thanks, and fair payment.',0),
+
+--
+-- Dumping data for table `page_text`
+--
+
+LOCK TABLES `page_text` WRITE;
+/*!40000 ALTER TABLE `page_text` DISABLE KEYS */;
+INSERT INTO `page_text` (`entry`, `text`, `next_page`) VALUES (15,'Hello Morgan,\r\n\r\nBusiness in Goldshire is brisk, so brisk that I haven\'t had time to send you any shipments!  \r\n\r\nI commissioned the person bearing this note to bring you a package of large wax candles (you know, the ones the Kobolds like to wear on their heads?). \r\n\r\nPlease give this person our thanks, and fair payment.',0),
 (16,'To the Honorable Headmaster Crillian,\n\nMy former Master, I write to you so that you might know what your apprentice has been doing of late.  Paying heed to your advice, I sought to build my knowledge and wisdom through travel outside the gates of our beloved Stormwind.  My journeys took me to many places but I have decided to take up residence here in the lovely town of Moonbrook.  The surrounding fields of Westfall are most beautiful as the harvest approaches.',17),
 (17,'Within just a few days of my visit I found myself tutoring the local children from the nearby farmlands.  The lessons went so well that the town mayor commissioned me to run a school and construction has begun on a brand new schoolhouse!  From Silverpine to Stormwind and now Moonbrook -- who would have guessed I would see so much of Azeroth!\n\nWarm regards,\n\nStalvan Mistmantle',0),
 (18,'Dear Noble Sir,\n\nWord of your need for a tutor for your children has traveled to me here in Goldshire, where I take up temporary residence in the Lion\'s Pride Inn.  Due to the unfortunate state of events in the region, I was forced to abandon my post as Headmaster of the Moonbrook Schoolhouse.  Please accept my application to serve as tutor for your offspring.  Headmaster Crillian of the Academy can speak to you of my abilities if necessary.',19),
@@ -1819,7 +1826,6 @@ INSERT INTO `page_text` VALUES (15,'Hello Morgan,\r\n\r\nBusiness in Goldshire i
 (3052,'Middle Watch, Eight Bells$BWatches changed.  All quiet.  Two men sent to locate Cedric.$B',3053),
 (3053,'Morning Watch, One Bell$BFire in Captain\'s quarters.  All hands roused.  Throwing powder overboard. ',0),
 (3036,'The mighty creature\'s maw opened wide, tossing bolts of icy water toward our vessel. Those terrible jaws clamped down upon the bow of our ship, tearing it from the hull. Sailors and cargo were thrown violently into the sea as the remnants of the ship disappeared beneath the waves.$B$BThe last thing I remember was flying from the broken hull, hitting the inky waters, and plunging beneath the waves. The world went dark and I thought for certain I\'d drawn my last breath. When I awoke in Theramore\'s infirmary, I knew someone had to tell our story.',0);
-
 /*!40000 ALTER TABLE `page_text` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

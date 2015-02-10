@@ -33,7 +33,14 @@ CREATE TABLE `skill_fishing_base_level` (
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Fishing system';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `skill_fishing_base_level` VALUES (1,-70),
+
+--
+-- Dumping data for table `skill_fishing_base_level`
+--
+
+LOCK TABLES `skill_fishing_base_level` WRITE;
+/*!40000 ALTER TABLE `skill_fishing_base_level` DISABLE KEYS */;
+INSERT INTO `skill_fishing_base_level` (`entry`, `skill`) VALUES (1,-70),
 (12,-70),
 (14,-70),
 (85,-70),
@@ -126,7 +133,6 @@ INSERT INTO `skill_fishing_base_level` VALUES (1,-70),
 (67,455),
 (1497,-20),
 (3479,-20);
-
 /*!40000 ALTER TABLE `skill_fishing_base_level` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

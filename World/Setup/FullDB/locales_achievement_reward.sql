@@ -50,6 +50,12 @@ CREATE TABLE `locales_achievement_reward` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `locales_achievement_reward`
+--
+
+LOCK TABLES `locales_achievement_reward` WRITE;
+/*!40000 ALTER TABLE `locales_achievement_reward` DISABLE KEYS */;
 /*!40000 ALTER TABLE `locales_achievement_reward` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -35,7 +35,14 @@ CREATE TABLE `mail_level_reward` (
   PRIMARY KEY (`level`,`raceMask`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Mail System';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `mail_level_reward` VALUES (20,512,232,16280),
+
+--
+-- Dumping data for table `mail_level_reward`
+--
+
+LOCK TABLES `mail_level_reward` WRITE;
+/*!40000 ALTER TABLE `mail_level_reward` DISABLE KEYS */;
+INSERT INTO `mail_level_reward` (`level`, `raceMask`, `mailTemplateId`, `senderEntry`) VALUES (20,512,232,16280),
 (20,1024,227,20914),
 (20,4,226,4772),
 (20,64,228,7954),
@@ -59,7 +66,6 @@ INSERT INTO `mail_level_reward` VALUES (20,512,232,16280),
 (60,1101,283,35100),
 (70,1101,284,35133),
 (70,690,285,35135);
-
 /*!40000 ALTER TABLE `mail_level_reward` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

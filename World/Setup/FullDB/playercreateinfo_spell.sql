@@ -35,7 +35,14 @@ CREATE TABLE `playercreateinfo_spell` (
   PRIMARY KEY (`race`,`class`,`Spell`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `playercreateinfo_spell` VALUES (1,1,78,'Heroic Strike'),
+
+--
+-- Dumping data for table `playercreateinfo_spell`
+--
+
+LOCK TABLES `playercreateinfo_spell` WRITE;
+/*!40000 ALTER TABLE `playercreateinfo_spell` DISABLE KEYS */;
+INSERT INTO `playercreateinfo_spell` (`race`, `class`, `Spell`, `Note`) VALUES (1,1,78,'Heroic Strike'),
 (1,1,81,'Dodge'),
 (1,1,107,'Block'),
 (1,1,196,'One-Handed Axes'),
@@ -2890,7 +2897,6 @@ INSERT INTO `playercreateinfo_spell` VALUES (1,1,78,'Heroic Strike'),
 (10,6,61437,'Opening'),
 (10,8,61437,'Opening'),
 (10,9,61437,'Opening');
-
 /*!40000 ALTER TABLE `playercreateinfo_spell` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -38,7 +38,14 @@ CREATE TABLE `game_tele` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1426 DEFAULT CHARSET=utf8 COMMENT='Tele Command';
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `game_tele` VALUES (314,-758.534,4401.98,79.563,2.88658,530,'DustquillRavine'),
+
+--
+-- Dumping data for table `game_tele`
+--
+
+LOCK TABLES `game_tele` WRITE;
+/*!40000 ALTER TABLE `game_tele` DISABLE KEYS */;
+INSERT INTO `game_tele` (`id`, `position_x`, `position_y`, `position_z`, `orientation`, `map`, `name`) VALUES (314,-758.534,4401.98,79.563,2.88658,530,'DustquillRavine'),
 (313,-6440.73,-1987.77,244.718,0.464476,0,'DustfireValley'),
 (312,-10898.3,-364.784,39.2681,3.04614,0,'Duskwood'),
 (311,9317.38,-7856.4,63.2953,5.35693,530,'DuskwitherSpire'),
@@ -1463,7 +1470,6 @@ INSERT INTO `game_tele` VALUES (314,-758.534,4401.98,79.563,2.88658,530,'Dustqui
 (1423,8447.44,2698.09,656.783,2.8392,571,'theshadowvault'),
 (1424,6122.16,-1061.5,402.568,4.77853,571,'k3'),
 (1425,-8755.84,-4454.57,-200.169,4.37,1,'CullingOfStratholme');
-
 /*!40000 ALTER TABLE `game_tele` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

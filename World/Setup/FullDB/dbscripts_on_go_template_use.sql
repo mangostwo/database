@@ -47,7 +47,14 @@ CREATE TABLE `dbscripts_on_go_template_use` (
   `comments` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `dbscripts_on_go_template_use` VALUES (178145,0,10,11920,30000,0,0,0,0,0,0,0,0,0,0,0,''),
+
+--
+-- Dumping data for table `dbscripts_on_go_template_use`
+--
+
+LOCK TABLES `dbscripts_on_go_template_use` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_go_template_use` DISABLE KEYS */;
+INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES (178145,0,10,11920,30000,0,0,0,0,0,0,0,0,0,0,0,''),
 (176581,0,10,11876,30000,0,0,0,0,0,0,0,0,0,0,0,''),
 (175944,0,10,10882,30000,0,0,0,0,0,0,0,-5008.08,-2115.23,83.6999,1.02974,''),
 (182024,0,10,17830,30000,0,0,0,0,0,0,0,-368.557,172.036,-21.784,4.61,''),
@@ -220,7 +227,6 @@ INSERT INTO `dbscripts_on_go_template_use` VALUES (178145,0,10,11920,30000,0,0,0
 (184415,0,9,0,60,183816,30,7,0,0,0,0,0,0,0,0,'respawn gobject'),
 (185208,0,10,22339,4000,0,0,0,0,0,0,0,0,0,0,0,'summon Redeemet Hatchling '),
 (185212,0,10,22337,0,0,0,0,0,0,0,0,0,0,0,0,'summon Malevolent Hatchling ');
-
 /*!40000 ALTER TABLE `dbscripts_on_go_template_use` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
