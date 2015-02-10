@@ -33,12 +33,16 @@ BEGIN
 
     -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
 
+-- ------------------------------------------------------------
+-- WARNING: THIS COMPLETELY BREAKS THE QUESTS, DO NOT RUN IT --
+-- ------------------------------------------------------------
+
     /*
      * Updates for MangosTwo (Wrath of the Lich King)
      *
      * Data from AngelEmu
      */
-
+/*
     REPLACE INTO `creature_template` (`entry`, `npcflags`) VALUES (54, 4224);
     REPLACE INTO `creature_template` (`entry`, `npcflags`) VALUES (66, 128);
     REPLACE INTO `creature_template` (`entry`, `npcflags`) VALUES (68, 1);
@@ -7730,7 +7734,7 @@ BEGIN
     REPLACE INTO `creature_template` (`entry`, `npcflags`) VALUES (40441, 1);
     REPLACE INTO `creature_template` (`entry`, `npcflags`) VALUES (40607, 4224);
 
-
+*/
   
     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     
