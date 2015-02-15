@@ -37,7 +37,6 @@ BEGIN
 --                Start Up Error Fixes - This kills all errors at this time (12th of February, 2015
     
 -- ScriptDev2
-----------------
 
 UPDATE gameobject_template SET ScriptName='go_gordunni_trap' WHERE entry=144050;
 UPDATE gameobject_template SET ScriptName='go_pirate_treasure' WHERE entry=142194;
@@ -48,8 +47,6 @@ UPDATE creature_template SET ScriptName='boss_netherspite' WHERE Entry=17369;
 
 
 -- EventAI
--------------
-
 -- scripting done by SD2
 UPDATE creature_template SET AIName='' WHERE Entry=5764;
 -- incorrect value used, 48 should be used for stand state (was set to 47)
@@ -59,7 +56,6 @@ UPDATE creature_ai_scripts SET action1_type=48 WHERE id=454207;
 
 
 -- World Database
-----------------------
 
 -- Developer items (Martin ...)
 UPDATE item_template SET displayid=7016, sheath=3, DisenchantID=0 WHERE entry=17;
