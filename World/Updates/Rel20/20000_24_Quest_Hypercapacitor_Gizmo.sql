@@ -34,7 +34,7 @@ BEGIN
     -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
           
           
-    UPDATE creature_template SET MinLevel=30, MaxLevel=30, FactionAlliance=14, FactionHorde=14, Scale=0, Family=0, UnitFlags=832, ExtraFlags=0, PowerMultiplier=0 WHERE Entry=10992;      
+    UPDATE creature_template SET UnitFlags=832 WHERE Entry=10992;      
           
     DELETE FROM dbscripts_on_go_use WHERE id = 16775;
 
