@@ -15,7 +15,7 @@ BEGIN
   -- Set the new revision string
   SET @cNewRev = 'required_20000_00_Rel20_Initial';
 
-  -- Set thisRevision to the column name of db_version in the currently selected database
+  -- Set thisRevision to the column name of character_db_version in the currently selected database
   SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='character_db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
 
  

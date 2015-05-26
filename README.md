@@ -6,14 +6,11 @@
 
 MangosOne World Database
 ===
-DEVELOPMENT BRANCH
-===
- **(Please be aware that this branch is a Work in Progress)**
 
 ### A World Database for TBC Wow
 ----
-A content database for [**MangosOne**][10], and [**World of Warcraft**][50] Client Patch
-1.12 - [_Drums of War_][51].
+A content database for [**WoTLK**][10] MaNGOS Servers, and [**World of Warcraft**][50] Client Patch
+3.3.5a - [Wrath of the Lich King][51].
 
 ### How to Install
 ---------------
@@ -30,7 +27,7 @@ A content database for [**MangosOne**][10], and [**World of Warcraft**][50] Clie
 1. Run: **InstallDatabases.bat** and follow the onscreen prompts.
 
 
-[10]: https://github.com/mangoszero/server "mangos One"
+[10]: https://github.com/mangostwo/server "mangos Two"
 
 [50]: http://blizzard.com/games/wow/ "World of Warcraft"
-[51]: http://www.wowpedia.org/Patch_2.4.3 "WoW 2.4.3"
+[51]: http://www.wowpedia.org/Patch_3.3.5a "WoW 3.3.5a"

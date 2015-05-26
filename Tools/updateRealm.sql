@@ -1,0 +1,1 @@
+update Realmlist set name='MangosTwo Server', realmbuilds='12340' where id=1;

@@ -1,6 +1,6 @@
 License
 =======
-**mangos-zero database** is copyright of the respective authors, and is available
+The **MaNGOS** world Database is copyright of the respective authors, and is available
 under the [Creative Commons Attribution-NonCommercial-ShareAlike 3.0][1] license,
 except where explicitly stated otherwise.
 
