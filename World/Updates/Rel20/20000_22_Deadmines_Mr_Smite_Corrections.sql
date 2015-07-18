@@ -49,7 +49,7 @@ BEGIN
     UPDATE `creature_template` SET `FactionAlliance`='27', `FactionHorde`='27' WHERE `Entry`='646';
 
     -- Changed Mr. Smite's orientation and position
-    UPDATE `creature_template` SET `position_x`='-24.733', `position_y`='-798.865', `position_z`='19.4144', `orientation`='0.750789' WHERE `guid`='79337';
+    UPDATE `creature` SET `position_x`='-24.733', `position_y`='-798.865', `position_z`='19.4144', `orientation`='0.750789' WHERE `guid`='79337';
      
      
     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
