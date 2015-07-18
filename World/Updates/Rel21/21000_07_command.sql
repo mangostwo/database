@@ -10,10 +10,10 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_21000_01_Release21_initial'; 
+  SET @cOldRev = 'required_21000_06_mangos_string'; 
 
   -- Set the new revision string
-  SET @cNewRev = 'required_21000_02_warden_checks';
+  SET @cNewRev = 'required_21000_07_command';
 
   -- Set thisRevision to the column name of db_version in the currently selected database
   SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
@@ -25,7 +25,7 @@ BEGIN
     START TRANSACTION;
 
 	-- version
-	INSERT IGNORE INTO `db_version` SET `Version` = 'MaNGOSTwo Database Rev 21000_02';
+	INSERT IGNORE INTO `db_version` SET `Version` = 'MaNGOSTwo Database Rev 21000_07';
 
     -- Apply the Version Change from Old Version to New Version
     SET @query = CONCAT('ALTER TABLE db_version CHANGE COLUMN ',@cOldRev, ' ' ,@cNewRev,' bit;');
@@ -36,23 +36,7 @@ BEGIN
 
     -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
           
-SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for `warden_checks`
--- ----------------------------
-DROP TABLE IF EXISTS `warden_checks`;
-CREATE TABLE `warden_checks` (
-  `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `type` TINYINT(3) UNSIGNED DEFAULT NULL,
-  `data` VARCHAR(48) DEFAULT '',
-  `str` VARCHAR(20) DEFAULT '',
-  `address` INT(10) UNSIGNED DEFAULT NULL,
-  `length` TINYINT(3) UNSIGNED DEFAULT NULL,
-  `result` VARCHAR(24) DEFAULT '',
-  `comment` VARCHAR(50) DEFAULT '',
-  PRIMARY KEY (`id`)
-) ENGINE=MYISAM AUTO_INCREMENT=790 DEFAULT CHARSET=utf8;
+DELETE FROM command WHERE name='npc addmove';
      
     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     

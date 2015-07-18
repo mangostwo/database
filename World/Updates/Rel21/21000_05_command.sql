@@ -10,10 +10,10 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_21000_01_Release21_initial'; 
+  SET @cOldRev = 'required_21000_04_mangos_dungeonfinder_rewards'; 
 
   -- Set the new revision string
-  SET @cNewRev = 'required_21000_02_warden_checks';
+  SET @cNewRev = 'required_21000_05_command';
 
   -- Set thisRevision to the column name of db_version in the currently selected database
   SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
@@ -25,7 +25,7 @@ BEGIN
     START TRANSACTION;
 
 	-- version
-	INSERT IGNORE INTO `db_version` SET `Version` = 'MaNGOSTwo Database Rev 21000_02';
+	INSERT IGNORE INTO `db_version` SET `Version` = 'MaNGOSTwo Database Rev 21000_05';
 
     -- Apply the Version Change from Old Version to New Version
     SET @query = CONCAT('ALTER TABLE db_version CHANGE COLUMN ',@cOldRev, ' ' ,@cNewRev,' bit;');
@@ -36,23 +36,11 @@ BEGIN
 
     -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
           
-SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for `warden_checks`
--- ----------------------------
-DROP TABLE IF EXISTS `warden_checks`;
-CREATE TABLE `warden_checks` (
-  `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `type` TINYINT(3) UNSIGNED DEFAULT NULL,
-  `data` VARCHAR(48) DEFAULT '',
-  `str` VARCHAR(20) DEFAULT '',
-  `address` INT(10) UNSIGNED DEFAULT NULL,
-  `length` TINYINT(3) UNSIGNED DEFAULT NULL,
-  `result` VARCHAR(24) DEFAULT '',
-  `comment` VARCHAR(50) DEFAULT '',
-  PRIMARY KEY (`id`)
-) ENGINE=MYISAM AUTO_INCREMENT=790 DEFAULT CHARSET=utf8;
+DELETE FROM command WHERE name='wp add' OR name='wp modify' OR name='wp show';
+INSERT INTO command VALUES
+('wp add',2,'Syntax: .wp add [Selected Creature or dbGuid] [pathId [wpOrigin] ]'),
+('wp modify',2,'Syntax: .wp modify command [dbGuid, id] [value]\r\nwhere command must be one of: waittime  | scriptid | orientation | del | move\r\nIf no waypoint was selected, one can be chosen with dbGuid and id.\r\nThe commands have the following meaning:\r\n waittime (Set the time the npc will wait at a point (in ms))\r\n scriptid (Set the DB-Script that will be executed when the wp is reached)\r\n orientation (Set the orientation of this point) \r\n del (Remove the waypoint from the path)\r\n move (Move the wayoint to the current position of the player)'),
+('wp show',2,'Syntax: .wp show command [dbGuid] [pathId [wpOrigin] ]\r\nwhere command can have one of the following values\r\non (to show all related wp)\r\nfirst (to see only first one)\r\nlast (to see only last one)\r\noff (to hide all related wp)\r\ninfo (to get more info about theses wp)\r\n\r\nFor using info you have to do first show on and than select a Visual-Waypoint and do the show info!\r\nwith pathId and wpOrigin you can specify which path to show (optional)');
      
     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     
