@@ -1,5 +1,5 @@
 -- Apply this fix to the Rel18 database to get it back into sync.
-ALTER TABLE db_version CHANGE COLUMN required_12615_01_mangos_creature_template_classlevelstats required_12615_01_mangos_creature_template_classlevelstats bit;
+ALTER TABLE db_version CHANGE COLUMN required_12615_01_mangos_creature_template_classlevelstats required_02_mangos_creature_classlevels bit;
 
 -- Madrigosa script target fix
 DELETE FROM spell_script_target WHERE entry IN (46609);
