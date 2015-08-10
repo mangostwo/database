@@ -10,7 +10,7 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_12546_01_characters_random_battleground';
+  SET @cOldRev = 'required_12763_00_characters_pvpstats';
 
   -- Set the new revision string
   SET @cNewRev = 'required_20000_00_Rel20_Initial';

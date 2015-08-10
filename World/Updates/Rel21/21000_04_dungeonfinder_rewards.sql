@@ -1,4 +1,4 @@
-﻿-- --------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------------
 -- This is an attempt to create a full transactional update
 -- --------------------------------------------------------------------------------
 DROP PROCEDURE IF EXISTS `update_mangos`; 
@@ -37,11 +37,12 @@ BEGIN
     -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
           
 CREATE TABLE IF NOT EXISTS `dungeonfinder_rewards` (
-`id` int(10) NOT NULL,
-  `level` mediumint(8) unsigned NOT NULL COMMENT 'uint32',
-  `base_xp_reward` mediumint(8) unsigned NOT NULL COMMENT 'uint32',
-  `base_monetary_reward` int(10) NOT NULL COMMENT 'int32'
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=67 ;
+`id` INT(10) NOT NULL,
+  `level` MEDIUMINT(8) UNSIGNED NOT NULL COMMENT 'uint32',
+  `base_xp_reward` MEDIUMINT(8) UNSIGNED NOT NULL COMMENT 'uint32',
+  `base_monetary_reward` INT(10) NOT NULL COMMENT 'int32',
+  PRIMARY KEY (`id`)
+) ENGINE=MYISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=67 ;
 
 DELETE FROM `dungeonfinder_rewards` WHERE `id` BETWEEN 1 AND 66;
 
@@ -114,23 +115,21 @@ INSERT INTO `dungeonfinder_rewards` (`id`, `level`, `base_xp_reward`, `base_mone
 (66, 80, 0, 99300);
 
 ALTER TABLE `dungeonfinder_rewards`
- ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `dungeonfinder_rewards`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=67;
+MODIFY `id` INT(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=67;
 
 CREATE TABLE IF NOT EXISTS `dungeonfinder_requirements` (
-  `mapId` mediumint(8) unsigned NOT NULL,
-  `difficulty` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `min_item_level` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `item` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `item_2` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `alliance_quest` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `horde_quest` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `achievement` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `quest_incomplete_text` text,
-  `comment` text
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Dungeon Finder Requirements';
+  `mapId` MEDIUMINT(8) UNSIGNED NOT NULL,
+  `difficulty` TINYINT(3) UNSIGNED NOT NULL DEFAULT '0',
+  `min_item_level` SMALLINT(5) UNSIGNED NOT NULL DEFAULT '0',
+  `item` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `item_2` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `alliance_quest` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `horde_quest` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `achievement` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `quest_incomplete_text` TEXT,
+  `comment` TEXT,
+  PRIMARY KEY (`mapId`,`difficulty`)
+) ENGINE=MYISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Dungeon Finder Requirements';
 
 DELETE FROM `dungeonfinder_requirements` WHERE `difficulty`=0 AND `mapId` IN (269,632,650,658,668);
 DELETE FROM `dungeonfinder_requirements` WHERE `difficulty`=1 AND `mapId` IN (269,540,542,543,545,546,547,552,553,554,555,556,557,558,560);
@@ -180,17 +179,16 @@ INSERT INTO `dungeonfinder_requirements` (`mapId`, `difficulty`, `min_item_level
 (668, 0, 219, 0, 0, 24710, 24712, 0, NULL, 'Halls of Reflection (Entrance)'),
 (668, 1, 219, 0, 0, 24710, 24712, 0, NULL, 'Halls of Reflection (Entrance)');
 
-ALTER TABLE `dungeonfinder_requirements`
- ADD PRIMARY KEY (`mapId`,`difficulty`);
 
 CREATE TABLE IF NOT EXISTS `dungeonfinder_item_rewards` (
-`id` int(10) unsigned NOT NULL,
-  `min_level` smallint(3) unsigned NOT NULL COMMENT 'dbc value',
-  `max_level` smallint(3) unsigned NOT NULL COMMENT 'dbc value',
-  `item_reward` mediumint(8) unsigned NOT NULL,
-  `item_amount` mediumint(4) unsigned NOT NULL,
-  `dungeon_type` smallint(4) unsigned NOT NULL DEFAULT '0'
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+`id` INT(10) UNSIGNED NOT NULL,
+  `min_level` SMALLINT(3) UNSIGNED NOT NULL COMMENT 'dbc value',
+  `max_level` SMALLINT(3) UNSIGNED NOT NULL COMMENT 'dbc value',
+  `item_reward` MEDIUMINT(8) UNSIGNED NOT NULL,
+  `item_amount` MEDIUMINT(4) UNSIGNED NOT NULL,
+  `dungeon_type` SMALLINT(4) UNSIGNED NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MYISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 DELETE FROM `dungeonfinder_item_rewards` WHERE `id` BETWEEN 1 AND 10;
 
@@ -206,11 +204,9 @@ INSERT INTO `dungeonfinder_item_rewards` (`id`, `min_level`, `max_level`, `item_
 (9, 80, 82, 49426, 2, 4),
 (10, 70, 75, 0, 0, 2);
 
-ALTER TABLE `dungeonfinder_item_rewards`
- ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `dungeonfinder_item_rewards`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
      
     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     
