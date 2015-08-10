@@ -1,20 +1,8 @@
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: 192.168.1.3    Database: mangos2
+-- ------------------------------------------------------
+-- Server version	5.5.34
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -802,7 +790,7 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-741,'Listen carefully, for the lord of Blackrock will surely destroy you, should you not be prepared.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Vaelan greetings'),
 (-742,'My strength.... is... returning!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
 (-743,'You\'ve restored my health! I\'m in your debt, $N.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
-(-744,'You\'e found a cure! We will crush our enemies!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
+(-744,'You\'ve found a cure! We will crush our enemies!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
 (-745,'How dare you interfere with our work!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'32273'),
 (-746,'My time... has run out...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'32273'),
 (-747,'The %s flies up through the trees, free of Terokk\'s corruption.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'22339'),

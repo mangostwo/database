@@ -1,13 +1,8 @@
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: 192.168.1.3    Database: mangos2
+-- ------------------------------------------------------
+-- Server version	5.5.34
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1142,9 +1137,8 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000005782,'It\'s now or never, soldiers! Let\'s do this! For K\'aresh! For the Protectorate!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Captain Saeed - say attack start'),
 (2000005783,'The time for your destruction has finally come, Dimensius!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Captain Saeed - say taunt dimensius'),
 (2000005784,'We won. Dimensius no more. Report this proffesor Dabiri.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Captain Saeed - say quest complete'),
-(2000000011,'Did you find something fun to chase around, Twinkle?  I bet you did!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
-(2000000012,'It\'s just you and me, Twinkle.  Daddy\'s not going to be coming home.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
-(2000000013,'I wonder how far this would launch that white cat...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000405,'It\'s just you and me, Twinkle. Daddy\'s not going to be coming home.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000404,'Did you find something fun to chase around, Twinkle? I bet you did!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
 (2000000014,'My people have survived in Outland...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000015,'Unnoticed for years...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000016,'...uncorrupted!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
@@ -1253,7 +1247,8 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000400,'Give of your hearts and your purses! Give to the children of Stormwind who have lost their parents.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'John Turner  - Say 3'),
 (2000000401,'Help the children of Stormwind... victims of the war and plague!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'John Turner  - Say 4'),
 (2000000402,'%s calls upon the mighty armies of the Scourge!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,NULL),
-(2000000403,'Armies of the Scourge, hear my call! The scarlet apocalypse has begun! Tear this land asunder and leave only death in your wake!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,6,0,22,NULL);
+(2000000403,'Armies of the Scourge, hear my call! The scarlet apocalypse has begun! Tear this land asunder and leave only death in your wake!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,6,0,22,NULL),
+(2000000406,'I wonder how far this would launch that white cat...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL);
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

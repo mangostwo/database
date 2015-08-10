@@ -1,20 +1,8 @@
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: 192.168.1.3    Database: mangos2
+-- ------------------------------------------------------
+-- Server version	5.5.34
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -11188,7 +11176,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1684411,16844,7,0,100,0,0,0,0,0,11,29147,0,21,11,33928,0,0,21,0,0,0,'Crust Burster - Cast Sandworm Submerge Visual and Cast Tunnel Bore Passive and Prevent Combat Movement on Evade'),
 (1684412,16844,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Crust Burster - Set Phase 0 on Evade'),
 (1684601,16846,2,0,100,0,20,0,0,0,11,3019,0,0,1,-46,0,0,0,0,0,0,'Mag\'har Grunt - Cast Enrage When Below 20% HP'),
-(1684701,16847,8,0,100,0,29314,-1,0,0,48,1,2,0,1,-742,-743,-744,0,0,0,0,'Debilitated Mag\'har Grunt - Set random movement and Yell random text on Spell hit'),
+(1684701,16847,8,0,100,0,29314,-1,0,0,47,1,2,0,1,-742,-743,-744,0,0,0,0,'Debilitated Mag\'har Grunt - Set random movement and Yell random text on Spell hit'),
 (1685701,16857,11,0,100,0,0,0,0,0,19,33554432,0,0,0,0,0,0,0,0,0,0,'Marauding Crust Burster - Remove Unselectable Unit Flag on Spawn'),
 (1685702,16857,11,0,100,0,0,0,0,0,11,29147,0,16,11,33928,0,0,21,0,0,0,'Marauding Crust Burster - Cast Sandworm Submerge Visual and Cast Tunnel Bore Passive and Prevent Combat Movement on Spawn'),
 (1685703,16857,1,0,100,1,1000,1000,1000,1000,11,29147,0,48,0,0,0,0,0,0,0,0,'Marauding Crust Burster - Cast Sandworm Submerge Visual OOC'),
@@ -11339,7 +11327,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1705802,17058,0,0,100,32,1000,1000,0,0,1,-1145,-1146,0,1,-1147,-1148,0,0,0,0,0,'Illidari Taskmaster - Random Say on Aggro'),
 (1705803,17058,0,0,75,1,2000,2000,16000,16000,11,16244,1,0,0,0,0,0,0,0,0,0,'Illidari Taskmaster - Cast Demoralizing Shout'),
 (1705804,17058,2,0,100,0,20,0,0,0,11,34186,0,0,0,0,0,0,0,0,0,0,'Illidari Taskmaster - Cast Haste Other When Below 20% HP'),
-(1722601,17226,8,0,100,0,30077,-1,0,0,33,17226,6,0,48,2,0,0,0,0,0,0,'Viera Sunwhisper - Kill Credit and WP movement on Spell Hit'),
+(1722601,17226,8,0,100,0,30077,-1,0,0,33,17226,6,0,47,2,0,0,0,0,0,0,'Viera Sunwhisper - Kill Credit and WP movement on Spell Hit'),
 (1833801,18338,11,0,100,0,0,0,0,0,1,-1206,-1207,0,0,0,0,0,0,0,0,0,'Highlord Kruul - Yell on Spawn'),
 (1833802,18338,4,0,100,0,0,0,0,0,1,-1208,-1209,-1210,0,0,0,0,0,0,0,0,'Highlord Kruul - Yell on Aggro'),
 (1833803,18338,5,0,100,1,0,0,0,0,1,-1211,0,0,11,21054,0,0,0,0,0,0,'Highlord Kruul - Cast Capture Soul and Yell on Kill'),
@@ -18092,7 +18080,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2820102,28201,0,0,100,5,5000,12000,21000,27000,11,58810,4,0,0,0,0,0,0,0,0,0,'Bile Golem (Heroic) - Cast Wretching Bile'),
 (2824901,28249,2,0,100,3,50,0,20000,25000,11,52352,1,0,0,0,0,0,0,0,0,0,'Devouring Ghoul (Normal) - Cast Devour Flesh at 50% HP'),
 (2824902,28249,2,0,100,5,50,0,20000,25000,11,58758,1,0,0,0,0,0,0,0,0,0,'Devouring Ghoul (Heroic) - Cast Devour Flesh at 50% HP'),
-(2861201,28612,30,0,100,6,5,26528,0,0,48,0,0,0,0,0,0,0,0,0,0,0,'Knight of the Silver Hand - Set Movement Idle on AI event received'),
+(2861201,28612,30,0,100,6,5,26528,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Knight of the Silver Hand - Set Movement Idle on AI event received'),
 (2861202,28612,30,0,100,6,6,26528,0,0,24,0,0,0,41,30000,0,0,0,0,0,0,'Knight of the Silver Hand - Evade and Despawn on AI event received'),
 (3099401,30994,1,0,100,7,20000,20000,240000,240000,1,-877,-878,-879,0,0,0,0,0,0,0,0,'Magistrate Barthilas - Random Say 1 OOC'),
 (3099402,30994,1,0,100,7,27000,27000,247000,247000,1,-880,-881,-882,0,0,0,0,0,0,0,0,'Magistrate Barthilas - Random Say 2 OOC'),
@@ -26376,7 +26364,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (735502,7355,0,0,100,3,9000,14000,15000,25000,11,12255,0,1,0,0,0,0,0,0,0,0,'Tuten Kash - Curse of Tuten Kash'),
 (1047204,10472,2,0,100,2,40,0,0,0,3,11284,0,0,22,2,0,0,0,0,0,0,'Scholomance Occultist - Transform into Dark Shade and Set Phase 2 at 40% HP (Phase 1)'),
 (1047205,10472,0,3,100,3,500,1000,6500,15600,11,17228,1,0,0,0,0,0,0,0,0,0,'Scholomance Occultist - Cast Shadow Bolt Volley (Phase 2)'),
-(2048101,20481,11,0,100,6,0,0,0,0,11,35278,0,0,0,0,0,0,0,0,0,0,'Raging Flames - Cast Raging Flames on Spawn');
+(2048101,20481,11,0,100,6,0,0,0,0,11,35278,0,0,0,0,0,0,0,0,0,0,'Raging Flames - Cast Raging Flames on Spawn'),
+(1879701,18797,4,0,100,6,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Tortured skeleton - stand on aggro');
 /*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

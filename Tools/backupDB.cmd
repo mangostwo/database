@@ -34,6 +34,7 @@ mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_templa
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_template_addon >  _full_db\creature_template_addon.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_template_classlevelstats >  _full_db\creature_template_classlevelstats.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_template_spells >  _full_db\creature_template_spells.sql
+mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% custom_texts >  _full_db\custom_texts.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% db_script_string >  _full_db\db_script_string.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% db_version >  _full_db\db_version.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% dbdocsfields >  _full_db\dbdocsfields.sql

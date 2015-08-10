@@ -1,13 +1,8 @@
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: 192.168.1.3    Database: mangos2
+-- ------------------------------------------------------
+-- Server version	5.5.34
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -48,10 +43,16 @@ CREATE TABLE `dungeonfinder_requirements` (
 
 LOCK TABLES `dungeonfinder_requirements` WRITE;
 /*!40000 ALTER TABLE `dungeonfinder_requirements` DISABLE KEYS */;
-INSERT INTO `dungeonfinder_requirements` (`mapId`, `difficulty`, `min_item_level`, `item`, `item_2`, `alliance_quest`, `horde_quest`, `achievement`, `quest_incomplete_text`, `comment`) VALUES (269,0,0,0,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" before entering the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
-(269,1,0,30635,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" and be level 70 before entering the Heroic difficulty of the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
-(540,1,0,30637,30622,0,0,0,NULL,'The Shattered Halls (Entrance)'),
-(542,1,0,30637,30622,0,0,0,NULL,'The Blood Furnace (Entrance)'),
+INSERT INTO `dungeonfinder_requirements` (`mapId`, `difficulty`, `min_item_level`, `item`, `item_2`, `alliance_quest`, `horde_quest`, `achievement`, `quest_incomplete_text`, `comment`) VALUES (658,1,200,0,0,24499,24511,0,NULL,'Pit of Saron (Entrance)'),
+(658,0,200,0,0,24499,24511,0,NULL,'Pit of Saron (Entrance)'),
+(650,1,200,0,0,0,0,0,NULL,'Trial of the Champion'),
+(650,0,200,0,0,0,0,0,NULL,'Trial of the Champion'),
+(649,3,0,0,0,0,0,0,NULL,'Trial of the Crusader'),
+(632,1,200,0,0,0,0,0,NULL,'Forge of Souls (Entrance)'),
+(632,0,200,0,0,0,0,0,NULL,'Forge of Souls (Entrance)'),
+(631,3,0,0,0,0,0,4597,NULL,'IceCrown Citadel (Entrance)'),
+(619,1,180,0,0,0,0,0,NULL,'Ahn\'Kahet (entrance)'),
+(631,2,0,0,0,0,0,4530,NULL,'IceCrown Citadel (Entrance)'),
 (543,1,0,30637,30622,0,0,0,NULL,'Hellfire Ramparts (Entrance)'),
 (545,1,0,30623,0,0,0,0,NULL,'The Steamvault (Entrance)'),
 (546,1,0,30623,0,0,0,0,NULL,'The Underbog (Entrance)'),
@@ -76,16 +77,10 @@ INSERT INTO `dungeonfinder_requirements` (`mapId`, `difficulty`, `min_item_level
 (602,1,180,0,0,0,0,0,NULL,'Ulduar,Halls of Lightning (entrance)'),
 (604,1,180,0,0,0,0,0,NULL,'Gundrak (entrance north)'),
 (608,1,180,0,0,0,0,0,NULL,'Violet Hold (entrance)'),
-(619,1,180,0,0,0,0,0,NULL,'Ahn\'Kahet (entrance)'),
-(631,2,0,0,0,0,0,4530,NULL,'IceCrown Citadel (Entrance)'),
-(631,3,0,0,0,0,0,4597,NULL,'IceCrown Citadel (Entrance)'),
-(632,0,200,0,0,0,0,0,NULL,'Forge of Souls (Entrance)'),
-(632,1,200,0,0,0,0,0,NULL,'Forge of Souls (Entrance)'),
-(649,3,0,0,0,0,0,0,NULL,'Trial of the Crusader'),
-(650,0,200,0,0,0,0,0,NULL,'Trial of the Champion'),
-(650,1,200,0,0,0,0,0,NULL,'Trial of the Champion'),
-(658,0,200,0,0,24499,24511,0,NULL,'Pit of Saron (Entrance)'),
-(658,1,200,0,0,24499,24511,0,NULL,'Pit of Saron (Entrance)'),
+(542,1,0,30637,30622,0,0,0,NULL,'The Blood Furnace (Entrance)'),
+(269,1,0,30635,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" and be level 70 before entering the Heroic difficulty of the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
+(269,0,0,0,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" before entering the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
+(540,1,0,30637,30622,0,0,0,NULL,'The Shattered Halls (Entrance)'),
 (668,0,219,0,0,24710,24712,0,NULL,'Halls of Reflection (Entrance)'),
 (668,1,219,0,0,24710,24712,0,NULL,'Halls of Reflection (Entrance)');
 /*!40000 ALTER TABLE `dungeonfinder_requirements` ENABLE KEYS */;
