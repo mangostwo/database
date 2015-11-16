@@ -1,3 +1,8 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `playercreateinfo_action`; 
+-- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
 -- Host: 192.168.1.3    Database: mangos2
@@ -14,23 +19,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `playercreateinfo_action`
---
-
-DROP TABLE IF EXISTS `playercreateinfo_action`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `playercreateinfo_action` (
-  `race` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `class` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `button` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `action` int(11) unsigned NOT NULL DEFAULT '0',
-  `type` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`race`,`class`,`button`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `playercreateinfo_action`

@@ -1,3 +1,8 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `quest_poi`; 
+-- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
 -- Host: 192.168.1.3    Database: mangos2
@@ -14,26 +19,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `quest_poi`
---
-
-DROP TABLE IF EXISTS `quest_poi`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `quest_poi` (
-  `questId` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `poiId` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `objIndex` int(11) NOT NULL DEFAULT '0',
-  `mapId` int(11) unsigned NOT NULL DEFAULT '0',
-  `mapAreaId` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `floorId` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `unk3` int(11) unsigned NOT NULL DEFAULT '0',
-  `unk4` int(11) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`questId`,`poiId`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `quest_poi`

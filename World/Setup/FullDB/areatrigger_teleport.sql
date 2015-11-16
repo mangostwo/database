@@ -1,3 +1,8 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `areatrigger_teleport`; 
+-- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
 -- Host: 192.168.1.3    Database: mangos2
@@ -14,33 +19,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `areatrigger_teleport`
---
-
-DROP TABLE IF EXISTS `areatrigger_teleport`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `areatrigger_teleport` (
-  `id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Identifier',
-  `name` text,
-  `required_level` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `required_item` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `required_item2` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `heroic_key` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `heroic_key2` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `required_quest_done` int(11) unsigned NOT NULL DEFAULT '0',
-  `required_quest_done_heroic` int(11) unsigned NOT NULL DEFAULT '0',
-  `target_map` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `target_position_x` float NOT NULL DEFAULT '0',
-  `target_position_y` float NOT NULL DEFAULT '0',
-  `target_position_z` float NOT NULL DEFAULT '0',
-  `target_orientation` float NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  FULLTEXT KEY `name` (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Trigger System';
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `areatrigger_teleport`

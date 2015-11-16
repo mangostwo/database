@@ -1,3 +1,8 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `creature_template_spells`; 
+-- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
 -- Host: 192.168.1.3    Database: mangos2
@@ -14,27 +19,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `creature_template_spells`
---
-
-DROP TABLE IF EXISTS `creature_template_spells`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `creature_template_spells` (
-  `entry` mediumint(8) unsigned NOT NULL,
-  `spell1` mediumint(8) unsigned NOT NULL,
-  `spell2` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `spell3` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `spell4` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `spell5` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `spell6` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `spell7` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `spell8` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`entry`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Creature System (Spells used by creature)';
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `creature_template_spells`

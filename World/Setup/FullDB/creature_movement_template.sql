@@ -1,3 +1,8 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `creature_movement_template`; 
+-- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
 -- Host: 192.168.1.3    Database: mangos2
@@ -14,36 +19,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `creature_movement_template`
---
-
-DROP TABLE IF EXISTS `creature_movement_template`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `creature_movement_template` (
-  `entry` mediumint(8) unsigned NOT NULL COMMENT 'Creature entry',
-  `point` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `position_x` float NOT NULL DEFAULT '0',
-  `position_y` float NOT NULL DEFAULT '0',
-  `position_z` float NOT NULL DEFAULT '0',
-  `waittime` int(10) unsigned NOT NULL DEFAULT '0',
-  `script_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `textid1` int(11) NOT NULL DEFAULT '0',
-  `textid2` int(11) NOT NULL DEFAULT '0',
-  `textid3` int(11) NOT NULL DEFAULT '0',
-  `textid4` int(11) NOT NULL DEFAULT '0',
-  `textid5` int(11) NOT NULL DEFAULT '0',
-  `emote` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `spell` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `wpguid` int(11) NOT NULL DEFAULT '0',
-  `orientation` float NOT NULL DEFAULT '0',
-  `model1` mediumint(9) NOT NULL DEFAULT '0',
-  `model2` mediumint(9) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`entry`,`point`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Creature waypoint system';
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `creature_movement_template`

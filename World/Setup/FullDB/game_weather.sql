@@ -1,3 +1,8 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `game_weather`; 
+-- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
 -- Host: 192.168.1.3    Database: mangos2
@@ -14,31 +19,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `game_weather`
---
-
-DROP TABLE IF EXISTS `game_weather`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `game_weather` (
-  `zone` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `spring_rain_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `spring_snow_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `spring_storm_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `summer_rain_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `summer_snow_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `summer_storm_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `fall_rain_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `fall_snow_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `fall_storm_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `winter_rain_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `winter_snow_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  `winter_storm_chance` tinyint(3) unsigned NOT NULL DEFAULT '25',
-  PRIMARY KEY (`zone`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Weather System';
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `game_weather`

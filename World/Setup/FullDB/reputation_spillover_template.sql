@@ -1,3 +1,8 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `reputation_spillover_template`; 
+-- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
 -- Host: 192.168.1.3    Database: mangos2
@@ -14,31 +19,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `reputation_spillover_template`
---
-
-DROP TABLE IF EXISTS `reputation_spillover_template`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `reputation_spillover_template` (
-  `faction` smallint(6) unsigned NOT NULL DEFAULT '0' COMMENT 'faction entry',
-  `faction1` smallint(6) unsigned NOT NULL DEFAULT '0' COMMENT 'faction to give spillover for',
-  `rate_1` float NOT NULL DEFAULT '0' COMMENT 'the given rep points * rate',
-  `rank_1` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'max rank, above this will not give any spillover',
-  `faction2` smallint(6) unsigned NOT NULL DEFAULT '0',
-  `rate_2` float NOT NULL DEFAULT '0',
-  `rank_2` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `faction3` smallint(6) unsigned NOT NULL DEFAULT '0',
-  `rate_3` float NOT NULL DEFAULT '0',
-  `rank_3` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `faction4` smallint(6) unsigned NOT NULL DEFAULT '0',
-  `rate_4` float NOT NULL DEFAULT '0',
-  `rank_4` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`faction`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Reputation spillover reputation gain';
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `reputation_spillover_template`

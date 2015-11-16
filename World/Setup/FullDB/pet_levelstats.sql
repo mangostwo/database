@@ -1,3 +1,8 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `pet_levelstats`; 
+-- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
 -- Host: 192.168.1.3    Database: mangos2
@@ -14,28 +19,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `pet_levelstats`
---
-
-DROP TABLE IF EXISTS `pet_levelstats`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pet_levelstats` (
-  `creature_entry` mediumint(8) unsigned NOT NULL,
-  `level` tinyint(3) unsigned NOT NULL,
-  `hp` smallint(5) unsigned NOT NULL,
-  `mana` smallint(5) unsigned NOT NULL,
-  `armor` int(10) unsigned NOT NULL DEFAULT '0',
-  `str` smallint(5) unsigned NOT NULL,
-  `agi` smallint(5) unsigned NOT NULL,
-  `sta` smallint(5) unsigned NOT NULL,
-  `inte` smallint(5) unsigned NOT NULL,
-  `spi` smallint(5) unsigned NOT NULL,
-  PRIMARY KEY (`creature_entry`,`level`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 PACK_KEYS=0 COMMENT='Stores pet levels stats.';
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `pet_levelstats`
