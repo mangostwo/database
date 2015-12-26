@@ -26,7 +26,7 @@ BEGIN
     SET @cNewStructure = '2';
     SET @cNewContent = '3';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Zaxxis NPCs Should be aggressive';
+    SET @cNewDescription = 'Zaxxis NPCs aggressive';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'Zaxxis NPCs incorrectly set as friendly to all';
