@@ -51,7 +51,7 @@ BEGIN
 -- Start Up error fixes
 
 
-UPDATE `mangosTwo`.`creature` SET `MovementType`='1' WHERE `guid`='82534';
+UPDATE creature SET MovementType=1 WHERE guid=82534;
 
 -- replace with the correct value
 UPDATE dbscripts_on_creature_movement SET dataint = 2000000404 WHERE id = 1723002 AND dataint = 2000000011;
