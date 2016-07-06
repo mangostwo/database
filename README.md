@@ -4,10 +4,10 @@
 [![](/icons/TOOLS.gif)](http://github.com/mangostools)
 [![](/icons/TRACKER.gif)](https://www.getmangos.eu/project.php)
 
-MangosOne World Database
+MangosTwo World Database
 ===
 
-### A World Database for TBC Wow
+### A World Database for WoTLK Wow
 ----
 A content database for [**WoTLK**][10] MaNGOS Servers, and [**World of Warcraft**][50] Client Patch
 3.3.5a - [Wrath of the Lich King][51].
