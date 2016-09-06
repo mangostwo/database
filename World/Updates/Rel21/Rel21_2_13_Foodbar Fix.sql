@@ -23,7 +23,7 @@ BEGIN
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '2';
-    SET @cNewContent = '3';
+    SET @cNewContent = '13';
  
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
