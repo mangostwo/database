@@ -20,12 +20,12 @@ BEGIN
     -- Expected Values
     SET @cOldVersion = '21'; 
     SET @cOldStructure = '2'; 
-    SET @cOldContent = '8'; 
+    SET @cOldContent = '14'; 
 
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '2';
-    SET @cNewContent = '9';
+    SET @cNewContent = '15';
  
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
