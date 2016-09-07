@@ -1,19 +1,27 @@
--- ---------------------------------------- 
--- --        CLEAR DOWN THE TABLE        -- 
--- ---------------------------------------- 
-TRUNCATE TABLE `dungeonfinder_rewards`; 
--- ---------------------------------------- 
--- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: 192.168.1.3    Database: mangos2
--- ------------------------------------------------------
--- Server version	5.5.34
+-- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
+--
+-- This program is free software; you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation; either version 2 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program; if not, write to the Free Software
+-- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -21,12 +29,29 @@ TRUNCATE TABLE `dungeonfinder_rewards`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `dungeonfinder_rewards`
+--
+
+DROP TABLE IF EXISTS `dungeonfinder_rewards`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dungeonfinder_rewards` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `level` mediumint(8) unsigned NOT NULL COMMENT 'uint32',
+  `base_xp_reward` mediumint(8) unsigned NOT NULL COMMENT 'uint32',
+  `base_monetary_reward` int(10) NOT NULL COMMENT 'int32',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `dungeonfinder_rewards`
 --
 
 LOCK TABLES `dungeonfinder_rewards` WRITE;
 /*!40000 ALTER TABLE `dungeonfinder_rewards` DISABLE KEYS */;
-INSERT INTO `dungeonfinder_rewards` (`id`, `level`, `base_xp_reward`, `base_monetary_reward`) VALUES (66,80,0,99300),
+INSERT INTO `dungeonfinder_rewards` (`id`, `level`, `base_xp_reward`, `base_monetary_reward`) VALUES
+(66,80,0,99300),
 (65,79,16550,74000),
 (64,78,16550,74000),
 (63,77,16550,74000),
@@ -103,3 +128,4 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+

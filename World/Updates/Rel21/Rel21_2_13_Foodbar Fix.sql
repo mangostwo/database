@@ -24,6 +24,20 @@ BEGIN
     SET @cNewVersion = '21';
     SET @cNewStructure = '2';
     SET @cNewContent = '13';
+                            -- DESCRIPTION IS 30 Characters MAX    
+    SET @cNewDescription = 'Foodbar fix';
+
+                        -- COMMENT is 150 Characters MAX
+    SET @cNewComment = 'Foodbar fix';
+
+    -- Evaluate all settings
+    SET @cCurResult := (SELECT description FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+    SET @cOldResult := (SELECT description FROM db_version WHERE `version`=@cOldVersion AND `structure`=@cOldStructure AND `content`=@cOldContent);
+    SET @cNewResult := (SELECT description FROM db_version WHERE `version`=@cNewVersion AND `structure`=@cNewStructure AND `content`=@cNewContent);
+
+    IF (@cCurResult = @cOldResult) THEN    -- Does the current version match the expected version
+        -- APPLY UPDATE
+        START TRANSACTION;
  
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -32,7 +46,6 @@ BEGIN
 /*
 remove unnecessary action food bar icon
 */
-
 DELETE FROM `playercreateinfo_action` WHERE `race` = '10' AND `class` = '9' AND `button` = '11' AND `action` = '20857' AND `type` = '128'; 
 DELETE FROM `playercreateinfo_action` WHERE `race` = '10' AND `class` = '8' AND `button` = '11' AND `action` = '20857' AND `type` = '128'; 
 DELETE FROM `playercreateinfo_action` WHERE `race` = '10' AND `class` = '5' AND `button` = '11' AND `action` = '20857' AND `type` = '128';
@@ -47,11 +60,20 @@ DELETE FROM `playercreateinfo_action` WHERE `race` = '5' AND `class` = '1' AND `
 DELETE FROM `playercreateinfo_action` WHERE `race` = '1' AND `class` = '9' AND `button` = '11' AND `action` = '4604' AND `type` = '128'; 
 
 
+DELETE FROM `playercreateinfo_action` WHERE `race` = '1' AND class = 6 and button = 11;
+DELETE FROM `playercreateinfo_action` WHERE `race` = '2' AND class = 6 and button = 11;
+DELETE FROM `playercreateinfo_action` WHERE `race` = '3' AND class = 6 and button = 11;
+DELETE FROM `playercreateinfo_action` WHERE `race` = '4' AND class = 6 and button = 11;
+DELETE FROM `playercreateinfo_action` WHERE `race` = '5' AND class = 6 and button = 11;
+DELETE FROM `playercreateinfo_action` WHERE `race` = '6' AND class = 6 and button = 11;
+DELETE FROM `playercreateinfo_action` WHERE `race` = '8' AND class = 6 and button = 11;
+DELETE FROM `playercreateinfo_action` WHERE `race` = '10' AND class = 6 and button = 11;
+
 /*
 Add food icon to deathknight action bar
 */
 
-Update `playercreateinfo_action` set `button` = '10' where `race` = '1' and `class` = '6' and `button` = '11'
+Update `playercreateinfo_action` set `button` = '10' where `race` = '1' and `class` = '6' and `button` = '11';
 INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES('1','6','11','41751','128');
 INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES('2','6','11','41751','128');
 INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES('3','6','11','41751','128');
@@ -60,7 +82,6 @@ INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `typ
 INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES('6','6','11','41751','128');
 INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES('8','6','11','41751','128');
 INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES('10','6','11','41751','128');
-
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --

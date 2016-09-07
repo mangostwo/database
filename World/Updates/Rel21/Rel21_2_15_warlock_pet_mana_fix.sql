@@ -26,6 +26,21 @@ BEGIN
     SET @cNewVersion = '21';
     SET @cNewStructure = '2';
     SET @cNewContent = '15';
+                            -- DESCRIPTION IS 30 Characters MAX    
+    SET @cNewDescription = 'Warlock pet fix';
+
+                        -- COMMENT is 150 Characters MAX
+    SET @cNewComment = 'Warlock mana pet fix';
+
+    -- Evaluate all settings
+    SET @cCurResult := (SELECT description FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+    SET @cOldResult := (SELECT description FROM db_version WHERE `version`=@cOldVersion AND `structure`=@cOldStructure AND `content`=@cOldContent);
+    SET @cNewResult := (SELECT description FROM db_version WHERE `version`=@cNewVersion AND `structure`=@cNewStructure AND `content`=@cNewContent);
+
+    IF (@cCurResult = @cOldResult) THEN    -- Does the current version match the expected version
+        -- APPLY UPDATE
+        START TRANSACTION;
+
  
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -37,8 +52,8 @@ To follow suit with the remaining pets, UnitClass set
 with value 2.
 */
 
-UPDATE `creature_template` SET `UnitClass` = '2' WHERE `creature_template`.`Entry` =1863;
-UPDATE `creature_template` SET `UnitClass` = '2' WHERE `creature_template`.`Entry` =416;
+UPDATE `creature_template` SET `UnitClass` = '2' WHERE Entry =1863;
+UPDATE `creature_template` SET `UnitClass` = '2' WHERE Entry =416;
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --

@@ -1,19 +1,27 @@
--- ---------------------------------------- 
--- --        CLEAR DOWN THE TABLE        -- 
--- ---------------------------------------- 
-TRUNCATE TABLE `areatrigger_teleport`; 
--- ---------------------------------------- 
--- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: 192.168.1.3    Database: mangos2
--- ------------------------------------------------------
--- Server version	5.5.34
+-- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
+--
+-- This program is free software; you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation; either version 2 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program; if not, write to the Free Software
+-- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -21,12 +29,39 @@ TRUNCATE TABLE `areatrigger_teleport`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `areatrigger_teleport`
+--
+
+DROP TABLE IF EXISTS `areatrigger_teleport`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `areatrigger_teleport` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Identifier',
+  `name` text,
+  `required_level` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `required_item` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `required_item2` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `heroic_key` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `heroic_key2` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `required_quest_done` int(11) unsigned NOT NULL DEFAULT '0',
+  `required_quest_done_heroic` int(11) unsigned NOT NULL DEFAULT '0',
+  `target_map` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `target_position_x` float NOT NULL DEFAULT '0',
+  `target_position_y` float NOT NULL DEFAULT '0',
+  `target_position_z` float NOT NULL DEFAULT '0',
+  `target_orientation` float NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Trigger System';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `areatrigger_teleport`
 --
 
 LOCK TABLES `areatrigger_teleport` WRITE;
 /*!40000 ALTER TABLE `areatrigger_teleport` DISABLE KEYS */;
-INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_item`, `required_item2`, `heroic_key`, `heroic_key2`, `required_quest_done`, `required_quest_done_heroic`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES (45,'Scarlet Monastery - Graveyard (Entrance)',20,0,0,0,0,0,0,189,1688.99,1053.48,18.6775,0.00117),
+INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_item`, `required_item2`, `heroic_key`, `heroic_key2`, `required_quest_done`, `required_quest_done_heroic`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES
+(45,'Scarlet Monastery - Graveyard (Entrance)',20,0,0,0,0,0,0,189,1688.99,1053.48,18.6775,0.00117),
 (78,'DeadMines Entrance',10,0,0,0,0,0,0,36,-16.4,-383.07,61.78,1.86),
 (101,'Stormwind Stockades Entrance',15,0,0,0,0,0,0,34,54.23,0.28,-18.34,6.26),
 (107,'Stormwind Vault Entrance',0,0,0,0,0,0,0,35,-0.91,40.57,-24.23,0),
@@ -67,6 +102,7 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (902,'Uldaman Exit',30,0,0,0,0,0,0,70,-214.02,383.607,-38.7687,0.5),
 (922,'Zul\'Farrak Instance Start',0,0,0,0,0,0,0,1,-6796.49,-2890.77,8.88063,0),
 (924,'Zul\'Farrak Entrance',35,0,0,0,0,0,0,209,1213.52,841.59,8.93,6.09),
+(943,'Leap of Faith - End of fall',0,0,0,0,0,0,0,1,-5187.47,-2804.32,-8.375,5.76),
 (1064,'Onyxia\'s Lair - Dustwallow Instance',0,0,0,0,0,0,0,1,-4747.17,-3753.27,49.8122,0.713271),
 (1466,'Blackrock Mountain - Searing Gorge Instance?',40,0,0,0,0,0,0,230,458.32,26.52,-70.67,4.95),
 (1468,'Blackrock Spire - Searing Gorge Instance (Inside)',45,0,0,0,0,0,0,229,78.5083,-225.044,49.839,5.1),
@@ -82,7 +118,6 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (2221,'Stratholme - Eastern Plaguelands Instance (Inside)',0,0,0,0,0,0,0,0,3235.46,-4050.6,110.01,0),
 (2226,'Ragefire Chasm - Ogrimmar Instance (Inside)',0,0,0,0,0,0,0,1,1813.49,-4418.58,-18.57,1.78),
 (2230,'Ragefire Chasm - Ogrimmar Instance',8,0,0,0,0,0,0,389,3.81,-14.82,-17.84,4.39),
-(4743,'Utgarde Keep (exit)',0,0,0,0,0,0,0,571,1237.2,-4859.27,218.283,0.274),
 (2530,'Hall of Legends - Ogrimmar (Inside)',0,0,0,0,0,0,0,1,1637.32,-4242.7,56.1827,4.1927),
 (2534,'Stormwind (Inside) - Champions Hall',0,0,0,0,0,0,0,0,-8762.45,403.062,103.902,5.34463),
 (2567,'Scholomance Entrance',45,0,0,0,0,0,0,289,196.37,127.05,134.91,6.09),
@@ -109,6 +144,7 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (3195,'Dire Maul',0,0,0,0,0,0,0,1,-3980.58,776.193,161.006,0),
 (3196,'Dire Maul',0,0,0,0,0,0,0,1,-4030.21,127.966,26.8109,0),
 (3197,'Dire Maul',0,0,0,0,0,0,0,1,-3577.67,841.859,134.594,0),
+(3528,'The Molten Core Window Entrance',50,0,0,0,0,0,0,409,1096,-467,-104.6,3.64),
 (3529,'The Molten Core Window(Lava) Entrance',50,0,0,0,0,0,0,409,1096,-467,-104.6,3.64),
 (3726,'Blackwing Lair - Blackrock Mountain - Eastern Kingdoms',60,0,0,0,0,0,0,469,-7673.03,-1106.08,396.651,0.703353),
 (3728,'Blackrock Spire, Unknown',45,0,0,0,0,0,0,229,174.74,-474.77,116.84,3.2),
@@ -116,13 +152,12 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (3930,'Zul\'Gurub Exit ',0,0,0,0,0,0,0,0,-11916.3,-1208.37,92.2868,0),
 (3948,'Arathi Basin Alliance Out',0,0,0,0,0,0,0,0,-1198,-2533,22,0),
 (3949,'Arathi Basin Horde Out',0,0,0,0,0,0,0,0,-817,-3509,73,0),
-(3528,'The Molten Core Window Entrance',50,0,0,0,0,0,0,409,1096,-467,-104.6,3.64),
 (4006,'Ruins Of Ahn\'Qiraj (Inside)',0,0,0,0,0,0,0,1,-8418.5,1505.94,31.8232,0),
 (4008,'Ruins Of Ahn\'Qiraj (Outside)',50,0,0,0,0,0,0,509,-8429.74,1512.14,31.9074,0),
 (4010,'Ahn\'Qiraj Temple (Outside)',50,0,0,0,0,0,0,531,-8231.33,2010.6,129.861,0),
 (4012,'Ahn\'Qiraj Temple (Inside)',0,0,0,0,0,0,0,1,-8242.67,1992.06,129.072,0),
-(4745,'Utgarde Keep (entrance)',68,0,0,0,0,0,0,574,153.789,-86.548,12.551,0.304),
 (4131,'Karazhan, Main (Entrance)',68,0,0,0,0,0,0,532,-11100,-2003.98,49.8927,0.577268),
+(4135,'Karazhan, Service (Entrance)',68,0,0,0,0,0,0,532,-11040.1,-1996.85,94.6837,2.20224),
 (4145,'The Shattered Halls (Exit)',0,0,0,0,0,0,0,530,-311.16,3082.1,-3.71,4.92),
 (4147,'The Blood Furnace (Exit)',0,0,0,0,0,0,0,530,-303.506,3164.82,31.7425,5.24025),
 (4149,'Magtheridon\'s Lair (Exit)',0,0,0,0,0,0,0,530,-313.679,3088.35,-116.502,2.05307),
@@ -160,37 +195,55 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (4407,'Shadow Labyrinth (Entrance)',65,0,0,30633,0,0,0,555,0.488033,-0.215935,-1.12788,3.15888),
 (4409,'Eastern Plaguelands To Sunstrider Isle',0,0,0,0,0,0,0,530,6123,-7005,138,5),
 (4416,'Serpentshrine Cavern (Entrance)',70,0,0,0,0,0,0,548,2.5343,-0.022318,821.727,0.004512),
+(4418,'Serpentshrine Cavern (Exit)',0,0,0,0,0,0,0,530,827.011,6865.47,-63.7844,3.06507),
 (4436,'Karazhan, Main (Exit)',0,0,0,0,0,0,0,0,-11112.9,-2005.89,49.3307,4.02516),
-(4468,'The Arcatraz (Entrance)',68,0,0,30634,0,0,0,552,-1.23165,0.0143459,-0.204293,0.0157123),
+(4455,'The Arcatraz (Exit)',0,0,0,0,0,0,0,530,3312.09,1331.89,505.559,2.00554),
 (4457,'The Eye (Exit)',0,0,0,0,0,0,0,530,3087.31,1373.79,184.643,1.52918),
 (4459,'The Botanica (Exit)',0,0,0,0,0,0,0,530,3413.65,1483.32,182.838,2.54432),
 (4461,'The Mechanar (Exit)',0,0,0,0,0,0,0,530,2862.41,1546.09,252.161,0.805457),
 (4467,'The Botanica (Entrance)',68,0,0,30634,0,0,0,553,40.0395,-28.613,-1.1189,2.35856),
-(4455,'The Arcatraz (Exit)',0,0,0,0,0,0,0,530,3312.09,1331.89,505.559,2.00554),
+(4468,'The Arcatraz (Entrance)',68,0,0,30634,0,0,0,552,-1.23165,0.0143459,-0.204293,0.0157123),
 (4469,'The Mechanar (Entrance)',68,0,0,30634,0,0,0,554,-28.906,0.680314,-1.81282,0.0345509),
 (4470,'The Eye (Entrance)',68,0,0,0,0,0,0,550,-10.8021,-1.15045,-2.42833,6.22821),
 (4487,'Battle Of Mount Hyjal (Exit)',0,0,0,0,0,0,0,1,-8177.5,-4183,-168,4.5),
+(4520,'Karazhan, Service (Exit)',0,0,0,0,0,0,0,0,-11034.8,-2003.8,92.98,0),
+(4523,'Socrethar\'s Seat To Mainland',0,0,0,0,0,0,0,530,4773.76,3451.27,105.15,3.84),
 (4534,'Gruul\'s Lair (Exit)',0,0,0,0,0,0,0,530,3549.8,5085.97,2.46332,2.25742),
 (4535,'Gruul\'s Lair (Entrance)',65,0,0,0,0,0,0,565,62.7842,35.462,-3.9835,1.41844),
-(4598,'Black Temple (Entrance)',70,0,0,0,0,0,0,564,96.4462,1002.35,-86.9984,6.15675),
-(4619,'Black Temple (Exit)',0,0,0,0,0,0,0,530,-3653.51,317.493,36.1671,6.24941),
-(4418,'Serpentshrine Cavern (Exit)',0,0,0,0,0,0,0,530,827.011,6865.47,-63.7844,3.06507),
-(4523,'Socrethar\'s Seat To Mainland',0,0,0,0,0,0,0,530,4773.76,3451.27,105.15,3.84),
-(4738,'Zul\'Aman (Entrance)',68,0,0,0,0,0,0,568,120.7,1776,43.46,4.7713),
-(4739,'Zul\'Aman (Exit)',0,0,0,0,0,0,0,530,6851.5,-7997.68,192.36,1.56688),
-(943,'Leap of Faith - End of fall',0,0,0,0,0,0,0,1,-5187.47,-2804.32,-8.375,5.76),
 (4561,'Invasion Point, Cataclysm (Return Point)',0,0,0,0,0,0,0,530,-3278.63,2831.31,123.01,1.56),
 (4562,'Invasion Point, Cataclysm (Return Point)',0,0,0,0,0,0,0,530,-3278.63,2831.31,123.01,1.56),
-(4135,'Karazhan, Service (Entrance)',68,0,0,0,0,0,0,532,-11040.1,-1996.85,94.6837,2.20224),
+(4598,'Black Temple (Entrance)',70,0,0,0,0,0,0,564,96.4462,1002.35,-86.9984,6.15675),
+(4612,'The Botanica (Atrium Exit)',0,0,0,0,0,0,0,530,3409.85,1486.26,182.837,2.53073),
+(4614,'The Mechanar (Boss Exit)',0,0,0,0,0,0,0,530,2862.41,1546.09,252.161,0.805457),
+(4619,'Black Temple (Exit)',0,0,0,0,0,0,0,530,-3653.51,317.493,36.1671,6.24941),
+(4738,'Zul\'Aman (Entrance)',68,0,0,0,0,0,0,568,120.7,1776,43.46,4.7713),
+(4739,'Zul\'Aman (Exit)',0,0,0,0,0,0,0,530,6851.5,-7997.68,192.36,1.56688),
+(4741,'Utgarde Pinnacle (exit)',0,0,0,0,0,0,0,571,1228.09,-4862.45,41.248,3.443),
+(4743,'Utgarde Keep (exit)',0,0,0,0,0,0,0,571,1237.2,-4859.27,218.283,0.274),
+(4745,'Utgarde Keep (entrance)',68,0,0,0,0,0,0,574,153.789,-86.548,12.551,0.304),
+(4747,'Utgarde Pinnacle (entrance)',75,0,0,0,0,0,0,575,584.117,-327.974,110.138,3.122),
 (4885,'Magisters\' Terrace (Exit)',0,0,0,0,0,0,0,530,12884.6,-7336.17,65.48,1.09),
 (4887,'Magisters\' Terrace (Entrance)',70,0,0,0,0,0,11492,585,7.09,-0.45,-2.8,0.05),
 (4889,'Sunwell Plateau (Entrance)',70,0,0,0,0,0,0,580,1790.65,925.67,15.15,3.1),
 (4891,'Sunwell Plateau (Exit)',0,0,0,0,0,0,0,530,12560.8,-6774.59,15.08,6.25),
-(4747,'Utgarde Pinnacle (entrance)',75,0,0,0,0,0,0,575,584.117,-327.974,110.138,3.122),
-(4741,'Utgarde Pinnacle (exit)',0,0,0,0,0,0,0,571,1228.09,-4862.45,41.248,3.443),
-(4983,'The Nexus (entrance)',68,0,0,0,0,0,0,576,145.87,-10.554,-16.636,1.528),
 (4981,'The Nexus (exit)',0,0,0,0,0,0,0,571,3897.42,6985.33,69.487,3.17),
-(5246,'The Oculus (entrance)',75,0,0,0,0,0,0,578,1055.93,986.85,361.07,5.745),
+(4983,'The Nexus (entrance)',68,0,0,0,0,0,0,576,145.87,-10.554,-16.636,1.528),
+(4998,'Drak\'Tharon Keep (entrance)',69,0,0,0,0,0,0,600,-517.343,-487.976,11.01,4.831),
+(5000,'Drak\'Tharon Keep (exit)',0,0,0,0,0,0,0,571,4774.47,-2028.04,229.373,4.645),
+(5001,'The Oculus (exit)',0,0,0,0,0,0,0,571,3876.16,6984.44,106.32,6.279),
+(5010,'Ulduar, Halls of Stone (entrance)',72,0,0,0,0,0,0,599,1153.24,806.164,195.937,4.715),
+(5012,'Ulduar, Halls of Stone (exit)',0,0,0,0,0,0,0,571,8921.93,-970.399,1039.2,4.726),
+(5051,'Zul\'drak - Voltarus, going up',0,0,0,0,0,0,0,571,6159.16,-2028.6,408.168,3.74088),
+(5079,'Zul\'drak - Voltarus, going down',0,0,0,0,0,0,0,571,6175.6,-2008.78,245.255,1.49857),
+(5091,'Ulduar, Halls of Lightning (exit)',0,0,0,0,0,0,0,571,9182.91,-1384.73,1110.21,2.431),
+(5093,'Ulduar, Halls of Lightning (entrance)',75,0,0,0,0,0,0,602,1331.47,259.619,53.398,4.772),
+(5113,'Azjol-Nerub (exit back)',0,0,0,0,0,0,0,571,3678.05,2166.4,35.795,5.58),
+(5115,'Azjol-Nerub (exit)',0,0,0,0,0,0,0,571,3678.05,2166.4,35.795,5.58),
+(5117,'Azjol-Nerub (entrance)',67,0,0,0,0,0,0,601,413.314,795.968,831.351,5.5),
+(5148,'Culling of Stratholme (exit)',0,0,0,0,0,0,0,1,-8756.87,-4459.29,-200.73,1.32),
+(5150,'Culling of Stratholme (entrance)',75,0,0,0,0,0,0,595,1431.1,556.92,36.69,5.16),
+(5187,'Teleportation pad, Garm\'s Rise -> K3',77,0,0,0,0,12821,0,571,6153.08,-1074.07,403.478,2.04995),
+(5190,'Teleportation pad, K3 -> Garm\'s Rise',77,0,0,0,0,12821,0,571,6313.44,-1762.44,457.645,2.08917),
 (5191,'Naxxramas (entrance1)',80,0,0,0,0,0,0,533,3005.68,-3447.77,293.93,4.65),
 (5192,'Naxxramas (entrance2)',80,0,0,0,0,0,0,533,3019.34,-3434.36,293.99,6.27),
 (5193,'Naxxramas (entrance3)',80,0,0,0,0,0,0,533,3005.9,-3420.58,294.11,1.58),
@@ -199,63 +252,45 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (5197,'Naxxramas (exit2)',0,0,0,0,0,0,0,571,3679.03,-1259.68,243.55,3.98),
 (5198,'Naxxramas (exit3)',0,0,0,0,0,0,0,571,3661.14,-1279.55,243.55,0.82),
 (5199,'Naxxramas (exit4)',0,0,0,0,0,0,0,571,3660.01,-1260.99,243.55,5.51),
-(5150,'Culling of Stratholme (entrance)',75,0,0,0,0,0,0,595,1431.1,556.92,36.69,5.16),
-(5148,'Culling of Stratholme (exit)',0,0,0,0,0,0,0,1,-8756.87,-4459.29,-200.73,1.32),
+(5205,'Gundrak (entrance south)',71,0,0,0,0,0,0,604,1891.84,832.169,176.669,2.109),
+(5206,'Gundrak (entrance north)',71,0,0,0,0,0,0,604,1894.58,652.713,176.666,4.078),
 (5209,'Violet Hold (entrance)',70,0,0,0,0,0,0,608,1808.82,803.93,44.364,6.282),
 (5211,'Violet Hold (exit)',0,0,0,0,0,0,0,571,5680.7,487.323,652.418,0.882),
-(5206,'Gundrak (entrance north)',71,0,0,0,0,0,0,604,1894.58,652.713,176.666,4.078),
-(5205,'Gundrak (entrance south)',71,0,0,0,0,0,0,604,1891.84,832.169,176.669,2.109),
-(5277,'Gundrak (exit north)',0,0,0,0,0,0,0,571,6970.02,-4402.09,441.578,3.845),
-(5231,'Gundrak (exit south)',0,0,0,0,0,0,0,571,6702.47,-4660.55,441.568,0.75),
-(5093,'Ulduar, Halls of Lightning (entrance)',75,0,0,0,0,0,0,602,1331.47,259.619,53.398,4.772),
-(5091,'Ulduar, Halls of Lightning (exit)',0,0,0,0,0,0,0,571,9182.91,-1384.73,1110.21,2.431),
-(5010,'Ulduar, Halls of Stone (entrance)',72,0,0,0,0,0,0,599,1153.24,806.164,195.937,4.715),
-(5012,'Ulduar, Halls of Stone (exit)',0,0,0,0,0,0,0,571,8921.93,-970.399,1039.2,4.726),
-(5117,'Azjol-Nerub (entrance)',67,0,0,0,0,0,0,601,413.314,795.968,831.351,5.5),
-(5115,'Azjol-Nerub (exit)',0,0,0,0,0,0,0,571,3678.05,2166.4,35.795,5.58),
-(5113,'Azjol-Nerub (exit back)',0,0,0,0,0,0,0,571,3678.05,2166.4,35.795,5.58),
-(5215,'Ahn\'Kahet (entrance)',68,0,0,0,0,0,0,619,333.351,-1109.94,69.772,0.553),
 (5213,'Ahn\'Kahet (exit)',0,0,0,0,0,0,0,571,3641.84,2032.94,2.47,1.178),
-(5243,'Chamber of Aspects, Obsidian Sanctum (entrance)',80,0,0,0,0,0,0,615,3228.58,385.86,65.549,1.578),
+(5215,'Ahn\'Kahet (entrance)',68,0,0,0,0,0,0,619,333.351,-1109.94,69.772,0.553),
+(5231,'Gundrak (exit south)',0,0,0,0,0,0,0,571,6702.47,-4660.55,441.568,0.75),
 (5241,'Chamber of Aspects, Obsidian Sanctum (exit)',0,0,0,0,0,0,0,571,3448,261.545,-110.163,0.097),
-(4998,'Drak\'Tharon Keep (entrance)',69,0,0,0,0,0,0,600,-517.343,-487.976,11.01,4.831),
-(5000,'Drak\'Tharon Keep (exit)',0,0,0,0,0,0,0,571,4774.47,-2028.04,229.373,4.645),
-(5290,'The Eye of Eternity (entrance)',80,0,0,0,0,0,0,616,727.942,1329.39,267.234,5.496),
-(5001,'The Oculus (exit)',0,0,0,0,0,0,0,571,3876.16,6984.44,106.32,6.279),
-(4520,'Karazhan, Service (Exit)',0,0,0,0,0,0,0,0,-11034.8,-2003.8,92.98,0),
-(5379,'Ulduar Raid entrance',80,0,0,0,0,0,0,603,-914.041,-148.98,463.137,6.28),
-(5381,'Ulduar Raid exit',0,0,0,0,0,0,0,571,9345.56,-1114.88,1245.09,3.11),
-(5262,'Vault of Archavon (Exit)',0,0,0,0,0,0,0,571,5480.88,2840.47,418.68,3.14),
+(5243,'Chamber of Aspects, Obsidian Sanctum (entrance)',80,0,0,0,0,0,0,615,3228.58,385.86,65.549,1.578),
+(5246,'The Oculus (entrance)',75,0,0,0,0,0,0,578,1055.93,986.85,361.07,5.745),
 (5258,'Vault of Archavon (Entrance)',80,0,0,0,0,0,0,624,-505.96,-103.353,157,0),
+(5262,'Vault of Archavon (Exit)',0,0,0,0,0,0,0,571,5480.88,2840.47,418.68,3.14),
 (5273,'Dalaran well to sewer',0,0,0,0,0,0,0,571,5791.39,560.1,633.76,0.79),
-(5510,'Trial of the Champion, exit',0,0,0,0,0,0,0,571,8574.13,791.833,558.528,0.0035),
-(5505,'Trial of the Champion, entrance',80,0,0,0,0,0,0,650,805.216,618.056,412.393,3.0949),
-(5642,'ICC The Forge of Souls, exit',0,0,0,0,0,0,0,571,5669.52,2005.31,798.042,2.25255),
-(5635,'ICC The Forge of Souls, entrance',75,0,0,0,0,0,0,632,4923.11,2175.02,638.734,2.00109),
-(5508,'Trial of the Crusader (exit)',0,0,0,0,0,0,0,571,8515.46,728.92,558.3,4.74206),
-(5503,'Trial of the Crusader (entrance)',80,0,0,0,0,0,0,649,563.61,80.6815,395.139,1.65937),
-(5636,'ICC Halls of Reflection (entrance)',75,0,0,0,0,0,0,668,5239.01,1932.64,707.695,0.800565),
-(5646,'ICC Halls of Reflection (exit)',0,0,0,0,0,0,0,571,5630.59,1997.55,798.049,1.44042),
-(5688,'ICC Forge of Souls (exit)',0,0,0,0,0,0,0,658,435.743,212.413,528.709,6.25646),
-(5668,'ICC IceCrown Citadel (exit)',0,0,0,0,0,0,0,571,5790,2071.48,636.065,0.459897),
-(5670,'ICC IceCrown Citadel (entrance)',80,0,0,0,0,0,0,631,76.8638,2211.37,30,3.14965),
-(5643,'ICC Pit of Saron (exit)',0,0,0,0,0,0,0,571,5595.92,2013.02,798.041,0.648728),
-(5683,'ICC Pit of Saron (exit)',0,0,0,0,0,0,0,571,5595.92,2013.02,798.041,0.648728),
-(5637,'ICC Pit of Saron (entrance)',75,0,0,0,0,0,0,658,435.743,212.413,528.709,6.25646),
-(5051,'Zul\'drak - Voltarus, going up',0,0,0,0,0,0,0,571,6159.16,-2028.6,408.168,3.74088),
-(5079,'Zul\'drak - Voltarus, going down',0,0,0,0,0,0,0,571,6175.6,-2008.78,245.255,1.49857),
-(5869,'Ruby Sanctum, entrance',80,0,0,0,0,0,0,724,3279.13,533.479,90.1375,3.14138),
-(5872,'Ruby Sanctum, exit',0,0,0,0,0,0,0,571,3604.33,192.201,-110.843,2.18319),
+(5277,'Gundrak (exit north)',0,0,0,0,0,0,0,571,6970.02,-4402.09,441.578,3.845),
+(5290,'The Eye of Eternity (entrance)',80,0,0,0,0,0,0,616,727.942,1329.39,267.234,5.496),
 (5332,'Naxxanar',0,0,0,0,0,0,0,571,3736.1,3565.4,290.8,3.669),
 (5334,'Temple City of En\'kilah',0,0,0,0,0,0,0,571,3801.5,3586.05,49.57,0.746),
 (5338,'Naxxanar',0,0,0,0,0,0,0,571,3736.1,3565.4,290.8,3.669),
 (5340,'Naxxanar (top)',0,0,0,0,0,0,0,571,3692.43,3577.94,473.32,6.14),
+(5379,'Ulduar Raid entrance',80,0,0,0,0,0,0,603,-914.041,-148.98,463.137,6.28),
+(5381,'Ulduar Raid exit',0,0,0,0,0,0,0,571,9345.56,-1114.88,1245.09,3.11),
 (5461,'Waygate sholazar -> un\'goro',77,0,0,0,0,12613,0,1,-6162.12,-1331.69,-168.965,2.39285),
 (5462,'Waygate un\'goro -> sholazar',77,0,0,0,0,12613,0,571,4885.89,5176.28,-84.8635,0.435156),
-(5190,'Teleportation pad, K3 -> Garm\'s Rise',77,0,0,0,0,12821,0,571,6313.44,-1762.44,457.645,2.08917),
-(5187,'Teleportation pad, Garm\'s Rise -> K3',77,0,0,0,0,12821,0,571,6153.08,-1074.07,403.478,2.04995),
-(4612,'The Botanica (Atrium Exit)',0,0,0,0,0,0,0,530,3409.85,1486.26,182.837,2.53073),
-(4614,'The Mechanar (Boss Exit)',0,0,0,0,0,0,0,530,2862.41,1546.09,252.161,0.805457);
+(5503,'Trial of the Crusader (entrance)',80,0,0,0,0,0,0,649,563.61,80.6815,395.139,1.65937),
+(5505,'Trial of the Champion, entrance',80,0,0,0,0,0,0,650,805.216,618.056,412.393,3.0949),
+(5508,'Trial of the Crusader (exit)',0,0,0,0,0,0,0,571,8515.46,728.92,558.3,4.74206),
+(5510,'Trial of the Champion, exit',0,0,0,0,0,0,0,571,8574.13,791.833,558.528,0.0035),
+(5635,'ICC The Forge of Souls, entrance',75,0,0,0,0,0,0,632,4923.11,2175.02,638.734,2.00109),
+(5636,'ICC Halls of Reflection (entrance)',75,0,0,0,0,0,0,668,5239.01,1932.64,707.695,0.800565),
+(5637,'ICC Pit of Saron (entrance)',75,0,0,0,0,0,0,658,435.743,212.413,528.709,6.25646),
+(5642,'ICC The Forge of Souls, exit',0,0,0,0,0,0,0,571,5669.52,2005.31,798.042,2.25255),
+(5643,'ICC Pit of Saron (exit)',0,0,0,0,0,0,0,571,5595.92,2013.02,798.041,0.648728),
+(5646,'ICC Halls of Reflection (exit)',0,0,0,0,0,0,0,571,5630.59,1997.55,798.049,1.44042),
+(5668,'ICC IceCrown Citadel (exit)',0,0,0,0,0,0,0,571,5790,2071.48,636.065,0.459897),
+(5670,'ICC IceCrown Citadel (entrance)',80,0,0,0,0,0,0,631,76.8638,2211.37,30,3.14965),
+(5683,'ICC Pit of Saron (exit)',0,0,0,0,0,0,0,571,5595.92,2013.02,798.041,0.648728),
+(5688,'ICC Forge of Souls (exit)',0,0,0,0,0,0,0,658,435.743,212.413,528.709,6.25646),
+(5869,'Ruby Sanctum, entrance',80,0,0,0,0,0,0,724,3279.13,533.479,90.1375,3.14138),
+(5872,'Ruby Sanctum, exit',0,0,0,0,0,0,0,571,3604.33,192.201,-110.843,2.18319);
 /*!40000 ALTER TABLE `areatrigger_teleport` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -267,3 +302,4 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
