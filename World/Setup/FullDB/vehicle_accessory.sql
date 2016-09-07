@@ -1,19 +1,27 @@
--- ---------------------------------------- 
--- --        CLEAR DOWN THE TABLE        -- 
--- ---------------------------------------- 
-TRUNCATE TABLE `vehicle_accessory`; 
--- ---------------------------------------- 
--- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: 192.168.1.3    Database: mangos2
--- ------------------------------------------------------
--- Server version	5.5.34
+-- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
+--
+-- This program is free software; you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation; either version 2 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program; if not, write to the Free Software
+-- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -21,12 +29,29 @@ TRUNCATE TABLE `vehicle_accessory`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `vehicle_accessory`
+--
+
+DROP TABLE IF EXISTS `vehicle_accessory`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `vehicle_accessory` (
+  `vehicle_entry` int(10) unsigned NOT NULL COMMENT 'entry of the npc who has some accessory as vehicle',
+  `seat` mediumint(8) unsigned NOT NULL COMMENT 'onto which seat shall the passenger be boarded',
+  `accessory_entry` int(10) unsigned NOT NULL COMMENT 'entry of the passenger that is to be boarded',
+  `comment` varchar(255) NOT NULL,
+  PRIMARY KEY (`vehicle_entry`,`seat`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Vehicle Accessory (passengers that are auto-boarded onto a vehicle)';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `vehicle_accessory`
 --
 
 LOCK TABLES `vehicle_accessory` WRITE;
 /*!40000 ALTER TABLE `vehicle_accessory` DISABLE KEYS */;
-INSERT INTO `vehicle_accessory` (`vehicle_entry`, `seat`, `accessory_entry`, `comment`) VALUES (27241,0,27268,'Risen Gryphon'),
+INSERT INTO `vehicle_accessory` (`vehicle_entry`, `seat`, `accessory_entry`, `comment`) VALUES
+(27241,0,27268,'Risen Gryphon'),
 (27626,0,27627,'Tatjana\'s Horse'),
 (27661,0,27662,'Wintergarde Gryphon'),
 (28018,0,28006,'Thiassi the Light Bringer'),
@@ -159,3 +184,4 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+

@@ -1,19 +1,27 @@
--- ---------------------------------------- 
--- --        CLEAR DOWN THE TABLE        -- 
--- ---------------------------------------- 
-TRUNCATE TABLE `script_waypoint`; 
--- ---------------------------------------- 
--- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: 192.168.1.3    Database: mangos2
--- ------------------------------------------------------
--- Server version	5.5.34
+-- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
+--
+-- This program is free software; you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation; either version 2 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program; if not, write to the Free Software
+-- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -21,12 +29,32 @@ TRUNCATE TABLE `script_waypoint`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `script_waypoint`
+--
+
+DROP TABLE IF EXISTS `script_waypoint`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `script_waypoint` (
+  `entry` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'creature_template entry',
+  `pointid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `location_x` float NOT NULL DEFAULT '0',
+  `location_y` float NOT NULL DEFAULT '0',
+  `location_z` float NOT NULL DEFAULT '0',
+  `waittime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'waittime in millisecs',
+  `point_comment` text,
+  PRIMARY KEY (`entry`,`pointid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Script Creature waypoints';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `script_waypoint`
 --
 
 LOCK TABLES `script_waypoint` WRITE;
 /*!40000 ALTER TABLE `script_waypoint` DISABLE KEYS */;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `waittime`, `point_comment`) VALUES (467,0,-10508.4,1068,55.21,0,''),
+INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `waittime`, `point_comment`) VALUES
+(467,0,-10508.4,1068,55.21,0,''),
 (467,1,-10518.3,1074.84,53.96,0,''),
 (467,2,-10534.8,1081.92,49.88,0,''),
 (467,3,-10546.5,1084.88,50.13,0,''),
@@ -3317,7 +3345,52 @@ INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `
 (26499,76,2293.69,1506.81,128.737,18000,'SAY_HUNT_MALGANIS'),
 (26499,77,2300.74,1487.23,128.362,0,''),
 (26499,78,2308.58,1460.86,127.839,0,''),
-(26499,79,2326.61,1420.56,127.78,0,'');
+(26499,79,2326.61,1420.56,127.78,0,''),
+(19671,0,-362.876,-71.333,-0.96,5000,'SAY_ESCORT_START'),
+(19671,1,-372.647,-88.728,-0.958,0,''),
+(19671,2,-373.163,-114.959,-0.958,0,''),
+(19671,3,-373.137,-138.439,-0.958,0,''),
+(19671,4,-373.687,-152.964,-0.958,0,''),
+(19671,5,-379.091,-158.089,-0.958,0,''),
+(19671,6,-381.149,-164.796,-0.958,0,''),
+(19671,7,-375.292,-164.111,0.715,0,'SAY_FIRST_STOP - escort paused'),
+(19671,8,-375.292,-164.111,0.715,1000,'SAY_FIRST_STOP_COMPLETE'),
+(19671,9,-381.149,-164.796,-0.958,0,''),
+(19671,10,-374.292,-193.614,-0.967,0,''),
+(19671,11,-370.799,-217.796,-0.959,0,''),
+(19671,12,-344.132,-222.647,-0.959,0,''),
+(19671,13,-310.88,-219.357,-0.945,9000,'SAY_COLLECTOR_SEARCH'),
+(19671,14,-299.879,-201.809,-1.181,0,''),
+(19671,15,-285.874,-187.791,-0.694,0,''),
+(19671,16,-271.884,-164.856,-1.912,0,''),
+(19671,17,-260.729,-159.094,-1.19,0,'SAY_SECOND_STOP - escort paused'),
+(19671,18,-244.372,-163.136,-0.924,0,''),
+(19671,19,-236.428,-185.952,-0.953,0,''),
+(19671,20,-210.659,-206.71,0.906,0,''),
+(19671,21,-193.375,-219.378,-0.518,0,''),
+(19671,22,-171.121,-223.043,-0.955,0,''),
+(19671,23,-148.658,-221.031,-0.77,0,''),
+(19671,24,-128.15,-215.657,-0.187,0,''),
+(19671,25,-93.429,-219.264,-1.32,0,''),
+(19671,26,-72.886,-222.278,-0.184,0,'SAY_THIRD_STOP - escort paused'),
+(19671,27,-42.343,-224.004,-0.268,0,''),
+(19671,28,-15.603,-223.78,0.793,0,''),
+(19671,29,-12.975,-223.157,1.811,42000,'SAY_REST'),
+(19671,30,-12.975,-223.157,1.811,5000,'SAY_BREAK_OVER'),
+(19671,31,-14.898,-222.906,0.786,0,''),
+(19671,32,-44.684,-221.592,-0.146,0,''),
+(19671,33,-59.746,-211.847,0.216,0,''),
+(19671,34,-63.1,-195.288,-0.615,0,''),
+(19671,35,-63.218,-191.959,-1.725,0,''),
+(19671,36,-67.063,-160.281,-0.955,0,''),
+(19671,37,-67.888,-128.704,-1.226,0,''),
+(19671,38,-68.226,-107.766,-0.289,0,''),
+(19671,39,-68.251,-105.624,-1.631,0,''),
+(19671,40,-66.342,-88.147,-1.167,0,'SAY_XIRAXIS_SPAWN - escort paused'),
+(19671,41,-67.831,-78.571,-2.114,0,''),
+(19671,42,-67.692,-76.665,-0.941,0,''),
+(19671,43,-67.624,-56.025,-0.844,0,'quest complete'),
+(19671,44,-64.493,-15.776,-0.943,0,'');
 /*!40000 ALTER TABLE `script_waypoint` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -3330,4 +3403,3 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-06 14:53:08

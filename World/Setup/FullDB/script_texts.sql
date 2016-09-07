@@ -1,19 +1,27 @@
--- ---------------------------------------- 
--- --        CLEAR DOWN THE TABLE        -- 
--- ---------------------------------------- 
-TRUNCATE TABLE `script_texts`; 
--- ---------------------------------------- 
--- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: 192.168.1.3    Database: mangos2
--- ------------------------------------------------------
--- Server version	5.5.34
+-- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
+--
+-- This program is free software; you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation; either version 2 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program; if not, write to the Free Software
+-- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -21,12 +29,40 @@ TRUNCATE TABLE `script_texts`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `script_texts`
+--
+
+DROP TABLE IF EXISTS `script_texts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `script_texts` (
+  `entry` mediumint(8) NOT NULL,
+  `content_default` text NOT NULL,
+  `content_loc1` text,
+  `content_loc2` text,
+  `content_loc3` text,
+  `content_loc4` text,
+  `content_loc5` text,
+  `content_loc6` text,
+  `content_loc7` text,
+  `content_loc8` text,
+  `sound` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `type` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `language` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `emote` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `comment` text,
+  PRIMARY KEY (`entry`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Script Texts';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `script_texts`
 --
 
 LOCK TABLES `script_texts` WRITE;
 /*!40000 ALTER TABLE `script_texts` DISABLE KEYS */;
-INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1000000,'<ScriptDev2 Text Entry Missing!>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'DEFAULT_TEXT'),
+INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
+(-1000000,'<ScriptDev2 Text Entry Missing!>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'DEFAULT_TEXT'),
 (-1000001,'%s goes into a killing frenzy!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'EMOTE_GENERIC_FRENZY_KILL'),
 (-1000002,'%s goes into a frenzy!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'EMOTE_GENERIC_FRENZY'),
 (-1000003,'%s becomes enraged!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'EMOTE_GENERIC_ENRAGED'),
@@ -4173,7 +4209,28 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-1001180,'Don\'t go toward the light, Mr. Floppy!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'emily SAY_FLOPPY_ALMOST_DEAD'),
 (-1001181,'Mr. Floppy, you\'re ok! Thank you so much for saving Mr. Floppy!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'emily SAY_SECOND_WOLF_DEFEAT'),
 (-1001182,'I think I see the camp! We\'re almost home, Mr. Floppy! Let\'s go!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'emily SAY_RESUME_ESCORT'),
-(-1001183,'Thank you for helping me to get back to the camp. Go tell Walter that I\'m safe now!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'emily SAY_ESCORT_COMPLETE');
+(-1001183,'Thank you for helping me to get back to the camp. Go tell Walter that I\'m safe now!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'emily SAY_ESCORT_COMPLETE'),
+(-1557015,'This should\'t take very long. Just watch my back as I empty these nether collectors.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'sha\'heen SAY_ESCORT_START'),
+(-1557016,'Fantastic! let\'s move on, shall we?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'sha\'heen SAY_START'),
+(-1557017,'Looking at these energy levels, Shaffar was set to make a killing!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,28,'sha\'heen SAY_FIRST_STOP'),
+(-1557018,'That should do it...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'sha\'heen SAY_FIRST_STOP_COMPLETE'),
+(-1557019,'Hmm, now where is the next collector?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'sha\'heen SAY_COLLECTOR_SEARCH'),
+(-1557020,'Ah, there it is. Follow me, fleshling.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'sha\'heen SAY_COLLECTOR_FOUND'),
+(-1557021,'There can\'t be too many more of these collectors. Just keep me safe as I do my job.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,28,'sha\'heen SAY_SECOND_STOP'),
+(-1557022,'What do we have here? I thought you said the area was secure? This is now the third attack? If we make it out of here, I will definitely be deducting this from your reward. Now don\'t just stand here, destroy them so I can get to that collector.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'sha\'heen SAY_THIRD_STOP'),
+(-1557023,'We\'re close to the exit. I\'ll let you rest for about thirty seconds, but then we\'re out of here.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'sha\'heen SAY_REST'),
+(-1557024,'Are you ready to go?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'sha\'heen SAY_READY_GO'),
+(-1557025,'Ok break time is OVER. Let\'s go!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'sha\'heen SAY_BREAK_OVER'),
+(-1557026,'Shadow Lord Xiraxis yells: Bravo! Bravo! Good show... I couldn\'t convince you to work for me, could I? No, I suppose the needless slaughter of my employees might negatively impact your employment application.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'xiraxis SAY_SPAWN'),
+(-1557027,'Your plan was a good one, Sha\'heen, and you would have gotten away with it if not for one thing...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'xiraxis SAY_FINAL_STOP_1'),
+(-1557028,'Oh really? And what might that be?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_FINAL_STOP_2'),
+(-1557029,'Never underestimate the other ethereal\'s greed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'xiraxis SAY_FINAL_STOP_3'),
+(-1557030,'He was right, you know. I\'ll have to take that tag-line for my own... It\'s not like he\'ll have a use for it anymore!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_XIRAXIS_DEAD'),
+(-1557031,'Thanks and good luck!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_COMPLETE'),
+(-1557032,'%s checks to make sure his body is intact.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'sha\'heen EMOTE_TELEPORT'),
+(-1557033,'You made it! Well done, $r. Now if you\'ll excuse me, I have to get the rest of our crew inside.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_SPAWN'),
+(-1557034,'%s expertly manipulates the control panel.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,28,'sha\'heen EMOTE_PANEL'),
+(-1557035,'Let\'s not waste any time! Take anything that isn\'t nailed down to the floor and teleport directly to Stormspire! Chop chop!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_ESCORT_READY');
 /*!40000 ALTER TABLE `script_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -4186,4 +4243,3 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-06 14:53:08

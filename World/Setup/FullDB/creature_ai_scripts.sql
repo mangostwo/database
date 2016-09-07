@@ -1,19 +1,27 @@
--- ---------------------------------------- 
--- --        CLEAR DOWN THE TABLE        -- 
--- ---------------------------------------- 
-TRUNCATE TABLE `creature_ai_scripts`; 
--- ---------------------------------------- 
--- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: 192.168.1.3    Database: mangos2
--- ------------------------------------------------------
--- Server version	5.5.34
+-- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
+--
+-- This program is free software; you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation; either version 2 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program; if not, write to the Free Software
+-- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -21,12 +29,48 @@ TRUNCATE TABLE `creature_ai_scripts`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `creature_ai_scripts`
+--
+
+DROP TABLE IF EXISTS `creature_ai_scripts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `creature_ai_scripts` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Identifier',
+  `creature_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'Creature Template Identifier',
+  `event_type` tinyint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Event Type',
+  `event_inverse_phase_mask` int(11) NOT NULL DEFAULT '0' COMMENT 'Mask which phases this event will not trigger in',
+  `event_chance` int(3) unsigned NOT NULL DEFAULT '100',
+  `event_flags` int(3) unsigned NOT NULL DEFAULT '0',
+  `event_param1` int(11) NOT NULL DEFAULT '0',
+  `event_param2` int(11) NOT NULL DEFAULT '0',
+  `event_param3` int(11) NOT NULL DEFAULT '0',
+  `event_param4` int(11) NOT NULL DEFAULT '0',
+  `action1_type` tinyint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Action Type',
+  `action1_param1` int(11) NOT NULL DEFAULT '0',
+  `action1_param2` int(11) NOT NULL DEFAULT '0',
+  `action1_param3` int(11) NOT NULL DEFAULT '0',
+  `action2_type` tinyint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Action Type',
+  `action2_param1` int(11) NOT NULL DEFAULT '0',
+  `action2_param2` int(11) NOT NULL DEFAULT '0',
+  `action2_param3` int(11) NOT NULL DEFAULT '0',
+  `action3_type` tinyint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Action Type',
+  `action3_param1` int(11) NOT NULL DEFAULT '0',
+  `action3_param2` int(11) NOT NULL DEFAULT '0',
+  `action3_param3` int(11) NOT NULL DEFAULT '0',
+  `comment` varchar(255) NOT NULL DEFAULT '' COMMENT 'Event Comment',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=19228122 DEFAULT CHARSET=utf8 COMMENT='EventAI Scripts';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `creature_ai_scripts`
 --
 
 LOCK TABLES `creature_ai_scripts` WRITE;
 /*!40000 ALTER TABLE `creature_ai_scripts` DISABLE KEYS */;
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (224001,2240,9,0,100,1,0,5,1800,9800,11,7159,1,0,0,0,0,0,0,0,0,0,'Syndicate Footpad - Cast Backstab'),
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(224001,2240,9,0,100,1,0,5,1800,9800,11,7159,1,0,0,0,0,0,0,0,0,0,'Syndicate Footpad - Cast Backstab'),
 (224002,2240,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Syndicate Footpad - Flee at 15% HP'),
 (224101,2241,11,0,100,0,0,0,0,0,11,3616,0,1,0,0,0,0,0,0,0,0,'Syndicate Thief - Cast Poison Proc on Spawn'),
 (224102,2241,0,0,100,1,2000,12000,36200,46300,11,6713,1,1,0,0,0,0,0,0,0,0,'Syndicate Thief - Cast Disarm'),
@@ -8655,7 +8699,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (489501,4895,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Smiling Jim - Flee at 15% HP'),
 (489601,4896,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Charity Mipsy - Flee at 15% HP'),
 (489701,4897,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Helenia Olden - Flee at 15% HP');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (489801,4898,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Brant Jasperbloom - Flee at 15% HP'),
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(489801,4898,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Brant Jasperbloom - Flee at 15% HP'),
 (489901,4899,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Uma Bartulm - Flee at 15% HP'),
 (490001,4900,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Alchemist Narett - Flee at 15% HP'),
 (490101,4901,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Sara Pierce - Flee at 15% HP'),
@@ -17038,7 +17083,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (903103,9031,0,0,100,3,16000,16000,12000,12000,11,15471,5,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Enveloping Web'),
 (903104,9031,0,0,100,3,12000,12000,45000,45000,11,12493,4,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Curse of Weakness'),
 (903105,9031,0,0,100,3,24000,24000,18000,18000,11,15470,4,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Curse of Tongues');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (903106,9031,0,0,100,3,8000,12000,23000,26000,11,8994,5,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Banish'),
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(903106,9031,0,0,100,3,8000,12000,23000,26000,11,8994,5,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Banish'),
 (903401,9034,1,0,100,2,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Hate\'rel - Prevent Combat Movement and Set Phase to 0 on Spawn'),
 (903402,9034,4,0,100,2,0,0,0,0,11,15232,1,0,22,1,0,0,0,0,0,0,'Hate\'rel - Cast Shadow Bolt and Set Phase 1 on Aggro'),
 (903403,9034,9,13,100,3,0,40,3400,4800,11,15232,1,0,0,0,0,0,0,0,0,0,'Hate\'rel - Cast Shadow Bolt (Phase 1)'),
@@ -25391,7 +25437,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (3399301,33993,0,0,100,3,10000,15000,15000,25000,11,64213,4,0,0,0,0,0,0,0,0,0,'Emalon the Storm Watcher (10-Man Normal) - Cast Chain Lightning'),
 (3399302,33993,0,0,100,5,10000,15000,15000,25000,11,64215,4,0,0,0,0,0,0,0,0,0,'Emalon the Storm Watcher (25-Man Normal) - Cast Chain Lightning'),
 (3399303,33993,0,0,100,3,20000,20000,45000,45000,11,64216,0,0,0,0,0,0,0,0,0,0,'Emalon the Storm Watcher (10-Man Normal) - Cast Lightning Nova');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (3399304,33993,0,0,100,5,20000,20000,45000,45000,11,65279,0,0,0,0,0,0,0,0,0,0,'Emalon the Storm Watcher (25-Man Normal) - Cast Lightning Nova'),
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(3399304,33993,0,0,100,5,20000,20000,45000,45000,11,65279,0,0,0,0,0,0,0,0,0,0,'Emalon the Storm Watcher (25-Man Normal) - Cast Lightning Nova'),
 (3399305,33993,0,0,100,7,45000,45000,45000,45000,11,64218,0,0,0,0,0,0,0,0,0,0,'Emalon the Storm Watcher - Cast Overcharge'),
 (3399306,33993,0,0,100,6,360000,360000,0,0,11,26662,0,1,0,0,0,0,0,0,0,0,'Emalon the Storm Watcher - Cast Berserk After 6 Minutes'),
 (3399801,33998,0,0,100,7,5000,8000,4000,7000,11,64363,4,0,0,0,0,0,0,0,0,0,'Tempest Minion - Cast Shock'),

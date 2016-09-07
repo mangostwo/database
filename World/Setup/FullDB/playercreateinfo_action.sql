@@ -1,19 +1,27 @@
--- ---------------------------------------- 
--- --        CLEAR DOWN THE TABLE        -- 
--- ---------------------------------------- 
-TRUNCATE TABLE `playercreateinfo_action`; 
--- ---------------------------------------- 
--- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: 192.168.1.3    Database: mangos2
--- ------------------------------------------------------
--- Server version	5.5.34
+-- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
+--
+-- This program is free software; you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation; either version 2 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program; if not, write to the Free Software
+-- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -21,12 +29,30 @@ TRUNCATE TABLE `playercreateinfo_action`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `playercreateinfo_action`
+--
+
+DROP TABLE IF EXISTS `playercreateinfo_action`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `playercreateinfo_action` (
+  `race` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `class` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `button` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `action` int(11) unsigned NOT NULL DEFAULT '0',
+  `type` smallint(5) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`race`,`class`,`button`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `playercreateinfo_action`
 --
 
 LOCK TABLES `playercreateinfo_action` WRITE;
 /*!40000 ALTER TABLE `playercreateinfo_action` DISABLE KEYS */;
-INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES (1,1,0,6603,0),
+INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES
+(1,1,0,6603,0),
 (1,1,72,6603,0),
 (1,1,73,78,0),
 (1,1,82,59752,0),
@@ -51,7 +77,7 @@ INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `typ
 (1,6,3,45462,0),
 (1,6,4,45902,0),
 (1,6,5,47541,0),
-(1,6,11,59752,0),
+(1,6,10,59752,0),
 (2,1,2,20572,0),
 (1,8,1,168,0),
 (1,8,0,133,0),
@@ -60,7 +86,7 @@ INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `typ
 (1,9,1,687,0),
 (1,9,0,686,0),
 (1,9,9,59752,0),
-(1,9,11,4604,128),
+(2,6,11,41751,128),
 (2,1,0,6603,0),
 (2,1,72,6603,0),
 (2,1,73,78,0),
@@ -167,7 +193,7 @@ INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `typ
 (5,1,72,6603,0),
 (5,1,73,78,0),
 (5,1,74,20577,0),
-(5,1,83,4604,128),
+(1,6,11,41751,128),
 (5,1,84,6603,0),
 (5,1,96,6603,0),
 (5,1,108,6603,0),
@@ -176,7 +202,7 @@ INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `typ
 (5,4,2,2098,0),
 (5,4,3,2764,0),
 (5,4,4,20577,0),
-(5,4,11,4604,128),
+(3,6,11,41751,128),
 (5,5,2,20577,0),
 (5,5,1,2050,0),
 (5,5,0,585,0),
@@ -219,7 +245,7 @@ INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `typ
 (6,7,1,403,0),
 (6,7,2,331,0),
 (6,7,3,20549,0),
-(6,7,11,4604,128),
+(4,6,11,41751,128),
 (6,7,75,20549,0),
 (6,11,96,6603,0),
 (6,11,84,6603,0),
@@ -247,7 +273,7 @@ INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `typ
 (7,6,4,45902,0),
 (7,6,5,47541,0),
 (7,6,10,20589,0),
-(7,6,83,41751,128),
+(5,6,11,41751,128),
 (7,6,72,6603,0),
 (7,6,11,41751,128),
 (7,6,84,6603,0),
@@ -271,7 +297,7 @@ INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `typ
 (8,3,0,6603,0),
 (8,3,1,2973,0),
 (8,3,2,75,0),
-(8,3,11,4604,128),
+(6,6,11,41751,128),
 (8,4,0,6603,0),
 (8,4,1,1752,0),
 (8,4,2,2098,0),
@@ -298,23 +324,21 @@ INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `typ
 (10,2,0,6603,0),
 (10,2,2,635,0),
 (10,2,3,28730,0),
-(10,2,11,20857,128),
+(10,6,11,41751,128),
 (10,3,0,6603,0),
 (10,3,1,2973,0),
 (10,3,2,75,0),
 (10,3,3,28730,0),
-(10,3,11,20857,128),
+(8,6,11,41751,128),
 (10,4,0,6603,0),
 (10,4,1,1752,0),
 (10,4,2,2098,0),
 (10,4,3,2764,0),
 (10,4,4,25046,0),
-(10,4,11,20857,128),
 (10,5,0,6603,0),
 (10,5,1,585,0),
 (10,5,2,2050,0),
 (10,5,3,28730,0),
-(10,5,11,20857,128),
 (10,6,0,6603,0),
 (10,6,1,49576,0),
 (10,6,2,45477,0),
@@ -326,12 +350,10 @@ INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `typ
 (10,8,1,133,0),
 (10,8,2,168,0),
 (10,8,3,28730,0),
-(10,8,11,20857,128),
 (10,9,0,6603,0),
 (10,9,1,686,0),
 (10,9,2,687,0),
 (10,9,3,28730,0),
-(10,9,11,20857,128),
 (11,1,0,6603,0),
 (11,1,72,6603,0),
 (11,1,73,78,0),
@@ -392,3 +414,4 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
