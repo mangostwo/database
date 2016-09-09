@@ -53,7 +53,7 @@ CREATE TABLE `custom_texts` (
   `emote` SMALLINT(5) UNSIGNED NOT NULL DEFAULT '0',
   `comment` TEXT,
   PRIMARY KEY (`entry`)
-) ENGINE=MYISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Custom Texts';
+) ENGINE=MYISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Custom Texts';
   
     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     

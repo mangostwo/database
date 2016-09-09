@@ -20,7 +20,7 @@ CREATE TABLE `script_binding` (
   `data` tinyint(2) unsigned DEFAULT '0' COMMENT 'Misc data; Effect number for spellscripts',
   PRIMARY KEY (`ScriptName`,`bind`),
   KEY `type` (`type`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='SD2 Script Names and Binding';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='SD2 Script Names and Binding';
 
 /*Data for the table `script_binding` */
 
