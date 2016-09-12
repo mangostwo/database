@@ -1,27 +1,19 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `script_binding`; 
+-- ---------------------------------------- 
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host:                Database: mangos2
+-- ------------------------------------------------------
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -29,29 +21,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `script_binding`
---
-
-DROP TABLE IF EXISTS `script_binding`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `script_binding` (
-  `type` tinyint(2) unsigned NOT NULL COMMENT 'enum ScriptedObjectType in ScriptMgr.h',
-  `ScriptName` char(64) NOT NULL COMMENT 'Script name, to be unique across all types',
-  `bind` mediumint(10) NOT NULL COMMENT 'Bound to entry (>0) or GUID (<0)',
-  `data` tinyint(2) unsigned DEFAULT '0' COMMENT 'Misc data; Effect number for spellscripts',
-  PRIMARY KEY (`ScriptName`,`bind`),
-  KEY `type` (`type`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='SD2 Script Names and Binding';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `script_binding`
 --
 
 LOCK TABLES `script_binding` WRITE;
 /*!40000 ALTER TABLE `script_binding` DISABLE KEYS */;
-INSERT INTO `script_binding` (`type`, `ScriptName`, `bind`, `data`) VALUES
+INSERT INTO `script_binding` (`type`, `ScriptName`, `bind`, `data`) VALUES 
 (3,'at_aldurthar_gate',5284,0),
 (3,'at_aldurthar_gate',5285,0),
 (3,'at_aldurthar_gate',5286,0),
@@ -1537,7 +1512,15 @@ INSERT INTO `script_binding` (`type`, `ScriptName`, `bind`, `data`) VALUES
 (0,'npc_burster_worm',22466,0),
 (0,'npc_burster_worm',22482,0),
 (0,'npc_burster_worm',23285,0),
-(0,'npc_shaheen',19671,0);
+(0,'npc_shaheen',19671,0),
+(0,'npc_phalanx',9502,0),
+(0,'npc_hurley_blackbreath',9537,0),
+(0,'go_bar_beer_keg',164911,0),
+(0,'boss_plugger_spazzring',9499,0),
+(0,'go_bar_ale_mug',165738,0),
+(0,'go_bar_ale_mug',165739,0),
+(0,'npc_ironhand_guardian',8982,0),
+(0,'npc_mistress_nagmara',9500,0);
 /*!40000 ALTER TABLE `script_binding` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1550,3 +1533,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2016-09-12  8:34:36

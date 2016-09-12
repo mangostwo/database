@@ -1,27 +1,19 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `script_waypoint`; 
+-- ---------------------------------------- 
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host:                Database: mangos2
+-- ------------------------------------------------------
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -29,31 +21,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `script_waypoint`
---
-
-DROP TABLE IF EXISTS `script_waypoint`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `script_waypoint` (
-  `entry` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'creature_template entry',
-  `pointid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `location_x` float NOT NULL DEFAULT '0',
-  `location_y` float NOT NULL DEFAULT '0',
-  `location_z` float NOT NULL DEFAULT '0',
-  `waittime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'waittime in millisecs',
-  `point_comment` text,
-  PRIMARY KEY (`entry`,`pointid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Script Creature waypoints';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `script_waypoint`
 --
 
 LOCK TABLES `script_waypoint` WRITE;
 /*!40000 ALTER TABLE `script_waypoint` DISABLE KEYS */;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `waittime`, `point_comment`) VALUES
+INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `waittime`, `point_comment`) VALUES 
 (467,0,-10508.4,1068,55.21,0,''),
 (467,1,-10518.3,1074.84,53.96,0,''),
 (467,2,-10534.8,1081.92,49.88,0,''),
@@ -572,14 +545,11 @@ INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `
 (7807,35,-4416.71,2209.76,7.36,0,''),
 (7807,36,-4405.25,2231.77,5.94,0,''),
 (7807,37,-4377.61,2265.45,6.71,15000,'complete quest SAY_END'),
-(9503,0,883.295,-188.926,-43.7037,0,''),
-(9503,1,872.764,-185.606,-43.7037,5000,'b1'),
-(9503,2,867.923,-188.006,-43.7037,5000,'b2'),
-(9503,3,863.296,-190.795,-43.7037,5000,'b3'),
-(9503,4,856.14,-194.653,-43.7037,5000,'b4'),
-(9503,5,851.879,-196.928,-43.7037,15000,'b5'),
-(9503,6,877.035,-187.048,-43.7037,0,''),
-(9503,7,891.198,-197.924,-43.6204,0,'home'),
+(9503,18,872.919,-228.175,-43.5566,0,''),
+(9503,19,875.919,-230.925,-43.5566,0,''),
+(9503,20,876.919,-230.175,-43.5566,0,''),
+(9503,21,877.919,-229.425,-43.5566,0,''),
+(9503,22,882.395,-225.949,-46.7405,0,''),
 (9623,0,-6383.07,-1964.37,-258.709,0,'SAY_AME_START'),
 (9623,1,-6393.65,-1949.57,-261.449,0,''),
 (9623,2,-6397.85,-1931.1,-263.366,0,''),
@@ -3390,7 +3360,44 @@ INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `
 (19671,41,-67.831,-78.571,-2.114,0,''),
 (19671,42,-67.692,-76.665,-0.941,0,''),
 (19671,43,-67.624,-56.025,-0.844,0,'quest complete'),
-(19671,44,-64.493,-15.776,-0.943,0,'');
+(19671,44,-64.493,-15.776,-0.943,0,''),
+(9502,1,868.122,-223.884,-43.695,0,'YELL_PHALANX_AGGRO'),
+(9537,3,883.96,-148.087,-49.76,0,''),
+(9537,2,882.63,-148.166,-49.7597,0,''),
+(9537,1,855.816,-149.763,-49.671,0,'YELL_HURLEY_SPAWN'),
+(9537,0,854.977,-150.308,-49.671,0,''),
+(9503,17,872.169,-227.425,-43.5566,0,''),
+(9503,16,870.419,-225.675,-43.5566,0,'open door'),
+(9503,15,867.074,-221.959,-43.4472,0,''),
+(9503,14,866.824,-220.959,-43.4472,0,''),
+(9503,13,864.244,-210.826,-43.459,0,''),
+(9503,12,869.465,-202.878,-43.4588,0,''),
+(9503,11,869.124,-202.852,-43.7088,0,''),
+(9503,10,885.185,-194.007,-43.4584,0,''),
+(9503,9,876.935,-189.007,-43.4584,0,'Nagmara escort'),
+(9503,8,891.198,-197.924,-43.6204,0,'home'),
+(9503,7,877.035,-187.048,-43.7037,0,''),
+(9503,6,851.879,-196.928,-43.7037,15000,'b5'),
+(9503,5,856.14,-194.653,-43.7037,5000,'b4'),
+(9503,4,863.296,-190.795,-43.7037,5000,'b3'),
+(9503,3,867.923,-188.006,-43.7037,5000,'b2'),
+(9503,2,872.764,-185.606,-43.7037,5000,'b1'),
+(9503,1,885.185,-194.007,-43.4584,0,''),
+(9503,0,885.185,-194.007,-43.4584,0,''),
+(9502,0,847.848,-230.067,-43.614,0,''),
+(9537,4,896.846,-147.319,-49.7575,0,''),
+(9537,5,896.846,-147.319,-49.7575,0,''),
+(9503,23,885.895,-223.699,-49.2405,0,''),
+(9503,24,887.645,-222.449,-49.2405,0,''),
+(9503,25,885.937,-223.351,-49.2954,0,''),
+(9503,26,887.437,-222.351,-49.2954,0,''),
+(9503,27,888.937,-221.601,-49.5454,0,''),
+(9503,28,887.687,-220.101,-49.5454,0,''),
+(9503,29,886.687,-218.851,-49.5454,0,''),
+(9503,30,887.567,-220.04,-49.7059,0,''),
+(9503,31,886.567,-218.79,-49.7059,0,''),
+(9503,32,886.067,-218.29,-49.7059,0,''),
+(9503,33,880.825,-221.389,-49.9562,0,'stop');
 /*!40000 ALTER TABLE `script_waypoint` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -3403,3 +3410,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2016-09-12  8:34:37

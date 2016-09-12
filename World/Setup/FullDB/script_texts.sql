@@ -1,27 +1,19 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `script_texts`; 
+-- ---------------------------------------- 
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host:                Database: mangos2
+-- ------------------------------------------------------
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -29,39 +21,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `script_texts`
---
-
-DROP TABLE IF EXISTS `script_texts`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `script_texts` (
-  `entry` mediumint(8) NOT NULL,
-  `content_default` text NOT NULL,
-  `content_loc1` text,
-  `content_loc2` text,
-  `content_loc3` text,
-  `content_loc4` text,
-  `content_loc5` text,
-  `content_loc6` text,
-  `content_loc7` text,
-  `content_loc8` text,
-  `sound` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `type` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `language` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `emote` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `comment` text,
-  PRIMARY KEY (`entry`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Script Texts';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `script_texts`
 --
 
 LOCK TABLES `script_texts` WRITE;
 /*!40000 ALTER TABLE `script_texts` DISABLE KEYS */;
-INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
+INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES 
 (-1000000,'<ScriptDev2 Text Entry Missing!>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'DEFAULT_TEXT'),
 (-1000001,'%s goes into a killing frenzy!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'EMOTE_GENERIC_FRENZY_KILL'),
 (-1000002,'%s goes into a frenzy!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'EMOTE_GENERIC_FRENZY'),
@@ -4230,7 +4195,41 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-1557032,'%s checks to make sure his body is intact.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'sha\'heen EMOTE_TELEPORT'),
 (-1557033,'You made it! Well done, $r. Now if you\'ll excuse me, I have to get the rest of our crew inside.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_SPAWN'),
 (-1557034,'%s expertly manipulates the control panel.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,28,'sha\'heen EMOTE_PANEL'),
-(-1557035,'Let\'s not waste any time! Take anything that isn\'t nailed down to the floor and teleport directly to Stormspire! Chop chop!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_ESCORT_READY');
+(-1557035,'Let\'s not waste any time! Take anything that isn\'t nailed down to the floor and teleport directly to Stormspire! Chop chop!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_ESCORT_READY'),
+(-1230036,'I want more ale! Give me more ale!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'rocknot SAY_MORE_BEER'),
+(-1230037,'You\'ll pay for that!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Grim Patron SAY_PISSED_PATRON_1'),
+(-1230038,'No!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Grim Patron SAY_PISSED_PATRON_2'),
+(-1230039,'Oh! Now I\'m pissed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Grim Patron SAY_PISSED_PATRON_3'),
+(-1230040,'Violence! Property damage! None shall pass!!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Phalanx YELL_PHALANX_AGGRO'),
+(-1230041,'Get away from those kegs!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Hurley Blackbreath YELL_HURLEY_SPAWN'),
+(-1230042,'You\'ll pay for that!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Hurley Blackbreath SAY_HURLEY_AGGRO'),
+(-1230043,'You can\'t hide from us. Prepare to burn!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'anvilrage guardsman SAY_GUARD_AGGRO'),
+(-1230044,'That one\'s empty!!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,60,'rocknot SAY_BARREL_1'),
+(-1230045,'Ah, empty again!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,35,'rocknot SAY_BARREL_2'),
+(-1230046,'ALE!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,60,'rocknot SAY_BARREL_3'),
+(-1230047,'Im out of here!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,60,'rocknot SAY_ROCKNOT_DESPAWN'),
+(-1230048,'HALT! There were...reports...of a...disturbance.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Fireguard Destroyer YELL_PATROL_1'),
+(-1230050,'Try the boar! It\'s my new recipe!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Plugger Spazzring SAY_OOC_1'),
+(-1230051,'Enjoy! You won\'t find better ale anywhere!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Plugger Spazzring SAY_OOC_2'),
+(-1230052,'Drink up! There\'s more where that came from!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Plugger Spazzring SAY_OOC_3'),
+(-1230053,'Have you tried the Dark Iron Ale? It\'s the best!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Plugger Spazzring SAY_OOC_4'),
+(-1230054,'What are you doing over there?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Plugger Spazzring YELL_STOLEN_1'),
+(-1230055,'Hey! Get away from that!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Plugger Spazzring YELL_STOLEN_2'),
+(-1230056,'No stealing the goods!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Plugger Spazzring YELL_STOLEN_3'),
+(-1230057,'That\'s it! You\'re going down!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Plugger Spazzring YELL_AGRRO_1'),
+(-1230058,'That\'s it! No more beer until this mess is sorted out!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Plugger Spazzring YELL_AGRRO_2'),
+(-1230060,'Ha! You can\'t even begin to imagine the futility of your efforts.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Emperor Thaurissan YELL_SENATOR_1'),
+(-1230061,'Is that the best you can do? Do you really expect that you could defeat someone as awe inspiring as me?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Emperor Thaurissan YELL_SENATOR_2'),
+(-1230062,'They were just getting in the way anyways.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Emperor Thaurissan YELL_SENATOR_3'),
+(-1230063,'Your efforts are utterly pointless, fools! You will never be able to defeat me!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Emperor Thaurissan YELL_SENATOR_4'),
+(-1230064,'I will crush you into little tiny pieces!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Emperor Thaurissan YELL_AGGRO_2'),
+(-1230066,'Hey, Rocknot!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Nagmara SAY_NAGMARA_1'),
+(-1230067,'Let\'s go, honey.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Nagmara SAY_NAGMARA_2'),
+(-1230068,'%s kisses her lover.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'Nagmara TEXTEMOTE_NAGMARA'),
+(-1230049,'We...are...investigating.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Fireguard Destroyer YELL_PATROL_2'),
+(-1230059,'Hey, my pockets were picked!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Plugger Spazzring YELL_PICKPOCKETED'),
+(-1230065,'Prepare to meet your doom at the hands of Ragnaros\' most powerful servant!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Emperor Thaurissan YELL_AGGRO_3'),
+(-1230069,'%s kisses Mistress Nagmara',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,17,'Rocknot TEXTEMOTE_ROCKNOT');
 /*!40000 ALTER TABLE `script_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -4243,3 +4242,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2016-09-12  8:34:36

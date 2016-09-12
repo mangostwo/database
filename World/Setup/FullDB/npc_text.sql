@@ -1,27 +1,19 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `npc_text`; 
+-- ---------------------------------------- 
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2015 MaNGOSTwo <https://github.com/mangostwo>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host:                Database: mangos2
+-- ------------------------------------------------------
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -29,105 +21,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `npc_text`
---
-
-DROP TABLE IF EXISTS `npc_text`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `npc_text` (
-  `ID` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `text0_0` longtext,
-  `text0_1` longtext,
-  `lang0` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `prob0` float NOT NULL DEFAULT '0',
-  `em0_0` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em0_1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em0_2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em0_3` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em0_4` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em0_5` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `text1_0` longtext,
-  `text1_1` longtext,
-  `lang1` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `prob1` float NOT NULL DEFAULT '0',
-  `em1_0` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em1_1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em1_2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em1_3` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em1_4` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em1_5` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `text2_0` longtext,
-  `text2_1` longtext,
-  `lang2` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `prob2` float NOT NULL DEFAULT '0',
-  `em2_0` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em2_1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em2_2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em2_3` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em2_4` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em2_5` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `text3_0` longtext,
-  `text3_1` longtext,
-  `lang3` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `prob3` float NOT NULL DEFAULT '0',
-  `em3_0` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em3_1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em3_2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em3_3` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em3_4` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em3_5` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `text4_0` longtext,
-  `text4_1` longtext,
-  `lang4` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `prob4` float NOT NULL DEFAULT '0',
-  `em4_0` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em4_1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em4_2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em4_3` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em4_4` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em4_5` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `text5_0` longtext,
-  `text5_1` longtext,
-  `lang5` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `prob5` float NOT NULL DEFAULT '0',
-  `em5_0` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em5_1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em5_2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em5_3` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em5_4` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em5_5` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `text6_0` longtext,
-  `text6_1` longtext,
-  `lang6` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `prob6` float NOT NULL DEFAULT '0',
-  `em6_0` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em6_1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em6_2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em6_3` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em6_4` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em6_5` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `text7_0` longtext,
-  `text7_1` longtext,
-  `lang7` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `prob7` float NOT NULL DEFAULT '0',
-  `em7_0` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em7_1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em7_2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em7_3` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em7_4` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `em7_5` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `npc_text`
 --
 
 LOCK TABLES `npc_text` WRITE;
 /*!40000 ALTER TABLE `npc_text` DISABLE KEYS */;
-INSERT INTO `npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob0`, `em0_0`, `em0_1`, `em0_2`, `em0_3`, `em0_4`, `em0_5`, `text1_0`, `text1_1`, `lang1`, `prob1`, `em1_0`, `em1_1`, `em1_2`, `em1_3`, `em1_4`, `em1_5`, `text2_0`, `text2_1`, `lang2`, `prob2`, `em2_0`, `em2_1`, `em2_2`, `em2_3`, `em2_4`, `em2_5`, `text3_0`, `text3_1`, `lang3`, `prob3`, `em3_0`, `em3_1`, `em3_2`, `em3_3`, `em3_4`, `em3_5`, `text4_0`, `text4_1`, `lang4`, `prob4`, `em4_0`, `em4_1`, `em4_2`, `em4_3`, `em4_4`, `em4_5`, `text5_0`, `text5_1`, `lang5`, `prob5`, `em5_0`, `em5_1`, `em5_2`, `em5_3`, `em5_4`, `em5_5`, `text6_0`, `text6_1`, `lang6`, `prob6`, `em6_0`, `em6_1`, `em6_2`, `em6_3`, `em6_4`, `em6_5`, `text7_0`, `text7_1`, `lang7`, `prob7`, `em7_0`, `em7_1`, `em7_2`, `em7_3`, `em7_4`, `em7_5`) VALUES
+INSERT INTO `npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob0`, `em0_0`, `em0_1`, `em0_2`, `em0_3`, `em0_4`, `em0_5`, `text1_0`, `text1_1`, `lang1`, `prob1`, `em1_0`, `em1_1`, `em1_2`, `em1_3`, `em1_4`, `em1_5`, `text2_0`, `text2_1`, `lang2`, `prob2`, `em2_0`, `em2_1`, `em2_2`, `em2_3`, `em2_4`, `em2_5`, `text3_0`, `text3_1`, `lang3`, `prob3`, `em3_0`, `em3_1`, `em3_2`, `em3_3`, `em3_4`, `em3_5`, `text4_0`, `text4_1`, `lang4`, `prob4`, `em4_0`, `em4_1`, `em4_2`, `em4_3`, `em4_4`, `em4_5`, `text5_0`, `text5_1`, `lang5`, `prob5`, `em5_0`, `em5_1`, `em5_2`, `em5_3`, `em5_4`, `em5_5`, `text6_0`, `text6_1`, `lang6`, `prob6`, `em6_0`, `em6_1`, `em6_2`, `em6_3`, `em6_4`, `em6_5`, `text7_0`, `text7_1`, `lang7`, `prob7`, `em7_0`, `em7_1`, `em7_2`, `em7_3`, `em7_4`, `em7_5`) VALUES 
 (1,'','Greetings $N',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
 (2,'','Hey there, $N. How can I help you?',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
 (68,'Greetings $N','Greetings $N',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
@@ -2490,7 +2389,7 @@ INSERT INTO `npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob0`, `em0_0`, `
 (7753,'Who are you?  Where am I?  I feel... so weak...','',0,1,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
 (7754,'What bug comes before the lords of the Council?  A bug, no doubt, wishing to be squashed!','What bug comes before the lords of the Council?  A bug, no doubt, wishing to be squashed!',0,1,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
 (7755,'You best have a seat then, this is gonna be a long one.$B$BWhen we initially arrived in Silithus, Mistress Mar\'alith was the first of the night elves from Cenarion Hold to join the expedition. Our routine was nothing out of the ordinary: Form a party to venture into the various hives and search for lost artifacts.','',0,1,25,1,1,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0);
-INSERT INTO `npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob0`, `em0_0`, `em0_1`, `em0_2`, `em0_3`, `em0_4`, `em0_5`, `text1_0`, `text1_1`, `lang1`, `prob1`, `em1_0`, `em1_1`, `em1_2`, `em1_3`, `em1_4`, `em1_5`, `text2_0`, `text2_1`, `lang2`, `prob2`, `em2_0`, `em2_1`, `em2_2`, `em2_3`, `em2_4`, `em2_5`, `text3_0`, `text3_1`, `lang3`, `prob3`, `em3_0`, `em3_1`, `em3_2`, `em3_3`, `em3_4`, `em3_5`, `text4_0`, `text4_1`, `lang4`, `prob4`, `em4_0`, `em4_1`, `em4_2`, `em4_3`, `em4_4`, `em4_5`, `text5_0`, `text5_1`, `lang5`, `prob5`, `em5_0`, `em5_1`, `em5_2`, `em5_3`, `em5_4`, `em5_5`, `text6_0`, `text6_1`, `lang6`, `prob6`, `em6_0`, `em6_1`, `em6_2`, `em6_3`, `em6_4`, `em6_5`, `text7_0`, `text7_1`, `lang7`, `prob7`, `em7_0`, `em7_1`, `em7_2`, `em7_3`, `em7_4`, `em7_5`) VALUES
+INSERT INTO `npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob0`, `em0_0`, `em0_1`, `em0_2`, `em0_3`, `em0_4`, `em0_5`, `text1_0`, `text1_1`, `lang1`, `prob1`, `em1_0`, `em1_1`, `em1_2`, `em1_3`, `em1_4`, `em1_5`, `text2_0`, `text2_1`, `lang2`, `prob2`, `em2_0`, `em2_1`, `em2_2`, `em2_3`, `em2_4`, `em2_5`, `text3_0`, `text3_1`, `lang3`, `prob3`, `em3_0`, `em3_1`, `em3_2`, `em3_3`, `em3_4`, `em3_5`, `text4_0`, `text4_1`, `lang4`, `prob4`, `em4_0`, `em4_1`, `em4_2`, `em4_3`, `em4_4`, `em4_5`, `text5_0`, `text5_1`, `lang5`, `prob5`, `em5_0`, `em5_1`, `em5_2`, `em5_3`, `em5_4`, `em5_5`, `text6_0`, `text6_1`, `lang6`, `prob6`, `em6_0`, `em6_1`, `em6_2`, `em6_3`, `em6_4`, `em6_5`, `text7_0`, `text7_1`, `lang7`, `prob7`, `em7_0`, `em7_1`, `em7_2`, `em7_3`, `em7_4`, `em7_5`) VALUES 
 (7756,'It sure is! Those hives were abuzz with various silithid that were none to happy to see us.$B$BEverything was going fine until we came across a glyphed crystal in Hive\'Regal. She was drawn to it like a moth to a flame! She put her pretty little cheek up against the crystal and instantly entered a trance like state. Naturally, this worried my crew. We picked her up and carried her out of there with a quickness!','',0,1,1,1,5,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
 (7757,'We took her to the Commander with hopes that the druids of the Circle could fix her up. Sure enough, they were able to wake her up. We figured our business with the Circle was done and we could get back to work.$B$BA few weeks passed and everything was going fine. Brann was still around back then so we had a bit of order in our work structure. Then one day, out of the blue, she appeared back at our camp.$b','',0,1,1,1,5,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
 (7758,'Are you daft? Who else would I be talking about? Yes, the girl - Mistress Mar\'alith. Anyhow, she was back and not in too good of a mood. That\'s when the demands started flowing.$b','',0,1,6,273,1,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
@@ -5197,7 +5096,7 @@ INSERT INTO `npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob0`, `em0_0`, `
 (13173,'The blood is life... And as easily as the ebb and flow of blood is controlled, so too is the life of our enemies.','',0,1,0,1,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
 (13174,'We are what the cold wind carries. The icy chill of despair... The cold embrace of death...','',0,1,0,396,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
 (13176,'It saddens all of us to see the Drakkari destroying themselves this way.$B$BThe power that they gain from killing the natural gods of the land is transitory.$B$BWhat is gained in the short run will be lost to them for all eternity.','',0,1,0,1,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0);
-INSERT INTO `npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob0`, `em0_0`, `em0_1`, `em0_2`, `em0_3`, `em0_4`, `em0_5`, `text1_0`, `text1_1`, `lang1`, `prob1`, `em1_0`, `em1_1`, `em1_2`, `em1_3`, `em1_4`, `em1_5`, `text2_0`, `text2_1`, `lang2`, `prob2`, `em2_0`, `em2_1`, `em2_2`, `em2_3`, `em2_4`, `em2_5`, `text3_0`, `text3_1`, `lang3`, `prob3`, `em3_0`, `em3_1`, `em3_2`, `em3_3`, `em3_4`, `em3_5`, `text4_0`, `text4_1`, `lang4`, `prob4`, `em4_0`, `em4_1`, `em4_2`, `em4_3`, `em4_4`, `em4_5`, `text5_0`, `text5_1`, `lang5`, `prob5`, `em5_0`, `em5_1`, `em5_2`, `em5_3`, `em5_4`, `em5_5`, `text6_0`, `text6_1`, `lang6`, `prob6`, `em6_0`, `em6_1`, `em6_2`, `em6_3`, `em6_4`, `em6_5`, `text7_0`, `text7_1`, `lang7`, `prob7`, `em7_0`, `em7_1`, `em7_2`, `em7_3`, `em7_4`, `em7_5`) VALUES
+INSERT INTO `npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob0`, `em0_0`, `em0_1`, `em0_2`, `em0_3`, `em0_4`, `em0_5`, `text1_0`, `text1_1`, `lang1`, `prob1`, `em1_0`, `em1_1`, `em1_2`, `em1_3`, `em1_4`, `em1_5`, `text2_0`, `text2_1`, `lang2`, `prob2`, `em2_0`, `em2_1`, `em2_2`, `em2_3`, `em2_4`, `em2_5`, `text3_0`, `text3_1`, `lang3`, `prob3`, `em3_0`, `em3_1`, `em3_2`, `em3_3`, `em3_4`, `em3_5`, `text4_0`, `text4_1`, `lang4`, `prob4`, `em4_0`, `em4_1`, `em4_2`, `em4_3`, `em4_4`, `em4_5`, `text5_0`, `text5_1`, `lang5`, `prob5`, `em5_0`, `em5_1`, `em5_2`, `em5_3`, `em5_4`, `em5_5`, `text6_0`, `text6_1`, `lang6`, `prob6`, `em6_0`, `em6_1`, `em6_2`, `em6_3`, `em6_4`, `em6_5`, `text7_0`, `text7_1`, `lang7`, `prob7`, `em7_0`, `em7_1`, `em7_2`, `em7_3`, `em7_4`, `em7_5`) VALUES 
 (13177,'Gather your senses quickly, we must press on.','',0,1,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
 (13179,'This isn\'t getting any easier. Stratholme is burning. We must brave the Scourge and the flames to reach Mal\'Ganis. Prepare yourselves.','',0,1,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
 (13180,'','Zim\'Torga is able to provide us with a certain level of protection, but she has been greatly weakened by the presence of the Scourge and the actions of the Drakkari.$B$BIt falls to me and Ahunae to see to the rest of our defenses.',0,1,0,1,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
@@ -6034,3 +5933,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2016-09-12  8:34:31
