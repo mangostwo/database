@@ -65,7 +65,7 @@ echo           {wdbStruct}   - Backup the Structure as part of the backup (YES/N
 echo           {chardbname}  - Name of the Character Database
 echo           {cdbStruct}   - Backup the Structure as part of the backup (YES/NO)
 echo           {realmdbname} - Name of the Realm Database
-echo           {rdbStructe}  - Backup the Structure as part of the backup (YES/NO)
+echo           {rdbStruct}   - Backup the Structure as part of the backup (YES/NO)
 
 echo  e.g.
 echo.

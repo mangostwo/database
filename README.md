@@ -4,7 +4,7 @@
 [![](/icons/TOOLS.gif)](http://github.com/mangostools)
 [![](/icons/TRACKER.gif)](https://www.getmangos.eu/project.php)
 
-MangosTwo World Database
+WoTLK World Database
 ===
 
 ### A World Database for WoTLK Wow
