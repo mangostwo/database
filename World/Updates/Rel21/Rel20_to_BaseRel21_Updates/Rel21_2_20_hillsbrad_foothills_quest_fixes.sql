@@ -67,11 +67,10 @@ DELETE FROM `quest_template` WHERE `entry` = '14351';
 
 
 /*
-Added the quest Dangerous, to the quest giver
+Pointed game object to correct quest: Dangerous
 */
 
-DELETE FROM `creature_questrelation` WHERE `quest` = '567';
-INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES ('2215', '567')
+UPDATE `gameobject_template` SET `data1` = '567' WHERE 'entry' = '2008';
     
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
