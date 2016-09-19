@@ -1,5 +1,14 @@
+-- ----------------------------------------
+-- Added to prevent timeout's while loading
+-- ----------------------------------------
+SET GLOBAL net_read_timeout=30;
+SET GLOBAL net_write_timeout=60;
+SET GLOBAL net_buffer_length=1000000; 
+SET GLOBAL max_allowed_packet=1000000000;
+SET GLOBAL connect_timeout=10000000;
+
 -- --------------------------------------------------------------------------------
--- This is an attempt to create a full transactional update
+-- This is an attempt to create a full transactional MaNGOS update (v1.3)
 -- --------------------------------------------------------------------------------
 DROP PROCEDURE IF EXISTS `update_mangos`; 
 
@@ -18,17 +27,17 @@ BEGIN
     -- Expected Values
     SET @cOldVersion = '21'; 
     SET @cOldStructure = '2'; 
-    SET @cOldContent = '11'; 
+    SET @cOldContent = '18';
 
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '2';
-    SET @cNewContent = '12';
+    SET @cNewContent = '19';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Remove Imp spell';
+    SET @cNewDescription = 'Outland_first_aid.sql';
 
                         -- COMMENT is 150 Characters MAX
-    SET @cNewComment = 'Remove Imp spell from trainers';
+    SET @cNewComment = 'Outland_first_aid.sql';
 
     -- Evaluate all settings
     SET @cCurResult := (SELECT description FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
@@ -38,22 +47,28 @@ BEGIN
     IF (@cCurResult = @cOldResult) THEN    -- Does the current version match the expected version
         -- APPLY UPDATE
         START TRANSACTION;
-		
-		        -- UPDATE THE DB VERSION
+
+        -- UPDATE THE DB VERSION
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         INSERT INTO `db_version` VALUES (@cNewVersion, @cNewStructure, @cNewContent, @cNewDescription, @cNewComment);
         SET @cNewResult := (SELECT description FROM db_version WHERE `version`=@cNewVersion AND `structure`=@cNewStructure AND `content`=@cNewContent);
- 
+
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
+    /*
+Burko and Aresella now train first aid.
+*/
+UPDATE `creature_template` SET NpcFlags ='80' WHERE entry ='18990'; -- Burko
+UPDATE `creature_template` SET NpcFlags ='80' WHERE entry ='18991'; -- Aresella
+
 /*
-remove imp spell from trainer
+Remove training guides from Aresella's vender goods
 */
 
-DELETE FROM `npc_trainer_template` WHERE spell ='688';
-
+DELETE FROM `npc_vendor` WHERE `entry` = "18991";
+    
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -78,7 +93,20 @@ DELETE FROM `npc_trainer_template` WHERE spell ='688';
             IF(@cCurResult IS NULL) THEN    -- Something has gone wrong
                 SELECT '* UPDATE FAILED *' AS `===== Status =====`,'Unable to locate DB Version Information' AS `============= Error Message =============`;
             ELSE
-                SELECT '* UPDATE SKIPPED *' AS `===== Status =====`,@cOldResult AS `=== Expected ===`,@cCurResult AS `===== Found Version =====`;
+		IF(@cOldResult IS NULL) THEN    -- Something has gone wrong
+		    SET @cCurVersion := (SELECT `version` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+		    SET @cCurStructure := (SELECT `STRUCTURE` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+		    SET @cCurContent := (SELECT `Content` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+                    SET @cCurOutput = CONCAT(@cCurVersion, '_', @cCurStructure, '_', @cCurContent, ' - ',@cCurResult);
+                    SET @cOldResult = CONCAT('Rel',@cOldVersion, '_', @cOldStructure, '_', @cOldContent, ' - ','IS NOT APPLIED');
+                    SELECT '* UPDATE SKIPPED *' AS `===== Status =====`,@cOldResult AS `=== Expected ===`,@cCurOutput AS `===== Found Version =====`;
+		ELSE
+		    SET @cCurVersion := (SELECT `version` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+		    SET @cCurStructure := (SELECT `STRUCTURE` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+		    SET @cCurContent := (SELECT `Content` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+                    SET @cCurOutput = CONCAT(@cCurVersion, '_', @cCurStructure, '_', @cCurContent, ' - ',@cCurResult);
+                    SELECT '* UPDATE SKIPPED *' AS `===== Status =====`,@cOldResult AS `=== Expected ===`,@cCurOutput AS `===== Found Version =====`;
+                END IF;
             END IF;
         END IF;
     END IF;
@@ -91,3 +119,4 @@ CALL update_mangos();
 
 -- Drop the procedure
 DROP PROCEDURE IF EXISTS `update_mangos`;
+
