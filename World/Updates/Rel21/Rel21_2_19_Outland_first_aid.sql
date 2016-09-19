@@ -65,6 +65,7 @@ UPDATE `creature_template` SET NpcFlags ='80' WHERE entry ='18991'; -- Aresella
 
 /*
 Remove training guides from Aresella's vender goods
+DO NOT USE THIS PORTION IN MANGOS ONE
 */
 
 DELETE FROM `npc_vendor` WHERE `entry` = "18991";
