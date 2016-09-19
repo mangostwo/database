@@ -57,7 +57,7 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
-    /*
+/*
 Removed duplicate quest where 14351 is also 550
 */
 DELETE FROM `creature_questrelation` WHERE `quest` = '14351';
@@ -67,11 +67,9 @@ DELETE FROM `quest_template` WHERE `entry` = '14351';
 
 
 /*
-Added the quest Dangerous, to the quest giver
+Pointed gameobject to correct quest: Dangerous
 */
-
-DELETE FROM `creature_questrelation` WHERE `quest` = '567';
-INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES ('2215', '567')
+UPDATE `gameobject_template` set `data1` = '567' WHERE `entry` = '2008';
     
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
