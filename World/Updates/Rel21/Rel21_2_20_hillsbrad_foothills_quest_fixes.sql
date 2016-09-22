@@ -34,7 +34,7 @@ BEGIN
     SET @cNewStructure = '2';
     SET @cNewContent = '20';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'hillsbrad_foothills_quest_fixes';
+    SET @cNewDescription = 'hillsbrad_foothills_fixes';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'hillsbrad_foothills_quest_fixes';

@@ -34,7 +34,7 @@ BEGIN
     SET @cNewStructure = '2';
     SET @cNewContent = '21';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'verious_quest_and_gameobjects_updated';
+    SET @cNewDescription = 'quest_and_gameobjects_fixes';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'verious_quest_and_gameobjects_updated';
