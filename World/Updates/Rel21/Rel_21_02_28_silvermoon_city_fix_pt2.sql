@@ -34,10 +34,10 @@ BEGIN
     SET @cNewStructure = '02';
     SET @cNewContent = '28';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Start_up_error_fix';
+    SET @cNewDescription = 'silvermoon_city_fix_pt2';
 
                         -- COMMENT is 150 Characters MAX
-    SET @cNewComment = 'Start_up_error_fix';
+    SET @cNewComment = 'silvermoon_city_fix_pt2';
 
     -- Evaluate all settings
     SET @cCurResult := (SELECT description FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
@@ -345,6 +345,8 @@ Remove verious NPCs
 */
 DELETE FROM `creature` WHERE `guid` = '64058'; -- Arcane Guardian
 DELETE FROM `creature` WHERE `guid` = '84939'; -- [DND]Spirit 1
+
+update `creature_movement_template` set `script_id` = '1723000' where `entry` = '17230' and `point` = '10'
 
     
 
