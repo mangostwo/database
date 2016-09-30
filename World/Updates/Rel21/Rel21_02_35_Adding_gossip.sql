@@ -56,6 +56,7 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+-- Thanks stan84 UDB
     -- Elisara Sunstriker - gossip
 UPDATE creature_template SET GossipMenuId = 7117 WHERE entry = 16147;
 DELETE FROM gossip_menu WHERE entry = 7117; 
