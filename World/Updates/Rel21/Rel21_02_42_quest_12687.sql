@@ -27,12 +27,12 @@ BEGIN
     -- Expected Values
     SET @cOldVersion = '21'; 
     SET @cOldStructure = '02'; 
-    SET @cOldContent = '21';
+    SET @cOldContent = '41';
 
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '02';
-    SET @cNewContent = '22';
+    SET @cNewContent = '42';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'quest_12687';
 
