@@ -58,7 +58,7 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
     -- Twinkle | Mangos Necrovoice
-update `creature_movement_template` set `script_id` = '1723000' where `entry` = '17230' and `point` = '10'; - Added script to waypoint
+update `creature_movement_template` set `script_id` = '1723000' where `entry` = '17230' and `point` = '10'; -- Added script to waypoint
 
 -- Sangrias Stillblade
 UPDATE creature_template SET EquipmentTemplateId = 352 WHERE Entry = 17716; -- UDB 139 update
