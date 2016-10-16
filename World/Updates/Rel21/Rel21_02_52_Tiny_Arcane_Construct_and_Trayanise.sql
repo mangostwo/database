@@ -34,7 +34,7 @@ BEGIN
     SET @cNewStructure = '02';
     SET @cNewContent = '52';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Tiny_Arcane_Construct_and_Trayanise';
+    SET @cNewDescription = 'Tiny_Arcane_Construct';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'Tiny_Arcane_Construct_and_Trayanise';

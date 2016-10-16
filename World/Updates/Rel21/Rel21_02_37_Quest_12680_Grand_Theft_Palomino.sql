@@ -34,7 +34,7 @@ BEGIN
     SET @cNewStructure = '02';
     SET @cNewContent = '37';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Quest_12680_Grand_Theft_Palomino';
+    SET @cNewDescription = 'Quest_12680';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'Quest_12680_Grand_Theft_Palomino';
