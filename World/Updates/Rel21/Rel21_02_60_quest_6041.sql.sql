@@ -25,14 +25,14 @@ BEGIN
     SET @cCurContent := (SELECT content FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
 
     -- Expected Values
-    SET @cOldVersion = '20'; 
+    SET @cOldVersion = '21'; 
     SET @cOldStructure = '02'; 
-    SET @cOldContent = '44';
+    SET @cOldContent = '59';
 
     -- New Values
-    SET @cNewVersion = '20';
+    SET @cNewVersion = '21';
     SET @cNewStructure = '02';
-    SET @cNewContent = '45';
+    SET @cNewContent = '60';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'quest_6041.sql';
 
