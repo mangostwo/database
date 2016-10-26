@@ -25,14 +25,14 @@ BEGIN
     SET @cCurContent := (SELECT content FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
 
     -- Expected Values
-    SET @cOldVersion = '20'; 
+    SET @cOldVersion = '21'; 
     SET @cOldStructure = '02'; 
-    SET @cOldContent = '44';
+    SET @cOldContent = '59';
 
     -- New Values
-    SET @cNewVersion = '20';
+    SET @cNewVersion = '21';
     SET @cNewStructure = '02';
-    SET @cNewContent = '45';
+    SET @cNewContent = '60';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'quest_6041.sql';
 
@@ -57,7 +57,7 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
-    -- UDB Fix
+-- UDB Fix
 -- quest 6041
 -- script targets (eff0 for creature, eff2 for go)
 DELETE FROM spell_script_target WHERE entry=19250;
@@ -120,4 +120,3 @@ CALL update_mangos();
 
 -- Drop the procedure
 DROP PROCEDURE IF EXISTS `update_mangos`;
-

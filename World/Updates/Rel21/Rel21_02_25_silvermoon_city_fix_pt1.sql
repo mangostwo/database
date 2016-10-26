@@ -65,6 +65,16 @@ UPDATE `creature` SET `MovementType` = '2' WHERE `guid` = '56891'; -- Silvermoon
 UPDATE `creature` SET `position_x` = '9811.86' , `position_y` = '-7364.81' , `position_z` = '20.7075' , `orientation` = '6.2163' , `MovementType` = '2' WHERE `guid` = '56892'; -- Silvermoon City Guardian
 
 /*
+Added Silvermoon Guardian custom emotes
+*/
+DELETE FROM `db_script_string` WHERE `entry` IN (2000005829,2000005828,2000005827,2000005826);
+INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
+(2000005829,'Even the Light is no match for the indomitable will of our people.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,16,'Silvermoon Guardian say_4'),
+(2000005828,'Our lives are yours, Blood Knight.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,16,'Silvermoon Guardian say_3'),
+(2000005827,'Glory to the Sun K-- ah.... Silvermoon!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,16,'Silvermoon Guardian say_2'),
+(2000005826,'Your power strengthens us all.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,16,'Silvermoon Guardian say_1');
+
+/*
 Silvermoon City Guardian waypoints
 */
 DELETE FROM `creature_movement` WHERE `id` IN (56891,56902,56892);
