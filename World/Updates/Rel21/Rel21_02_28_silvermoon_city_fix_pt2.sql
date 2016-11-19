@@ -346,7 +346,7 @@ Remove verious NPCs
 DELETE FROM `creature` WHERE `guid` = '64058'; -- Arcane Guardian
 DELETE FROM `creature` WHERE `guid` = '84939'; -- [DND]Spirit 1
 
-update `creature_movement_template` set `script_id` = '1723000' where `entry` = '17230' and `point` = '10'
+UPDATE `creature_movement_template` SET `script_id` = '1723000' WHERE `entry` = '17230' AND `point` = '10';
 
     
 
