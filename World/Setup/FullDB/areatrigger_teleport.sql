@@ -5,7 +5,7 @@ TRUNCATE TABLE `areatrigger_teleport`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: localhost    Database: m2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -269,4 +269,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12 22:00:39
+-- Dump completed on 2016-12-13  0:32:55

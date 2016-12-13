@@ -5,7 +5,7 @@ TRUNCATE TABLE `db_script_string`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -427,9 +427,56 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000401,'Help the children of Stormwind... victims of the war and plague!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'John Turner  - Say 4'),
 (2000000402,'%s calls upon the mighty armies of the Scourge!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,NULL),
 (2000000403,'Armies of the Scourge, hear my call! The scarlet apocalypse has begun! Tear this land asunder and leave only death in your wake!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,6,0,22,NULL),
-(2000000404,'Did you find something fun to chase around, Twinkle? I bet you did!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
-(2000000405,'It\'s just you and me, Twinkle. Daddy\'s not going to be coming home.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
-(2000000406,'I wonder how far this would launch that white cat...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000404,'It\'s just you and me, Twinkle. Daddy\'s not going to be coming home.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Magistrix say_1'),
+(2000000405,'You\'re such a good friend, Twinkle. You\'d never leave me, would you?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Magistrix say_2'),
+(2000000406,'Did you find something fun to chase around, Twinkle?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Magistrix say_3'),
+(2000000407,'I\'m workin\' as fast as I can, cap\'n!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000408,'I can\'t keep this pace up, sir! If the Scourge don\'t get me, exhaustion will!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000409,'Suffer well, death knight...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,25,NULL),
+(2000000410,'The realm of shadows awaits...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000411,'What are we to do? We\'ve lost everything!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000000412,'Havenshire is lost.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000000413,'We fight! We push them back, just as we have always done!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,15,NULL),
+(2000000467,'%s wakes up, startled.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,NULL),
+(2000000468,'Was... Was it all a dream? Azuremyst, Bloodmyst, Zangarmarsh, Shadowmoon... even Zul\'Aman... Jane! Jane where are you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,10,6,NULL),
+(2000000469,'I\'m right here, daddy. You\'ve been asleep all day long. You sure must be tired!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,10,1,NULL),
+(2000000470,'Ah, wonderful. It was all just a dream...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,10,1,NULL),
+(2000000471,'%s resumes playing on the beach.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,NULL),
+(2000000474,'Putting the bottles away, %s sighs.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,NULL),
+(2000000482,'What a beautiful shot!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000483,'Hah! Bullseye!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000484,'Agh... a chill ran up my spine.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000485,'They\'ll see the light, I hope.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000571,'My brothers and sisters. Listen to me. We must speak of the survival of our people. We have narrowly survived one calamity, but I fear the next shall destroy us.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000572,'Can you not see what is happening? Open your eyes. It is laid bare for all to see. What is this new alliance? Why have we betrayed our allies of old, only to take up with the enemies of all that live?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000573,'No, you\'re wrong! We were the ones betrayed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,22,NULL),
+(2000000574,'When have the dwarves ever been our friends?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,11,NULL),
+(2000000575,'The humans abandoned us in our darkest hour! Their prince himself led the assault on our lands.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,25,NULL),
+(2000000576,'You fool! The prince\'s minions were the very Forsaken we have now allied ourselves with, and now he has betrayed us!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000000577,'The Ranger-General of Silvermoon will be a loyal ally!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000578,'You speak of her as friend? You are a fool. This \"Dark Lady\" is not Sylvanas.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000579,'Blood will be true. We can trust in none but our own!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,25,NULL),
+(2000000580,'Blood? And these orcs, these fair weather friends? They will aid us?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,11,NULL),
+(2000000581,'A great blight lies across our land! It grows every day. Our need for magic weakens us, and will bring us to destruction, just as it has before!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,25,NULL),
+(2000000582,'How are we to live without magic?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000000583,'Look at the wonders of this city! This is magic.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000000584,'But at what cost? You\'ve all been blinded. We have all been blinded.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000585,'You call us traitors?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,25,NULL),
+(2000000586,'The magisters are the traitors! They have sealed our doom.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,25,NULL),
+(2000000587,'Idealistic blather. Go back to your forests!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,3,NULL),
+(2000000588,'You would have us live like the savages!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000000589,'No, not savagery! Conscience. The excesses of our people will destroy us, and all that we have struggled to build.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000590,'We have not struggled so hard to survive, only to bring about the true destruction.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000591,'We stand on the brink of destruction. We must reconsider this rash course of action.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000000592,'If we speak as one, we cannot be ignored!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000593,'Lend us your voices! Now is the time we must act to save our people.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000594,'Lor\'themar must hear us! We will not be silenced!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000000595,'That should take care of that. Summon me if you have further need of my services.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,11,NULL),
+(2000000596,'We will repay the betrayal of the Alliance! We shall never forget, and never forgive!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,21,NULL),
+(2000000597,'How can you say our lives are not better now? How can you deny the betterment of our lives?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,21,NULL),
+(2000000598,'Lor\'themar has remade Silvermoon into something we may truly be proud of.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,21,NULL),
+(2000000599,'Our new allies will bring us back to our former glory. These bonds will be true, and we will not be betrayed again!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,21,NULL),
+(2000000813,'Speak with me to hear my tale.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
 (2000005001,'Opus wants some Cuergo\'s Gold... with worm.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000005002,'Bijou lost! SQUAWK! *cough',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000005003,'Kibler is being investigated by G.E.T.A.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
@@ -1227,7 +1274,15 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000005818,'As you can see, your people are now mine. I will now turn this city household by household, until the flame of life has been snuffed out... forever.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,14411,1,0,378,'Malganis - city 5'),
 (2000005819,'I won\'t allow it, Mal\'Ganis! Better that these people die by my hand than serve as your slaves in death!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,14296,1,0,397,'Arthas - city 6'),
 (2000005820,'Mal\'Ganis will send out some of his Scourge minions to interfere with us. Those of you with the strongest steel and magic shall go forth and destroy them. I will lead the rest of my forces in purging Stratholme of the infected.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,14885,1,0,1,'Arthas - city 7'),
-(2000005821,'You have my thanks for saving my existence in this timeline. Now I must report back to my superiors. They must know immediately of what I just experienced.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'guardian of life - say thank you');
+(2000005821,'You have my thanks for saving my existence in this timeline. Now I must report back to my superiors. They must know immediately of what I just experienced.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'guardian of life - say thank you'),
+(2000005822,'Champion Vranesh arches a sculpted brow at the guards, a disapproving scowl on his face.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'Champion Vranesh emote_1'),
+(2000005823,'Champion Vranesh glances from guard to guard.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'Champion Vranesh emote_2'),
+(2000005824,'Champion Vranesh surveys the small ranger practice ground with a condescending smirk.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'Champion Vranesh emote_3'),
+(2000005825,'Champion Vranesh inclines his head slightly to the pair of guardians in greeting.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'Champion Vranesh emote_4'),
+(2000005826,'Your power strengthens us all.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,16,'Silvermoon Guardian say_1'),
+(2000005827,'Glory to the Sun K-- ah.... Silvermoon!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,16,'Silvermoon Guardian say_2'),
+(2000005828,'Our lives are yours, Blood Knight.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,16,'Silvermoon Guardian say_3'),
+(2000005829,'Even the Light is no match for the indomitable will of our people.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,16,'Silvermoon Guardian say_4');
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1240,4 +1295,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:19
+-- Dump completed on 2016-12-13  0:33:05

@@ -5,7 +5,7 @@ TRUNCATE TABLE `creature_ai_texts`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -594,7 +594,7 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-566,'Who dares disturb my meditation!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,5802,1,0,0,'4832'),
 (-567,'Sleep...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,5804,1,0,0,'4832'),
 (-568,'Just... Dust...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,5803,1,0,0,'4832'),
-(-569,'Aku\'mai is dead! At last, I can leave this wretched place!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'6729'),
+(-569,'Aku\'mai is dead! At last, I can leave this wretched place!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'6729'),
 (-570,'Cry for mercy! Your meaningless lives will soon be forfeit!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,11015,1,0,0,'17888'),
 (-571,'Your death will be a painful one.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,11016,1,0,0,'17888'),
 (-572,'You... are marked.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,11052,1,0,0,'17888'),
@@ -1330,7 +1330,14 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-757,'Begone foul demon!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'28529'),
 (-758,'Scourge! Do not let it escape!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'28529'),
 (-759,'\'Tis the work of the Scourge!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'28529'),
-(-760,'Death stalks us! Destroy it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'28529');
+(-760,'Death stalks us! Destroy it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'28529'),
+(-182301,'The magister\'s going to kill me...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18230'),
+(-182302,'Argh. They told me those crystals would work properly!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18230'),
+(-182303,'When I catch you, I\'m going to disenchant your components, so help me...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18230'),
+(-182304,'You stay out of the regent lord\'s way! I mean it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18230'),
+(-182305,'No, no, no! Come back here!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18230'),
+(-9000,'I will present your head to Abbendis myself!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'29000'),
+(-9001,'Scourge filth! DIE!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'29000');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1343,4 +1350,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:14
+-- Dump completed on 2016-12-13  0:32:59

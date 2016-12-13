@@ -5,7 +5,7 @@ TRUNCATE TABLE `game_tele`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -1451,7 +1451,8 @@ INSERT INTO `game_tele` (`id`, `position_x`, `position_y`, `position_z`, `orient
 (1422,8447.44,2698.09,656.783,2.8392,571,'shadowvault'),
 (1423,8447.44,2698.09,656.783,2.8392,571,'theshadowvault'),
 (1424,6122.16,-1061.5,402.568,4.77853,571,'k3'),
-(1425,-8755.84,-4454.57,-200.169,4.37,1,'CullingOfStratholme');
+(1425,-8755.84,-4454.57,-200.169,4.37,1,'CullingOfStratholme'),
+(1426,5632.48,2016.71,798.27,4.73,571,'frozenhalls');
 /*!40000 ALTER TABLE `game_tele` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1464,4 +1465,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:23
+-- Dump completed on 2016-12-13  0:33:10

@@ -5,7 +5,7 @@ TRUNCATE TABLE `spell_template`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -65,7 +65,9 @@ INSERT INTO `spell_template` (`id`, `attr`, `attr_ex`, `attr_ex2`, `attr_ex3`, `
 (21883,384,268435456,0,0,0,101,225,76,22,0,0,0,178904,0,0,'Summon Healed Celebrian Vine'),
 (33242,384,0,4,0,0,101,21,28,18,0,7,0,19259,64,0,'summon Infernal Invader'),
 (11756,384,268435456,0,0,0,101,4,76,47,0,15,0,144064,0,0,'Summon Gordunni chest (COBALT)'),
-(19394,384,268435456,0,0,0,101,4,76,47,0,15,0,177681,0,0,'Summon Gordunni chest (JUNK)');
+(19394,384,268435456,0,0,0,101,4,76,47,0,15,0,177681,0,0,'Summon Gordunni chest (JUNK)'),
+(39240,0,0,0,0,0,101,4,28,41,0,8,0,22483,64,0,'Summon Summon Sand Gnome front of the caster'),
+(39241,0,0,0,0,0,101,4,28,41,0,8,0,22482,64,0,'Summon Mature Bone Sifter front of the caster');
 /*!40000 ALTER TABLE `spell_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -78,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:38
+-- Dump completed on 2016-12-13  0:33:30

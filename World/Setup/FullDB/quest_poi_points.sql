@@ -5,7 +5,7 @@ TRUNCATE TABLE `quest_poi_points`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -6963,7 +6963,6 @@ INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES
 (780,3,-3316,-1042),
 (780,3,-3238,-1076),
 (780,4,-2913,-258),
-(781,0,-2878,-222),
 (782,1,-7015,-3611),
 (782,2,-6646,-2152),
 (783,0,-8903,-163),
@@ -49851,9 +49850,9 @@ INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES
 (12963,21,-185,-5086),
 (12963,21,-212,-5143),
 (12963,21,-149,-5181),
-(12963,21,-119,-5183);
+(12963,21,-119,-5183),
+(12963,22,2116,-3382);
 INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES 
-(12963,22,2116,-3382),
 (12963,22,2147,-3374),
 (12963,22,2177,-3306),
 (12963,22,2148,-3221),
@@ -55707,7 +55706,6 @@ INSERT INTO `quest_poi_points` (`questId`, `poiId`, `x`, `y`) VALUES
 (14349,0,1290,316),
 (14350,0,3315,-3380),
 (14350,1,1871,-3213),
-(14351,0,1288,334),
 (14352,0,2190,1864),
 (14352,1,1288,334),
 (14353,0,1288,334),
@@ -56453,4 +56451,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:35
+-- Dump completed on 2016-12-13  0:33:25

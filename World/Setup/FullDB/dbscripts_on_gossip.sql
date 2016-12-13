@@ -5,7 +5,7 @@ TRUNCATE TABLE `dbscripts_on_gossip`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -602,7 +602,11 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 (8081,3,0,0,0,0,0,0,2000000253,0,0,0,0,0,0,0,''),
 (8081,6,22,17,2,0,0,0,0,0,0,0,0,0,0,0,'Faction change'),
 (8081,8,26,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
-(476402,1,0,0,0,0,0,0,2000000259,0,0,0,0,0,0,0,'');
+(476402,1,0,0,0,0,0,0,2000000259,0,0,0,0,0,0,0,''),
+(9528,0,15,48961,0,0,0,2,0,0,0,0,0,0,0,0,''),
+(9528,1,15,48960,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(9531,0,15,48621,0,0,0,2,0,0,0,0,0,0,0,0,''),
+(9531,1,15,48622,0,0,0,0,0,0,0,0,0,0,0,0,'');
 /*!40000 ALTER TABLE `dbscripts_on_gossip` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -615,4 +619,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:21
+-- Dump completed on 2016-12-13  0:33:07

@@ -5,7 +5,7 @@ TRUNCATE TABLE `quest_poi`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -1848,7 +1848,6 @@ INSERT INTO `quest_poi` (`questId`, `poiId`, `objIndex`, `mapId`, `mapAreaId`, `
 (780,2,5,1,9,0,0,1),
 (780,3,5,1,9,0,0,1),
 (780,4,-1,1,9,0,0,1),
-(781,0,-1,1,9,0,0,1),
 (782,1,4,0,17,0,0,5),
 (782,2,-1,0,17,0,0,5),
 (783,0,-1,0,30,0,0,1),
@@ -18084,7 +18083,6 @@ INSERT INTO `quest_poi` (`questId`, `poiId`, `objIndex`, `mapId`, `mapAreaId`, `
 (14349,0,-1,0,382,0,0,7),
 (14350,0,4,0,23,0,0,1),
 (14350,1,-1,0,23,0,0,1),
-(14351,0,-1,0,382,0,0,7),
 (14352,0,4,0,20,0,0,1),
 (14352,1,-1,0,20,0,0,1),
 (14353,0,-1,0,20,0,0,1),
@@ -18522,4 +18520,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:34
+-- Dump completed on 2016-12-13  0:33:25

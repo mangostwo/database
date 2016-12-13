@@ -5,7 +5,7 @@ TRUNCATE TABLE `spell_target_position`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -78,7 +78,7 @@ INSERT INTO `spell_target_position` (`id`, `target_map`, `target_position_x`, `t
 (6483,1,5483.9,-749.881,334.621,0),
 (6719,1,-3615.49,-4467.34,24.3141,0),
 (8735,48,-151.89,106.96,-39.87,4.53),
-(9268,1,8786.36,967.445,30.197,3.39632),
+(9268,1,9664.01,2526.15,1332.16,0),
 (11362,0,-5095,757,261,4.42),
 (11409,0,-14462,460,16,3.49),
 (447,0,16229,16265,14,3.19),
@@ -639,7 +639,9 @@ INSERT INTO `spell_target_position` (`id`, `target_map`, `target_position_x`, `t
 (25877,531,-7975.77,974.82,-41.584,4.417),
 (25871,531,-7997.19,979.192,-41.653,4.896),
 (25884,531,-8015.24,976.553,-41.647,4.947),
-(25004,1,7738.52,-2314.8,452.679,0);
+(25004,1,7738.52,-2314.8,452.679,0),
+(48960,571,4313.37,-2958.17,318.463,1.98),
+(48622,571,4274.53,-3055.55,319.463,2.535);
 /*!40000 ALTER TABLE `spell_target_position` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -652,4 +654,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:38
+-- Dump completed on 2016-12-13  0:33:30

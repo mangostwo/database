@@ -5,7 +5,7 @@ TRUNCATE TABLE `creature_template_spells`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -4498,6 +4498,7 @@ INSERT INTO `creature_template_spells` (`entry`, `spell1`, `spell2`, `spell3`, `
 (30124,56750,56753,0,0,0,0,0,0),
 (30161,56091,56092,57090,57143,57108,57092,0,0),
 (30228,56683,56684,56712,0,0,0,0,0),
+(30230,62225,47480,47481,47482,47484,67886,0,0),
 (30337,56585,0,56570,0,0,0,0,0),
 (30645,57643,57652,57665,57668,0,0,0,0),
 (30647,57621,0,0,0,0,0,0,0),
@@ -4617,4 +4618,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:19
+-- Dump completed on 2016-12-13  0:33:05

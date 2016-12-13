@@ -5,7 +5,7 @@ TRUNCATE TABLE `conditions`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -39,6 +39,7 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES
 (936,-3,935,0),
 (677,-2,158,159),
 (675,-2,425,192),
+(976,-2,463,837),
 (676,-2,507,231),
 (692,-2,686,691),
 (699,-2,697,698),
@@ -316,6 +317,7 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES
 (967,-1,966,71),
 (970,-1,969,719),
 (972,-1,969,971),
+(1004,-1,1003,1002),
 (862,1,23735,0),
 (861,1,23736,0),
 (860,1,23737,0),
@@ -480,6 +482,7 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES
 (800,8,8115,0),
 (803,8,8122,0),
 (148,8,8227,0),
+(1003,8,8350,0),
 (32,8,8460,0),
 (34,8,8464,0),
 (479,8,8556,0),
@@ -494,6 +497,7 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES
 (238,8,8867,0),
 (95,8,9152,0),
 (954,8,9345,0),
+(1002,8,9705,0),
 (768,8,9737,0),
 (769,8,9762,0),
 (368,8,9837,0),
@@ -568,7 +572,6 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES
 (323,9,558,0),
 (501,9,925,0),
 (69,9,1126,0),
-(15,9,2240,0),
 (220,9,2278,0),
 (218,9,2381,0),
 (222,9,3377,1),
@@ -768,6 +771,7 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES
 (85,11,50517,0),
 (90,11,58493,0),
 (398,11,67334,0),
+(15,12,8,0),
 (166,13,1048576,0),
 (74,14,0,1),
 (92,14,0,2),
@@ -1015,4 +1019,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:11
+-- Dump completed on 2016-12-13  0:32:56

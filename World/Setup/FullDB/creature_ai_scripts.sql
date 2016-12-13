@@ -5,7 +5,7 @@ TRUNCATE TABLE `creature_ai_scripts`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -3512,11 +3512,10 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1833701,18337,4,0,100,0,0,0,0,0,12,16222,1,300000,0,0,0,0,0,0,0,0,'Priest Kath\'mar - Summon Silvermoon City Guardian on Aggro'),
 (1834701,18347,4,0,100,0,0,0,0,0,12,16222,1,300000,0,0,0,0,0,0,0,0,'Olirea - Summon Silvermoon City Guardian on Aggro'),
 (1850701,18507,4,0,100,0,0,0,0,0,12,16222,1,300000,0,0,0,0,0,0,0,0,'Silvermoon Farstrider - Summon Silvermoon City Guardian on Aggro'),
-(1852701,18527,0,0,100,1,20000,60000,180000,240000,11,12051,0,1,0,0,0,0,0,0,0,0,'Conjurer Tyren - Cast Evocation'),
-(1852702,18527,0,0,100,1,15000,30000,45000,90000,11,11540,0,0,0,0,0,0,0,0,0,0,'Conjurer Tyren - Cast Blue Firework'),
-(1852703,18527,0,0,100,1,30000,60000,45000,90000,11,30161,0,0,0,0,0,0,0,0,0,0,'Conjurer Tyren - Cast Purple Firework'),
-(1852704,18527,0,0,100,1,45000,75000,45000,90000,11,11542,0,0,0,0,0,0,0,0,0,0,'Conjurer Tyren - Cast Red Streaks Firework'),
-(1852705,18527,0,0,100,1,60000,90000,45000,90000,11,11544,0,0,0,0,0,0,0,0,0,0,'Conjurer Tyren - Cast Yellow Rose Firework'),
+(2900003,29000,2,0,100,1,30,0,7000,10000,11,31713,0,1,0,0,0,0,0,0,0,0,'Scarlet Commander Rodrick - Cast Holy Light at 30% HP'),
+(182301,18230,1,0,75,33,6000,18000,32000,48000,1,-182301,-182302,-182303,1,-182304,-182305,0,0,0,0,0,'Trayanise - Random say on OOC'),
+(1852702,18527,1,0,100,1,90000,120000,420000,480000,11,12051,0,1,0,0,0,0,0,0,0,0,'Conjurer Tyren - Cast Evocation while OOC'),
+(1852701,18527,1,0,25,1,30000,60000,180000,240000,11,1949,0,0,0,0,0,0,0,0,0,0,'Conjurer Tyren - Cast Hellfire while OOC'),
 (1862901,18629,4,0,100,0,0,0,0,0,12,16222,1,300000,0,0,0,0,0,0,0,0,'Instructor Cel - Summon Silvermoon City Guardian on Aggro'),
 (1866801,18668,4,0,100,0,0,0,0,0,12,16222,1,300000,0,0,0,0,0,0,0,0,'Vaeron Kormar - Summon Silvermoon City Guardian on Aggro'),
 (1866901,18669,4,0,100,0,0,0,0,0,12,16222,1,300000,0,0,0,0,0,0,0,0,'Terric Brightwind - Summon Silvermoon City Guardian on Aggro'),
@@ -4827,8 +4826,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2894007,28940,2,0,100,0,15,0,0,0,22,2,0,0,0,0,0,0,0,0,0,0,'Scarlet Crusader - Set Phase 2 at 15% HP'),
 (2894008,28940,2,3,100,0,15,0,0,0,21,1,0,0,25,0,0,0,1,-47,0,0,'Scarlet Crusader - Start Combat Movement and Flee at 15% HP (Phase 2)'),
 (2894009,28940,7,0,100,0,0,0,0,0,22,1,0,0,40,1,0,0,0,0,0,0,'Scarlet Crusader - Set Phase 1 and Set Melee Weapon Model on Evade'),
-(2900001,29000,9,0,100,1,0,5,7000,13000,11,52835,1,0,0,0,0,0,0,0,0,0,'Scarlet Commander Rodrick - Cast Cleave'),
-(2900002,29000,2,0,100,1,30,0,7000,10000,11,31713,0,1,0,0,0,0,0,0,0,0,'Scarlet Commander Rodrick - Cast Holy Light at 30% HP'),
+(2900002,29000,9,0,100,1,0,5,7000,13000,11,52835,1,0,0,0,0,0,0,0,0,0,'Scarlet Commander Rodrick - Cast Cleave'),
+(2900001,29000,0,0,100,0,0,0,0,0,1,-9000,-9001,0,0,0,0,0,0,0,0,0,'Scarlet Commander Rodrick - Random Say on Aggro'),
 (2900101,29001,1,0,100,0,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'High Inquisitor Valroth - Prevent Combat Movement and Set Phase to 0 on Spawn'),
 (2900102,29001,4,0,100,0,0,0,0,0,11,52926,1,0,22,1,0,0,0,0,0,0,'High Inquisitor Valroth - Cast Valroth\'s Smite and Set Phase 1 on Aggro'),
 (2900103,29001,9,5,100,1,0,40,3400,4800,11,52926,1,0,0,0,0,0,0,0,0,0,'High Inquisitor Valroth - Cast Valroth\'s Smite (Phase 1)'),
@@ -8655,9 +8654,9 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (489401,4894,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Craig Nollward - Flee at 15% HP'),
 (489501,4895,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Smiling Jim - Flee at 15% HP'),
 (489601,4896,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Charity Mipsy - Flee at 15% HP'),
-(489701,4897,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Helenia Olden - Flee at 15% HP');
+(489701,4897,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Helenia Olden - Flee at 15% HP'),
+(489801,4898,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Brant Jasperbloom - Flee at 15% HP');
 INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES 
-(489801,4898,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Brant Jasperbloom - Flee at 15% HP'),
 (489901,4899,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Uma Bartulm - Flee at 15% HP'),
 (490001,4900,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Alchemist Narett - Flee at 15% HP'),
 (490101,4901,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Sara Pierce - Flee at 15% HP'),
@@ -16559,7 +16558,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1879429,18794,2,0,100,6,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Cabal Ritualist - Flee at 15% HP'),
 (1879430,18794,7,0,100,6,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Cabal Ritualist - Set Phase to 0 on Evade'),
 (1879431,18794,21,0,100,6,0,0,0,0,11,32958,0,0,0,0,0,0,0,0,0,0,'Cabal Ritualist - Cast Crystal Channel on Reaching Home'),
-(1879432,18794,1,0,100,6,1000,1000,0,0,11,32958,0,0,35,1,0,0,0,0,0,0,'Cabal Ritualist - Cast Crystal Channel on OOC Timer and Set Instance Data64 (SD2)'),
+(1879432,18794,1,0,100,6,1000,1000,0,0,11,32958,0,0,0,0,0,0,0,0,0,0,'Cabal Ritualist - Cast Crystal Channel on OOC Timer and Set Instance Data64 (SD2)'),
 (1879601,18796,4,0,10,6,0,0,0,0,1,-147,-345,0,0,0,0,0,1,0,0,0,'Fel Overseer - Random Say on Aggro'),
 (1879602,18796,4,0,100,6,0,0,0,0,11,27577,1,0,0,0,0,0,0,0,0,0,'Fel Overseer - Cast Intercept on Aggro'),
 (1879603,18796,0,0,100,7,13300,18900,15700,26500,11,30471,1,0,0,0,0,0,0,0,0,0,'Fel Overseer - Cast Uppercut'),
@@ -16952,7 +16951,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (497802,4978,0,0,100,3,9000,12000,12000,16000,11,865,0,1,0,0,0,0,0,0,0,0,'Aku\'mai Servant - Cast Frost Nova'),
 (604701,6047,0,0,100,3,5000,9000,14000,18000,11,865,0,1,0,0,0,0,0,0,0,0,'Aqua Guardian - Cast Frost Nova'),
 (624301,6243,9,0,100,3,0,20,7000,10000,11,6533,1,0,0,0,0,0,0,0,0,0,'Gelihast - Cast Net'),
-(672901,6729,1,0,100,2,1000,1000,0,0,1,-569,0,0,0,0,0,0,0,0,0,0,'Morridune - Say on Spawn'),
+(672901,6729,1,0,100,2,1000,1000,0,0,1,-569,0,0,0,0,0,0,0,0,0,0,'Morridune - Yell on Spawn'),
 (1287601,12876,1,0,100,2,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Baron Aquanis - Prevent Combat Movement on Spawn'),
 (1287602,12876,4,0,100,2,0,0,0,0,11,15043,1,0,22,1,0,0,0,0,0,0,'Baron Aquanis - Cast Frostbolt and Set Phase 1 on Aggro'),
 (1287603,12876,9,5,100,3,0,40,2400,3800,11,15043,1,0,0,0,0,0,0,0,0,0,'Baron Aquanis - Cast Frostbolt (Phase 1)'),
@@ -17039,9 +17038,9 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (903102,9031,0,0,100,3,7000,7000,7000,7000,11,15472,4,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Shadow Bolt'),
 (903103,9031,0,0,100,3,16000,16000,12000,12000,11,15471,5,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Enveloping Web'),
 (903104,9031,0,0,100,3,12000,12000,45000,45000,11,12493,4,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Curse of Weakness'),
-(903105,9031,0,0,100,3,24000,24000,18000,18000,11,15470,4,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Curse of Tongues');
+(903105,9031,0,0,100,3,24000,24000,18000,18000,11,15470,4,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Curse of Tongues'),
+(903106,9031,0,0,100,3,8000,12000,23000,26000,11,8994,5,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Banish');
 INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES 
-(903106,9031,0,0,100,3,8000,12000,23000,26000,11,8994,5,0,0,0,0,0,0,0,0,0,'Anub\'shiah - Cast Banish'),
 (903401,9034,1,0,100,2,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Hate\'rel - Prevent Combat Movement and Set Phase to 0 on Spawn'),
 (903402,9034,4,0,100,2,0,0,0,0,11,15232,1,0,22,1,0,0,0,0,0,0,'Hate\'rel - Cast Shadow Bolt and Set Phase 1 on Aggro'),
 (903403,9034,9,13,100,3,0,40,3400,4800,11,15232,1,0,0,0,0,0,0,0,0,0,'Hate\'rel - Cast Shadow Bolt (Phase 1)'),
@@ -26339,7 +26338,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1047204,10472,2,0,100,2,40,0,0,0,3,11284,0,0,22,2,0,0,0,0,0,0,'Scholomance Occultist - Transform into Dark Shade and Set Phase 2 at 40% HP (Phase 1)'),
 (1047205,10472,0,3,100,3,500,1000,6500,15600,11,17228,1,0,0,0,0,0,0,0,0,0,'Scholomance Occultist - Cast Shadow Bolt Volley (Phase 2)'),
 (2048101,20481,11,0,100,6,0,0,0,0,11,35278,0,0,0,0,0,0,0,0,0,0,'Raging Flames - Cast Raging Flames on Spawn'),
-(1879701,18797,4,0,100,6,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Tortured skeleton - stand on aggro');
+(1879701,18797,4,0,100,6,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Tortured skeleton - stand on aggro'),
+(1644202,16442,1,0,75,1,2000,3500,6500,9000,5,1,0,0,0,0,0,0,0,0,0,0,'Vinemaster Suntouched - Emote while OOC');
 /*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -26352,4 +26352,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12 22:00:42
+-- Dump completed on 2016-12-13  0:32:58

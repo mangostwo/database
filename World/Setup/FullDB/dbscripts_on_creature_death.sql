@@ -5,7 +5,7 @@ TRUNCATE TABLE `dbscripts_on_creature_death`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -137,7 +137,8 @@ INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`,
 (19554,10,18,0,0,20985,50,7,0,0,0,0,0,0,0,0,'Captain Saeed - despawn self'),
 (32273,0,14,60451,0,32281,50,0,0,0,0,0,0,0,0,0,'Guardian of Life - remove aura Corruption of Time'),
 (32273,2,0,0,0,32281,50,0,2000005821,0,0,0,0,0,0,0,'Guardian of Life - say thank you'),
-(32273,2,18,10000,0,32281,50,2,0,0,0,0,0,0,0,0,'Guardian of Life - Despawn');
+(32273,2,18,10000,0,32281,50,2,0,0,0,0,0,0,0,0,'Guardian of Life - Despawn'),
+(28611,0,24,0,0,0,0,0,0,0,0,0,0,0,0,0,'unmount');
 /*!40000 ALTER TABLE `dbscripts_on_creature_death` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -150,4 +151,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:20
+-- Dump completed on 2016-12-13  0:33:07

@@ -5,7 +5,7 @@ TRUNCATE TABLE `dbscripts_on_go_template_use`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -199,7 +199,11 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`
 (184414,0,9,0,60,183816,30,7,0,0,0,0,0,0,0,0,'respawn gobject'),
 (184415,0,9,0,60,183816,30,7,0,0,0,0,0,0,0,0,'respawn gobject'),
 (185208,0,10,22339,4000,0,0,0,0,0,0,0,0,0,0,0,'summon Redeemet Hatchling '),
-(185212,0,10,22337,0,0,0,0,0,0,0,0,0,0,0,0,'summon Malevolent Hatchling ');
+(185212,0,10,22337,0,0,0,0,0,0,0,0,0,0,0,0,'summon Malevolent Hatchling '),
+(176767,1,11,45427,15,0,0,0,0,0,0,0,0,0,0,0,''),
+(103016,1,31,4829,50,0,0,8,0,0,0,0,0,0,0,0,'search for 4829'),
+(103016,2,31,6729,50,0,0,8,0,0,0,0,0,0,0,0,'search for 6729'),
+(103016,3,10,6729,300000,0,0,0,0,0,0,0,-857.158,-467.636,-33.9256,5.90677,'');
 /*!40000 ALTER TABLE `dbscripts_on_go_template_use` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -212,4 +216,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:21
+-- Dump completed on 2016-12-13  0:33:07

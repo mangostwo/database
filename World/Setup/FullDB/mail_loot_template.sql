@@ -5,7 +5,7 @@ TRUNCATE TABLE `mail_loot_template`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -98,7 +98,18 @@ INSERT INTO `mail_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `group
 (161,21216,100,0,1,1,0),
 (168,21746,100,0,1,1,0),
 (180,24132,100,0,1,1,0),
-(183,31698,100,0,1,1,0);
+(183,31698,100,0,1,1,0),
+(224,46875,100,0,1,1,0),
+(225,46876,100,0,1,1,0),
+(226,46877,100,0,1,1,0),
+(227,46879,100,0,1,1,0),
+(228,46878,100,0,1,1,0),
+(229,46884,100,0,1,1,0),
+(230,46883,100,0,1,1,0),
+(231,46880,100,0,1,1,0),
+(232,46882,100,0,1,1,0),
+(233,46881,100,0,1,1,0),
+(236,39317,100,0,1,1,0);
 /*!40000 ALTER TABLE `mail_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -111,4 +122,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:30
+-- Dump completed on 2016-12-13  0:33:19

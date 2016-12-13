@@ -5,7 +5,7 @@ TRUNCATE TABLE `pool_template`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -6124,7 +6124,9 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (25459,1,'Veil Lithic - Cursed Eggs - Pool 4'),
 (25458,1,'Veil Lithic - Cursed Eggs - Pool 3'),
 (25457,1,'Veil Lithic - Cursed Eggs - Pool 2'),
-(25456,1,'Veil Lithic - Cursed Eggs - Pool 1');
+(25456,1,'Veil Lithic - Cursed Eggs - Pool 1'),
+(25559,15,'Tirisfal Pumpkin'),
+(25517,10,'Milly\'s Harvest');
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -6137,4 +6139,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:34
+-- Dump completed on 2016-12-13  0:33:24

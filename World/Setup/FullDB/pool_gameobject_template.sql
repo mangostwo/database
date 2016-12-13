@@ -5,7 +5,7 @@ TRUNCATE TABLE `pool_gameobject_template`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -27,7 +27,9 @@ TRUNCATE TABLE `pool_gameobject_template`;
 LOCK TABLES `pool_gameobject_template` WRITE;
 /*!40000 ALTER TABLE `pool_gameobject_template` DISABLE KEYS */;
 INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES 
-(185939,1800,0,'Nethermine Cargo');
+(185939,1800,0,'Nethermine Cargo'),
+(375,25559,0,'375 - Tirisfal Pumpkin'),
+(161557,25517,0,'161557 - Milly\'s Harvest');
 /*!40000 ALTER TABLE `pool_gameobject_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -40,4 +42,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:34
+-- Dump completed on 2016-12-13  0:33:24

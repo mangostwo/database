@@ -5,7 +5,7 @@ TRUNCATE TABLE `gameobject_questrelation`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -83,6 +83,7 @@ INSERT INTO `gameobject_questrelation` (`id`, `quest`) VALUES
 (2908,751),
 (2933,779),
 (2933,795),
+(3076,24857),
 (3643,68),
 (3972,895),
 (4141,900),
@@ -452,4 +453,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:25
+-- Dump completed on 2016-12-13  0:33:13

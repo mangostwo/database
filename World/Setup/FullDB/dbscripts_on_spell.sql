@@ -5,7 +5,7 @@ TRUNCATE TABLE `dbscripts_on_spell`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -199,7 +199,21 @@ INSERT INTO `dbscripts_on_spell` (`id`, `delay`, `command`, `datalong`, `datalon
 (42436,1,15,47173,0,0,0,10,0,0,0,0,0,0,0,0,'Cast Brewfest - Dark Iron Attack - Intro -  Assign Kill Credit'),
 (42436,1,15,43126,0,0,0,10,0,0,0,0,0,0,0,0,'Cast Mug Target Practice'),
 (42436,1,15,43073,0,0,0,10,0,0,0,0,0,0,0,0,'Cast Mug Target Practice'),
-(53435,0,15,53436,0,0,0,6,0,0,0,0,0,0,0,0,'Cast Teleport to CoT Stratholme Phase 4');
+(53435,0,15,53436,0,0,0,6,0,0,0,0,0,0,0,0,'Cast Teleport to CoT Stratholme Phase 4'),
+(52124,1,15,52125,0,28655,500,9,0,0,0,0,0,0,0,0,''),
+(52264,0,22,2084,1,28653,20,5,0,0,0,0,0,0,0,0,'temp faction'),
+(52264,1,15,52266,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(52264,1,14,52263,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(52264,3,37,0,0,28654,20,0,0,0,0,0,0,0,0,0,''),
+(52264,5,15,52267,0,28654,20,3,0,0,0,0,0,0,0,0,''),
+(52264,7,0,0,0,28654,20,3,2000000410,0,0,0,0,0,0,0,''),
+(52267,3,18,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(52149,0,31,28576,50,0,0,0,0,0,0,0,0,0,0,0,''),
+(52149,1,15,52152,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(52149,10,18,0,0,0,0,0,0,0,0,0,0,0,0,0,'despawn'),
+(66313,1,10,34854,30000,0,0,2,0,0,0,0,0,0,0,0,'spell Fire Bomb - summon Fire Bomb'),
+(19250,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,'kill credit'),
+(19250,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,'despawn target');
 /*!40000 ALTER TABLE `dbscripts_on_spell` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -212,4 +226,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:21
+-- Dump completed on 2016-12-13  0:33:08

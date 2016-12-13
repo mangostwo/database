@@ -5,7 +5,7 @@ TRUNCATE TABLE `creature_linking_template`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos2
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -51,6 +51,7 @@ INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`,
 (8319,109,5709,1,0),
 (8391,0,8400,3,50),
 (8421,0,8400,3,50),
+(9178,230,9156,4112,0),
 (10120,70,2748,20,0),
 (10316,229,10316,3,0),
 (10814,229,10363,7,0),
@@ -389,6 +390,7 @@ INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`,
 (34606,649,34564,4112,0),
 (34607,649,34564,4112,0),
 (34660,649,34564,4112,0),
+(34800,649,34796,4097,0),
 (34862,649,34564,4112,0),
 (36272,33,36296,140,0),
 (36561,249,10184,4096,0),
@@ -438,4 +440,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12  8:34:14
+-- Dump completed on 2016-12-13  0:33:00
