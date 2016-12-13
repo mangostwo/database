@@ -34,7 +34,7 @@ BEGIN
     SET @cNewStructure = '02';
     SET @cNewContent = '67';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Updates_and_improvements_to_NPCs';
+    SET @cNewDescription = 'Updates_and_fixes_to_NPCs';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'Updates_and_improvements_to_NPCs';

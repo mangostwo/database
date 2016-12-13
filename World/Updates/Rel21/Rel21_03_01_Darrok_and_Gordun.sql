@@ -31,8 +31,8 @@ BEGIN
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '02';
-    SET @cNewContent = '100';
+    SET @cNewStructure = '03';
+    SET @cNewContent = '01';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'Darrok & Gordun';
 

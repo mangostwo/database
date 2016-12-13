@@ -34,7 +34,7 @@ BEGIN
     SET @cNewStructure = '02';
     SET @cNewContent = '61';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Added_missing_script_for_Rel21_02_28';
+    SET @cNewDescription = 'Added_script_for_Rel21_02_28';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'Added_missing_script_for_Rel21_02_28';
