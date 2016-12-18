@@ -32,7 +32,7 @@ BEGIN
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '03';
-    SET @cNewContent = '2';
+    SET @cNewContent = '02';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'blackpaw_shaman';
 
