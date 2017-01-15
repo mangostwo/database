@@ -224,10 +224,12 @@ INSERT INTO `page_text` (`entry`, `text`, `next_page`) VALUES('3622','Tail swoos
 ('3624','Despite the statement, her words seemed to do the trick, Marcus smirked roguishly as he adjusted his leg plates, \"Well you aren\'t the only gifted one.\"\r\n\r\nSilence penetrated the room with palpable force as the conversation shifted to the language shared by all races of Azeroth.\r\n\r\nMinutes became hours, until their passionate dialog was interrupted by lightning streaking from the cloudless sky, thunderously slamming into the lake\'s surface and bathing them in steam.\r\n\r\n\"Is something wrong?\", Marcus asked.\r\n\r\n\"No my Marcus, you\'re just off to a great start.\"\r\n\r\nThe remaining pages have been thoroughly destroyed by the elements.','0');
 
 /*
-The Diary of High General Abbendis Item: 37540
+The Diary of High General Abbendis Item: 37540 Horde quest item
+The Path of Redemption Item: 37931 Alliance quest item
 */
 DELETE FROM `page_text` WHERE `entry` IN (3079, 3092, 3093, 3094, 3095, 3096, 3097, 3098, 3099, 3100, 3101, 3132, 3133, 3134, 3135, 3136, 3137, 3138, 3139, 3140, 3141, 3142, 3143, 3144, 3145, 3146, 3147, 3148, 3149, 3150, 3151, 3152, 3153, 3154, 3155, 3156);
 UPDATE `item_template` SET `PageText` = 3132 WHERE `entry` = 37540;
+UPDATE `item_template` SET `PageText` = 3132 WHERE `entry` = 37931;
 INSERT INTO `page_text` (`entry`, `text`, `next_page`) VALUES('3132','<HTML>\r\n<BODY>\r\n<BR/>\r\n<H1 align=\"center\">The Diary of High General Abbendis</H1>\r\n<BR/>\r\n<IMG src=\"Interface\\FlavorImages\\ScarletCrusadeLogo\"/>\r\n</BODY>\r\n</HTML>','3133'),
 ('3133','<HTML>\r\n<BODY>\r\n<BR/>\r\n<P>The voice whispered, \"Come to me.\" From the very beginning I knew that it was the Holy Light speaking to me in dreams. At last! After all of my years of prayers and good deeds, the cleansing of the blight of the unliving from the face of Azeroth. After all of the failures and resurrections.</P>\r\n<BR/>\r\n<P>Finally!</P>\r\n</BODY>\r\n</HTML>','3134'),
 ('3134','<HTML>\r\n<BODY>\r\n<BR/>\r\n<P>It happened again. \"Come to me...\", the Light commanded.</P>\r\n<BR/>\r\n<P>I woke up freezing, but it wasn\'t cold in my chambers. I\'m going to redouble my efforts! I\'ll tell the high abbot tomorrow that I want prayers increased. No more half-measures!</P>\r\n<BR/>\r\n<P>The Holy Light has taken notice of our good work. I can feel it!</P>\r\n</BODY>\r\n</HTML>','3135'),
