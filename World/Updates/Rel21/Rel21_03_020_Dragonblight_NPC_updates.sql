@@ -63,7 +63,7 @@ DELETE FROM `gameobject` WHERE guid = '15391';
 -- Focus Wizard and Dragonblight Mage Hunter  should not know how to fly.
 UPDATE `creature_template` SET `InhabitType` = 3 WHERE `entry` IN (26816, 26280);
 -- Grand Magus Telestra Should not wander about.
-UPDATE `creature` SET `MovementType` = '0' WHERE `guid` = '115486';
+UPDATE `creature` SET `MovementType` = '0', `spawndist` = '0' WHERE `guid` = '115486';
     
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
