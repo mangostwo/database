@@ -43,9 +43,9 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
-/*
-remove imp spell from trainer
-*/
+-- -----------------------------
+-- remove imp spell from trainer
+-- -----------------------------
 
 DELETE FROM `npc_trainer_template` WHERE spell ='688';
 
