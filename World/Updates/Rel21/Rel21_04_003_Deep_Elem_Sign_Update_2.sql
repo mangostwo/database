@@ -26,13 +26,13 @@ BEGIN
 
     -- Expected Values
     SET @cOldVersion = '21'; 
-    SET @cOldStructure = '03'; 
-    SET @cOldContent = '037';
+    SET @cOldStructure = '04'; 
+    SET @cOldContent = '002';
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '03';
-    SET @cNewContent = '038';
+    SET @cNewStructure = '04';
+    SET @cNewContent = '003';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'Deep_Elem_Sign_Update_2';
 
