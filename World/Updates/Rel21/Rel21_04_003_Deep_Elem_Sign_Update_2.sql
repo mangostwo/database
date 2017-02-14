@@ -27,17 +27,17 @@ BEGIN
     -- Expected Values
     SET @cOldVersion = '21'; 
     SET @cOldStructure = '04'; 
-    SET @cOldContent = '04';
+    SET @cOldContent = '002';
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '05';
-    SET @cNewContent = '01';
+    SET @cNewStructure = '04';
+    SET @cNewContent = '003';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'AutoBroadcast';
+    SET @cNewDescription = 'Deep_Elem_Sign_Update_2';
 
                         -- COMMENT is 150 Characters MAX
-    SET @cNewComment = 'AutoBroadcast System';
+    SET @cNewComment = 'Deep_Elem_Sign_Update_2';
 
     -- Evaluate all settings
     SET @cCurResult := (SELECT description FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
@@ -56,23 +56,10 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
-        DROP TABLE IF EXISTS `autobroadcast`;
 
-        CREATE TABLE `autobroadcast` (
-            `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-            `content` TEXT NULL,
-            `ratio` SMALLINT(6) UNSIGNED NOT NULL DEFAULT '0',
-            PRIMARY KEY (`id`)
-        )
-        ENGINE=INNODB;
-
-        INSERT INTO `autobroadcast` (`id`, `content`, `ratio`) VALUES (1, '|cff00ff00This is a sample of an automatic server message. You can use |cffffffffcolor tags |cff00ff00also|r', 1);
-        INSERT INTO `autobroadcast` (`id`, `content`, `ratio`) VALUES (2, '|cff00ffffThis is a sample of an automatic server message. You can use |cffffffffcolor tags also|r', 1);
-        INSERT INTO `autobroadcast` (`id`, `content`, `ratio`) VALUES (3, 'This is a sample of an automatic server message.', 3);
-
-        DELETE FROM `mangos_string` WHERE `entry` = 1700;
-        INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`)
-        VALUES (1700, '|cffff0000[Server Announce]:|r%s', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+-- The first update placed the sign on the post from it floating in the air position, it should be on the ground next to the post.
+UPDATE `gameobject` SET `position_x` = '340.22' , `position_y` = '1249.68' , `position_z` = '80.8974' , `rotation0` = '0.68659' , `rotation1` = '0.001571' , `rotation2` = '0.72691' WHERE `guid` = '33326';
+    
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -123,3 +110,4 @@ CALL update_mangos();
 
 -- Drop the procedure
 DROP PROCEDURE IF EXISTS `update_mangos`;
+

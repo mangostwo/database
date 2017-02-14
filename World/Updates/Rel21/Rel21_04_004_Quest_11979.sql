@@ -27,17 +27,17 @@ BEGIN
     -- Expected Values
     SET @cOldVersion = '21'; 
     SET @cOldStructure = '04'; 
-    SET @cOldContent = '04';
+    SET @cOldContent = '003';
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '05';
-    SET @cNewContent = '01';
+    SET @cNewStructure = '04';
+    SET @cNewContent = '004';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'AutoBroadcast';
+    SET @cNewDescription = 'Quest_11979';
 
                         -- COMMENT is 150 Characters MAX
-    SET @cNewComment = 'AutoBroadcast System';
+    SET @cNewComment = 'The_Taunka_Quest_chain';
 
     -- Evaluate all settings
     SET @cCurResult := (SELECT description FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
@@ -56,23 +56,14 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
-        DROP TABLE IF EXISTS `autobroadcast`;
 
-        CREATE TABLE `autobroadcast` (
-            `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-            `content` TEXT NULL,
-            `ratio` SMALLINT(6) UNSIGNED NOT NULL DEFAULT '0',
-            PRIMARY KEY (`id`)
-        )
-        ENGINE=INNODB;
-
-        INSERT INTO `autobroadcast` (`id`, `content`, `ratio`) VALUES (1, '|cff00ff00This is a sample of an automatic server message. You can use |cffffffffcolor tags |cff00ff00also|r', 1);
-        INSERT INTO `autobroadcast` (`id`, `content`, `ratio`) VALUES (2, '|cff00ffffThis is a sample of an automatic server message. You can use |cffffffffcolor tags also|r', 1);
-        INSERT INTO `autobroadcast` (`id`, `content`, `ratio`) VALUES (3, 'This is a sample of an automatic server message.', 3);
-
-        DELETE FROM `mangos_string` WHERE `entry` = 1700;
-        INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`)
-        VALUES (1700, '|cffff0000[Server Announce]:|r%s', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+-- quest relations
+-- Remove PrevQuestId from q.11978 "Into the Fold"
+UPDATE quest_template SET PrevQuestId = 0 WHERE entry = 11978;
+-- Make q.11977 "A Tauren Among Taunka" and q.11979 "The Taunka and the Tauren" exclusive
+-- Add q.11978 "Into the Fold" as NextQuestId to both quests
+UPDATE quest_template SET ExclusiveGroup = 11977, NextQuestId = 11978 WHERE entry IN (11977, 11979);
+    
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -123,3 +114,4 @@ CALL update_mangos();
 
 -- Drop the procedure
 DROP PROCEDURE IF EXISTS `update_mangos`;
+
