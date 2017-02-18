@@ -3,6 +3,7 @@
 set createcharDB=YES
 set createworldDB=YES
 set createrealmDB=YES
+set createMangosUser=YES
 
 set loadcharDB=YES
 set loadworldDB=YES
@@ -69,6 +70,8 @@ echo                           R   - Toggle Create Realm Db Structure (%loadreal
 echo                           Y   - Apply Realm DB updates (%RDBUpdate%)
 echo                           L   - Toggle Add RealmList Entry (%addrealmentry%)
 echo.
+echo                           P   - Toggle Create Mangos User (%createMangosUser%)
+echo.
 set LOCList=NO
 if %locFR% == YES set LOCList=YES
 if %locDE% == YES set LOCList=YES 
@@ -101,6 +104,8 @@ if %activity% == R goto LoadRealmDB:
 if %activity% == r goto LoadRealmDB:
 if %activity% == L goto AddRealmDB:
 if %activity% == l goto AddRealmDB:
+if %activity% == P goto ToggleCreateMangosUser:
+if %activity% == p goto ToggleCreateMangosUser:
 
 if %activity% == N goto Step1:
 if %activity% == n goto Step1:
@@ -257,6 +262,19 @@ goto main:
 set addrealmentry=NO
 goto main:
 
+:ToggleRealmDBUpdate
+if %createMangosUser% == NO goto ToggleCreateMangosUserNo:
+if %createMangosUser% == YES goto ToggleCreateMangosUserYes:
+goto main:
+
+:ToggleCreateMangosUserNo
+set createMangosUser=YES
+goto main:
+
+:ToggleCreateMangosUserYes
+set createMangosUser=NO
+goto main:
+
 :Step1
 if not exist %mysql%\mysql.exe then goto patherror
 color 08
@@ -329,6 +347,8 @@ if %loadrealmDB% == YES goto RealmDB3:
 :RealmDB4
 if %addrealmentry% == YES goto RealmDB5:
 
+:MangosUser
+if %createMangosUser% == YES goto MangosUser1:
 goto done:
 
 :WorldDB1
@@ -375,6 +395,13 @@ echo  Adding RealmList entry in Realm Database %rdb%
 echo --------------------------------------------------
 if %addrealmentry% == YES %mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% %rdb% < Tools\updateRealm.sql
 echo --------------------------------------------------
+goto MangosUser:
+
+:MangosUser1
+echo.
+echo  Creating 'mangos' user and granting privileges
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% < Tools\mangosCreateUser.sql
+
 goto done:
 
 
