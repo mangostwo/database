@@ -400,7 +400,10 @@ goto MangosUser:
 :MangosUser1
 echo.
 echo  Creating 'mangos' user and granting privileges
-%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% < Tools\mangosCreateUser.sql
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "CREATE USER 'mangos'@'localhost' IDENTIFIED BY 'mangos'";
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%wdb%`.* TO 'mangos'@'localhost'";
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%cdb%`.* TO 'mangos'@'localhost'";
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%rdb%`.* TO 'mangos'@'localhost'";
 
 goto done:
 
