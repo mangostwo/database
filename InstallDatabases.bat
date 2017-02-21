@@ -26,8 +26,10 @@ set locDE=NO
 rem -- Change the values below to match your server --
 set mysql=Tools\
 set svr=localhost
+set newuser=mangos
 set user=root
 set pass=mangos
+set newpass=mangos
 set port=3306
 set wdb=mangos2
 set wdborig=mangos2
@@ -262,7 +264,7 @@ goto main:
 set addrealmentry=NO
 goto main:
 
-:ToggleRealmDBUpdate
+:ToggleCreateMangosUser
 if %createMangosUser% == NO goto ToggleCreateMangosUserNo:
 if %createMangosUser% == YES goto ToggleCreateMangosUserYes:
 goto main:
@@ -347,9 +349,7 @@ if %loadrealmDB% == YES goto RealmDB3:
 :RealmDB4
 if %addrealmentry% == YES goto RealmDB5:
 
-:MangosUser
-if %createMangosUser% == YES goto MangosUser1:
-goto done:
+goto MangosUser:
 
 :WorldDB1
 echo Creating World Database %wdb%
@@ -397,14 +397,22 @@ if %addrealmentry% == YES %mysql%mysql -q -s -h %svr% --user=%user% --password=%
 echo --------------------------------------------------
 goto MangosUser:
 
+:MangosUser
+if %createMangosUser% == YES goto MangosUser1:
+goto done:
+
 :MangosUser1
 echo.
-echo  Creating 'mangos' user and granting privileges
-%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "CREATE USER 'mangos'@'localhost' IDENTIFIED BY 'mangos'";
-%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%wdb%`.* TO 'mangos'@'localhost'";
-%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%cdb%`.* TO 'mangos'@'localhost'";
-%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%rdb%`.* TO 'mangos'@'localhost'";
+set /p newuser=New MySQL user name?                       [%newuser%] : 
+if %newuser%. == . set newuser=mangos
+set /p newpass=New MySQL user password?                   [%newpass%] : 
+if %newpass%. == . set newpass=mangos
 
+echo  Creating '%newuser%' user and granting privileges
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "CREATE USER '%newuser%'@'%svr%' IDENTIFIED BY '%newpass%'";
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%wdb%`.* TO '%newuser%'@'%svr%'";
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%cdb%`.* TO '%newuser%'@'%svr%'";
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%rdb%`.* TO '%newuser%'@'%svr%'";
 goto done:
 
 
@@ -427,11 +435,11 @@ echo.
 echo  Database Localisation Support
 echo _____________________________________________________________
 echo.
-echo    French (FrancaÌs)  : F   - Toggle Loading Localisations (%locFR%)
+echo    French (Franca√≠s)  : F   - Toggle Loading Localisations (%locFR%)
 echo.
 echo       German (Deusch)  : G/D - Toggle Loading Localisations (%locDE%)    
 echo.
-echo     Spanish (Esp·na)  : S/E - Toggle Loading Localisations (%locES%)     
+echo     Spanish (Esp√°na)  : S/E - Toggle Loading Localisations (%locES%)     
 echo.
 echo                          N   - Next Step
 echo.
