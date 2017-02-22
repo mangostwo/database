@@ -226,7 +226,7 @@ INSERT INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, b2_1_pvp
 (25850,0,7,1,0,0,0,NULL);
 DELETE FROM db_script_string WHERE entry = 2000000562;
 INSERT INTO db_script_string (entry, content_default, sound, type, language, emote, comment) VALUES
-(2000000562,'%s trumpets in approval!',9916,2,0,0,NULL);
+(2000000562,'%s trumpets in approval!',0,2,0,377,NULL);
 -- Mammoth trap
 UPDATE gameobject SET spawntimesecs = 120, animprogress = 255 WHERE id = 188022; -- sync with creature
 UPDATE gameobject SET spawntimesecs = 120, animprogress = 255 WHERE id BETWEEN 188024 AND 188044; -- sync with creature
