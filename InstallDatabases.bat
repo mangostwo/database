@@ -1,5 +1,22 @@
 @ECHO OFF
 
+rem -- Change the values below to match your server --
+set mysql=Tools\
+set svr=localhost
+set newuser=mangos
+set user=root
+set pass=mangos
+set newpass=mangos
+set port=3306
+set wdb=mangos2
+set wdborig=mangos2
+set cdb=character2
+set cdborig=character2
+set rdb=realmd
+set rdborig=realmd
+
+rem -- Don't change past this point --
+
 set createcharDB=YES
 set createworldDB=YES
 set createrealmDB=YES
@@ -22,24 +39,6 @@ set locFR=NO
 set locES=NO
 set locDE=NO
 
-
-rem -- Change the values below to match your server --
-set mysql=Tools\
-set svr=localhost
-set newuser=mangos
-set user=root
-set pass=mangos
-set newpass=mangos
-set port=3306
-set wdb=mangos2
-set wdborig=mangos2
-set cdb=character2
-set cdborig=character2
-set rdb=realmd
-set rdborig=realmd
-
-rem -- Don't change past this point --
-
 rem -- first check that the repo has been cloned correctly
 if not exist Realm goto missingRecursive:
 
@@ -57,7 +56,6 @@ echo.
 echo          Website / Forum / Wiki: https://getmangos.eu         
 echo _____________________________________________________________
 echo.
-ECHO.
 echo    Character Database :   V   - Toggle Actually Create Character DB (%createcharDB%)
 echo                           C   - Toggle Create Character DB Structure (%loadcharDB%)
 echo                           B   - Apply Character DB updates (%CDBUpdate%)
@@ -289,6 +287,15 @@ echo    ^|_^|  ^|_\__,_^|_^|\_^|\___^|\___/^|___/  and World Loader
 echo.
 echo _____________________________________________________________
 echo.
+echo _________________________________________________________________________
+echo.
+echo  Only leave the defaults for username, password and mysql port on servers
+echo  with no external internet access.
+echo.
+echo  Using these settings will leave you server open to exploits,
+echo  security breaches... or much much worse.
+echo _________________________________________________________________________
+echo.
 echo.
 set /p svr=What is your MySQL host name?           [%svr%] : 
 if %svr%. == . set svr=localhost
@@ -406,7 +413,11 @@ echo.
 set /p newuser=New MySQL user name?                       [%newuser%] : 
 if %newuser%. == . set newuser=mangos
 set /p newpass=New MySQL user password?                   [%newpass%] : 
-if %newpass%. == . set newpass=mangos
+
+set defaultsused=NO 
+if %newpass% == mangos set defaultsused=YES
+if %newuser% == mangos set defaultsused=YES
+if %defaultsused% == YES goto done:
 
 echo  Creating '%newuser%' user and granting privileges
 %mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "CREATE USER '%newuser%'@'%svr%' IDENTIFIED BY '%newpass%'";
@@ -562,6 +573,21 @@ echo =============================================================
 echo.
 goto finish
 
+:defaultpasswordused
+echo.
+echo =============================================================
+ECHO === ERROR = ERROR = ERROR = ERROR = ERROR = ERROR = ERROR ===
+echo =============================================================
+echo.
+
+echo    We will not create a user with the default password 
+echo.
+echo =============================================================
+ECHO === ERROR = ERROR = ERROR = ERROR = ERROR = ERROR = ERROR ===
+echo =============================================================
+echo.
+goto finish
+
 :done
 if %CDBUpdate% == YES goto patchCharacter:
 :done1
@@ -581,7 +607,11 @@ echo.
 echo  Database Creation and Load complete
 echo _____________________________________________________________
 echo.
+
+REM Warn about not setting up the user
+if %defaultsused% == YES goto defaultpasswordused:
+
+:finish
 echo Done :)
 echo.
-:finish
 pause
