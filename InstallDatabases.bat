@@ -3,6 +3,7 @@
 set createcharDB=YES
 set createworldDB=YES
 set createrealmDB=YES
+set createMangosUser=YES
 
 set loadcharDB=YES
 set loadworldDB=YES
@@ -25,8 +26,10 @@ set locDE=NO
 rem -- Change the values below to match your server --
 set mysql=Tools\
 set svr=localhost
+set newuser=mangos
 set user=root
 set pass=mangos
+set newpass=mangos
 set port=3306
 set wdb=mangos2
 set wdborig=mangos2
@@ -69,6 +72,8 @@ echo                           R   - Toggle Create Realm Db Structure (%loadreal
 echo                           Y   - Apply Realm DB updates (%RDBUpdate%)
 echo                           L   - Toggle Add RealmList Entry (%addrealmentry%)
 echo.
+echo                           P   - Toggle Create Mangos User (%createMangosUser%)
+echo.
 set LOCList=NO
 if %locFR% == YES set LOCList=YES
 if %locDE% == YES set LOCList=YES 
@@ -101,6 +106,8 @@ if %activity% == R goto LoadRealmDB:
 if %activity% == r goto LoadRealmDB:
 if %activity% == L goto AddRealmDB:
 if %activity% == l goto AddRealmDB:
+if %activity% == P goto ToggleCreateMangosUser:
+if %activity% == p goto ToggleCreateMangosUser:
 
 if %activity% == N goto Step1:
 if %activity% == n goto Step1:
@@ -257,6 +264,19 @@ goto main:
 set addrealmentry=NO
 goto main:
 
+:ToggleCreateMangosUser
+if %createMangosUser% == NO goto ToggleCreateMangosUserNo:
+if %createMangosUser% == YES goto ToggleCreateMangosUserYes:
+goto main:
+
+:ToggleCreateMangosUserNo
+set createMangosUser=YES
+goto main:
+
+:ToggleCreateMangosUserYes
+set createMangosUser=NO
+goto main:
+
 :Step1
 if not exist %mysql%\mysql.exe then goto patherror
 color 08
@@ -329,7 +349,7 @@ if %loadrealmDB% == YES goto RealmDB3:
 :RealmDB4
 if %addrealmentry% == YES goto RealmDB5:
 
-goto done:
+goto MangosUser:
 
 :WorldDB1
 echo Creating World Database %wdb%
@@ -375,6 +395,24 @@ echo  Adding RealmList entry in Realm Database %rdb%
 echo --------------------------------------------------
 if %addrealmentry% == YES %mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% %rdb% < Tools\updateRealm.sql
 echo --------------------------------------------------
+goto MangosUser:
+
+:MangosUser
+if %createMangosUser% == YES goto MangosUser1:
+goto done:
+
+:MangosUser1
+echo.
+set /p newuser=New MySQL user name?                       [%newuser%] : 
+if %newuser%. == . set newuser=mangos
+set /p newpass=New MySQL user password?                   [%newpass%] : 
+if %newpass%. == . set newpass=mangos
+
+echo  Creating '%newuser%' user and granting privileges
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "CREATE USER '%newuser%'@'%svr%' IDENTIFIED BY '%newpass%'";
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%wdb%`.* TO '%newuser%'@'%svr%'";
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%cdb%`.* TO '%newuser%'@'%svr%'";
+%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%rdb%`.* TO '%newuser%'@'%svr%'";
 goto done:
 
 
@@ -397,11 +435,11 @@ echo.
 echo  Database Localisation Support
 echo _____________________________________________________________
 echo.
-echo    French (Francaís)  : F   - Toggle Loading Localisations (%locFR%)
+echo    French (FrancaÃ­s)  : F   - Toggle Loading Localisations (%locFR%)
 echo.
 echo       German (Deusch)  : G/D - Toggle Loading Localisations (%locDE%)    
 echo.
-echo     Spanish (Espána)  : S/E - Toggle Loading Localisations (%locES%)     
+echo     Spanish (EspÃ¡na)  : S/E - Toggle Loading Localisations (%locES%)     
 echo.
 echo                          N   - Next Step
 echo.
