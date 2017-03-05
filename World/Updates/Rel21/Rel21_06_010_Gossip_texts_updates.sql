@@ -32,7 +32,7 @@ BEGIN
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '06';
-    SET @cNewContent = '0010';
+    SET @cNewContent = '010';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'Gossip_texts_updates';
 
