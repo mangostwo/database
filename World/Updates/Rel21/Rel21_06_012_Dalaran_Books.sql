@@ -32,7 +32,7 @@ BEGIN
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '06';
-    SET @cNewContent = '0012';
+    SET @cNewContent = '012';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'Dalaran_Books';
 
