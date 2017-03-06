@@ -58,6 +58,8 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
     UPDATE `gameobject_template`SET `data5` = 0, `data3` = 0 WHERE entry IN (192824);
+	UPDATE `gameobject_template`SET `data5` = 1, `data3` = 90000 WHERE entry IN (192874);
+
     
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
