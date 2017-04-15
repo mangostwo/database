@@ -75,11 +75,11 @@ DELETE FROM creature_linking WHERE guid IN (95023,95030,94965,62701,95015,94988,
 
 SET @GUID := (SELECT MAX(guid) FROM `creature`);
 INSERT INTO creature (guid, id, map, spawnMask, phaseMask, modelid, equipment_id, position_x, position_y, position_z, orientation, spawntimesecs, spawndist, currentwaypoint, curhealth, curmana, DeathState, MovementType) VALUES 
-(@GUID+1,17610,530,1,1,0,0,-1960.72,-10549.7,176.892,0.701538,300,0,0,1062,3060,0,0),
-(@GUID+2,17609,530,1,1,0,0,-1957.54,-10546.8,176.959,3.71904,300,0,0,1050,390,0,0),
-(@GUID+3,17610,530,1,1,0,0,-1965.61,-10620.2,163.838,2.55875,300,0,0,1062,3060,0,0),
-(@GUID+4,17609,530,1,1,0,0,-1968.46,-10619,163.838,5.676,300,0,0,1050,390,0,0),
-(@GUID+5,17610,530,1,1,0,0,-1961.58,-10523.8,176.967,3.86228,300,0,0,1137,3354,0,2);
+(@GUID+1,17609,530,1,1,0,0,-1957.54,-10546.8,176.959,3.71904,300,0,0,1050,390,0,0),
+(@GUID+2,17609,530,1,1,0,0,-1968.46,-10619,163.838,5.676,300,0,0,1050,390,0,0),
+(94965,17610,530,1,1,0,0,-1965.61,-10620.2,163.838,2.55875,300,0,0,1062,3060,0,0),
+(95023,17610,530,1,1,0,0,-1960.72,-10549.7,176.892,0.701538,300,0,0,1062,3060,0,0),
+(95015,17610,530,1,1,0,0,-1961.58,-10523.8,176.967,3.86228,300,0,0,1137,3354,0,2);
 
 -- Updates
 DELETE FROM creature_addon WHERE guid IN (63303);
@@ -254,6 +254,10 @@ INSERT INTO creature_movement (id, point, position_x, position_y, position_z, wa
 (63590,2,-2106.04,-10696.3,63.9701, 0, 0,5.35059, 0, 0),
 (63590,3,-2093.75,-10712.9,67.5059, 0, 0,5.12519, 0, 0),
 (63590,4,-2095.73,-10756.2,67.9933, 10000, 1788702,5.09769, 0, 0);
+DELETE FROM db_scripts WHERE id IN (1788701, 1788702);
+INSERT INTO db_scripts (script_type, id, delay, command, datalong, datalong2, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3,1788701,0,25,1,0,0,0,0,0,0,0,0,0,0,0,0,'RUN ON'),
+(3,1788702,1,20,1,30,0,0,0x08,0,0,0,0,0,0,0,0,'movement chenged to 1:random');
 
 DELETE FROM creature_linking WHERE guid IN (63591,63586,63588,63589,63607,63603,63602,63606,63592);
 INSERT INTO creature_linking (guid, master_guid, flag) VALUES

@@ -85,10 +85,10 @@ OR master_guid IN (60840,63064,63056,63059,63060,63068,63067,63058,63073,63090,6
 SET @GUID := (SELECT MAX(guid) FROM `creature`);
 INSERT INTO creature (guid, id, map, spawnMask, phaseMask, modelid, equipment_id, position_x, position_y, position_z, orientation, spawntimesecs, spawndist, currentwaypoint, curhealth, curmana, DeathState, MovementType) VALUES 
 -- Blue Flutterer
-(@GUID+1,17349,530,1,1,0,0,-2337.49,-12083.1,30.9244,2.0638,300,0,0,176,0,0,2),
+(60840,17349,530,1,1,0,0,-2337.49,-12083.1,30.9244,2.0638,300,0,0,176,0,0,2),
 -- Wrathscale Screamer & Shorestalker
-(@GUID+2,17333,530,1,1,0,0,-2260.35,-12261.7,35.653,3.22982,300,5,0,241,601,0,1),
-(@GUID+3,17331,530,1,1,0,412,-2234.92,-12275.2,49.4182,5.09514,300,5,0,247,0,0,1);
+(@GUID+1,17333,530,1,1,0,0,-2260.35,-12261.7,35.653,3.22982,300,5,0,241,601,0,1),
+(@GUID+2,17331,530,1,1,0,412,-2234.92,-12275.2,49.4182,5.09514,300,5,0,247,0,0,1);
 
 -- Updates
 -- Blue Flutterer
