@@ -61,7 +61,7 @@ BEGIN
 
 -- Missing spawns 
 -- missing added
-SET @GUID := (SELECT MAX(guid) FROM `gameobject`);
+SET @GUID := (SELECT MAX(guid) FROM `creature`);
 INSERT INTO creature (guid, id, map, spawnMask, phaseMask, modelid, equipment_id, position_x, position_y, position_z, orientation, spawntimesecs, spawndist, currentwaypoint, curhealth, curmana, DeathState, MovementType) VALUES 
 -- Barbed Crawler
 (@GUID+1,17217,530,1,1,0,0,-5271.14,-11285.8,-13.7946,1.02375,300,10,0,156,0,0,1),
