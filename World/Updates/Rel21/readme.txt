@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel21_03_01 - Darrok_and_Gordun
+Rel21_06_047_q9294_Healing_the_Lake
 
 You need to run the appriopriate updates in folder:
 

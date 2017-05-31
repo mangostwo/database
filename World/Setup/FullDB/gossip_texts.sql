@@ -38,7 +38,7 @@ INSERT INTO `gossip_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-3000108,'I need a moment of your time, sir.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'prospector anvilward GOSSIP_ITEM_MOMENT'),
 (-3000109,'I am ready, Oronok. Let us destroy Cyrukh and free the elements!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'oronok torn-heart GOSSIP_ITEM_FIGHT'),
 (-3000110,'Why... yes, of course. I\'ve something to show you right inside this building, Mr. Anvilward.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'prospector anvilward GOSSIP_ITEM_SHOW'),
-(-3000111,'I am ready, Anchorite. Let us begin the exorcism.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'anchorite barada GOSSIP_ITEM_EXORCISM'),
+(-3000111,'Turn the key to start the machine.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'threshwackonator  GOSSIP_ITEM_TURN_KEY'),
 (-3000112,'I\'m ready - let\'s get out of here.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'injured goblin miner GOSSIP_ITEM_ESCORT_READY'),
 (-3000113,'Go on, you\'re free. Get out of here!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'saronite mine slave GOSSIP_ITEM_SLAVE_FREE'),
 (-3000114,'I\'m ready to start the distillation, uh, Tipsy.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'tipsy mcmanus GOSSIP_ITEM_START_DISTILLATION'),
@@ -140,7 +140,8 @@ INSERT INTO `gossip_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-3650000,'I am ready.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'herald GOSSIP_ITEM_READY'),
 (-3650001,'I am ready. However, I\'d like to skip the pageantry.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'herald GOSSIP_ITEM_READY_SKIP_INTRO'),
 (-3650002,'I am ready for the next challenge.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'herald GOSSIP_ITEM_READY_NEXT_CHALLENGE'),
-(-3230003,'Why don\'t you and Rocknot go find somewhere private...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'nagmara GOSSIP_ITEM_NAGMARA');
+(-3230003,'Why don\'t you and Rocknot go find somewhere private...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'nagmara GOSSIP_ITEM_NAGMARA'),
+(-3006669,'I am ready, Anchorite. Let us begin the exorcism.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'anchorite barada GOSSIP_ITEM_EXORCISM');
 /*!40000 ALTER TABLE `gossip_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -153,4 +154,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:33:13
+-- Dump completed on 2017-05-31 20:31:29

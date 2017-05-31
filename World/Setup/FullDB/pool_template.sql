@@ -6126,7 +6126,17 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (25457,1,'Veil Lithic - Cursed Eggs - Pool 2'),
 (25456,1,'Veil Lithic - Cursed Eggs - Pool 1'),
 (25559,15,'Tirisfal Pumpkin'),
-(25517,10,'Milly\'s Harvest');
+(25517,10,'Milly\'s Harvest'),
+(25523,1,'Draenei Youngling'),
+(25520,1,'Blood Elf Bandit'),
+(25536,10,'Blood Mushroom'),
+(25552,1,'Bloodmyst Isle - Tattered Chest - Pool 1'),
+(25553,1,'Bloodmyst Isle - Tattered Chest - Pool 2'),
+(25554,1,'Bloodmyst Isle - Tattered Chest - Pool 3'),
+(25555,1,'Bloodmyst Isle - Tattered Chest - Pool 4'),
+(25556,1,'Bloodmyst Isle - Tattered Chest - Pool 5'),
+(25557,1,'Bloodmyst Isle - Tattered Chest - Pool 6'),
+(25558,1,'Bloodmyst Isle - Tattered Chest - Pool 7');
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -6139,4 +6149,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:33:24
+-- Dump completed on 2017-05-31 20:31:37

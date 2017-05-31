@@ -34788,7 +34788,31 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (26096,25466,0,'185211 - Cursed Egg #21'),
 (39914,25466,0,'185210 - Cursed Egg #22'),
 (39916,25467,0,'185211 - Cursed Egg #23'),
-(39917,25467,0,'185210 - Cursed Egg #24');
+(39917,25467,0,'185210 - Cursed Egg #24'),
+(300056,25552,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 1'),
+(85442,25552,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 1'),
+(300050,25553,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 2'),
+(300058,25553,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 2'),
+(91361,25553,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 2'),
+(300053,25554,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 3'),
+(85470,25554,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 3'),
+(85438,25554,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 3'),
+(300055,25555,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 4'),
+(300052,25555,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 4'),
+(300046,25555,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 4'),
+(300061,25555,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 4'),
+(300048,25556,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 5'),
+(300057,25556,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 5'),
+(300047,25556,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 5'),
+(85472,25556,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 5'),
+(300059,25557,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 6'),
+(300051,25557,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 6'),
+(300060,25557,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 6'),
+(300062,25557,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 6'),
+(300054,25558,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 7'),
+(300049,25558,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 7'),
+(85471,25558,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 7'),
+(300063,25558,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 7');
 /*!40000 ALTER TABLE `pool_gameobject` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -34801,4 +34825,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:33:24
+-- Dump completed on 2017-05-31 20:31:37

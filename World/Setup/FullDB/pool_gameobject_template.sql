@@ -29,7 +29,8 @@ LOCK TABLES `pool_gameobject_template` WRITE;
 INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES 
 (185939,1800,0,'Nethermine Cargo'),
 (375,25559,0,'375 - Tirisfal Pumpkin'),
-(161557,25517,0,'161557 - Milly\'s Harvest');
+(161557,25517,0,'161557 - Milly\'s Harvest'),
+(181891,25536,0,'Blood Mushroom - 181891');
 /*!40000 ALTER TABLE `pool_gameobject_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -42,4 +43,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:33:24
+-- Dump completed on 2017-05-31 20:31:37

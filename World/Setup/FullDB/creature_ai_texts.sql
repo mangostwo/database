@@ -1337,7 +1337,27 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-182304,'You stay out of the regent lord\'s way! I mean it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18230'),
 (-182305,'No, no, no! Come back here!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18230'),
 (-9000,'I will present your head to Abbendis myself!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'29000'),
-(-9001,'Scourge filth! DIE!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'29000');
+(-9001,'Scourge filth! DIE!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'29000'),
+(-268321,'This transgression against the Blue Dragonsflight has been noted. I will take extra pleasure in separating the life energy from your body!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'26832'),
+(-1411,'Hrm, azure snapdragons? Where do they come up with these names? Daedal has gone mad!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17587'),
+(-1412,'Where in the Nether are these damnable lashers?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17587'),
+(-1413,'These stags are nothing like talbuks.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17587'),
+(-1414,'I wonder what that little purple creature at the village is...It\'s certainly beautiful.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17587'),
+(-1415,'I\'m supposed to be hunting infected nightstalkers...this should be easy.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17587'),
+(-1416,'Time to meet your maker!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17587'),
+(-1417,'Thanks for the heal, $N!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17587'),
+(-268320,'You test my patience, you now see the true might of the Blue.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'26832'),
+(-268280,'Deal with this interruption, Keldonus. After you are through, bring the head of the one they call $n. I will decorate my chambers with their skull.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'26828'),
+(-267621,'I\'m sorry, daddy....',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,0,'26762'),
+(-267620,'Keep them away from the focus!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'26762'),
+(-263490,'You\'re too late! The accord has been negotiated. Only the details remain. Small details... like you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'26349'),
+(-272320,'Filthy cretin. Your kind doesn\'t deserve to live. Have at thee!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'27232'),
+(-268151,'Ya shouldn\'a taken the boat north, mon!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'26815'),
+(-268152,'Ah, Deino, mah sistah. Ta\'zinni die now.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,14,0,'26815'),
+(-12000,'Kill me... Kill me now!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'25610'),
+(-12001,'Somebody please... Help...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'25610'),
+(-12002,'Don\'t let them turn me into one of those aberrations!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'25610'),
+(-1418,'Face the wrath of Bristlelimb!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'17702');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1350,4 +1370,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:32:59
+-- Dump completed on 2017-05-31 20:31:17
