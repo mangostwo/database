@@ -351,6 +351,15 @@ if %loadworldDB% == NO echo TRUNCATE TABLE `%TABLENAME%`; >>  _full_worlddb\%TAB
 if %loadworldDB% == NO echo -- ---------------------------------------- >>  _full_worlddb\%TABLENAME%.sql
 mysqldump -Q -c -e -q %extraparams% -u%user% -p%pass% --port=%port% -h %svr% %wdb% %TABLENAME% >>  _full_worlddb\%TABLENAME%.sql
 
+SET TABLENAME=autobroadcast
+echo             %TABLENAME%
+if %loadworldDB% == NO echo -- ---------------------------------------- >  _full_worlddb\%TABLENAME%.sql
+if %loadworldDB% == NO echo -- --        CLEAR DOWN THE TABLE        -- >>  _full_worlddb\%TABLENAME%.sql
+if %loadworldDB% == NO echo -- ---------------------------------------- >>  _full_worlddb\%TABLENAME%.sql
+if %loadworldDB% == NO echo TRUNCATE TABLE `%TABLENAME%`; >>  _full_worlddb\%TABLENAME%.sql
+if %loadworldDB% == NO echo -- ---------------------------------------- >>  _full_worlddb\%TABLENAME%.sql
+mysqldump -Q -c -e -q %extraparams% -u%user% -p%pass% --port=%port% -h %svr% %wdb% %TABLENAME% >>  _full_worlddb\%TABLENAME%.sql
+
 SET TABLENAME=battleground_events
 echo             %TABLENAME%
 if %loadworldDB% == NO echo -- ---------------------------------------- >  _full_worlddb\%TABLENAME%.sql
@@ -2122,24 +2131,6 @@ if %loadcharDB% == NO echo TRUNCATE TABLE `%TABLENAME%`; >>  _full_chardb\%TABLE
 if %loadcharDB% == NO echo -- ---------------------------------------- >>  _full_chardb\%TABLENAME%.sql
 mysqldump -Q -c -e -q %extraparams% -u%user% -p%pass% --port=%port% -h %svr% %cdb% %TABLENAME% >>  _full_chardb\%TABLENAME%.sql
 
-SET TABLENAME=dbdocssubtables
-echo             %TABLENAME%
-if %loadcharDB% == NO echo -- ---------------------------------------- >  _full_chardb\%TABLENAME%.sql
-if %loadcharDB% == NO echo -- --        CLEAR DOWN THE TABLE        -- >>  _full_chardb\%TABLENAME%.sql
-if %loadcharDB% == NO echo -- ---------------------------------------- >>  _full_chardb\%TABLENAME%.sql
-if %loadcharDB% == NO echo TRUNCATE TABLE `%TABLENAME%`; >>  _full_chardb\%TABLENAME%.sql
-if %loadcharDB% == NO echo -- ---------------------------------------- >>  _full_chardb\%TABLENAME%.sql
-mysqldump -Q -c -e -q %extraparams% -u%user% -p%pass% --port=%port% -h %svr% %cdb% %TABLENAME% >>  _full_chardb\%TABLENAME%.sql
-
-SET TABLENAME=dbdocssubtables_localised
-echo             %TABLENAME%
-if %loadcharDB% == NO echo -- ---------------------------------------- >  _full_chardb\%TABLENAME%.sql
-if %loadcharDB% == NO echo -- --        CLEAR DOWN THE TABLE        -- >>  _full_chardb\%TABLENAME%.sql
-if %loadcharDB% == NO echo -- ---------------------------------------- >>  _full_chardb\%TABLENAME%.sql
-if %loadcharDB% == NO echo TRUNCATE TABLE `%TABLENAME%`; >>  _full_chardb\%TABLENAME%.sql
-if %loadcharDB% == NO echo -- ---------------------------------------- >>  _full_chardb\%TABLENAME%.sql
-mysqldump -Q -c -e -q %extraparams% -u%user% -p%pass% --port=%port% -h %svr% %cdb% %TABLENAME% >>  _full_chardb\%TABLENAME%.sql
-
 SET TABLENAME=dbdocstable
 echo             %TABLENAME%
 if %loadcharDB% == NO echo -- ---------------------------------------- >  _full_chardb\%TABLENAME%.sql
@@ -2150,6 +2141,24 @@ if %loadcharDB% == NO echo -- ---------------------------------------- >>  _full
 mysqldump -Q -c -e -q %extraparams% -u%user% -p%pass% --port=%port% -h %svr% %cdb% %TABLENAME% >>  _full_chardb\%TABLENAME%.sql
 
 SET TABLENAME=dbdocstable_localised
+echo             %TABLENAME%
+if %loadcharDB% == NO echo -- ---------------------------------------- >  _full_chardb\%TABLENAME%.sql
+if %loadcharDB% == NO echo -- --        CLEAR DOWN THE TABLE        -- >>  _full_chardb\%TABLENAME%.sql
+if %loadcharDB% == NO echo -- ---------------------------------------- >>  _full_chardb\%TABLENAME%.sql
+if %loadcharDB% == NO echo TRUNCATE TABLE `%TABLENAME%`; >>  _full_chardb\%TABLENAME%.sql
+if %loadcharDB% == NO echo -- ---------------------------------------- >>  _full_chardb\%TABLENAME%.sql
+mysqldump -Q -c -e -q %extraparams% -u%user% -p%pass% --port=%port% -h %svr% %cdb% %TABLENAME% >>  _full_chardb\%TABLENAME%.sql
+
+SET TABLENAME=dbdocssubtables
+echo             %TABLENAME%
+if %loadcharDB% == NO echo -- ---------------------------------------- >  _full_chardb\%TABLENAME%.sql
+if %loadcharDB% == NO echo -- --        CLEAR DOWN THE TABLE        -- >>  _full_chardb\%TABLENAME%.sql
+if %loadcharDB% == NO echo -- ---------------------------------------- >>  _full_chardb\%TABLENAME%.sql
+if %loadcharDB% == NO echo TRUNCATE TABLE `%TABLENAME%`; >>  _full_chardb\%TABLENAME%.sql
+if %loadcharDB% == NO echo -- ---------------------------------------- >>  _full_chardb\%TABLENAME%.sql
+mysqldump -Q -c -e -q %extraparams% -u%user% -p%pass% --port=%port% -h %svr% %cdb% %TABLENAME% >>  _full_chardb\%TABLENAME%.sql
+
+SET TABLENAME=dbdocssubtables_localised
 echo             %TABLENAME%
 if %loadcharDB% == NO echo -- ---------------------------------------- >  _full_chardb\%TABLENAME%.sql
 if %loadcharDB% == NO echo -- --        CLEAR DOWN THE TABLE        -- >>  _full_chardb\%TABLENAME%.sql
