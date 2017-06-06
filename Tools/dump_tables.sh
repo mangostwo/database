@@ -82,7 +82,6 @@ game_graveyard_zone \
 game_tele \
 game_weather \
 gameobject \
-gameobject_addon \
 gameobject_battleground \
 gameobject_involvedrelation \
 gameobject_loot_template \
