@@ -58,7 +58,7 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
     -- Moved Nazzivus Monument Glyph to correct location.
-	UPDATE `gameobject` SET position_x = -2307.93, position_y = -11266.3, position_z = 36.8, rotation2 = 0.99905, rotation3 = 0.0435773 WHERE guid = 44724 AND id = 182532;
+	UPDATE `gameobject` SET position_x = -2307.93, position_y = -11266.3, position_z = 36.8, rotation2 = 0.99905, rotation3 = 0.0435773, `spawntimesecs` = 2  WHERE guid = 44724 AND id = 182532;
 	-- Moved Draenei Ascendant to correct location. It can now be foudn within the Tomb of Lights
 	UPDATE `gameobject` SET `position_x` = -2971.17, `position_y` = 4335.93, `position_z` = -41.1587, `orientation` = 1.53589, `rotation2` = 0, `rotation3` = 1 WHERE `guid` = 50481 AND `id` = 184830;
     
