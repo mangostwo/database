@@ -99,7 +99,15 @@ INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALU
 (140417,25454,0,'Arcatraz - Unbound Devastator - Pool'),
 (140416,25454,0,'Arcatraz - Spiteful Temptress - Pool'),
 (140390,25455,0,'Arcatraz - Entropic Eye - Pool 2'),
-(140391,25455,0,'Arcatraz - Death Watcher - Pool 2');
+(140391,25455,0,'Arcatraz - Death Watcher - Pool 2'),
+(63727,25524,0,'Blood Watch - Defender Auston'),
+(84428,25524,0,'Blood Watch - Defender Katroi'),
+(84397,25525,0,'Blood Watch - Defender Kadithuul'),
+(63725,25525,0,'Blood Watch - Defender Kranos'),
+(84396,25526,0,'Blood Watch - Defender Ashoon'),
+(63724,25526,0,'Blood Watch - Defender Ursi'),
+(84395,25527,0,'Blood Watch - Defender Zaibah'),
+(63726,25527,0,'Blood Watch - Defender Sorli');
 /*!40000 ALTER TABLE `pool_creature` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -112,4 +120,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:33:23
+-- Dump completed on 2017-09-06 20:20:22

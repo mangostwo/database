@@ -445,6 +445,7 @@ INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALU
 (2404,3076,0,0),
 (2405,3077,0,0),
 (2405,3098,0,0),
+(2421,3380,0,0),
 (2422,3094,0,0),
 (2423,3095,0,0),
 (2424,3096,0,0),
@@ -2076,7 +2077,7 @@ INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALU
 (7592,9283,0,0),
 (7593,9241,0,0),
 (7594,9242,0,0),
-(7595,9244,0,0),
+(7595,9246,0,0),
 (7596,9243,0,0),
 (7601,9248,0,0),
 (7602,9249,0,0),
@@ -4251,4 +4252,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-31 20:31:29
+-- Dump completed on 2017-09-06 20:20:14

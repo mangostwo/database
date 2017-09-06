@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel21_06_047_q9294_Healing_the_Lake
+Rel21_06_073_Lazy_peon_script_text
 
 You need to run the appriopriate updates in folder:
 

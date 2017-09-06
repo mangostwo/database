@@ -729,7 +729,7 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-1000792,'We can overcome these foul creatures.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'volcor SAY_AGGRO_1'),
 (-1000793,'We shall earn our deaths at the very least!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'volcor SAY_AGGRO_2'),
 (-1000794,'Don\'t give up! Fight, to the death!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'volcor SAY_AGGRO_3'),
-(-1000795,'OK boss, I get back to tree hitting.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'lazy peon SAY_AWAKE_1'),
+(-1000795,'Ow! Ok, I\'ll get back to work, $N!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'lazy peon SAY_AWAKE_1'),
 (-1000796,'Sleepy... so sleepy...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'lazy peon SAY_AWAKE_2'),
 (-1000797,'%s squawks and heads toward Veil Shalas. Hurry and follow!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'skywing SAY_SKYWING_START'),
 (-1000798,'%s pauses briefly before the tree and then heads inside.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'skywing SAY_SKYWING_TREE_DOWN'),
@@ -4229,7 +4229,8 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-1230049,'We...are...investigating.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Fireguard Destroyer YELL_PATROL_2'),
 (-1230059,'Hey, my pockets were picked!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Plugger Spazzring YELL_PICKPOCKETED'),
 (-1230065,'Prepare to meet your doom at the hands of Ragnaros\' most powerful servant!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Emperor Thaurissan YELL_AGGRO_3'),
-(-1230069,'%s kisses Mistress Nagmara',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,17,'Rocknot TEXTEMOTE_ROCKNOT');
+(-1230069,'%s kisses Mistress Nagmara',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,17,'Rocknot TEXTEMOTE_ROCKNOT'),
+(-1999926,'Overlord Wyrmthalak calls for help!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'9568');
 /*!40000 ALTER TABLE `script_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -4242,4 +4243,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:33:27
+-- Dump completed on 2017-09-06 20:20:25

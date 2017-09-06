@@ -321,7 +321,7 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000295,'Return to Jotunheim and tell them to keep him asleep until I arrive. I will judge this vrykul with my own eyes.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000296,'Right away, my lady.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000297,'%s picks up the naga flag.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,NULL),
-(2000000298,'What\'s the big idea, Spark? Why\'d you call for this meeting?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000298,'What\'s the big idea, Spark? Why\'d you call for this meeting?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
 (2000000299,'What\'s the big idea? You nearly blew my cover, idiot! I told you to put the compass and navigation maps somewhere safe - not out in the open for any fool to discover.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000300,'The Master has gone to great lengths to secure information about the whereabouts of the Exodar. You could have blown the entire operation, including the cover of our spy on the inside.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000301,'Relax, Spark! I have it all under control. We\'ll strip mine the Exodar right out from under \'em - making both you and I very, very rich in the process.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
@@ -555,6 +555,11 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000698,'We\'ve got to do something about this!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
 (2000000699,'Thank you, Adamant. I think I know just the person for the job.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,2,NULL),
 (2000000813,'Speak with me to hear my tale.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
+(2000000827,'Don\'t you people ever check the mail?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000828,'How am I expected to deliver all of these messages?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000829,'I need to be re-assigned. This job is pushing me over the edge...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000830,'He thinks he\'s so damned important. Always pushing me around... I\'ll show him. I\'ll show all of them!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000831,'If only I could get back to the mushroom thicket. I have not seen such a mature cluster in my lifetime!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000001010,'Oh no!  I\'m losing this one!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000005001,'Opus wants some Cuergo\'s Gold... with worm.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000005002,'Bijou lost! SQUAWK! *cough',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
@@ -1357,7 +1362,9 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000005828,'Our lives are yours, Blood Knight.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,16,'Silvermoon Guardian say_3'),
 (2000005829,'Even the Light is no match for the indomitable will of our people.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,16,'Silvermoon Guardian say_4'),
 (2000005832,'Let us hold or discussion in a more... private place. Follow me, $n.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Wind Trader Marid - Say 1'),
-(2000005833,'You didn\'t really think I\'d do business with you again, did you? Sometimes, the best way to return to profitability is to know when to cut your losses.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Wind Trader Marid - Say 2');
+(2000005833,'You didn\'t really think I\'d do business with you again, did you? Sometimes, the best way to return to profitability is to know when to cut your losses.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Wind Trader Marid - Say 2'),
+(2000005834,'My sword Archeus served me well in life, but as at last my spirit may pass from the unhappy existence, I need it no longer.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005835,'I shall cling to the love of my daughter and hope that I will find forgiveness under the Light for my sins.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL);
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1370,4 +1377,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-31 20:31:23
+-- Dump completed on 2017-09-06 20:20:07

@@ -6136,7 +6136,11 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (25555,1,'Bloodmyst Isle - Tattered Chest - Pool 4'),
 (25556,1,'Bloodmyst Isle - Tattered Chest - Pool 5'),
 (25557,1,'Bloodmyst Isle - Tattered Chest - Pool 6'),
-(25558,1,'Bloodmyst Isle - Tattered Chest - Pool 7');
+(25558,1,'Bloodmyst Isle - Tattered Chest - Pool 7'),
+(25524,1,'Blood Watch - Defender Auston/Defender Katroi - Pool 1'),
+(25525,1,'Blood Watch - Defender Kadithuul/Defender Kranos - Pool 2'),
+(25526,1,'Blood Watch - Defender Ashoon/Defender Ursi - Pool 3'),
+(25527,1,'Blood Watch - Defender Zaibah/Defender Sorli - Pool 4');
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -6149,4 +6153,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-31 20:31:37
+-- Dump completed on 2017-09-06 20:20:23

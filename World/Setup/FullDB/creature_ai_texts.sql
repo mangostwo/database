@@ -1357,7 +1357,13 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-12000,'Kill me... Kill me now!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'25610'),
 (-12001,'Somebody please... Help...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'25610'),
 (-12002,'Don\'t let them turn me into one of those aberrations!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'25610'),
-(-1418,'Face the wrath of Bristlelimb!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'17702');
+(-1418,'Face the wrath of Bristlelimb!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'17702'),
+(-12003,'Obey the laws of Silvermoon. Failure to do so will result in termination.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103'),
+(-12004,'Do not disturb the serenity of the city. Peace must be upheld.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103'),
+(-12005,'Remain strong. Kael\'thas will - error - Lor\'themar will lead you to power and glory!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103'),
+(-12006,'Maintain order within these walls.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103'),
+(-12007,'Happiness is mandatory, citizen.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103'),
+(-12008,'Do not be disheartened. Silvermoon will remain strong through this course of events.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1370,4 +1376,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-31 20:31:17
+-- Dump completed on 2017-09-06 20:20:01

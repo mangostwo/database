@@ -1999,7 +1999,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (88111,881,27,0,100,1,12544,1,15000,30000,11,12544,0,1,0,0,0,0,0,0,0,0,'Surena Caledon - Cast Frost Armor on Missing Buff'),
 (88112,881,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Surena Caledon - Set Phase to 0 on Evade'),
 (192201,1922,1,0,10,0,120000,600000,120000,600000,4,1018,0,0,5,393,0,0,0,0,0,0,'Gray Forest Wolf - Howl and Emote OOC'),
-(204401,2044,11,0,100,0,0,0,0,0,1,-449,-450,0,0,0,0,0,0,0,0,0,'Forlorn Spirit - Random Say on Spawn'),
+(204401,2044,4,0,100,0,0,0,0,0,1,-449,-450,0,0,0,0,0,0,0,0,0,'Forlorn Spirit - Random Say on Spawn'),
 (204402,2044,0,0,100,1,2000,2000,2000,2000,11,3105,1,32,0,0,0,0,0,0,0,0,'Forlorn Spirit - Cast Curse of Stalvan'),
 (204403,2044,8,0,100,1,0,127,45000,45000,11,118,6,0,0,0,0,0,0,0,0,0,'Forlorn Spirit - Cast Polymorph on Spell Hit'),
 (591701,5917,10,0,100,0,1,15,0,0,32,583,6,7,0,0,0,0,0,0,0,0,'Clara Charles - Summons Defias Ambusher on LOS'),
@@ -26392,7 +26392,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1755102,17551,8,0,100,1,2052,-1,0,0,33,17551,6,0,0,0,0,0,0,0,0,0,'Tavara - Quest Credit on Spellhit (Quest: 9586)'),
 (1755103,17551,8,0,100,1,59544,-1,0,0,33,17551,6,0,0,0,0,0,0,0,0,0,'Tavara - Quest Credit on Spellhit (Quest: 9586)'),
 (1741001,17410,11,0,100,0,0,0,0,0,11,25035,0,1,3,0,17109,0,0,0,0,0,'Stillpine Ancestor Vark - Cast Elemental Spawn-in and set correct modelid on Spawn'),
-(2022701,20227,30,0,100,1,5,16516,0,0,18,256,10,0,0,0,0,0,0,0,0,0,'Apprentice Meledor - change targets unitFlag on Receive AI Event');
+(2022701,20227,30,0,100,1,5,16516,0,0,18,256,10,0,0,0,0,0,0,0,0,0,'Apprentice Meledor - change targets unitFlag on Receive AI Event'),
+(1810302,18103,1,0,75,33,5000,10000,90000,100000,1,-12003,-12004,-12005,1,-12006,-12007,-12008,0,0,0,0,'Arcane Guardian - Random say on OOC');
 /*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -26405,4 +26406,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-31 20:31:17
+-- Dump completed on 2017-09-06 20:20:01

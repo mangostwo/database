@@ -454,7 +454,7 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (2405,0,0,'Is there a difference between ooze and slime?',1,1,0,0,0,0,0,'',0),
 (2405,1,0,'What do you mean by \"pure?\"',1,1,0,0,0,0,0,'',0),
 (2405,2,0,'Are there any areas you can think of that would be so untouched?',1,1,0,0,0,0,0,'',0),
-(2422,0,0,'What do you think of Dadanga?',1,1,0,0,0,0,0,'',0),
+(2422,0,0,'What do you think of Dadanga?',1,1,2421,0,0,0,0,'',0),
 (2441,0,0,'Where is the zeppelin now?',1,1,0,0,0,0,0,'',0),
 (2464,0,1,'Let me browse your goods.',3,128,0,0,0,0,0,'',0),
 (2465,0,0,'Lady Jaina, this may sound like an odd request... but I have a young ward who is quite shy. You are a hero to him, and he asked me to get your autograph.',1,1,5850,0,2465,0,0,'',562),
@@ -3376,4 +3376,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-31 20:31:29
+-- Dump completed on 2017-09-06 20:20:14

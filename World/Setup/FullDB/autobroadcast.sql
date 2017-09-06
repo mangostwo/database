@@ -5,7 +5,7 @@ TRUNCATE TABLE `autobroadcast`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: localhost    Database: mangos0
+-- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -42,4 +42,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-06 20:55:43
+-- Dump completed on 2017-09-06 20:19:58

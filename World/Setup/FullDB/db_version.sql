@@ -27,7 +27,7 @@ TRUNCATE TABLE `db_version`;
 LOCK TABLES `db_version` WRITE;
 /*!40000 ALTER TABLE `db_version` DISABLE KEYS */;
 INSERT INTO `db_version` (`version`, `structure`, `content`, `description`, `comment`) VALUES 
-(21,6,47,'q9294_Healing_the_Lake','Base DB from 21000_01 to 21.6.47');
+(21,6,73,'Lazy_peon_script_text','Base DB from 21000_01 to 21.6.73');
 /*!40000 ALTER TABLE `db_version` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -40,4 +40,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-31 20:31:23
+-- Dump completed on 2017-09-06 20:20:08
