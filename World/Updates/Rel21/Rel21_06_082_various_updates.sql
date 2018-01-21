@@ -105,9 +105,9 @@ BEGIN
 
 	-- Fix Z axis for NPCs, Kaymard Copperpinch, Penney Copperpinch, and Great Father Winter
 	-- Credit: https://github.com/Aokromes/TrinityCore/commit/a7d04aa09d1b31dd7df9a07db3890041ebefe870
-	UPDATE `Creature` SET `position_z`=17.3676 WHERE `guid`=53620;
-	UPDATE `Creature` SET `position_z`=17.0995 WHERE `guid`=53618;
-	UPDATE `Creature` SET `position_z`=15.8220 WHERE `guid`=53646;
+	UPDATE `creature` SET `position_z`=17.3676 WHERE `guid`=53620;
+	UPDATE `creature` SET `position_z`=17.0995 WHERE `guid`=53618;
+	UPDATE `creature` SET `position_z`=15.8220 WHERE `guid`=53646;
 
     
 
