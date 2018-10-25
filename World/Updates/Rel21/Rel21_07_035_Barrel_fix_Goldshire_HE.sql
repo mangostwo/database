@@ -56,10 +56,10 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+		SET @new_entry := (SELECT MAX(guid) FROM `gameobject`); 
+		INSERT INTO gameobject (guid, id, map, spawnMask, phaseMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecs, animprogress, state) VALUES ((@new_entry+1,    186234,    0,    1,    1,    -9433.25,    63.5795,    56.5826,    0.0105866,    0,    0,    0.00529325,    0.999986,    5,    100,    1);
 		
-		INSERT INTO gameobject (guid, id, map, spawnMask, phaseMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecs, animprogress, state) VALUES (300430,    186234,    0,    1,    1,    -9433.25,    63.5795,    56.5826,    0.0105866,    0,    0,    0.00529325,    0.999986,    5,    100,    1);
-		
-		INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES ('300430', '12');
+		INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES (@new_entry+1, '12');
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
