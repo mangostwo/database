@@ -34,7 +34,7 @@ BEGIN
     SET @cNewStructure = '07';
     SET @cNewContent = '038';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = '[TBC] SunReach';
+    SET @cNewDescription = 'SunReach NPC update';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'Fix auras on Shattered Sun models';
@@ -58,12 +58,12 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
         -- Make the Shattered Sun Warrior appear on screen at Sunreach Harbour
-        UPDATE `creature_addon` SET `auras` = '45170'
-        WHERE `guid` IN ('71916','71917','71919');
+        UPDATE `creature_addon` SET `auras` = 45170
+        WHERE `guid` IN (71916,71917,71919);
 
         -- Make the Shattered Sun Marksman appear on screen at Sunreach Harbour
-        UPDATE `creature_addon` SET `auras` = '44924'
-        WHERE `guid` IN ('54030', '54031');  
+        UPDATE `creature_addon` SET `auras` = 44924
+        WHERE `guid` IN (54030, 54031);  
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
