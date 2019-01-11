@@ -225,7 +225,7 @@ CREATE TABLE `conditions` (
   `value2` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'data field two for the condition',
   PRIMARY KEY (`condition_entry`),
   UNIQUE KEY `unique_conditions` (`type`,`value1`,`value2`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1734 ROW_FORMAT=DYNAMIC COMMENT='Condition System';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1734 ROW_FORMAT=DYNAMIC COMMENT='Condition System';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
