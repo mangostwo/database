@@ -70,12 +70,12 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@poolentry+2,1,'Bloodsail Charts');
 DELETE FROM `pool_gameobject` WHERE `guid` IN (12154,54137,@goguid+1,12156,12208,54217);
 INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES 
-(12154,@poolentry+1,0,'Bloodsail Orders Point 1'),
-(54137,@poolentry+1,0,'Bloodsail Orders Point 2'),
-(@goguid+1,@poolentry+1,0,'Bloodsail Orders Point 3'),
-(12156,@poolentry+2,0,'Bloodsail Charts Point 1'),
-(12208,@poolentry+2,0,'Bloodsail Charts Point 2'),
-(54217,@poolentry+2,0,'Bloodsail Charts Point 3');
+(12154,@poolentry+1,0,'Bloodsail Charts Point 1'),
+(54137,@poolentry+1,0,'Bloodsail Charts Point 2'),
+(@goguid+1,@poolentry+1,0,'Bloodsail Charts Point 3'),
+(12156,@poolentry+2,0,'Bloodsail Orders Point 1'),
+(12208,@poolentry+2,0,'Bloodsail Orders Point 2'),
+(54217,@poolentry+2,0,'Bloodsail Orders Point 3');
 
 -- Remove extra Bloodsail Orders.
 DELETE FROM `gameobject` WHERE `guid` = 54242;
