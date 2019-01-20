@@ -66,8 +66,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 -- Add pools for Bloodsail Orders and Charts.
 DELETE FROM `pool_template` WHERE `entry` IN (@poolentry+1,@poolentry+2);
 INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
-(@poolentry+1,1,'Bloodsail Orders'),
-(@poolentry+2,1,'Bloodsail Charts');
+(@poolentry+1,1,'Bloodsail Charts'),
+(@poolentry+2,1,'Bloodsail Orders');
 DELETE FROM `pool_gameobject` WHERE `guid` IN (12154,54137,@goguid+1,12156,12208,54217);
 INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES 
 (12154,@poolentry+1,0,'Bloodsail Charts Point 1'),
