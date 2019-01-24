@@ -27,12 +27,12 @@ BEGIN
     -- Expected Values
     SET @cOldVersion = '21'; 
     SET @cOldStructure = '10'; 
-    SET @cOldContent = '0013';
+    SET @cOldContent = '013';
 
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '10';
-    SET @cNewContent = '0014';
+    SET @cNewContent = '014';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'various ai script updates';
 
