@@ -64,7 +64,7 @@ ALTER TABLE `locales_points_of_interest` ENGINE=MYISAM;
 
 /* Alter table in target */
 ALTER TABLE `locales_quest` 
-	CHANGE `ObjectiveText1_loc1` `ObjectiveText1_loc1` TEXT  COLLATE utf8_general_ci NULL COMMENT 'Korean localization of ObjectiveText1 in the quest_template table.' AFTER `ObjectiveText1_loc0` , ENGINE=MYISAM; 
+	CHANGE `ObjectiveText1_loc1` `ObjectiveText1_loc1` TEXT  COLLATE utf8_general_ci NULL COMMENT 'Korean localization of ObjectiveText1 in the quest_template table.' AFTER `Details_loc8` , ENGINE=MYISAM; 
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
