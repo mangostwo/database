@@ -44,9 +44,10 @@ BEGIN
 
     
 -- Ravenous Windroc
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `entry` = 18220;
 DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 18220;
 INSERT INTO `creature_ai_scripts` VALUES
-('1822001','18220','0','0','100','1','5000','1000','10000','20000','11','30285','1','32','0','0','0','0','0','0','0','0','Ravenous Windroc - Cast Eagle Claw');
+('1822001','18220','0','0','100','1','1000','5000','10000','20000','11','30285','1','32','0','0','0','0','0','0','0','0','Ravenous Windroc - Cast Eagle Claw');
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
