@@ -43,6 +43,7 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
     UPDATE `creature_template` SET `MinLevelMana` = 2846 , `MaxLevelMana` = 2846 WHERE `Entry` = 17137;
+	UPDATE `creature` SET `curmana` = 2846 WHERE `id` = 17137;
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
