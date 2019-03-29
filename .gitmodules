@@ -1,6 +1,3 @@
 [submodule "Realm"]
 	path = Realm
 	url = https://github.com/mangos/Realm_DB.git
-[submodule "realm"]
-	path = realm
-	url = https://github.com/mangos/Realm_DB.git
