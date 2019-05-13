@@ -42,8 +42,10 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
-		SET @dbstring := (SELECT MAX(entry) FROM `db_script_string`);
+SET @dbstring := (SELECT MAX(entry) FROM `db_script_string`);
 SET @con_entry := (SELECT MAX(condition_entry) FROM `conditions`);
+SET @con_entry := (SELECT MAX(condition_entry) FROM `conditions`);
+set @entry := (SELECT MAX(Entry) FROM `creature_template`);
 
 -- Add conditions to "Crow"leg Dan's gossip
 -- Event scripted
