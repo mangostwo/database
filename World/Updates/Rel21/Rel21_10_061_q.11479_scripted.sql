@@ -63,7 +63,7 @@ INSERT INTO `db_script_string` (`entry`,`content_default`,`comment`) VALUES
 DELETE FROM `db_scripts` WHERE `id` = 9335;
 INSERT INTO `db_scripts` (`script_type`, `id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (2,9335,0,0,0,0,0,0,0,@dbstring+1,0,0,0,0,0,0,0,'Crowleg say'),
-(2,9335,6,26,0,0,0,0,0,0,0,0,0,0,0,0,0,'Crowleg attack'),
+(2,9335,7,26,0,0,0,0,0,0,0,0,0,0,0,0,0,'Crowleg attack'),
 (2,9335,7,29,1,2,0,0,0,0,0,0,0,0,0,0,0,'Crowleg NpcFlag change');
 
 UPDATE `gossip_menu_option` SET `action_menu_id` = -1, `action_script_id` = 9335, `condition_id` = @con_entry+1 WHERE `menu_id` = 9335 and `id` = 0;
