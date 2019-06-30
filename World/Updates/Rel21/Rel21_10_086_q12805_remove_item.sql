@@ -25,10 +25,10 @@ BEGIN
     SET @cNewStructure = '10';
     SET @cNewContent = '086';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'q12589 remove item';
+    SET @cNewDescription = 'q12805 remove item';
 
                         -- COMMENT is 150 Characters MAX
-    SET @cNewComment = 'q12589 remove item';
+    SET @cNewComment = 'q12805 remove item';
 
     -- Evaluate all settings
     SET @cCurResult := (SELECT description FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
