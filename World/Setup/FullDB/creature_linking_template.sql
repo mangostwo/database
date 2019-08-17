@@ -27,6 +27,7 @@ TRUNCATE TABLE `creature_linking_template`;
 LOCK TABLES `creature_linking_template` WRITE;
 /*!40000 ALTER TABLE `creature_linking_template` DISABLE KEYS */;
 INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES 
+(390,0,330,515,0),
 (1414,0,1413,656,30),
 (1415,0,1413,656,30),
 (1725,36,644,1,0),
@@ -43,6 +44,9 @@ INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`,
 (5707,0,5706,518,20),
 (5719,109,5709,1,0),
 (5722,109,5709,1,0),
+(5798,1,5797,3,15),
+(5799,1,5797,3,15),
+(5800,1,5797,3,15),
 (7076,70,2748,20,0),
 (7077,70,2748,20,0),
 (7268,209,7267,1,0),
@@ -440,4 +444,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:33:00
+-- Dump completed on 2019-08-17 22:07:08

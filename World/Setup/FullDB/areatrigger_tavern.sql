@@ -139,7 +139,8 @@ INSERT INTO `areatrigger_tavern` (`id`, `name`) VALUES
 (5316,'Wyrmrest Temple'),
 (5317,'Wyrmrest Temple'),
 (5323,'Camp Tunka\'lo'),
-(5327,'Krasus\' Landing');
+(5327,'Krasus\' Landing'),
+(5360,'Grom\'arsh Crash-Site');
 /*!40000 ALTER TABLE `areatrigger_tavern` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -152,4 +153,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:32:55
+-- Dump completed on 2019-08-17 22:07:05

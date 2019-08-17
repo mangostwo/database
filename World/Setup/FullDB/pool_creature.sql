@@ -107,7 +107,10 @@ INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALU
 (84396,25526,0,'Blood Watch - Defender Ashoon'),
 (63724,25526,0,'Blood Watch - Defender Ursi'),
 (84395,25527,0,'Blood Watch - Defender Zaibah'),
-(63726,25527,0,'Blood Watch - Defender Sorli');
+(63726,25527,0,'Blood Watch - Defender Sorli'),
+(151426,25560,0,'Lord Melenas spawn #1'),
+(151427,25560,0,'Lord Melenas spawn #2'),
+(151428,25560,0,'Lord Melenas spawn #3');
 /*!40000 ALTER TABLE `pool_creature` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -120,4 +123,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-06 20:20:22
+-- Dump completed on 2019-08-17 22:07:21

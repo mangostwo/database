@@ -34812,7 +34812,25 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (300054,25558,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 7'),
 (300049,25558,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 7'),
 (85471,25558,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 7'),
-(300063,25558,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 7');
+(300063,25558,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 7'),
+(10677,25561,50,'Food Crate'),
+(1462,25561,50,'Water Barrel'),
+(30758,25562,50,'Food Crate'),
+(29275,25562,50,'Water Barrel'),
+(32754,25563,50,'Food Crate'),
+(32313,25563,50,'Water Barrel'),
+(30839,25564,50,'Food Crate'),
+(30677,25564,50,'Water Barrel'),
+(30687,25565,50,'Food Crate'),
+(29276,25565,50,'Water Barrel'),
+(29306,25566,50,'Food Crate'),
+(29609,25566,50,'Water Barrel'),
+(12154,25567,0,'Bloodsail Charts Point 1'),
+(54137,25567,0,'Bloodsail Charts Point 2'),
+(300170,25567,0,'Bloodsail Charts Point 3'),
+(12156,25568,0,'Bloodsail Orders Point 1'),
+(12208,25568,0,'Bloodsail Orders Point 2'),
+(54217,25568,0,'Bloodsail Orders Point 3');
 /*!40000 ALTER TABLE `pool_gameobject` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -34825,4 +34843,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-31 20:31:37
+-- Dump completed on 2019-08-17 22:07:21

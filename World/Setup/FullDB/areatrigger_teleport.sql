@@ -38,7 +38,7 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (194,'Shadowfang keep - Entrance',0,0,0,0,0,0,0,0,-232.796,1568.28,76.8909,4.398),
 (226,'The Barrens - Wailing Caverns',0,0,0,0,0,0,0,1,-740.059,-2214.23,16.1374,5.68),
 (228,'The Barrens - Wailing Caverns',10,0,0,0,0,0,0,43,-163.49,132.9,-73.66,5.83),
-(242,'Razorfen Kraul Instance Start',0,0,0,0,0,0,0,1,-4464.92,-1666.24,90,0),
+(242,'Razorfen Kraul Instance Start',0,0,0,0,0,0,0,1,-4464.92,-1666.24,81.9,0),
 (244,'Razorfen Kraul Entrance',17,0,0,0,0,0,0,47,1943,1544.63,82,1.38),
 (257,'Blackphantom Deeps Entrance',19,0,0,0,0,0,0,48,-151.89,106.96,-39.87,4.53),
 (259,'Blackphantom Deeps Instance Start',0,0,0,0,0,0,0,1,4247.74,745.879,-24.5299,0),
@@ -269,4 +269,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:32:55
+-- Dump completed on 2019-08-17 22:07:05

@@ -26,20 +26,20 @@ TRUNCATE TABLE `battleground_template`;
 
 LOCK TABLES `battleground_template` WRITE;
 /*!40000 ALTER TABLE `battleground_template` DISABLE KEYS */;
-INSERT INTO `battleground_template` (`id`, `MinPlayersPerTeam`, `MaxPlayersPerTeam`, `AllianceStartLoc`, `AllianceStartO`, `HordeStartLoc`, `HordeStartO`) VALUES 
-(1,40,40,611,2.72532,610,2.27452),
-(2,10,10,769,3.14159,770,0.00391),
-(3,15,15,890,3.91992,889,0.88828),
-(4,5,5,929,0,936,3.14159),
-(5,5,5,939,0,940,3.14159),
-(6,5,5,0,0,0,0),
-(7,15,15,1103,3.22092,1104,0.01649),
-(8,5,5,1258,0,1259,3.14159),
-(9,15,15,1367,0,1368,0),
-(10,5,5,1362,0,1363,0),
-(11,5,5,1364,0,1365,0),
-(30,40,40,1485,0,1486,0),
-(32,5,40,0,0,0,0);
+INSERT INTO `battleground_template` (`id`, `MinPlayersPerTeam`, `MaxPlayersPerTeam`, `AllianceStartLoc`, `AllianceStartO`, `HordeStartLoc`, `HordeStartO`, `Comment`) VALUES 
+(1,40,40,611,2.72532,610,2.27452,'Alterac Valley'),
+(2,10,10,769,3.14159,770,0.00391,'Warsong Gulch'),
+(3,15,15,890,3.91992,889,0.88828,'Arathi Basin'),
+(4,5,5,929,0,936,3.14159,'Nagrand Arena'),
+(5,5,5,939,0,940,3.14159,'Blade\'s Edge Arena'),
+(6,5,5,0,0,0,0,'All Arenas'),
+(7,15,15,1103,3.22092,1104,0.01649,'Eye of The Storm'),
+(8,5,5,1258,0,1259,3.14159,'Ruins of Lordaeron'),
+(9,15,15,1367,0,1368,0,'Strand of the Ancients'),
+(10,5,5,1362,0,1363,0,'Dalaran Sewers'),
+(11,5,5,1364,0,1365,0,'The Ring of Valor'),
+(30,40,40,1485,0,1486,0,'Isle of Conquest'),
+(32,5,40,0,0,0,0,'Random Battleground');
 /*!40000 ALTER TABLE `battleground_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:32:56
+-- Dump completed on 2019-08-17 22:07:05

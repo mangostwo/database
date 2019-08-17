@@ -89,7 +89,8 @@ INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `quest_start`, `qu
 (26809,0,0,0,0,0,953),
 (33498,63125,0,0,0,1,964),
 (30066,62503,12953,1,12953,1,0),
-(36558,67830,0,0,0,1,0);
+(36558,67830,0,0,0,1,0),
+(33357,75648,0,0,0,1,0);
 /*!40000 ALTER TABLE `npc_spellclick_spells` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -102,4 +103,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-13  0:33:20
+-- Dump completed on 2019-08-17 22:07:18

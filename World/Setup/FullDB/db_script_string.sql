@@ -214,7 +214,7 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000188,'Rest now, Adaris. You need to recover your strength.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000189,'I never thought it would turn out to be mana oil! There\'s going to be plenty of demand for that, minus Grek, of course!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000190,'Ship it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000191,'%s smells the meat, awakens from his slumber, and roars in anger!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,5,0,0,NULL),
+(2000000191,'%s smells the meat, awakens from his slumber, and roars in anger!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'Shatterhorn whisper'),
 (2000000192,'AAAAHHH!!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,NULL),
 (2000000193,'Thank you, $r. I will take this miserable cur from you now.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000194,'Perfect.  As long as you don\'t go hacking and slashing your way through, they\'ll never know the difference.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
@@ -300,9 +300,9 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000274,'The Lorehammer ist reacting. This must be from Stormhoof\'s time.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000275,'The Lorehammer is silent. This isn\'t from Stormhoof\'s time.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000276,'Treacherous whelp! Sironas will destroy you and your people!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000277,'Morae... Is that you?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000278,'No... you\'re not Morae, but I sense that you have met. When you see her, tell her that I survived the crash, only to be done in by the infiltrators.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000279,'Let her know... my last thought was of her...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000277,'Morae... Is that you?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,6,NULL),
+(2000000278,'No... you\'re not Morae, but I sense that you have met. When you see her, tell her that I survived the crash, only to be done in by the infiltrators.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,274,NULL),
+(2000000279,'Let her know... my last thought was of her...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
 (2000000280,'Good luck... You\'ll need it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000281,'May the best win!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000282,'You will not defeat me!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
@@ -447,6 +447,11 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000483,'Hah! Bullseye!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000484,'Agh... a chill ran up my spine.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000485,'They\'ll see the light, I hope.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000488,'%s reads from the book of the dead.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,NULL),
+(2000000489,'Shane Dabiri, Lee, Alex T., Rob F., J. A. B.,  A. Mayberry!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
+(2000000490,'Jeffrey Kaplan! Tom Chilton! Rob Pardo!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
+(2000000491,'Justin Thavirat! Roman Kenney! Our entire awesome art and animation team!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
+(2000000492,'Kevin Jordan and Jonathan LeCraft!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
 (2000000519,'Oh man, I thought I was dead for sure. Ugh... Still dizzy...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,462,NULL),
 (2000000520,'I can get back to Stronghold on my own, I think. Now that you bought me some time, I should be able to stealth out of here. Who ever you are... thank you. May Elune bless you always!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
 (2000000521,'I will need to focus my energies onto this knife. By doing so, I should catch some of the stronger psychic impressions associated with it.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
@@ -561,6 +566,16 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000830,'He thinks he\'s so damned important. Always pushing me around... I\'ll show him. I\'ll show all of them!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000831,'If only I could get back to the mushroom thicket. I have not seen such a mature cluster in my lifetime!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000001010,'Oh no!  I\'m losing this one!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000001740,'Reports from the test on the enemy fleet have come in, sir!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000001741,'Excellent.  What\'s the lowdown?  Do we have a bodycount?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000001742,'Well... the good news is we forced the reinforcements to turn back.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000001743,'Well, spit it out!  What\'s the bad news?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000001744,'The plague was not quite... fatal.  However, reports of harmful effects include nausea, loss of equilibrium and severe stomach pain.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000001745,'Severe stomach pain?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,6,NULL),
+(2000001746,'SEVERE STOMACH PAIN?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,5,NULL),
+(2000001747,'We are the Royal Apothecary Society!  Inducing belly aches is not part of our job description!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000001748,'Am I surrounded by amateurs?  I want a full analysis of the new strain by tomorrow morning!  Get on it, Ravien!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000001749,'Yes, sir!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000005001,'Opus wants some Cuergo\'s Gold... with worm.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000005002,'Bijou lost! SQUAWK! *cough',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000005003,'Kibler is being investigated by G.E.T.A.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
@@ -1364,7 +1379,24 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000005832,'Let us hold or discussion in a more... private place. Follow me, $n.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Wind Trader Marid - Say 1'),
 (2000005833,'You didn\'t really think I\'d do business with you again, did you? Sometimes, the best way to return to profitability is to know when to cut your losses.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Wind Trader Marid - Say 2'),
 (2000005834,'My sword Archeus served me well in life, but as at last my spirit may pass from the unhappy existence, I need it no longer.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000005835,'I shall cling to the love of my daughter and hope that I will find forgiveness under the Light for my sins.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL);
+(2000005835,'I shall cling to the love of my daughter and hope that I will find forgiveness under the Light for my sins.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005836,'Well done! Hurry, though, we don\'t want to be caught!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Lakka yell on Darkweaver Syth death.'),
+(2000005837,'Thank you for freeing me, $N! I\'m going to make my way to Shattrath!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Lakka say on interaction.'),
+(2000005838,'By the seven Ata\'mal crystals!  Others have survived the crash!  Zhanaa, is that you?  It is so good to see you again!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005839,'And who do we have here?  No doubt th... crzzzk ...ade this communication possible?  I give you greetings fro... psshzzzk... Azure Watch.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005840,'Judging by your signal, we put you... ust southeast of the larger part of the island we crashed onto.  Cross the Crystalbrook River to ge... kshhhhk zzzt. Sorry, there\'s a lot of stat...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005841,'This is great news!  Your efforts have indeed saved us, $N!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005842,'Curse that frog! Yes, I joined the Southsea crew - you want to make something of it, mate? I\'ll cut you down here and now!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Crowleg script text.'),
+(2000005843,'I... I can understand you now! Well, now that we can talk to each other, you have some explaining to do!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000005844,'How did you get my communicator from the Explorers\' League?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000005845,'You have my thanks for dispatching the iron dwarves. But why would the Horde have an interest in me?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,6,NULL),
+(2000005846,'That wouldn\'t be Scout Vor\'takh, would it? Even I know of his reputation for ruthlessness. He means to abduct me, then?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000005847,'If you\'ve seen the journal, then you know what I\'ve been discovering. The titans\' own creations are at war with each other!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000005848,'Loken and his iron dwarf minions have ousted the Earthen from Ulduar and taken over the city.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
+(2000005849,'If we spend our time and strength fighting with each other, Loken will use Ulduar\'s resources to destroy both Horde and Alliance.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,6,NULL),
+(2000005850,'Speak to the commander at your post, lad, and persuade him to abandon Vor\'takh\'s foolish plan.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,6,NULL),
+(2000005851,'If the Explorers\' League sent men, I didn\'t see any trace of them. I found your note buried in a camp overrun by iron dwarves.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005852,'A scout found the remains of your journal in Thor Modan. We\'ve been looking for you ever since.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL);
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1377,4 +1409,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-06 20:20:07
+-- Dump completed on 2019-08-17 22:07:11

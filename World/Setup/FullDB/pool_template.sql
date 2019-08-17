@@ -6140,7 +6140,18 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (25524,1,'Blood Watch - Defender Auston/Defender Katroi - Pool 1'),
 (25525,1,'Blood Watch - Defender Kadithuul/Defender Kranos - Pool 2'),
 (25526,1,'Blood Watch - Defender Ashoon/Defender Ursi - Pool 3'),
-(25527,1,'Blood Watch - Defender Zaibah/Defender Sorli - Pool 4');
+(25527,1,'Blood Watch - Defender Zaibah/Defender Sorli - Pool 4'),
+(25560,1,'Spawn pool for Lord Melenas'),
+(25561,1,'Kharanos - Food Crate / Water Barrel '),
+(25562,1,'Food Crate / Water Barrel'),
+(25563,1,'Food Crate / Water Barrel'),
+(25564,1,'Food Crate / Water Barrel'),
+(25565,1,'Food Crate / Water Barrel'),
+(25566,1,'Food Crate / Water Barrel'),
+(25567,1,'Bloodsail Charts'),
+(25568,1,'Bloodsail Orders'),
+(1187,1,'Ambassador Jerrikar (18695)'),
+(25569,1,'Bog Lurker (18682)');
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -6153,4 +6164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-06 20:20:23
+-- Dump completed on 2019-08-17 22:07:22

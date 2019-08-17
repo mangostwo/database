@@ -115,7 +115,9 @@ INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description
 (32495,1085,0,'RARE Hildana Deathstealer - 32495'),
 (32517,1086,0,'RARE Loque\'nahak - 32517'),
 (17587,25523,0,'Draenei Youngling - 17587'),
-(17591,25520,0,'Blood Elf Bandit - 17591');
+(17591,25520,0,'Blood Elf Bandit - 17591'),
+(18695,1187,0,'Ambassador Jerrikar (18695)'),
+(18682,25569,0,'Bog Lurker (18682)');
 /*!40000 ALTER TABLE `pool_creature_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -128,4 +130,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-31 20:31:37
+-- Dump completed on 2019-08-17 22:07:21

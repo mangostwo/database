@@ -1363,7 +1363,11 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-12005,'Remain strong. Kael\'thas will - error - Lor\'themar will lead you to power and glory!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103'),
 (-12006,'Maintain order within these walls.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103'),
 (-12007,'Happiness is mandatory, citizen.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103'),
-(-12008,'Do not be disheartened. Silvermoon will remain strong through this course of events.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103');
+(-12008,'Do not be disheartened. Silvermoon will remain strong through this course of events.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18103'),
+(-272321,'%s raises his shield in a vigorous defense!','0','0','0','0','0','0','0','0',0,2,0,0,'Coilskar Sorceress'),
+(-1757,'That liquid... it reeks!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,22,'North Fleet Reservist - Yell 1'),
+(-1758,'Someone shoot that bat down!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,22,'North Fleet Reservist - Yell 2'),
+(-1759,'I don\'t feel so good...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,22,'North Fleet Reservist - Yell 3');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1376,4 +1380,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-06 20:20:01
+-- Dump completed on 2019-08-17 22:07:07
