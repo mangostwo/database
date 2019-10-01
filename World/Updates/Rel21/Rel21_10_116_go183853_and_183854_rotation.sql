@@ -44,8 +44,8 @@ BEGIN
 
     
 -- Game objects, Arcanist Maisie the Storm-Summoner and Magistrix Monica the Sun-Gazer have had their rotation updated.
--- UPDATE `gameobject` SET `rotation0` = 0.672365, `rotation1` = 0.002638, `rotation2` = 0.740206, `rotation3` = -0.003526 WHERE `id` = 183853;
--- UPDATE `gameobject` SET `rotation0` = 0.665888, `rotation1` = 0.0007, `rotation2` = 0.746051, `rotation3` = 0.0007 WHERE `id` = 183854;
+UPDATE `gameobject` SET `rotation0` = 0.672365, `rotation1` = 0.002638, `rotation2` = 0.740206, `rotation3` = -0.003526 WHERE `id` = 183853;
+UPDATE `gameobject` SET `rotation0` = 0.665888, `rotation1` = 0.0007, `rotation2` = 0.746051, `rotation3` = 0.0007 WHERE `id` = 183854;
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
