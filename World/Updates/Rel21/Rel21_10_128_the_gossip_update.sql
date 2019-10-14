@@ -189,7 +189,7 @@ UPDATE `gossip_menu_option` SET `action_menu_id` = 6585 WHERE `menu_id` = 6586;
 UPDATE `npc_text` SET `text0_0` = 'In the Light we all cast shadows, my $g brother : sister;.  Do you seek further guidance today?', `text0_1` = '' WHERE `ID` = 8591;
 UPDATE `npc_text` SET `text0_1` = '' WHERE `ID` = 8592;
 
-DELETE FROM `npc_text` WHERE `ID` IN (5740,12549);
+DELETE FROM `npc_text` WHERE `ID` IN (5740);
 
    
 
