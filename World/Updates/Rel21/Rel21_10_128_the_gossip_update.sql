@@ -116,7 +116,7 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES
 
 UPDATE `gossip_menu` SET `entry` = 6341, `condition_id` = @condition+1 WHERE `entry` = 6441 AND `text_id` = 7634 AND `script_id` = 0;
 DELETE FROM `gossip_menu` WHERE `entry` = 4091 AND `text_id` = 4991;
-DELETE FROM `gossip_menu` WHERE `entry` in(7243,5710,4696,3642,4558,4560,4679,4680,3643,4572,4573,4574,4691,4692,4016,161,656,1582,1801,2352,4013,4686,4689,5711,5712,5713,6442,4695,4566);
+DELETE FROM `gossip_menu` WHERE `entry` in(7243,5710,4696,3642,4558,4560,4679,4680,3643,4572,4573,4574,4691,4692,4016,161,656,1582,1801,2352,4013,4686,4689,5711,5712,5713,6442,4566);
 INSERT INTO `gossip_menu` (`entry`, `text_id`, `condition_id`) values 
 (7243,8549,0),
 (7243,8550,@condition+2),
@@ -150,7 +150,7 @@ INSERT INTO `gossip_menu` (`entry`, `text_id`, `condition_id`) values
 (4016, 4878,0);
 
 
-DELETE FROM `gossip_menu_option` WHERE `menu_id` IN (5710,4558,4560,4679,4558,4560,4679,4558,4560,4679,4572,4573,4574,4692,1802,656,1582,2352,1017,4016,4695,5711,5712,5713);
+DELETE FROM `gossip_menu_option` WHERE `menu_id` IN (5710,4558,4560,4679,4558,4560,4679,4558,4560,4679,4572,4573,4574,4692,1802,656,1582,2352,1017,4016,5711,5712,5713);
 INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `condition_id`) VALUES
 (4679,0,3,'I seek more training in the priestly ways.',5,16,0,0,0,0,0,'',0),
 (4679,1,0,'I wish to unlearn my talents.',1,1,4461,0,0,0,0,'',566),
