@@ -44,7 +44,7 @@ BEGIN
 
     
 -- Remove 0 set as AIName
-UPDATE `creature_template` SET `AIName` = '' WHERE `entry` IN (15554,16166,17290,17296,17431); 
+UPDATE `creature_template` SET `AIName` = '' WHERE `Entry` IN (15554,16166,17290,17296,17431); 
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
