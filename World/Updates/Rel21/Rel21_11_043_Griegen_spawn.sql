@@ -44,7 +44,7 @@ BEGIN
 
 SET @GUID := (SELECT MAX(`guid`) FROM `creature`);
 SET @Entry := (SELECT MAX(`entry`) FROM `pool_template`);
-
+DELETE FROM `creature` WHERE `id` = 32471;
 INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
 (@GUID+1,32471,571,1,65535,0,0,5115.49,-1652.65,234.728,2.96739,28800,0,0,15952,0,0,2),
 (@GUID+2,32471,571,1,65535,0,0,5326.75,-1479.26,238.009,3.02158,28800,0,0,15952,0,0,2),
