@@ -115,7 +115,6 @@ INSERT INTO `creature_movement` (`id`,`point`,`position_x`,`position_y`,`positio
 (@guid+2,15,6075.78,4618.8,-97.4729,5.03912),
 (@guid+2,16,6087.94,4603.13,-96.8083,5.27239);
 
-SET @Entry := (SELECT MAX(`entry`) FROM `pool_template`);
 INSERT INTO `pool_template` VALUES
 (@Entry+1,1,'RARE King Krush (32485)');
 DELETE FROM `pool_creature_template` WHERE `id` = 32485;

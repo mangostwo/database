@@ -52,7 +52,6 @@ INSERT INTO `creature` (`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_
 (32475,571,1,65535,0,0,6554.22,-4523.84,450.781,2.6564,28800,20,0,16502,0,0,1),
 (32475,571,1,65535,0,0,6704.23,-4205.16,458.033,4.71414,28800,20,0,16502,0,0,1);
 
-SET @Entry := (SELECT MAX(`entry`) FROM `pool_template`);
 INSERT INTO `pool_template` VALUES
 (@Entry+1,1,'RARE Terror Spinner (32475)');
 DELETE FROM `pool_creature_template` WHERE `id` = 32475;

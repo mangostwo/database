@@ -74,7 +74,6 @@ INSERT INTO `creature_movement` (`id`,`point`,`position_x`,`position_y`,`positio
 (@guid+4,3,5533.35,-2618.47,303.953,3.12393);
 
 
-SET @Entry := (SELECT MAX(`entry`) FROM `pool_template`);
 INSERT INTO `pool_template` VALUES
 (@Entry+1,1,'RARE Zul\drak Sentinel (32447)');
 DELETE FROM `pool_creature_template` WHERE `id` = 32447;
