@@ -44,7 +44,7 @@ BEGIN
 
     
 SET @script_id := (SELECT MAX(`id`) FROM `db_scripts`);
-INSERT INTO `mangos_2`.`db_scripts` (`script_type`,`id`,`command`,`datalong`,`comments`) VALUES 
+INSERT INTO `db_scripts` (`script_type`,`id`,`command`,`datalong`,`comments`) VALUES 
 (3,@script_id+1,25,1,'Fjord Crow - Set run');
 
 UPDATE `creature_movement` SET `script_id` = @script_id+1 WHERE `id` IN (108159,108160,108153,108164,108161,108169,108167,108157,108163,108168,108144,108165,108143) AND `point` = 1;
