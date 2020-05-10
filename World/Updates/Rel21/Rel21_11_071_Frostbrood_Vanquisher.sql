@@ -44,7 +44,7 @@ BEGIN
 
     
 -- Update Frostbrood Vanquisher to make it usable in Death Knight quest An End to All Things.
-UPDATE `creature_template` SET `MinLevel` = '65', `MaxLevel` = '80', `SpeedWalk` = '1.1', `SpeedRun` = '1.2', `UnitClass` = '2', `MinLevelHealth` = '9000', `MaxLevelHealth` = '20000', `MinLevelMana` = '10000', `MaxLevelMana` = '20000' WHERE `Entry` = '28670';
+UPDATE `creature_template` SET `MinLevel` = '75', `MaxLevel` = '80', `SpeedWalk` = '1.1', `SpeedRun` = '1.2', `UnitClass` = '2', `MinLevelHealth` = '120000', `MaxLevelHealth` = '133525', `MinLevelMana` = '47000', `MaxLevelMana` = '51360' WHERE `Entry` = '28670';
 
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
