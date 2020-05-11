@@ -61,12 +61,12 @@ INSERT INTO `creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `e
 (9819, 3361, 1984, 0),
 (10681, 3361, 1984, 0);
 
-UPDATE `creature_template` SET `EquipmentTemplateId`= 17223 WHERE `entry`= 17223;
-UPDATE `creature_template` SET `EquipmentTemplateId`= 5851 WHERE `entry`= 5851;
-UPDATE `creature_template` SET `EquipmentTemplateId`= 5861 WHERE `entry`= 5861;
-UPDATE `creature_template` SET `EquipmentTemplateId`= 7113 WHERE `entry`= 7113;
-UPDATE `creature_template` SET `EquipmentTemplateId`= 9819 WHERE `entry`= 9819;
-UPDATE `creature_template` SET `EquipmentTemplateId`= 10681 WHERE `entry`= 10681;
+UPDATE `creature_template` SET `EquipmentTemplateId`= 17223 WHERE `Entry`= 17223;
+UPDATE `creature_template` SET `EquipmentTemplateId`= 5851 WHERE `Entry`= 5851;
+UPDATE `creature_template` SET `EquipmentTemplateId`= 5861 WHERE `Entry`= 5861;
+UPDATE `creature_template` SET `EquipmentTemplateId`= 7113 WHERE `Entry`= 7113;
+UPDATE `creature_template` SET `EquipmentTemplateId`= 9819 WHERE `Entry`= 9819;
+UPDATE `creature_template` SET `EquipmentTemplateId`= 10681 WHERE `Entry`= 10681;
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
