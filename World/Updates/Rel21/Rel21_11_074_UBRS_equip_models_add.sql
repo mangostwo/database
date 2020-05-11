@@ -18,13 +18,13 @@ BEGIN
 
     -- Expected Values
     SET @cOldVersion = '21'; 
-    SET @cOldStructure = '17'; 
-    SET @cOldContent = '002';
+    SET @cOldStructure = '11'; 
+    SET @cOldContent = '073';
 
     -- New Values
     SET @cNewVersion = '00';
-    SET @cNewStructure = '17';
-    SET @cNewContent = '003';
+    SET @cNewStructure = '11';
+    SET @cNewContent = '074';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'UBRS_equip_models_add';
 
