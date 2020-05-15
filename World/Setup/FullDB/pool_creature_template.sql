@@ -117,7 +117,32 @@ INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description
 (17587,25523,0,'Draenei Youngling - 17587'),
 (17591,25520,0,'Blood Elf Bandit - 17591'),
 (18695,1187,0,'Ambassador Jerrikar (18695)'),
-(18682,25569,0,'Bog Lurker (18682)');
+(18682,25569,0,'Bog Lurker (18682)'),
+(18690,1174,0,'Morcrush (18690)'),
+(18692,1175,0,'Hemathion (18692)'),
+(18693,1176,0,'Speaker Margrom (18693)'),
+(18677,1177,0,'Mekthorg the Wild (18677)'),
+(18678,1178,0,'Fulgorge (18678)'),
+(18679,1179,0,'Vorakem Doomspeaker (18679)'),
+(17144,1180,0,'Goretooth (17144)'),
+(18683,1181,0,'Voidhunter Yar (18683)'),
+(18697,1183,0,'Chief Engineer Lorthander (18697)'),
+(18698,1184,0,'Ever-Core the Punisher (18698)'),
+(20932,1185,0,'Nuramoc (20932)'),
+(18694,1186,0,'Collidus the Warp-Watcher (18694)'),
+(18696,1188,0,'Kraator (18696)'),
+(18685,1189,0,'Okrek (18685)'),
+(18686,1190,0,'Doomsayer Jurim (18686)'),
+(18689,1191,0,'Crippler (18689)'),
+(18680,1192,0,'Marticar (18680)'),
+(18681,1193,0,'Coilfang Emissary (18681)'),
+(32500,25571,0,'RARE Dirkee - 32500'),
+(32471,25572,0,'RARE Griegen - 32471'),
+(32481,25573,0,'RARE Aotona - 32481'),
+(32447,25574,0,'RARE Zul\'drak Sentinel - 32447'),
+(32485,25575,0,'RARE King Krush - 32485'),
+(32475,25576,0,'RARE Terror Spinner - 32475'),
+(32501,25577,0,'RARE High Thane Jorfus - 32501');
 /*!40000 ALTER TABLE `pool_creature_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -130,4 +155,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17 22:07:21
+-- Dump completed on 2020-05-14 22:01:52

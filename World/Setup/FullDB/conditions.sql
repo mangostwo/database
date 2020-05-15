@@ -1065,7 +1065,18 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (1763,9,12920,0,'Has quest Catching up with Brann'),
 (1764,9,12926,0,'Has quest Pieces of the Puzzle'),
 (1765,24,40971,1,'No item 40971'),
-(1766,-1,1763,1765,'No item 40971');
+(1766,-1,1763,1765,'No item 40971'),
+(1767,-2,102,93,NULL),
+(1768,9,9067,0,NULL),
+(1769,8,12278,0,'Brew of the month vendor - Alliance'),
+(1770,8,12306,0,'Brew of the month vendor - Horde'),
+(1771,-2,1769,1770,'Link Horde - Alliance Brew of the month condition'),
+(1772,24,13544,1,'Gossip menu 3310 second check.'),
+(1773,-1,38,1772,'Replace Spectral Essence Gossip menu 3310 check'),
+(1774,9,9437,0,NULL),
+(1775,4,4568,0,'The Coin Master - Dalaran Fountain'),
+(1405,8,11892,0,'Arch Druid Lathorius - Gossip'),
+(1776,8,11864,0,'Arch Druid Lathorius - Gossip');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1078,4 +1089,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17 22:07:06
+-- Dump completed on 2020-05-14 22:01:34

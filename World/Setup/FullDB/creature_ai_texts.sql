@@ -1367,7 +1367,18 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-272321,'%s raises his shield in a vigorous defense!','0','0','0','0','0','0','0','0',0,2,0,0,'Coilskar Sorceress'),
 (-1757,'That liquid... it reeks!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,22,'North Fleet Reservist - Yell 1'),
 (-1758,'Someone shoot that bat down!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,22,'North Fleet Reservist - Yell 2'),
-(-1759,'I don\'t feel so good...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,22,'North Fleet Reservist - Yell 3');
+(-1759,'I don\'t feel so good...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,22,'North Fleet Reservist - Yell 3'),
+(-272322,'%s appears very grateful to be free of the koi-koi spirit\'s influence.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,34,'21326'),
+(-1408,'Embrace the end!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Twilight Thug Ssay - On argo'),
+(-1409,'Carnage!  May I spill blood in His name!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Twilight Thug Ssay - On argo'),
+(-1410,'My death matters little... the Hammer will still fall!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Twilight Thug - Chance Say on Death'),
+(-1443,'I wanna go home... Take off this uniform and leave the Horde!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Mobu - Random Say 2'),
+(-1444,'What am I supposed TO DO without tools, Gorge!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Mobu - Random Say 2'),
+(-1445,'Can\'t fix somethin\' as complicated as a tank without the proper equipment, buddy!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Mobu - Random Say 3'),
+(-1433,'%s\'s eyes glow red for a brief moment.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'25730'),
+(-1434,'Is that the best you can do?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'25730'),
+(-1435,'I require more bodies! Bring them to me at once!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'25618'),
+(-1436,'Bring the Flenser the fallen Horde! They will be reanimated as soldiers of the Lich King!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'25618');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1380,4 +1391,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17 22:07:07
+-- Dump completed on 2020-05-14 22:01:36

@@ -3350,7 +3350,8 @@ INSERT INTO `spell_script_target` (`entry`, `type`, `targetEntry`, `inverseEffec
 (38920,1,22351,0),
 (38096,1,17886,0),
 (26373,0,300058,0),
-(39184,1,16878,0);
+(39184,1,16878,0),
+(46237,1,25861,0);
 /*!40000 ALTER TABLE `spell_script_target` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -3363,4 +3364,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17 22:07:26
+-- Dump completed on 2020-05-14 22:01:57

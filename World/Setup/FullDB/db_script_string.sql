@@ -1396,7 +1396,25 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000005849,'If we spend our time and strength fighting with each other, Loken will use Ulduar\'s resources to destroy both Horde and Alliance.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,6,NULL),
 (2000005850,'Speak to the commander at your post, lad, and persuade him to abandon Vor\'takh\'s foolish plan.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,6,NULL),
 (2000005851,'If the Explorers\' League sent men, I didn\'t see any trace of them. I found your note buried in a camp overrun by iron dwarves.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000005852,'A scout found the remains of your journal in Thor Modan. We\'ve been looking for you ever since.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL);
+(2000005852,'A scout found the remains of your journal in Thor Modan. We\'ve been looking for you ever since.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000006001,'Puny $r cannot lift spear. Gor lift spear.!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gor say 1.'),
+(2000006002,'Hah! The Thunderspike is mine. Die!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gor say 2.'),
+(2000006003,'You\'ve saved me, fleshling! Ameer will hear of this noble act.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Captain Tyralius say on prison release'),
+(2000000805,'Thank you. I will not forget this!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000806,'You have to put a stop to this madness before it\'s too late!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000807,'My thanks to you, hero!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000808,'Oh, thank you, thank you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000809,'Avenge my friends who have already been sacrificed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000810,'Thank goodness for you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000811,'The vrykul are evil and must be destroyed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000812,'You saved my life!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000001489,'Yarrrr!  If it\'s me treasure yer lookin\' for... yer gonna have to fight for it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'Black Conrad\'s Ghost'),
+(2000001490,'Yer dead, landlubber!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Spectral Sailor'),
+(2000001491,'Yarrrrr... dead again!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Black Conrad\'s Ghost'),
+(2000000486,'I think, I\'ll be able to get to Brackenwall. The cargo they carried to the top of the towers. Be careful!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
+(2000000487,'To arms! the prisoner is escaping!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,''),
+(2000006004,'It would be a shame to let these leaflets go to waste, wouldn\'t it?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000006005,'With just a little creative editing, these are much more useful... ',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL);
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1409,4 +1427,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17 22:07:11
+-- Dump completed on 2020-05-14 22:01:40

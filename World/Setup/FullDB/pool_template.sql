@@ -6151,7 +6151,34 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (25567,1,'Bloodsail Charts'),
 (25568,1,'Bloodsail Orders'),
 (1187,1,'Ambassador Jerrikar (18695)'),
-(25569,1,'Bog Lurker (18682)');
+(25569,1,'Bog Lurker (18682)'),
+(25570,1,'Dalaran - Violet Hold image - South'),
+(1174,1,'Morcrush (18690)'),
+(1175,1,'Hemathion (18692)'),
+(1176,1,'Speaker Margrom (18693)'),
+(1177,1,'Mekthorg the Wild (18677)'),
+(1178,1,'Fulgorge (18678)'),
+(1179,1,'Vorakem Doomspeaker (18679)'),
+(1180,1,'Goretooth (17144)'),
+(1181,1,'Voidhunter Yar (18683)'),
+(1183,1,'Chief Engineer Lorthander (18697)'),
+(1184,1,'Ever-Core the Punisher (18698)'),
+(1185,1,'Nuramoc (20932)'),
+(1186,1,'Collidus the Warp-Watcher (18694)'),
+(1188,1,'Kraator (18696)'),
+(1189,1,'Okrek (18685)'),
+(1190,1,'Doomsayer Jurim (18686)'),
+(1191,1,'Crippler (18689)'),
+(1192,1,'Marticar (18680)'),
+(1193,1,'Coilfang Emissary (18681)'),
+(25571,1,'RARE Dirkee (32500)'),
+(25572,1,'RARE Griegen (32471)'),
+(25573,1,'Aotona (32481)'),
+(25574,1,'RARE Zuldrak Sentinel (32447)'),
+(25575,1,'RARE King Krush (32485)'),
+(25576,1,'RARE Terror Spinner (32475)'),
+(25577,1,'RARE High Thane Jorfus (32501)'),
+(25578,1,'RARE Vyragosa / Time-lost proto-drake (32630/32491)');
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -6164,4 +6191,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17 22:07:22
+-- Dump completed on 2020-05-14 22:01:52

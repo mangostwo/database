@@ -41,7 +41,7 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (242,'Razorfen Kraul Instance Start',0,0,0,0,0,0,0,1,-4464.92,-1666.24,81.9,0),
 (244,'Razorfen Kraul Entrance',17,0,0,0,0,0,0,47,1943,1544.63,82,1.38),
 (257,'Blackphantom Deeps Entrance',19,0,0,0,0,0,0,48,-151.89,106.96,-39.87,4.53),
-(259,'Blackphantom Deeps Instance Start',0,0,0,0,0,0,0,1,4247.74,745.879,-24.5299,0),
+(259,'Blackfathom Deeps Instance Start',0,0,0,0,0,0,0,1,4247.74,745.879,-24.5299,0),
 (286,'Uldaman Entrance',30,0,0,0,0,0,0,70,-226.8,49.09,-46.03,1.39),
 (288,'Uldaman Instance Start',0,0,0,0,0,0,0,0,-6066.73,-2955.63,209.776,0),
 (322,'Gnomeregan Instance Start',0,0,0,0,0,0,0,0,-5163.33,927.623,257.188,0),
@@ -62,8 +62,8 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (610,'Scarlet Monastery - Cathedral (Entrance)',20,0,0,0,0,0,0,189,855.683,1321.5,18.6709,0.001747),
 (612,'Scarlet Monastery - Armory (Entrance)',20,0,0,0,0,0,0,189,1610.83,-323.433,18.6738,6.28022),
 (614,'Scarlet Monastery - Library (Entrance)',20,0,0,0,0,0,0,189,255.346,-209.09,18.6773,6.26656),
-(702,'Stormwind - Wizard Sanctum Room',0,0,0,0,0,0,0,0,-9015.76,874.94,148.62,5.211),
-(704,'Stormwind - Wizard Sanctum Tower Portal',0,0,0,0,0,0,0,0,-9018.56,887.664,29.63,5.346),
+(702,'Stormwind - Wizard Sanctum Room',0,0,0,0,0,0,0,0,-9015.8,874.6,148.617,5.31),
+(704,'Stormwind - Wizard Sanctum Tower Portal',0,0,0,0,0,0,0,0,-9017.4,886.3,29.6206,5.38),
 (882,'Uldaman Instance End',0,0,0,0,0,0,0,0,-6620.48,-3765.19,266.91,0),
 (902,'Uldaman Exit',30,0,0,0,0,0,0,70,-214.02,383.607,-38.7687,0.5),
 (922,'Zul\'Farrak Instance Start',0,0,0,0,0,0,0,1,-6796.49,-2890.77,8.88063,0),
@@ -269,4 +269,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17 22:07:05
+-- Dump completed on 2020-05-14 22:01:34

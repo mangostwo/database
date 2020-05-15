@@ -9534,7 +9534,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (22039,0,0,1,0,0,0,NULL),
 (22040,0,0,1,0,0,0,NULL),
 (22042,0,0,1,16,0,0,NULL),
-(22044,0,0,1,0,0,0,NULL),
+(22044,0,0,1,0,0,0,'3616'),
 (22045,0,0,1,16,0,0,NULL),
 (22046,0,0,1,0,0,0,NULL),
 (22052,0,0,1,16,0,0,NULL),
@@ -12688,7 +12688,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (31581,0,0,1,0,0,0,NULL),
 (31582,0,0,1,0,0,0,NULL),
 (31583,0,50331648,1,0,0,0,NULL),
-(31584,0,0,0,0,0,0,NULL),
+(21319,0,0,0,0,0,0,NULL),
 (31630,0,0,1,0,0,0,NULL),
 (31641,0,0,1,0,0,0,NULL),
 (31644,0,0,1,0,0,0,NULL),
@@ -13632,7 +13632,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (37813,0,0,1,0,0,0,'72242 72370 72256 72408'),
 (37830,0,0,1,0,0,0,NULL),
 (37852,0,0,1,0,0,1024,NULL),
-(37854,0,50331648,0,0,0,1024,NULL),
+(25311,0,0,2,1,214,0,NULL),
 (37887,0,0,1,0,0,0,NULL),
 (37906,0,50331648,1,0,0,0,'72611'),
 (37928,0,0,1,0,333,0,NULL),
@@ -13705,7 +13705,10 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (40429,0,0,1,0,0,0,NULL),
 (40436,0,0,1,0,0,0,NULL),
 (40443,0,0,1,0,0,0,NULL),
-(40607,0,0,1,1,0,0,NULL);
+(40607,0,0,1,1,0,0,NULL),
+(15559,0,0,1,0,0,0,'25824'),
+(32491,0,50331648,1,0,0,0,''),
+(32630,0,50331648,1,0,0,0,'');
 /*!40000 ALTER TABLE `creature_template_addon` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -13718,4 +13721,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17 22:07:10
+-- Dump completed on 2020-05-14 22:01:40

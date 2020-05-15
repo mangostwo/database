@@ -3184,42 +3184,25 @@ CREATE TABLE `vehicle_accessory` (
   PRIMARY KEY (`vehicle_entry`,`seat`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Vehicle Accessory (passengers that are auto-boarded onto a vehicle)';
 --
--- Table structure for table `warden_build_specific`
+-- Table structure for table `warden`
 --
 
-DROP TABLE IF EXISTS `warden_build_specific`;
+DROP TABLE IF EXISTS `warden`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `warden_build_specific` (
+CREATE TABLE `warden` (
   `id` smallint(5) unsigned NOT NULL COMMENT 'Check ID from warden_checks',
   `build` smallint(5) unsigned NOT NULL COMMENT 'Client build',
+  `type` tinyint(3) unsigned DEFAULT NULL COMMENT 'Check Type',
   `data` varchar(48) NOT NULL DEFAULT '',
   `str` varchar(20) NOT NULL DEFAULT '',
   `address` int(10) unsigned NOT NULL DEFAULT '0',
   `length` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `result` varchar(24) NOT NULL DEFAULT '',
+  `comment` varchar(50) DEFAULT '' COMMENT 'Description of what the check is',
   PRIMARY KEY (`id`,`build`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `warden_checks`
---
-
-DROP TABLE IF EXISTS `warden_checks`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `warden_checks` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `type` tinyint(3) unsigned DEFAULT NULL,
-  `data` varchar(48) DEFAULT '',
-  `str` varchar(20) DEFAULT '',
-  `address` int(10) unsigned DEFAULT NULL,
-  `length` tinyint(3) unsigned DEFAULT NULL,
-  `result` varchar(24) DEFAULT '',
-  `comment` varchar(50) DEFAULT '',
-  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=790 DEFAULT CHARSET=utf8;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
