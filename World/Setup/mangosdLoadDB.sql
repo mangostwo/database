@@ -840,7 +840,9 @@ CREATE TABLE `disenchant_loot_template` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Loot System';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-/*Table structure for table `dungeonfinder_item_rewards` */
+--
+-- Table structure for table `dungeonfinder_item_rewards`
+--
 
 DROP TABLE IF EXISTS `dungeonfinder_item_rewards`;
 
@@ -854,7 +856,9 @@ CREATE TABLE `dungeonfinder_item_rewards` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
-/*Table structure for table `dungeonfinder_requirements` */
+--
+-- Table structure for table `dungeonfinder_requirements`
+--
 
 DROP TABLE IF EXISTS `dungeonfinder_requirements`;
 
