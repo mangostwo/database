@@ -52,6 +52,7 @@ for TABLE in \
 `db_script_string` \
 `db_scripts` \
 `db_version` \
+`disables` \
 `disenchant_loot_template` \
 `dungeonfinder_item_rewards` \
 `dungeonfinder_rewards` \
@@ -155,7 +156,7 @@ for TABLE in \
 `warden` \
 ; do
 
-echo "Dumping ${i}/138 ${TABLE}..."
+echo "Dumping ${i}/139 ${TABLE}..."
 
 echo "--
 -- Copyright (C) 2005-2017 MaNGOS <http://getmangos.eu/>
