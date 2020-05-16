@@ -468,6 +468,8 @@ CREATE TABLE `creature_model_info` (
 --
 
 DROP TABLE IF EXISTS `creature_model_race`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `creature_model_race` (
   `modelid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `racemask` mediumint(8) unsigned NOT NULL DEFAULT '0',
