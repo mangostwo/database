@@ -62,6 +62,7 @@ INSERT INTO `db_scripts` (`script_type`, `id`, `delay`,`command`, `datalong`, `d
 (3,@script_id+4,23000,14,45491,0,0,0,0,0,0,0,0,0,0,0,0,'');
 
 -- Re-work En'kilah Necromancer spawn locations.
+DELETE FROM `creature` WHERE `id` = 25378;
 INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
 (99160,25378,571,1,1,0,0,3842.22,3730.25,47.3423,2.30383,300,0,0,7432,7332,0,2),
 (99161,25378,571,1,1,0,0,3890.13,3719.33,46.9187,3.00197,300,0,0,7432,7332,0,2),
@@ -89,6 +90,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`
 (@guid+21,25378,571,1,1,0,0,4091.81,3448.9,108.985,5.74402,300,0,0,7432,7332,0,2);
 
 -- Add waypoints for En'kilah Necromancer.
+DELETE FROM `creature_movement` WHERE `id` IN (99160,99161,99162);
 INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 (99160,1,3842.22,3730.25,47.3423,2.30383,12000,@script_id+1),
 (99161,1,3890.13,3719.33,46.9187,3.00197,22000,@script_id+1),
