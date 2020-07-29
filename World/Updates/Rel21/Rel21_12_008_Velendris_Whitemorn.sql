@@ -44,6 +44,7 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
 -- Add Velendris Whitemorn gossip.
+DELETE FROM `gossip_menu` WHERE `entry` = 7196;
 INSERT INTO `gossip_menu` VALUES
 (7196,8477,0,0);
 UPDATE `creature_template` SET `GossipMenuId` = 7196 WHERE `Entry` = 15404;
