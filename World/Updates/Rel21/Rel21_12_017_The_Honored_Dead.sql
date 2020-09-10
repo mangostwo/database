@@ -56,8 +56,6 @@ INSERT INTO `db_scripts` (`script_type`,`id`,`delay`,`command`,`datalong`,`datal
 UPDATE `creature` SET `spawntimesecs` = 180 WHERE `id` IN (25342,25343);
 
 -- Small Chapel Fire
--- missing added - WoTLKDB free guids reused
--- DELETE FROM gameobject WHERE `id` = 182071;
 INSERT INTO gameobject (id, map, spawnMask, phaseMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecs, animprogress, state) VALUES
 (182071, 571, 1,1,4080.66, 5808.39, 72.167, 2.81378, 0, 0, 0.986598, 0.163171, -60, 255, 1),
 (182071, 571, 1,1,4065.5, 5851.05, 73.3949, 4.0131, 0, 0, 0.906553, -0.422092, -60, 255, 1),
