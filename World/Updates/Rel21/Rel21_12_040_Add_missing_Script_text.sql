@@ -45,7 +45,7 @@ BEGIN
 
     
 DELETE FROM `creature_ai_texts`  WHERE `entry` = -1406;
-INSERT INTO `mangos_2`.`creature_ai_texts` (`entry`, `content_default`, `type`, `comment`) VALUES 
+INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `type`, `comment`) VALUES 
 ('-1406', '%s loses all self control and begins to attack friend and foe alike!', '2', 'NPCs 23564 24198 24199');
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
