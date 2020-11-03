@@ -51,21 +51,21 @@ set colBold=[101m
 set colWhiteDarkYellow=[97;43m
 
 :setOptions
-set createcharDB=NO
+set createcharDB=YES
 set createworldDB=YES
-set createrealmDB=NO
-set createMangosUser=NO
+set createrealmDB=YES
+set createMangosUser=YES
 set updatesOnly=NO
-set loadcharDB=NO
+set loadcharDB=YES
 set loadworldDB=YES
-set loadrealmDB=NO
+set loadrealmDB=YES
 set defaultsused=NO 
 
-set CDBUpdate=NO
+set CDBUpdate=YES
 set WDBUpdate=YES
-set RDBUpdate=NO
+set RDBUpdate=YES
 
-set addrealmentry=NO
+set addrealmentry=YES
 
 set DBType=POPULATED
 set activity=N
