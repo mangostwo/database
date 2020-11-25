@@ -86,6 +86,7 @@ for TABLE in \
 `item_required_target` \
 `item_template` \
 `locales_achievement_reward` \
+`locales_command` \
 `locales_creature` \
 `locales_gameobject` \
 `locales_gossip_menu_option` \
