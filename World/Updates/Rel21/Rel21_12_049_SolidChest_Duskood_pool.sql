@@ -43,6 +43,8 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
+SET @pool_entry := (SELECT MAX(`entry`) FROM `pool_template`);
+
 -- Solid Chest - Ogre Mound - Duskwood.    
 DELETE FROM `pool_gameobject` WHERE `guid` IN (50993,18562,50931,92347,50853,92346,18547,92342);
 INSERT INTO `pool_gameobject` VALUES
@@ -54,7 +56,7 @@ INSERT INTO `pool_gameobject` VALUES
 (92346,@pool_entry+1,0,'Solid Chest - Ogre Mound - Duskwood'),
 (18547,@pool_entry+1,0,'Solid Chest - Ogre Mound - Duskwood'),
 (92342,@pool_entry+1,0,'Solid Chest - Ogre Mound - Duskwood');
-SET @pool_entry := (SELECT MAX(`entry`) FROM `pool_template`);
+
 INSERT INTO `pool_template` VALUES
 (@pool_entry+1,1,'Solid Chest - Ogre Mound - Duskwood');
 
