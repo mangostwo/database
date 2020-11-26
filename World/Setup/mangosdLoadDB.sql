@@ -48,6 +48,8 @@ CREATE TABLE `db_version` (
 --
 
 DROP TABLE IF EXISTS `achievement_criteria_requirement`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `achievement_criteria_requirement` (
   `criteria_id` mediumint(8) NOT NULL,
   `type` tinyint(3) unsigned NOT NULL DEFAULT '0',
@@ -55,13 +57,15 @@ CREATE TABLE `achievement_criteria_requirement` (
   `value2` mediumint(8) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`criteria_id`,`type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Achievment system';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `achievement_reward`
 --
 
 DROP TABLE IF EXISTS `achievement_reward`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `achievement_reward` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `gender` tinyint(3) NOT NULL DEFAULT '2',
@@ -73,6 +77,7 @@ CREATE TABLE `achievement_reward` (
   `text` text,
   PRIMARY KEY  (`entry`,`gender`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Achievment system';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `areatrigger_involvedrelation`
@@ -204,11 +209,12 @@ DROP TABLE IF EXISTS `command`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `command` (
-  `name` varchar(50) NOT NULL DEFAULT '' COMMENT 'The Command Name.',
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'The unique Command ID.',
+  `command_text` varchar(50) NOT NULL DEFAULT '' COMMENT 'The Command Name.',
   `security` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The minimum security level to use the command (See account.gmlevel) in the realm',
-  `help` longtext COMMENT 'The help text for the command which explains it''s use and parameters.',
-  PRIMARY KEY (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Chat System';
+  `help_text` longtext COMMENT 'The help text for the command which explains it''s use and parameters.',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=808 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Chat System';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -227,7 +233,7 @@ CREATE TABLE `conditions` (
   `comments` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`condition_entry`),
   UNIQUE KEY `unique_conditions` (`type`,`value1`,`value2`)
-) ENGINE=MyISAM AUTO_INCREMENT=1738 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Condition System';
+) ENGINE=MyISAM AUTO_INCREMENT=1753 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Condition System';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -314,7 +320,7 @@ CREATE TABLE `creature_ai_scripts` (
   `action3_param3` int(11) NOT NULL DEFAULT '0' COMMENT 'Parameter 3 of action3_type (See creature_ai_scripts.action3_type)',
   `comment` varchar(255) NOT NULL DEFAULT '' COMMENT 'Documents what an event script is supposed to do.',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19228124 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='EventAI Scripts';
+) ENGINE=MyISAM AUTO_INCREMENT=19228123 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='EventAI Scripts';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -333,7 +339,7 @@ CREATE TABLE `creature_ai_summons` (
   `spawntimesecs` int(11) unsigned NOT NULL DEFAULT '120' COMMENT 'The despawn timer for the summoned creature.',
   `comment` varchar(255) NOT NULL DEFAULT '' COMMENT 'Documents what kind of creature will be summoned.',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='EventAI Summoning Locations';
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='EventAI Summoning Locations';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -438,7 +444,7 @@ CREATE TABLE `creature_loot_template` (
   `item` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Template ID of the item which can be included into the loot.',
   `ChanceOrQuestChance` float NOT NULL DEFAULT '100' COMMENT 'Meaning of that field is a bit different depending on its sign.',
   `groupid` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'A group is a set of loot definitions.',
-  `mincountOrRef` mediumint(9) NOT NULL DEFAULT '1' COMMENT 'This field defines when positive: the minimum number of copies of the item. ',
+  `mincountOrRef` mediumint(9) NOT NULL DEFAULT '1' COMMENT 'This field defines \nwhen positive: the minimum number of copies of the item. ',
   `maxcount` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT 'For non-reference entries - the maximum number of copies of the item.',
   `condition_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Value that represents a loot condition that must be filled.',
   PRIMARY KEY (`entry`,`item`)
@@ -477,7 +483,7 @@ CREATE TABLE `creature_model_race` (
   `modelid_racial` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'option 2, explicit modelid',
   PRIMARY KEY (`modelid`,`racemask`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Model system';
-
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `creature_movement`
@@ -683,7 +689,8 @@ CREATE TABLE `creature_template_addon` (
 --
 
 DROP TABLE IF EXISTS `creature_template_classlevelstats`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `creature_template_classlevelstats` (
   `Level` tinyint(4) NOT NULL COMMENT 'Creature level for the stats.',
   `Class` tinyint(4) NOT NULL COMMENT 'A creature''s class. The following table describes the available classes.',
@@ -699,6 +706,7 @@ CREATE TABLE `creature_template_classlevelstats` (
   `BaseArmor` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Base armor value for any creature of this level and class.',
   PRIMARY KEY (`Level`,`Class`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `creature_template_spells`
@@ -746,6 +754,7 @@ CREATE TABLE `custom_texts` (
   `comment` text COMMENT 'This documents the script text.',
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Custom Texts';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `db_script_string`
@@ -802,7 +811,7 @@ CREATE TABLE `db_scripts` (
   `o` float NOT NULL DEFAULT '0' COMMENT 'Orientation angle (0 to 2*Pi).',
   `comments` varchar(255) NOT NULL COMMENT 'Textual comment.',
   PRIMARY KEY (`script_guid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4298 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10626 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -847,7 +856,8 @@ CREATE TABLE `disenchant_loot_template` (
 --
 
 DROP TABLE IF EXISTS `dungeonfinder_item_rewards`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dungeonfinder_item_rewards` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `min_level` smallint(3) unsigned NOT NULL COMMENT 'dbc value',
@@ -857,13 +867,15 @@ CREATE TABLE `dungeonfinder_item_rewards` (
   `dungeon_type` smallint(4) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `dungeonfinder_requirements`
 --
 
 DROP TABLE IF EXISTS `dungeonfinder_requirements`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dungeonfinder_requirements` (
   `mapId` mediumint(8) unsigned NOT NULL,
   `difficulty` tinyint(3) unsigned NOT NULL DEFAULT '0',
@@ -877,13 +889,15 @@ CREATE TABLE `dungeonfinder_requirements` (
   `comment` text,
   PRIMARY KEY (`mapId`,`difficulty`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Dungeon Finder Requirements';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `dungeonfinder_rewards`
 --
 
 DROP TABLE IF EXISTS `dungeonfinder_rewards`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dungeonfinder_rewards` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `level` mediumint(8) unsigned NOT NULL COMMENT 'uint32',
@@ -891,6 +905,7 @@ CREATE TABLE `dungeonfinder_rewards` (
   `base_monetary_reward` int(10) NOT NULL COMMENT 'int32',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `exploration_basexp`
@@ -1109,7 +1124,7 @@ CREATE TABLE `gameobject` (
   PRIMARY KEY (`guid`),
   KEY `idx_map` (`map`),
   KEY `idx_id` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=200000 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Gameobject System';
+) ENGINE=InnoDB AUTO_INCREMENT=632480 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Gameobject System';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1270,7 +1285,8 @@ CREATE TABLE `gossip_texts` (
 --
 
 DROP TABLE IF EXISTS `instance_encounters`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `instance_encounters` (
   `entry` int(10) unsigned NOT NULL COMMENT 'Unique entry from DungeonEncounter.dbc',
   `creditType` tinyint(3) unsigned NOT NULL DEFAULT '0',
@@ -1278,6 +1294,7 @@ CREATE TABLE `instance_encounters` (
   `lastEncounterDungeon` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'If not 0, LfgDungeon.dbc entry for the instance it is last encounter in',
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `instance_template`
@@ -1300,12 +1317,14 @@ CREATE TABLE `instance_template` (
 --
 
 DROP TABLE IF EXISTS `item_convert`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_convert` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `item` mediumint(8) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Item Convert System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `item_enchantment_template`
@@ -1327,12 +1346,14 @@ CREATE TABLE `item_enchantment_template` (
 --
 
 DROP TABLE IF EXISTS `item_expire_convert`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_expire_convert` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `item` mediumint(8) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Item Convert System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `item_loot_template`
@@ -1524,7 +1545,8 @@ CREATE TABLE `item_template` (
 --
 
 DROP TABLE IF EXISTS `locales_achievement_reward`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `locales_achievement_reward` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `gender` tinyint(3) NOT NULL DEFAULT '2',
@@ -1546,6 +1568,28 @@ CREATE TABLE `locales_achievement_reward` (
   `text_loc8` text DEFAULT NULL,
   PRIMARY KEY (`entry`,`gender`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `locales_command`
+--
+
+DROP TABLE IF EXISTS `locales_command`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `locales_command` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'The unique Command ID.',
+  `help_text_loc1` longtext COMMENT 'Korean help text for the command that explian its use and parameters',
+  `help_text_loc2` longtext COMMENT 'French help text for the command that explian its use and parameters',
+  `help_text_loc3` longtext COMMENT 'German help text for the command that explian its use and parameters',
+  `help_text_loc4` longtext COMMENT 'Chinese help text for the command that explian its use and parameters',
+  `help_text_loc5` longtext COMMENT 'Taiwanese help text for the command that explian its use and parameters',
+  `help_text_loc6` longtext COMMENT 'Spanish Spain help text for the command that explian its use and parameters',
+  `help_text_loc7` longtext COMMENT 'Spanish Latin America help text for the command that explian its use and parameters',
+  `help_text_loc8` longtext COMMENT 'Russian help text for the command that explian its use and parameters',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='GM Commands localized help';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `locales_creature`
@@ -2001,6 +2045,9 @@ CREATE TABLE `mangos_string` (
   `content_loc6` text COMMENT 'Spanish (Spain) localization of content_default',
   `content_loc7` text COMMENT 'Spanish (Latin America) localization of content_default',
   `content_loc8` text COMMENT 'Russian localization of content_default',
+  `source_file` varchar(100) DEFAULT NULL,
+  `source_enum_wrapper` varchar(100) DEFAULT NULL,
+  `source_enum_tag` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2010,6 +2057,8 @@ CREATE TABLE `mangos_string` (
 --
 
 DROP TABLE IF EXISTS `milling_loot_template`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `milling_loot_template` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `item` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -2020,13 +2069,15 @@ CREATE TABLE `milling_loot_template` (
   `condition_id` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Loot System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `npc_spellclick_spells`
 --
 
 DROP TABLE IF EXISTS `npc_spellclick_spells`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `npc_spellclick_spells` (
   `npc_entry` int(10) unsigned NOT NULL COMMENT 'reference to creature_template',
   `spell_id` int(10) unsigned NOT NULL COMMENT 'spell which should be casted ',
@@ -2036,6 +2087,7 @@ CREATE TABLE `npc_spellclick_spells` (
   `cast_flags` tinyint(3) unsigned NOT NULL COMMENT 'first bit defines caster: 1=player, 0=creature; second bit defines target, same mapping as caster bit',
   `condition_id` mediumint(8) unsigned NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `npc_text`
@@ -2050,82 +2102,82 @@ CREATE TABLE `npc_text` (
   `text0_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang0` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text ingame.',
   `prob0` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em0_0_delay` smallint(5) DEFAULT NULL,
-  `em0_0` smallint(5) DEFAULT NULL,
-  `em0_1_delay` smallint(5) DEFAULT NULL,
-  `em0_1` smallint(5) DEFAULT NULL,
-  `em0_2_delay` smallint(5) DEFAULT NULL,
-  `em0_2` smallint(5) DEFAULT NULL,
+  `em0_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em0_0` smallint(5) DEFAULT NULL COMMENT 'Emote to play when text is displayed.',
+  `em0_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em0_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em0_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em0_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed',
   `text1_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text1_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang1` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob1` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em1_0_delay` smallint(5) DEFAULT NULL,
-  `em1_0` smallint(5) DEFAULT NULL,
-  `em1_1_delay` smallint(5) DEFAULT NULL,
-  `em1_1` smallint(5) DEFAULT NULL,
-  `em1_2_delay` smallint(5) DEFAULT NULL,
-  `em1_2` smallint(5) DEFAULT NULL,
+  `em1_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em1_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em1_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em1_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em1_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em1_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text2_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text2_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang2` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob2` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em2_0_delay` smallint(5) DEFAULT NULL,
-  `em2_0` smallint(5) DEFAULT NULL,
-  `em2_1_delay` smallint(5) DEFAULT NULL,
-  `em2_1` smallint(5) DEFAULT NULL,
-  `em2_2_delay` smallint(5) DEFAULT NULL,
-  `em2_2` smallint(5) DEFAULT NULL,
+  `em2_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em2_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em2_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em2_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em2_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em2_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text3_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text3_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang3` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob3` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em3_0_delay` smallint(5) DEFAULT NULL,
-  `em3_0` smallint(5) DEFAULT NULL,
-  `em3_1_delay` smallint(5) DEFAULT NULL,
-  `em3_1` smallint(5) DEFAULT NULL,
-  `em3_2_delay` smallint(5) DEFAULT NULL,
-  `em3_2` smallint(5) DEFAULT NULL,
+  `em3_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em3_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em3_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em3_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em3_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em3_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text4_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text4_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang4` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob4` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em4_0_delay` smallint(5) DEFAULT NULL,
-  `em4_0` smallint(5) DEFAULT NULL,
-  `em4_1_delay` smallint(5) DEFAULT NULL,
-  `em4_1` smallint(5) DEFAULT NULL,
-  `em4_2_delay` smallint(5) DEFAULT NULL,
-  `em4_2` smallint(5) DEFAULT NULL,
+  `em4_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em4_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em4_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em4_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em4_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em4_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text5_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text5_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang5` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob5` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em5_0_delay` smallint(5) DEFAULT NULL,
-  `em5_0` smallint(5) DEFAULT NULL,
-  `em5_1_delay` smallint(5) DEFAULT NULL,
-  `em5_1` smallint(5) DEFAULT NULL,
-  `em5_2_delay` smallint(5) DEFAULT NULL,
-  `em5_2` smallint(5) DEFAULT NULL,
+  `em5_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em5_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em5_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em5_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em5_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em5_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text6_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text6_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang6` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob6` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em6_0_delay` smallint(5) DEFAULT NULL,
-  `em6_0` smallint(5) DEFAULT NULL,
-  `em6_1_delay` smallint(5) DEFAULT NULL,
-  `em6_1` smallint(5) DEFAULT NULL,
-  `em6_2_delay` smallint(5) DEFAULT NULL,
-  `em6_2` smallint(5) DEFAULT NULL,
+  `em6_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em6_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em6_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em6_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em6_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em6_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text7_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text7_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang7` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob7` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em7_0_delay` smallint(5) DEFAULT NULL,
-  `em7_0` smallint(5) DEFAULT NULL,
-  `em7_1_delay` smallint(5) DEFAULT NULL,
-  `em7_1` smallint(5) DEFAULT NULL,
-  `em7_2_delay` smallint(5) DEFAULT NULL,
-  `em7_2` smallint(5) DEFAULT NULL,
+  `em7_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em7_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em7_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em7_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em7_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em7_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2429,7 +2481,7 @@ CREATE TABLE `pool_creature` (
   `description` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT 'Description.',
   PRIMARY KEY (`guid`),
   KEY `pool_idx` (`pool_entry`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2463,7 +2515,7 @@ CREATE TABLE `pool_gameobject` (
   `description` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT 'Description.',
   PRIMARY KEY (`guid`),
   KEY `pool_idx` (`pool_entry`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2497,7 +2549,7 @@ CREATE TABLE `pool_pool` (
   `description` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT 'Description.',
   PRIMARY KEY (`pool_id`),
   KEY `pool_idx` (`mother_pool`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2520,7 +2572,8 @@ CREATE TABLE `pool_template` (
 --
 
 DROP TABLE IF EXISTS `prospecting_loot_template`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `prospecting_loot_template` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `item` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -2531,13 +2584,15 @@ CREATE TABLE `prospecting_loot_template` (
   `condition_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Loot System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `quest_poi`
 --
 
 DROP TABLE IF EXISTS `quest_poi`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `quest_poi` (
   `questId` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `poiId` tinyint(3) unsigned NOT NULL DEFAULT '0',
@@ -2549,13 +2604,15 @@ CREATE TABLE `quest_poi` (
   `unk4` int(11) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`questId`,`poiId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `quest_poi_points`
 --
 
 DROP TABLE IF EXISTS `quest_poi_points`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `quest_poi_points` (
   `questId` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `poiId` tinyint(3) unsigned NOT NULL DEFAULT '0',
@@ -2563,13 +2620,15 @@ CREATE TABLE `quest_poi_points` (
   `y` int(11) NOT NULL DEFAULT '0',
   KEY `idx_poip` (`questId`,`poiId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `quest_relations`
 --
 
 DROP TABLE IF EXISTS `quest_relations`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `quest_relations` (
   `actor` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The Entity involved in the quest',
   `entry` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'Creature or GO entr',
@@ -2577,6 +2636,7 @@ CREATE TABLE `quest_relations` (
   `role` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Role of the actor',
   PRIMARY KEY (`entry`,`quest`,`role`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `quest_template`
@@ -2809,7 +2869,8 @@ CREATE TABLE `reserved_name` (
 --
 
 DROP TABLE IF EXISTS `script_binding`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `script_binding` (
   `type` tinyint(2) unsigned NOT NULL COMMENT 'enum ScriptedObjectType in ScriptMgr.h',
   `ScriptName` char(64) NOT NULL COMMENT 'Script name, to be unique across all types',
@@ -2818,13 +2879,15 @@ CREATE TABLE `script_binding` (
   PRIMARY KEY (`ScriptName`,`bind`),
   KEY `type` (`type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='SD2 Script Names and Binding';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `script_texts`
 --
 
 DROP TABLE IF EXISTS `script_texts`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `script_texts` (
   `entry` mediumint(8) NOT NULL COMMENT 'Script text ID.',
   `content_default` text NOT NULL COMMENT 'Contains the text presented in the default language English.',
@@ -2843,13 +2906,15 @@ CREATE TABLE `script_texts` (
   `comment` text COMMENT 'Textual comment.',
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Script Texts';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `script_waypoint`
 --
 
 DROP TABLE IF EXISTS `script_waypoint`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `script_waypoint` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Creature ID (See creature_template.entry).',
   `pointid` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Point ID.',
@@ -2860,14 +2925,15 @@ CREATE TABLE `script_waypoint` (
   `point_comment` text COMMENT 'Textual comment.',
   PRIMARY KEY (`entry`,`pointid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Script Creature waypoints';
-
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `skill_discovery_template`
 --
 
 DROP TABLE IF EXISTS `skill_discovery_template`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `skill_discovery_template` (
   `spellId` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'SpellId of the discoverable spell',
   `reqSpell` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'spell requirement',
@@ -2875,13 +2941,15 @@ CREATE TABLE `skill_discovery_template` (
   `chance` float NOT NULL DEFAULT '0' COMMENT 'chance to discover',
   PRIMARY KEY (`spellId`,`reqSpell`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Skill Discovery System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `skill_extra_item_template`
 --
 
 DROP TABLE IF EXISTS `skill_extra_item_template`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `skill_extra_item_template` (
   `spellId` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'SpellId of the item creation spell',
   `requiredSpecialization` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Specialization spell id',
@@ -2889,6 +2957,7 @@ CREATE TABLE `skill_extra_item_template` (
   `additionalMaxNum` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'max num of adds',
   PRIMARY KEY (`spellId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Skill Specialization System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `skill_fishing_base_level`
@@ -2988,8 +3057,8 @@ DROP TABLE IF EXISTS `spell_elixir`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spell_elixir` (
-  `entry` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'SpellId of potion',
-  `mask` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT 'Mask 0x1 battle 0x2 guardian 0x3 flask 0x7 unstable flasks 0xB shattrath flasks',
+  `entry` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'Spell ID (See Spell.dbc).',
+  `mask` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT 'Defines what type of potion/food spell this is.',
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Spell System';
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3014,7 +3083,8 @@ CREATE TABLE `spell_learn_spell` (
 --
 
 DROP TABLE IF EXISTS `spell_loot_template`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spell_loot_template` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `item` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -3025,6 +3095,7 @@ CREATE TABLE `spell_loot_template` (
   `condition_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Loot System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `spell_pet_auras`
@@ -3124,7 +3195,8 @@ CREATE TABLE `spell_target_position` (
 --
 
 DROP TABLE IF EXISTS `spell_template`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spell_template` (
   `id` int(11) unsigned NOT NULL DEFAULT '0',
   `attr` int(11) unsigned NOT NULL DEFAULT '0',
@@ -3145,6 +3217,7 @@ CREATE TABLE `spell_template` (
   `comments` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='MaNGOS server side spells';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `spell_threat`
@@ -3181,7 +3254,8 @@ CREATE TABLE `transports` (
 -- Table structure for table `vehicle_accessory`
 --
 DROP TABLE IF EXISTS `vehicle_accessory`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `vehicle_accessory` (
   `vehicle_entry` int(10) unsigned NOT NULL COMMENT 'entry of the npc who has some accessory as vehicle',
   `seat` mediumint(8) unsigned NOT NULL COMMENT 'onto which seat shall the passenger be boarded',
@@ -3189,6 +3263,8 @@ CREATE TABLE `vehicle_accessory` (
   `comment` varchar(255) NOT NULL,
   PRIMARY KEY (`vehicle_entry`,`seat`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Vehicle Accessory (passengers that are auto-boarded onto a vehicle)';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
 --
 -- Table structure for table `warden`
 --
@@ -3197,8 +3273,8 @@ DROP TABLE IF EXISTS `warden`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `warden` (
-  `id` smallint(5) unsigned NOT NULL COMMENT 'Check ID from warden_checks',
-  `build` smallint(5) unsigned NOT NULL COMMENT 'Client build',
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Unique Identifier',
+  `build` smallint(5) unsigned NOT NULL COMMENT 'Build Number',
   `type` tinyint(3) unsigned DEFAULT NULL COMMENT 'Check Type',
   `data` varchar(48) NOT NULL DEFAULT '',
   `str` varchar(20) NOT NULL DEFAULT '',
@@ -3207,8 +3283,7 @@ CREATE TABLE `warden` (
   `result` varchar(24) NOT NULL DEFAULT '',
   `comment` varchar(50) DEFAULT '' COMMENT 'Description of what the check is',
   PRIMARY KEY (`id`,`build`)
-) ENGINE=MyISAM AUTO_INCREMENT=790 DEFAULT CHARSET=utf8;
-
+) ENGINE=MyISAM AUTO_INCREMENT=1571 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

@@ -6178,7 +6178,9 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (25575,1,'RARE King Krush (32485)'),
 (25576,1,'RARE Terror Spinner (32475)'),
 (25577,1,'RARE High Thane Jorfus (32501)'),
-(25578,1,'RARE Vyragosa / Time-lost proto-drake (32630/32491)');
+(25578,1,'RARE Vyragosa / Time-lost proto-drake (32630/32491)'),
+(25579,1,'Solid Chest - Ogre Mound - Duskwood'),
+(25580,1,'Solid Chest - Ogre Mound - Duskwood');
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -6191,4 +6193,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-14 22:01:52
+-- Dump completed on 2020-11-25 23:58:51

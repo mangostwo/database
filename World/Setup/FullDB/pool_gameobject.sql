@@ -5893,12 +5893,14 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (18544,955,0,'Peacebloom zone 215, node 143'),
 (18545,975,0,'Felweed zone 3521, node 39'),
 (18546,975,0,'Felweed zone 3521, node 40'),
+(18547,25580,0,'Solid Chest - Ogre Mound - Duskwood'),
 (18548,975,0,'Felweed zone 3521, node 41'),
 (18549,955,0,'Peacebloom zone 215, node 144'),
 (18551,955,0,'Peacebloom zone 215, node 145'),
 (18552,955,0,'Peacebloom zone 215, node 146'),
 (18557,975,0,'Felweed zone 3521, node 42'),
 (18560,955,0,'Earthroot zone 215, node 147'),
+(18562,25580,0,'Solid Chest - Ogre Mound - Duskwood'),
 (18563,975,0,'Felweed zone 3521, node 43'),
 (18569,995,0,'Briarthorn zone 10, node 213'),
 (18570,995,0,'Mageroyal zone 10, node 214'),
@@ -10072,6 +10074,9 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (50422,25428,2.77,'1852515 - Netherwing Egg #3'),
 (50423,25428,2.77,'1852515 - Netherwing Egg #2'),
 (50424,25428,2.77,'1852515 - Netherwing Egg #1'),
+(50853,25580,0,'Solid Chest - Ogre Mound - Duskwood'),
+(50931,25580,0,'Solid Chest - Ogre Mound - Duskwood'),
+(50993,25580,0,'Solid Chest - Ogre Mound - Duskwood'),
 (54137,25567,0,'Bloodsail Charts Point 2'),
 (54217,25568,0,'Bloodsail Orders Point 3'),
 (55112,976,0,'Felweed zone 3520, node 147'),
@@ -22100,13 +22105,13 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (78375,6573,7,'Mineral Spawn Point 57 - Truesilver'),
 (78376,6573,3,'Mineral Spawn Point 57 - Silver'),
 (78377,6574,0,'Mineral Spawn Point 58 - Mithril'),
-(78378,6574,30,'Mineral Spawn Point 58 - Small Thorium'),
+(78378,6574,30,'Mineral Spawn Point 58 - Small Thorium');
+INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES 
 (78379,6574,10,'Mineral Spawn Point 58 - Iron'),
 (78380,6574,10,'Mineral Spawn Point 58 - Gold'),
 (78381,6574,7,'Mineral Spawn Point 58 - Truesilver'),
 (78382,6574,3,'Mineral Spawn Point 58 - Silver'),
-(78383,6575,0,'Mineral Spawn Point 59 - Mithril');
-INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES 
+(78383,6575,0,'Mineral Spawn Point 59 - Mithril'),
 (78384,6575,30,'Mineral Spawn Point 59 - Small Thorium'),
 (78385,6575,10,'Mineral Spawn Point 59 - Iron'),
 (78386,6575,10,'Mineral Spawn Point 59 - Gold'),
@@ -27063,6 +27068,9 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (91361,25553,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 2'),
 (92216,1900,0,'The Deadmines - Large Battered Chest 6'),
 (92217,1900,0,'The Deadmines - Large Battered Chest 7'),
+(92342,25580,0,'Solid Chest - Ogre Mound - Duskwood'),
+(92346,25580,0,'Solid Chest - Ogre Mound - Duskwood'),
+(92347,25580,0,'Solid Chest - Ogre Mound - Duskwood'),
 (93304,982,0,'Goldclover Sholazar Basin, node 166'),
 (93305,982,0,'Goldclover Sholazar Basin, node 167'),
 (93306,982,0,'Goldclover Sholazar Basin, node 168'),
@@ -34843,4 +34851,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-14 22:01:52
+-- Dump completed on 2020-11-25 23:58:50

@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel21_11_075_Minor_updates
+Rel21_12_055_NPC_1434_position_fix
 
 You need to run the appriopriate updates in the zip file  in folder:
 

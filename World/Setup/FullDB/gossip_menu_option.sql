@@ -449,9 +449,8 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (2385,2,0,'Learn about Dual Talent Specialization.',1,1,10371,0,0,0,0,'',642),
 (2387,0,0,'Um... sorry to bother you, but could I see Goodsteel\'s ledger again... if you\'re not using it.',1,1,0,0,0,0,0,'',0),
 (2404,0,6,'I would like to check my deposit box.',9,131072,0,0,0,0,0,'',0),
-(2405,0,0,'Is there a difference between ooze and slime?',1,1,0,0,0,0,0,'',0),
-(2405,1,0,'What do you mean by \"pure?\"',1,1,0,0,0,0,0,'',0),
-(2405,2,0,'Are there any areas you can think of that would be so untouched?',1,1,0,0,0,0,0,'',0),
+(2406,0,0,'What do you mean by \"pure?\"',1,1,2407,0,0,0,0,'',1780),
+(2405,0,0,'Is there a difference between ooze and slime?',1,1,2406,0,0,0,0,'',1780),
 (2422,0,0,'What do you think of Dadanga?',1,1,2421,0,0,0,0,'',0),
 (2441,0,0,'Where is the zeppelin now?',1,1,0,0,0,0,0,'',0),
 (2464,0,1,'Let me browse your goods.',3,128,0,0,0,0,0,'',0),
@@ -3364,7 +3363,7 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (20018,0,0,'So how did he break the deal?',1,1,20019,0,0,0,0,NULL,0),
 (20019,0,0,'Perhaps I can be of some assistance. I will make a deal with you, Satyr. I shall recover this unforged breastplate and slay the beast. In exchange for this task, you will teach me how to create the breastplate.',1,1,-1,0,3049,0,0,NULL,0),
 (20022,0,0,'I need a Cenarion beacon.',1,1,-1,0,2208,0,0,NULL,628),
-(20071,0,0,'Wind Trader Marid, I\'ve returned with more information on the nether drakes.\r\nI\'m prepared to be your business partner, and for an extra sum, I\'ll take care of that troublesome elf and her human friend.',1,1,-1,0,2007101,0,0,NULL,1734),
+(20071,0,0,'Wind Trader Marid, I\'ve returned with more information on the nether drakes.$B$BI\'m prepared to be your business partner, and for an extra sum, I\'ll take care of that troublesome elf and her human friend.',1,1,-1,0,2007101,0,0,NULL,1734),
 (21221,0,3,'Can you train me how to use rogue skills?',5,16,0,0,0,0,0,'',0),
 (21221,1,0,'I wish to unlearn my talents.',1,1,4461,0,0,0,0,'',530),
 (21221,2,0,'Learn about Dual Talent Specialization.',1,1,10371,0,0,0,0,'',632),
@@ -3388,7 +3387,9 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (4016,0,3,'I seek training to ride a steed.',5,16,0,0,0,0,0,'',0),
 (10649,0,0,'Yes I do!',1,1,-1,0,10649,0,0,NULL,0),
 (3310,1,0,'Eva, I have lost the Spectral Essence. I need another.',1,1,-1,0,13854305,0,0,NULL,1773),
-(7371,0,0,'Balandar sent me to get you out of here and pick up his cargo. He is waiting for you in the Brackenwall.',1,1,-1,0,7371,0,0,NULL,1774);
+(7371,0,0,'Balandar sent me to get you out of here and pick up his cargo. He is waiting for you in the Brackenwall.',1,1,-1,0,7371,0,0,NULL,1774),
+(2407,0,0,'Are there any areas you can think of that would be so untouched?',1,1,2408,0,0,0,0,'',1780),
+(6088,1,0,'I\'d like to stable my pet here',14,4194304,0,0,0,0,0,NULL,0);
 /*!40000 ALTER TABLE `gossip_menu_option` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -3401,4 +3402,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-14 22:01:45
+-- Dump completed on 2020-11-25 23:58:38

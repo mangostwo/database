@@ -1076,7 +1076,14 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (1774,9,9437,0,NULL),
 (1775,4,4568,0,'The Coin Master - Dalaran Fountain'),
 (1405,8,11892,0,'Arch Druid Lathorius - Gossip'),
-(1776,8,11864,0,'Arch Druid Lathorius - Gossip');
+(1776,8,11864,0,'Arch Druid Lathorius - Gossip'),
+(1777,8,4512,0,'Show gossip text 3099 if quest, A Little Slime Goes a Long Way (Part 1),
+ is rewarded'),
+(1778,8,4513,0,'Show gossip text 3098 if quest, A Little Slime Goes a Long Way (Part 2),
+ is rewarded'),
+(1779,-3,1778,0,'Only show if quest, A Little Slime Goes a Long Way (Part 2),
+ is NOT rewarded'),
+(1780,-1,1777,1779,'Condition Check for A Little Slime Goes a Long Way gossip');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1089,4 +1096,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-14 22:01:34
+-- Dump completed on 2020-11-25 23:58:23

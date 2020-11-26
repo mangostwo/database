@@ -1414,7 +1414,12 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000486,'I think, I\'ll be able to get to Brackenwall. The cargo they carried to the top of the towers. Be careful!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
 (2000000487,'To arms! the prisoner is escaping!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,''),
 (2000006004,'It would be a shame to let these leaflets go to waste, wouldn\'t it?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
-(2000006005,'With just a little creative editing, these are much more useful... ',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL);
+(2000006005,'With just a little creative editing, these are much more useful... ',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000006006,'Incredible! Amazing! I don\'t even know what this means!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Laris Say.'),
+(2000000944,'You call that a hammer strike? What kind of amateurs am I workin\' with here?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274'),
+(2000000945,'And WHAT are our soldiers supposed to do with that shoddy piece of junk?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274'),
+(2000000946,'You\'re an embarrassment to this entire operation! Pack up your stuff and get out!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274'),
+(2000000947,'You keep that garbage up and I\'ll ship you back to your momma in a box with a note strapped to your chest that reads: FAILURE.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274');
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1427,4 +1432,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-14 22:01:40
+-- Dump completed on 2020-11-25 23:58:31

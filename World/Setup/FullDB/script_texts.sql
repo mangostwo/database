@@ -4230,7 +4230,10 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-1230059,'Hey, my pockets were picked!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Plugger Spazzring YELL_PICKPOCKETED'),
 (-1230065,'Prepare to meet your doom at the hands of Ragnaros\' most powerful servant!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Emperor Thaurissan YELL_AGGRO_3'),
 (-1230069,'%s kisses Mistress Nagmara',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,17,'Rocknot TEXTEMOTE_ROCKNOT'),
-(-1999926,'Overlord Wyrmthalak calls for help!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'9568');
+(-1999926,'Overlord Wyrmthalak calls for help!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'9568'),
+(-1001252,'%s is immobilized.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'npc_solenor EMOTE_IMMOBILIZED'),
+(-1001253,'You dare interfere with this being\'s testing? The battle must be fought alone! You shall all pay for this interference!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'the_cleaner SAY_THE_CLEANER_AGGRO'),
+(-1001251,'%s is stricken by a virulent poison.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'npc_artorius EMOTE_POISON');
 /*!40000 ALTER TABLE `script_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -4243,4 +4246,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-14 22:01:55
+-- Dump completed on 2020-11-25 23:58:54

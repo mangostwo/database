@@ -141,7 +141,10 @@ INSERT INTO `gossip_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-3650001,'I am ready. However, I\'d like to skip the pageantry.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'herald GOSSIP_ITEM_READY_SKIP_INTRO'),
 (-3650002,'I am ready for the next challenge.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'herald GOSSIP_ITEM_READY_NEXT_CHALLENGE'),
 (-3230003,'Why don\'t you and Rocknot go find somewhere private...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'nagmara GOSSIP_ITEM_NAGMARA'),
-(-3006669,'I am ready, Anchorite. Let us begin the exorcism.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'anchorite barada GOSSIP_ITEM_EXORCISM');
+(-3006669,'I am ready, Anchorite. Let us begin the exorcism.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'anchorite barada GOSSIP_ITEM_EXORCISM'),
+(-3509002,'A gnome, really ? Show me your real face, daemon !','A gnome, really ? Show me your real face, daemon !','Un gnome, vraiment ? Montre moi ton vrai visage, démon !',NULL,NULL,NULL,NULL,NULL,NULL,'nelson the nice GOSSIP_ITEM_NELSON_THE_NICE'),
+(-3509003,'A tauren, really ? Show me your real face, daemon !','A tauren, really ? Show me your real face, daemon !','Un tauren, vraiment ? Montre moi ton vrai visage, démon !',NULL,NULL,NULL,NULL,NULL,NULL,'artorius teh amiable GOSSIP_ITEM_ARTORIUS_THE_AMIABLE'),
+(-3509004,'Show me your real face, daemon !','Show me your real face, daemon !','Montre moi ton vrai visage, démon !',NULL,NULL,NULL,NULL,NULL,NULL,'npc_klinfran_the_crazed GOSSIP_ITEM_KLINFRAN_THE_AMIABLE');
 /*!40000 ALTER TABLE `gossip_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -154,4 +157,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-14 22:01:45
+-- Dump completed on 2020-11-25 23:58:38

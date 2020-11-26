@@ -654,7 +654,7 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-626,'And the Kirin Tor? What have they to say of this necromancy?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'20353'),
 (-627,'Then teach me, Kel\'Thuzad. Teach me everything you know...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'20353'),
 (-628,'What? Where in a..? Don\'t just stand around lads KILL SOMEBODY!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,13193,1,0,0,'26796'),
-(-629,'Now we\re getting someplace!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,13195,1,0,0,'26796'),
+(-629,'Now we\'re gettin\' somewhere!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,13195,1,0,0,'26796'),
 (-630,'Is that all you\'ve... got?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,13194,1,0,0,'26796'),
 (-631,'What is this? Mag thorin Kar! Kill them!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,13458,1,0,0,'26798'),
 (-632,'Our task is not yet done!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,13459,1,0,0,'26798'),
@@ -1378,7 +1378,9 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-1433,'%s\'s eyes glow red for a brief moment.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'25730'),
 (-1434,'Is that the best you can do?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'25730'),
 (-1435,'I require more bodies! Bring them to me at once!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'25618'),
-(-1436,'Bring the Flenser the fallen Horde! They will be reanimated as soldiers of the Lich King!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'25618');
+(-1436,'Bring the Flenser the fallen Horde! They will be reanimated as soldiers of the Lich King!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'25618'),
+(-20909,'How dare you interfere with our work!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Bishop Street - Say on argo'),
+(-1406,'%s loses all self control and begins to attack friend and foe alike!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'NPCs 23564 24198 24199');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1391,4 +1393,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-14 22:01:36
+-- Dump completed on 2020-11-25 23:58:26
