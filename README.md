@@ -4,7 +4,7 @@
 ---
 
 [<img src="https://www.getmangos.eu/!assets_mangos/Mangos2.png" width="48" valign="middle"/>](http://getmangos.eu)
- **MangosOne - The Wrath of the Lich King WoW Database**
+ **MangosTwo - The Wrath of the Lich King WoW Database**
 ===
 
 This is the database to support the MangosTwo server.
