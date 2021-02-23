@@ -1,36 +1,106 @@
-<table border=0 cellpadding=0 cellspacing=0 valign='top'><tr>
-<td><a href='https://www.getmangos.eu' target='getmangos.eu'><img src='https://www.getmangos.eu/!assets_mangos/logo.png' border=0></a></td>
-<td valign='top'>
-<a href='https://www.getmangos.eu/forums/' target='getmangos.forum'><img src='/icons/FORUM.gif' border=0></a>
-<a href='https://www.getmangos.eu/wiki' target='getmangos.wiki'><img src='/icons/WIKI.gif' border=0></a>
-<a href='https://www.getmangos.eu/github-activity/' target='getmangos.activity'><img src='/icons/ACTIVITY.gif' border=0></a>
-<a href='https://www.getmangos.eu/bug-tracker/mangos-two/' target='getmangos.tracker'><img src='/icons/TRACKER.gif' border=0></a>
-<br />Build Status: <br/>Linux 
-<a href='https://travis-ci.org/mangostwo/server/builds' target='MangosTwo'><img src='https://travis-ci.org/mangostwo/server.png' border=0></a>
- Windows 
-<a href='https://ci.appveyor.com/project/MaNGOS/server-80qcn/history' target='MangosTwo'><img src='https://ci.appveyor.com/api/projects/status/github/mangostwo/server?branch=master&svg=true' border=0></a>
-</td></tr></table>
+[<img src='https://www.getmangos.eu/!assets_mangos/currentlogo.gif' width="48" border=0>](https://www.getmangos.eu)
+[<img src='https://www.getmangos.eu/!assets_mangos/logo.png' border=0>](https://www.getmangos.eu)
 
-WoTLK World Database
+---
+
+[<img src="https://www.getmangos.eu/!assets_mangos/Mangos2.png" width="48" valign="middle"/>](http://getmangos.eu)
+ **MangosOne - The Wrath of the Lich King WoW Database**
 ===
 
-### A World Database for WoTLK Wow
+This is the database to support the MangosTwo server.
+
+It aims to be 100% compatible with the final version of WOTLK [World of Warcraft][2]
+namely [patch 3.3.5a][4].
+
+
+Dependencies
+------------
+The server stands on the shoulders of several well-known Open Source libraries plus
+a few awesome, but less known libraries to prevent us from inventing the wheel again.
+
+**Please note that Linux and Mac OS X users should install packages using
+their systems package management instead of source packages.**
+
+* **MySQL** / **MariaDB**: to store content, and user data, we rely on
+  [MySQL][40]/[MariaDB][41] to handle data.
+
+<br>We have a small, but extremely friendly and helpful community managed by MadMax and Antz.
+<br>Any trolling or unpleasantness is swiftly dealt with !!
+* Our discord/forum motto is "Be nice or Be somewhere else"
+
+**Official Website**
 ----
-A content database for [**WoTLK**][10] MaNGOS Servers, and [**World of Warcraft**][50] Client Patch
-3.3.5a - [Wrath of the Lich King][51].
 
-### How to Install
----------------
-##### Linux
+We welcome anyone who is interested in enjoying older versions of wow or contributing and helping out !
 
-1. Run: **InstallDatabases.sh** and follow the onscreen prompts.
+* [**Official MaNGOS Website**](https://getmangos.eu/)  
 
-##### Windows
+**Discord Server**
+----
+[![Widget for the Discord API guild](https://discord.com/api/guilds/286167585270005763/widget.png?style=banner2)](https://discord.gg/CzXcBXq) 
 
-1. Run: **InstallDatabases.bat** and follow the onscreen prompts.
+**Main Wiki**
+----
+
+The repository of as much information as we can pack in. Details regarding the Database, file type definitions, packet definitons etc.
+
+* [**Wiki Table of Contents**](http://getmangos.eu/wiki)  
 
 
-[10]: https://github.com/mangostwo/server "mangos Two"
+**Bug / Issue Tracker**
+----
 
-[50]: http://blizzard.com/games/wow/ "World of Warcraft"
-[51]: http://www.wowpedia.org/Patch_3.3.5a "WoW 3.3.5a"
+Found an issue or something which doesn't seem right, please log it in the relevant section of the Bug Tracker.
+
+* [**Bug Tracker**](https://www.getmangos.eu/bug-tracker/mangos-two/)
+
+**How to Install**
+----
+
+**Linux**
+
+Run: `InstallDatabases.sh` and follow the onscreen prompts.
+
+**Windows**
+
+Run: `InstallDatabases.bat` and follow the onscreen prompts.
+
+**Installation Guides**
+----
+
+More comprehensive Installation instructions for various operation systems can be found here.
+
+* [**Installation Guides**](https://www.getmangos.eu/wiki/documentation/installation-guides/) 
+
+
+License
+-------
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
+Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+The full license is included in the file [LICENSE](LICENSE).
+
+We have all put in hundreds of hours of time for free to make the server what it
+is today.
+<br>All we ask is that if you modify the code and make improvements, please have
+the decency to feed those changes back to us.
+
+Acknowledgements
+--------
+World of Warcraft, and all related art, images, and lore are copyright [Blizzard Entertainment, Inc.][1]
+
+[1]: http://blizzard.com/ "Blizzard Entertainment Inc. · we love you!"
+[2]: https://worldofwarcraft.com/ "World of Warcraft"
+[4]: http://www.wowpedia.org/Patch_3.3.5a "WoW 3.3.5a"
+[40]: http://www.mysql.com/ "MySQL · The world's most popular open source database"
+[41]: http://www.mariadb.org/ "MariaDB · An enhanced, drop-in replacement for MySQL"
