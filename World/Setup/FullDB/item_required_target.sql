@@ -7,7 +7,7 @@ TRUNCATE TABLE `item_required_target`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -82,6 +82,7 @@ INSERT INTO `item_required_target` (`entry`, `type`, `targetEntry`) VALUES
 (23337,1,16880),
 (23394,1,16847),
 (23417,1,16975),
+(23693,1,17226),
 (23697,1,15650),
 (23702,1,15652),
 (23703,1,16353),
@@ -220,4 +221,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:58:40
+-- Dump completed on 2021-03-18 22:15:36

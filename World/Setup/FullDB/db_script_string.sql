@@ -7,7 +7,7 @@ TRUNCATE TABLE `db_script_string`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -447,6 +447,8 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000483,'Hah! Bullseye!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000484,'Agh... a chill ran up my spine.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000485,'They\'ll see the light, I hope.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000486,'I think, I\'ll be able to get to Brackenwall. The cargo they carried to the top of the towers. Be careful!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
+(2000000487,'To arms! the prisoner is escaping!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,''),
 (2000000488,'%s reads from the book of the dead.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,NULL),
 (2000000489,'Shane Dabiri, Lee, Alex T., Rob F., J. A. B.,  A. Mayberry!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
 (2000000490,'Jeffrey Kaplan! Tom Chilton! Rob Pardo!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
@@ -559,13 +561,28 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000697,'And it looks like he\'s got reinforcements comin\' from Nazjatar!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
 (2000000698,'We\'ve got to do something about this!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,5,NULL),
 (2000000699,'Thank you, Adamant. I think I know just the person for the job.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,2,NULL),
+(2000000805,'Thank you. I will not forget this!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000806,'You have to put a stop to this madness before it\'s too late!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000807,'My thanks to you, hero!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000808,'Oh, thank you, thank you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000809,'Avenge my friends who have already been sacrificed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000810,'Thank goodness for you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000811,'The vrykul are evil and must be destroyed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000812,'You saved my life!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000813,'Speak with me to hear my tale.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
 (2000000827,'Don\'t you people ever check the mail?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000828,'How am I expected to deliver all of these messages?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000829,'I need to be re-assigned. This job is pushing me over the edge...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000830,'He thinks he\'s so damned important. Always pushing me around... I\'ll show him. I\'ll show all of them!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000831,'If only I could get back to the mushroom thicket. I have not seen such a mature cluster in my lifetime!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000944,'You call that a hammer strike? What kind of amateurs am I workin\' with here?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274'),
+(2000000945,'And WHAT are our soldiers supposed to do with that shoddy piece of junk?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274'),
+(2000000946,'You\'re an embarrassment to this entire operation! Pack up your stuff and get out!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274'),
+(2000000947,'You keep that garbage up and I\'ll ship you back to your momma in a box with a note strapped to your chest that reads: FAILURE.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274'),
 (2000001010,'Oh no!  I\'m losing this one!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000001489,'Yarrrr!  If it\'s me treasure yer lookin\' for... yer gonna have to fight for it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'Black Conrad\'s Ghost'),
+(2000001490,'Yer dead, landlubber!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Spectral Sailor'),
+(2000001491,'Yarrrrr... dead again!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Black Conrad\'s Ghost'),
 (2000001740,'Reports from the test on the enemy fleet have come in, sir!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
 (2000001741,'Excellent.  What\'s the lowdown?  Do we have a bodycount?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
 (2000001742,'Well... the good news is we forced the reinforcements to turn back.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
@@ -1400,26 +1417,9 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000006001,'Puny $r cannot lift spear. Gor lift spear.!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gor say 1.'),
 (2000006002,'Hah! The Thunderspike is mine. Die!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gor say 2.'),
 (2000006003,'You\'ve saved me, fleshling! Ameer will hear of this noble act.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Captain Tyralius say on prison release'),
-(2000000805,'Thank you. I will not forget this!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000806,'You have to put a stop to this madness before it\'s too late!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000807,'My thanks to you, hero!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000808,'Oh, thank you, thank you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000809,'Avenge my friends who have already been sacrificed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000810,'Thank goodness for you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000811,'The vrykul are evil and must be destroyed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000000812,'You saved my life!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000001489,'Yarrrr!  If it\'s me treasure yer lookin\' for... yer gonna have to fight for it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'Black Conrad\'s Ghost'),
-(2000001490,'Yer dead, landlubber!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Spectral Sailor'),
-(2000001491,'Yarrrrr... dead again!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Black Conrad\'s Ghost'),
-(2000000486,'I think, I\'ll be able to get to Brackenwall. The cargo they carried to the top of the towers. Be careful!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
-(2000000487,'To arms! the prisoner is escaping!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,''),
 (2000006004,'It would be a shame to let these leaflets go to waste, wouldn\'t it?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
 (2000006005,'With just a little creative editing, these are much more useful... ',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000006006,'Incredible! Amazing! I don\'t even know what this means!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Laris Say.'),
-(2000000944,'You call that a hammer strike? What kind of amateurs am I workin\' with here?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274'),
-(2000000945,'And WHAT are our soldiers supposed to do with that shoddy piece of junk?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274'),
-(2000000946,'You\'re an embarrassment to this entire operation! Pack up your stuff and get out!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274'),
-(2000000947,'You keep that garbage up and I\'ll ship you back to your momma in a box with a note strapped to your chest that reads: FAILURE.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,397,'NPC - 25274');
+(2000006006,'Incredible! Amazing! I don\'t even know what this means!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Laris Say.');
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1432,4 +1432,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:58:31
+-- Dump completed on 2021-03-18 22:15:26

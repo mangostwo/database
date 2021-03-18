@@ -1,8 +1,8 @@
 If your database is a version prior to:
 
-Rel21_12_055_NPC_1434_position_fix
+Rel21_13_003_Update_barrel_locations.sql
 
-You need to run the appriopriate updates in the zip file  in folder:
+You need to run the appriopriate updates in the zip file in the folder:
 
 Rel20_to_BaseRel21_Updates
 

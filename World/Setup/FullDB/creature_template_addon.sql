@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_template_addon`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -6352,6 +6352,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (15556,0,0,1,16,0,0,'25824'),
 (15557,0,0,1,0,0,0,'25824'),
 (15558,0,0,1,16,0,0,'25824'),
+(15559,0,0,1,0,0,0,'25824'),
 (15560,0,0,1,16,0,0,'25824'),
 (15561,0,0,1,16,0,0,'25824'),
 (15562,0,0,1,16,0,0,'25824'),
@@ -9249,6 +9250,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (21315,20344,0,0,16,0,0,NULL),
 (21316,0,0,1,16,0,0,'16245'),
 (21317,0,0,1,16,0,0,NULL),
+(21319,0,0,0,0,0,0,NULL),
 (21324,0,0,1,16,0,0,'17327'),
 (21325,0,0,1,16,0,0,NULL),
 (21326,0,0,1,16,0,0,NULL),
@@ -10016,9 +10018,11 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (23696,0,0,1,1,0,0,NULL),
 (23698,0,0,1,1,93,0,'43905'),
 (23704,0,0,1,1,0,0,NULL),
+(23705,0,0,0,0,0,0,'29266'),
 (23710,0,0,1,0,0,0,NULL),
 (23712,0,0,1,0,0,0,NULL),
 (23713,0,0,1,16,0,0,NULL),
+(23716,0,0,0,0,0,0,'29266'),
 (23720,0,0,1,16,0,0,NULL),
 (23723,0,0,1,16,0,0,NULL),
 (23727,0,0,1,16,0,0,NULL),
@@ -10445,6 +10449,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (25302,0,0,1,16,415,0,NULL),
 (25307,0,0,1,16,415,0,NULL),
 (25309,0,0,1,0,0,0,NULL),
+(25311,0,0,2,1,214,0,NULL),
 (25314,0,0,1,0,0,0,NULL),
 (25317,0,0,1,16,45,0,NULL),
 (25327,0,0,1,1,0,0,NULL),
@@ -12391,6 +12396,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (30456,0,0,1,0,0,0,NULL),
 (30464,0,0,1,0,0,0,NULL),
 (30466,0,0,1,0,0,0,NULL),
+(30469,0,8,1,0,0,0,NULL),
 (30472,0,0,1,1,0,0,NULL),
 (30475,0,0,0,0,0,0,NULL),
 (30483,0,0,1,0,0,0,NULL),
@@ -12688,7 +12694,6 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (31581,0,0,1,0,0,0,NULL),
 (31582,0,0,1,0,0,0,NULL),
 (31583,0,50331648,1,0,0,0,NULL),
-(21319,0,0,0,0,0,0,NULL),
 (31630,0,0,1,0,0,0,NULL),
 (31641,0,0,1,0,0,0,NULL),
 (31644,0,0,1,0,0,0,NULL),
@@ -12837,6 +12842,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (32487,0,0,1,0,0,0,NULL),
 (32488,0,0,1,0,0,0,'58897'),
 (32490,0,0,1,0,0,0,NULL),
+(32491,0,50331648,1,0,0,0,''),
 (32495,0,50331648,1,0,0,0,NULL),
 (32502,0,0,1,0,0,0,NULL),
 (32504,0,0,1,0,0,0,NULL),
@@ -12878,6 +12884,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (32620,0,0,1,0,0,0,NULL),
 (32623,0,0,1,0,0,0,NULL),
 (32625,0,0,1,0,0,0,NULL),
+(32630,0,50331648,1,0,0,0,''),
 (32631,0,0,1,0,0,0,NULL),
 (32638,0,0,1,0,0,0,NULL),
 (32642,0,0,1,0,0,0,NULL),
@@ -13632,7 +13639,6 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (37813,0,0,1,0,0,0,'72242 72370 72256 72408'),
 (37830,0,0,1,0,0,0,NULL),
 (37852,0,0,1,0,0,1024,NULL),
-(25311,0,0,2,1,214,0,NULL),
 (37887,0,0,1,0,0,0,NULL),
 (37906,0,50331648,1,0,0,0,'72611'),
 (37928,0,0,1,0,333,0,NULL),
@@ -13705,11 +13711,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (40429,0,0,1,0,0,0,NULL),
 (40436,0,0,1,0,0,0,NULL),
 (40443,0,0,1,0,0,0,NULL),
-(40607,0,0,1,1,0,0,NULL),
-(15559,0,0,1,0,0,0,'25824'),
-(32491,0,50331648,1,0,0,0,''),
-(32630,0,50331648,1,0,0,0,''),
-(30469,0,8,1,0,0,0,NULL);
+(40607,0,0,1,1,0,0,NULL);
 /*!40000 ALTER TABLE `creature_template_addon` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -13722,4 +13724,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:58:30
+-- Dump completed on 2021-03-18 22:15:23

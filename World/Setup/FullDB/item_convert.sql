@@ -7,7 +7,7 @@ TRUNCATE TABLE `item_convert`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,14 +27,14 @@ TRUNCATE TABLE `item_convert`;
 LOCK TABLES `item_convert` WRITE;
 /*!40000 ALTER TABLE `item_convert` DISABLE KEYS */;
 INSERT INTO `item_convert` (`entry`, `item`) VALUES 
-(50338,44135),
-(50337,44136),
 (50335,44133),
 (50336,44134),
-(50370,44152),
+(50337,44136),
+(50338,44135),
 (50367,44149),
 (50368,44159),
 (50369,44150),
+(50370,44152),
 (50372,44701),
 (50373,44702);
 /*!40000 ALTER TABLE `item_convert` ENABLE KEYS */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:58:39
+-- Dump completed on 2021-03-18 22:15:35

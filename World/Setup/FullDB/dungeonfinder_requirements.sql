@@ -7,7 +7,7 @@ TRUNCATE TABLE `dungeonfinder_requirements`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,16 +27,10 @@ TRUNCATE TABLE `dungeonfinder_requirements`;
 LOCK TABLES `dungeonfinder_requirements` WRITE;
 /*!40000 ALTER TABLE `dungeonfinder_requirements` DISABLE KEYS */;
 INSERT INTO `dungeonfinder_requirements` (`mapId`, `difficulty`, `min_item_level`, `item`, `item_2`, `alliance_quest`, `horde_quest`, `achievement`, `quest_incomplete_text`, `comment`) VALUES 
-(658,1,200,0,0,24499,24511,0,NULL,'Pit of Saron (Entrance)'),
-(658,0,200,0,0,24499,24511,0,NULL,'Pit of Saron (Entrance)'),
-(650,1,200,0,0,0,0,0,NULL,'Trial of the Champion'),
-(650,0,200,0,0,0,0,0,NULL,'Trial of the Champion'),
-(649,3,0,0,0,0,0,0,NULL,'Trial of the Crusader'),
-(632,1,200,0,0,0,0,0,NULL,'Forge of Souls (Entrance)'),
-(632,0,200,0,0,0,0,0,NULL,'Forge of Souls (Entrance)'),
-(631,3,0,0,0,0,0,4597,NULL,'IceCrown Citadel (Entrance)'),
-(619,1,180,0,0,0,0,0,NULL,'Ahn\'Kahet (entrance)'),
-(631,2,0,0,0,0,0,4530,NULL,'IceCrown Citadel (Entrance)'),
+(269,0,0,0,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" before entering the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
+(269,1,0,30635,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" and be level 70 before entering the Heroic difficulty of the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
+(540,1,0,30637,30622,0,0,0,NULL,'The Shattered Halls (Entrance)'),
+(542,1,0,30637,30622,0,0,0,NULL,'The Blood Furnace (Entrance)'),
 (543,1,0,30637,30622,0,0,0,NULL,'Hellfire Ramparts (Entrance)'),
 (545,1,0,30623,0,0,0,0,NULL,'The Steamvault (Entrance)'),
 (546,1,0,30623,0,0,0,0,NULL,'The Underbog (Entrance)'),
@@ -61,10 +55,16 @@ INSERT INTO `dungeonfinder_requirements` (`mapId`, `difficulty`, `min_item_level
 (602,1,180,0,0,0,0,0,NULL,'Ulduar,Halls of Lightning (entrance)'),
 (604,1,180,0,0,0,0,0,NULL,'Gundrak (entrance north)'),
 (608,1,180,0,0,0,0,0,NULL,'Violet Hold (entrance)'),
-(542,1,0,30637,30622,0,0,0,NULL,'The Blood Furnace (Entrance)'),
-(269,1,0,30635,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" and be level 70 before entering the Heroic difficulty of the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
-(269,0,0,0,0,10285,10285,0,'You must complete the quest \"Return to Andormu\" before entering the Black Morass.','Caverns Of Time,Black Morass (Entrance)'),
-(540,1,0,30637,30622,0,0,0,NULL,'The Shattered Halls (Entrance)'),
+(619,1,180,0,0,0,0,0,NULL,'Ahn\'Kahet (entrance)'),
+(631,2,0,0,0,0,0,4530,NULL,'IceCrown Citadel (Entrance)'),
+(631,3,0,0,0,0,0,4597,NULL,'IceCrown Citadel (Entrance)'),
+(632,0,200,0,0,0,0,0,NULL,'Forge of Souls (Entrance)'),
+(632,1,200,0,0,0,0,0,NULL,'Forge of Souls (Entrance)'),
+(649,3,0,0,0,0,0,0,NULL,'Trial of the Crusader'),
+(650,0,200,0,0,0,0,0,NULL,'Trial of the Champion'),
+(650,1,200,0,0,0,0,0,NULL,'Trial of the Champion'),
+(658,0,200,0,0,24499,24511,0,NULL,'Pit of Saron (Entrance)'),
+(658,1,200,0,0,24499,24511,0,NULL,'Pit of Saron (Entrance)'),
 (668,0,219,0,0,24710,24712,0,NULL,'Halls of Reflection (Entrance)'),
 (668,1,219,0,0,24710,24712,0,NULL,'Halls of Reflection (Entrance)');
 /*!40000 ALTER TABLE `dungeonfinder_requirements` ENABLE KEYS */;
@@ -79,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:58:33
+-- Dump completed on 2021-03-18 22:15:28

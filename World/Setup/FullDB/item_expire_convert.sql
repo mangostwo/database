@@ -7,7 +7,7 @@ TRUNCATE TABLE `item_expire_convert`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,11 +27,11 @@ TRUNCATE TABLE `item_expire_convert`;
 LOCK TABLES `item_expire_convert` WRITE;
 /*!40000 ALTER TABLE `item_expire_convert` DISABLE KEYS */;
 INSERT INTO `item_expire_convert` (`entry`, `item`) VALUES 
-(44623,44625),
 (39878,39883),
+(44623,44625),
 (44625,44627),
-(44632,44626),
 (44626,44629),
+(44632,44626),
 (44717,44718);
 /*!40000 ALTER TABLE `item_expire_convert` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -45,4 +45,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:58:39
+-- Dump completed on 2021-03-18 22:15:36
