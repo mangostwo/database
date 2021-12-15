@@ -19,17 +19,17 @@ BEGIN
     -- Expected Values
     SET @cOldVersion = '22'; 
     SET @cOldStructure = '01'; 
-    SET @cOldContent = '059';
+    SET @cOldContent = '061';
 
     -- New Values
     SET @cNewVersion = '22';
     SET @cNewStructure = '01';
-    SET @cNewContent = '060';
+    SET @cNewContent = '062';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Scarlet Courier';
+    SET @cNewDescription = 'Scarlet Miners spawn time';
 
                         -- COMMENT is 150 Characters MAX
-    SET @cNewComment = 'Scarlet Courier';
+    SET @cNewComment = 'Scarlet Miners spawn time';
 
     -- Evaluate all settings
     SET @cCurResult := (SELECT `description` FROM `db_version` ORDER BY `version` DESC, `STRUCTURE` DESC, `CONTENT` DESC LIMIT 0,1);
@@ -43,11 +43,8 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
-	-- Scarlet Courier
-	-- must be mounted on spawn
-	DELETE FROM `creature_template_addon` WHERE `entry` = 29076;
-	INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES 
-	(29076,14583,0,1,0,0,0,NULL);
+	-- Fix Scarlet Miners Spawning Too Fast
+	 UPDATE `creature` SET `spawntimesecs` = 120 WHERE `id` = 28822;
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
