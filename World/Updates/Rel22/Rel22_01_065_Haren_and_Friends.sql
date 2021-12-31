@@ -45,11 +45,11 @@ BEGIN
 
 	-- Haren Swifthoof <Horde Runner>
 	-- Stats, Waypoints moved to template & links
-	UPDATE creature_template SET MinLevel = 19, MaxLevel = 21, MinLevelHealth = 1347, MaxLevelHealth = 1563, Armor = 872, MeleeBaseAttackTime = 2000, RangedBaseAttackTime = 2000, MeleeAttackPower = 74, MinMeleeDmg = 27.6, MaxMeleeDmg = 40.5, SpeedWalk = 1.47, EquipmentTemplateId = 9, MovementType = 2 WHERE entry = 2478;
-	UPDATE creature SET spawndist = 0, MovementType = 2 WHERE id = 2478;
-	DELETE FROM creature_movement WHERE id = 9203;
-	DELETE FROM creature_movement_template WHERE entry = 2478;
-	INSERT INTO creature_movement_template (entry, point, position_x, position_y, position_z, waittime, script_id, orientation) VALUES
+	UPDATE `creature_template` SET `MinLevel` = 19, `MaxLevel` = 21, `MinLevelHealth` = 1347, `MaxLevelHealth` = 1563, `Armor` = 872, `MeleeBaseAttackTime` = 2000, `RangedBaseAttackTime` = 2000, `MeleeAttackPower` = 74, `MinMeleeDmg` = 27.6, `MaxMeleeDmg` = 40.5, `SpeedWalk` = 1.47, `EquipmentTemplateId` = 9, `MovementType` = 2 WHERE `Entry` = 2478;
+	UPDATE `creature` SET `spawndist` = 0, `MovementType` = 2 WHERE `id` = 2478;
+	DELETE FROM `creature_movement` WHERE `id` = 9203;
+	DELETE FROM `creature_movement_template` WHERE `entry` = 2478;
+	INSERT INTO `creature_movement_template` (`entry`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `orientation`) VALUES
 	(2478,1,-5715,-3532.59,304.363,0,0,100),
 	(2478,2,-5708.71,-3539.77,304.927,0,0,100),
 	(2478,3,-5696.26,-3549.28,305.553,0,0,100),
@@ -182,24 +182,24 @@ BEGIN
 	(2478,130,-5697.93,-3542.56,305.626,0,0,100),
 	(2478,131,-5714.33,-3524.31,303.827,0,0,100);
 	-- links
-	DELETE FROM creature_linking WHERE master_guid = 9203;
-	INSERT INTO creature_linking (guid, master_guid, flag) VALUES
+	DELETE FROM `creature_linking` WHERE `master_guid` = 9203;
+	INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 	(9204, 9203, 512+1),
 	(9205, 9203, 512+1);
 
 	-- Gradok
 	-- speed corrected & equip. added
 	-- No waypoints req. - linked to Haren Swifthoof <Horde Runner>
-	UPDATE creature_template SET SpeedWalk = 1.48, EquipmentTemplateId = 60, MovementType = 0 WHERE entry = 2477;
-	UPDATE creature SET position_x = -5719.179688, position_y = -3523.120117, position_z = 302.745056, orientation = 4.21382, spawndist = 0, MovementType = 0 WHERE guid = 9204;
-	DELETE FROM creature_movement WHERE id = 9204;
+	UPDATE `creature_template` SET `SpeedWalk` = 1.48, `EquipmentTemplateId` = 60, `MovementType` = 0 WHERE `Entry` = 2477;
+	UPDATE `creature` SET `position_x` = -5719.179688, `position_y` = -3523.120117, `position_z` = 302.745056, `orientation` = 4.21382, `spawndist` = 0, `MovementType` = 0 WHERE `guid` = 9204;
+	DELETE FROM `creature_movement` WHERE `id` = 9204;
 
 	-- Thraggomm
 	-- speed corrected & equip. added
 	-- No waypoints req. - linked to Haren Swifthoof <Horde Runner>
-	UPDATE creature_template SET SpeedWalk = 1.48, EquipmentTemplateId = 60, MovementType = 0 WHERE entry = 7170;
-	UPDATE creature SET position_x = -5721.733887, position_y = -3521.174316, position_z = 302.734222, orientation = 4.21382, spawndist = 0, MovementType = 0 WHERE guid = 9205;
-	DELETE FROM creature_movement WHERE id = 9205;
+	UPDATE `creature_template` SET `SpeedWalk` = 1.48, `EquipmentTemplateId` = 60, `MovementType` = 0 WHERE `Entry` = 7170;
+	UPDATE `creature` SET `position_x` = -5721.733887, `position_y` = -3521.174316, `position_z` = 302.734222, `orientation` = 4.21382, `spawndist` = 0, `MovementType` = 0 WHERE `guid` = 9205;
+	DELETE FROM `creature_movement` WHERE `id` = 9205;
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
