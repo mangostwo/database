@@ -23,7 +23,7 @@ BEGIN
 
     -- New Values
     SET @cNewVersion = '22';
-    SET @cNewStructure = '01';
+    SET @cNewStructure = '02';
     SET @cNewContent = '001';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'Alter conditions char length';
