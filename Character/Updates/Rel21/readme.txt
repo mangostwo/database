@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel21_03_001_Add_Field_Comments
+Rel21_04_001_update_deprecated_ROW_FORMAT
 
 You need to run the appriopriate updates in folder:
 
