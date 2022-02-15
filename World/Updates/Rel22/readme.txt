@@ -1,10 +1,10 @@
 If your database is a version prior to:
 
-Rel22_01_013_Q_7166_and_7171_details_text.sql
+Rel22_02_004_Scripts_for_q10723_and_q10802.sql
 
 You need to run the appriopriate updates in the zip file in the folder:
 
-Rel20_to_Base_Rel21_Updates
+Rel21_to_Base_Rel22_Updates
 
 
 To Find out the current version of your database run this query against your mangos world database:

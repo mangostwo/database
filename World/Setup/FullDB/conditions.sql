@@ -1078,11 +1078,11 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (1775,4,4568,0,'The Coin Master - Dalaran Fountain'),
 (1776,8,11864,0,'Arch Druid Lathorius - Gossip'),
 (1777,8,4512,0,'Show gossip text 3099 if quest, A Little Slime Goes a Long Way (Part 1),
-\n is rewarded'),
+\n\n is rewarded'),
 (1778,8,4513,0,'Show gossip text 3098 if quest, A Little Slime Goes a Long Way (Part 2),
-\n is rewarded'),
+\n\n is rewarded'),
 (1779,-3,1778,0,'Only show if quest, A Little Slime Goes a Long Way (Part 2),
-\n is NOT rewarded'),
+\n\n is NOT rewarded'),
 (1780,-1,1777,1779,'Condition Check for A Little Slime Goes a Long Way gossip');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1096,4 +1096,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 22:15:16
+-- Dump completed on 2022-02-15 13:58:04

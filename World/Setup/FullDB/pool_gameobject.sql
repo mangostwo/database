@@ -34838,7 +34838,9 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (300061,25555,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 4'),
 (300062,25557,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 6'),
 (300063,25558,0,'2846 - Bloodmyst Isle - Tattered Chest - Pool 7'),
-(300170,25567,0,'Bloodsail Charts Point 3');
+(300170,25567,0,'Bloodsail Charts Point 3'),
+(32742,25581,0,'Water Barrel (29275) - Stormwind City'),
+(32287,25581,0,'Food Crate (30758) - Stormwind City');
 /*!40000 ALTER TABLE `pool_gameobject` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -34851,4 +34853,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 22:15:50
+-- Dump completed on 2022-02-15 13:58:20

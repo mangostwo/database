@@ -1419,7 +1419,11 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000006003,'You\'ve saved me, fleshling! Ameer will hear of this noble act.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Captain Tyralius say on prison release'),
 (2000006004,'It would be a shame to let these leaflets go to waste, wouldn\'t it?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
 (2000006005,'With just a little creative editing, these are much more useful... ',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000006006,'Incredible! Amazing! I don\'t even know what this means!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Laris Say.');
+(2000006006,'Incredible! Amazing! I don\'t even know what this means!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Laris Say.'),
+(2000001235,'Psst... $r, over here! Next to the dead whale.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'Quest.11563 On accept.'),
+(2000006007,'Who dares defile the altar of Gorgrom the Dragon-Eater?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gorgrom SAY 1'),
+(2000006008,'I will crush it and flay it and eat its meat and crack its bones one by one when I am done.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gorgrom SAY 2'),
+(2000006009,'Misha lets out a loud roar as she rakes her claws against the gronn\'s altar.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,7933,2,0,35,'Misha EMOTE 1');
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1432,4 +1436,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 22:15:26
+-- Dump completed on 2022-02-15 13:58:08

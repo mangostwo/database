@@ -6180,7 +6180,9 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (25577,1,'RARE High Thane Jorfus (32501)'),
 (25578,1,'RARE Vyragosa / Time-lost proto-drake (32630/32491)'),
 (25579,1,'Solid Chest - Ogre Mound - Duskwood'),
-(25580,1,'Solid Chest - Ogre Mound - Duskwood');
+(25580,1,'Solid Chest - Ogre Mound - Duskwood'),
+(25581,1,'Water Barrel (29275) / Food Crate (30758) - Stormwind City'),
+(20002,20,'Grizzly Hills - Wolfsbane Root - 189313');
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -6193,4 +6195,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 22:15:51
+-- Dump completed on 2022-02-15 13:58:20

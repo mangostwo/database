@@ -2793,7 +2793,6 @@ INSERT INTO `playercreateinfo_spell` (`race`, `class`, `Spell`, `Note`) VALUES
 (11,6,49410,'Forceful Deflection'),
 (11,6,49576,'Death Grip'),
 (11,6,52665,'Sigil'),
-(11,6,59221,'Shadow Resistance'),
 (11,6,59539,'Shadow Resistance'),
 (11,6,59545,'Gift of the Naaru'),
 (11,6,59879,'Blood Plague'),
@@ -2894,4 +2893,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 22:15:49
+-- Dump completed on 2022-02-15 13:58:19

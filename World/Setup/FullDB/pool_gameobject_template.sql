@@ -30,7 +30,8 @@ INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `descripti
 (375,25559,0,'375 - Tirisfal Pumpkin'),
 (161557,25517,0,'161557 - Milly\'s Harvest'),
 (181891,25536,0,'Blood Mushroom - 181891'),
-(185939,1800,0,'Nethermine Cargo');
+(185939,1800,0,'Nethermine Cargo'),
+(189313,20002,0,'Grizzly Hills - Wolfsbane Root - 189313');
 /*!40000 ALTER TABLE `pool_gameobject_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -43,4 +44,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 22:15:50
+-- Dump completed on 2022-02-15 13:58:20
