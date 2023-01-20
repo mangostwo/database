@@ -26,10 +26,10 @@ BEGIN
     SET @cNewStructure = '04';
     SET @cNewContent = '001';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Character_Ticket';
+    SET @cNewDescription = 'Character_Whispers';
 
                         -- COMMENT is 150 Characters MAX
-    SET @cNewComment = 'Character_Ticket';
+    SET @cNewComment = 'Character_Whispers';
 
     -- Evaluate all settings
     SET @cCurResult := (SELECT `description` FROM `db_version` ORDER BY `version` DESC, `STRUCTURE` DESC, `CONTENT` DESC LIMIT 0,1);
