@@ -7,7 +7,7 @@ TRUNCATE TABLE `conditions`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -47,8 +47,8 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (18,28,58521,43508,NULL),
 (19,28,58523,43509,NULL),
 (20,28,58525,43510,NULL),
-(21,6,67,0,NULL),
-(22,6,469,0,NULL),
+(21,6,67,0,'Horde Player'),
+(22,6,469,0,'Alliance Player'),
 (23,2,13370,1,NULL),
 (24,10,0,0,NULL),
 (25,7,171,1,NULL),
@@ -221,8 +221,8 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (192,20,2817,0,NULL),
 (193,22,13667,0,NULL),
 (194,8,10279,0,NULL),
-(195,24,23792,1,NULL),
-(196,9,9531,0,NULL),
+(195,24,23792,1,'Have tree disguise.'),
+(196,9,9531,0,'ave Quset check.'),
 (197,9,9537,0,NULL),
 (198,2,32620,10,NULL),
 (199,8,10289,0,NULL),
@@ -554,7 +554,7 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (525,-1,182,181,NULL),
 (526,-1,182,183,NULL),
 (527,-1,22,193,NULL),
-(528,-1,196,195,NULL),
+(528,-1,196,195,'Have item and quest.e'),
 (529,-1,102,169,NULL),
 (530,-1,73,169,NULL),
 (531,-1,206,205,NULL),
@@ -1078,12 +1078,26 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (1775,4,4568,0,'The Coin Master - Dalaran Fountain'),
 (1776,8,11864,0,'Arch Druid Lathorius - Gossip'),
 (1777,8,4512,0,'Show gossip text 3099 if quest, A Little Slime Goes a Long Way (Part 1),
-\n\n is rewarded'),
+\n\n\n is rewarded'),
 (1778,8,4513,0,'Show gossip text 3098 if quest, A Little Slime Goes a Long Way (Part 2),
-\n\n is rewarded'),
+\n\n\n is rewarded'),
 (1779,-3,1778,0,'Only show if quest, A Little Slime Goes a Long Way (Part 2),
-\n\n is NOT rewarded'),
-(1780,-1,1777,1779,'Condition Check for A Little Slime Goes a Long Way gossip');
+\n\n\n is NOT rewarded'),
+(1780,-1,1777,1779,'Condition Check for A Little Slime Goes a Long Way gossip'),
+(1781,8,8325,0,'NPC text display - check q.8325 completed'),
+(1782,8,8347,0,'NPC text display - check q.8347 completed'),
+(1783,9,8347,0,'NPC text display - check q.8347 taken'),
+(1784,-2,1782,1783,'NPC text display - check q.8347 taken/completed'),
+(1785,8,9146,0,'Quest ID 9146 Rewarded'),
+(1786,8,9212,0,'Quest ID 9212 Rewarded'),
+(1787,-1,1785,1786,'(Quest 9146 Rewarded AND Quest 9212 Rewarded)'),
+(1788,9,9215,0,'Quest ID 9215 Taken'),
+(1789,9,9214,0,'Quest ID 9214 Taken'),
+(1790,-2,1788,1789,'(Quest 9215 Taken OR Quest 9214 Taken)'),
+(1791,8,9215,0,'Quest ID 9215 Rewarded'),
+(1792,8,9214,0,'Quest ID 9214 Rewarded'),
+(1793,-1,1791,1792,'(Quest ID 9215 Rewarded AND Quest ID 9214 Rewarded)'),
+(1794,-1,1787,1793,'((Quest ID 9146,9212,9215,9214 Rewarded');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1096,4 +1110,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15 13:58:04
+-- Dump completed on 2023-10-17 11:03:45

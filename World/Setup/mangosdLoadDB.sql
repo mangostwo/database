@@ -80,20 +80,6 @@ CREATE TABLE `achievement_reward` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `areatrigger_involvedrelation`
---
-
-DROP TABLE IF EXISTS `areatrigger_involvedrelation`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `areatrigger_involvedrelation` (
-  `id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Identifier',
-  `quest` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Quest Identifier',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Trigger System';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `areatrigger_tavern`
 --
 
@@ -507,7 +493,6 @@ CREATE TABLE `creature_movement` (
   `textid5` int(11) NOT NULL DEFAULT '0' COMMENT 'If a text should be emoted, this references the db_script_string table.',
   `emote` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Emote ID that the creature should perform.',
   `spell` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'The spell identifier.',
-  `wpguid` int(11) NOT NULL DEFAULT '0',
   `orientation` float NOT NULL DEFAULT '0' COMMENT 'The orientation for the creature''s movement point.',
   `model1` mediumint(9) NOT NULL DEFAULT '0' COMMENT 'A display model identifier activated on the waypoint.',
   `model2` mediumint(9) NOT NULL DEFAULT '0' COMMENT 'An alternative display model identifier activated on the waypoint.',
@@ -537,7 +522,6 @@ CREATE TABLE `creature_movement_template` (
   `textid5` int(11) NOT NULL DEFAULT '0' COMMENT 'Obsolete, Do not use this Field',
   `emote` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Emote ID that the creature should perform.',
   `spell` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'The spell identifier.',
-  `wpguid` int(11) NOT NULL DEFAULT '0',
   `orientation` float NOT NULL DEFAULT '0' COMMENT 'The orientation for the creature''s movement point.',
   `model1` mediumint(9) NOT NULL DEFAULT '0' COMMENT 'A display model identifier activated on the waypoint.',
   `model2` mediumint(9) NOT NULL DEFAULT '0' COMMENT 'An alternative display model identifier activated on the waypoint.',

@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_ai_scripts`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -20888,15 +20888,15 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2539603,25396,2,0,30,0,15,0,0,0,1,-496,-497,0,0,0,0,0,0,0,0,0,'Naxxanar Skeletal Mage - Chance Say at 15% HP'),
 (2541501,25415,2,0,100,0,50,0,0,0,11,50420,0,0,0,0,0,0,0,0,0,0,'Enraged Tempest - Cast Enrage at 50% HP'),
 (2541502,25415,6,0,100,0,0,0,0,0,11,50215,0,7,0,0,0,0,0,0,0,0,'Enraged Tempest - Cast Zephyr on Death'),
-(2541601,25416,4,0,100,0,0,0,0,0,1,-498,0,0,42,5,1,0,0,0,0,0,'Simmer - Say and Set Invincibility at 5% HP on Aggro'),
-(2541602,25416,2,0,100,0,5,0,0,0,2,35,0,0,1,-499,0,0,22,1,0,0,'Simmer - Become Friendly and Say and Set Phase 1 at 5% HP'),
+(2541601,25416,4,0,100,0,0,0,0,0,1,-498,0,0,42,5,1,0,0,0,0,0,'Simmer - Say and Set Invincibility at 10% HP on Aggro'),
+(2541602,25416,2,0,100,0,10,0,0,0,2,35,0,0,1,-499,0,0,22,1,0,0,'Simmer - Become Friendly and Say and Set Phase 1 at 10% HP'),
 (2541603,25416,0,6,100,1,5000,5000,5000,5000,1,-500,0,0,23,1,0,0,0,0,0,0,'Simmer - Time Spacer and Say and Set Phase 2 (Phase 1)'),
 (2541604,25416,0,5,100,1,5000,5000,5000,5000,1,-501,0,0,23,1,0,0,0,0,0,0,'Simmer - Time Spacer and Say and Set Phase 3 (Phase 2)'),
 (2541605,25416,1,0,100,0,120000,120000,0,0,2,0,0,0,0,0,0,0,0,0,0,0,'Simmer - Become Hostile After 2 Minutes'),
 (2541701,25417,9,0,100,1,0,5,7000,12000,11,50207,4,32,0,0,0,0,0,0,0,0,'Raging Boiler - Cast Boiling Blood'),
-(2541801,25418,4,0,100,0,0,0,0,0,42,5,1,0,0,0,0,0,0,0,0,0,'Churn - Set Invincibility at 5% HP on Aggro'),
+(2541801,25418,4,0,100,0,0,0,0,0,42,5,1,0,0,0,0,0,0,0,0,0,'Churn - Set Invincibility at 10% HP on Aggro'),
 (2541802,25418,0,0,100,1,5300,5300,9900,9900,11,50206,1,0,0,0,0,0,0,0,0,0,'Churn - Cast Scalding Steam'),
-(2541803,25418,2,0,100,0,5,0,0,0,2,35,0,0,1,-487,0,0,22,1,0,0,'Churn - Become Friendly and Say and Set Phase 1 at 5% HP'),
+(2541803,25418,2,0,100,0,10,0,0,0,2,35,0,0,1,-487,0,0,22,1,0,0,'Churn - Become Friendly and Say and Set Phase 1 at 10% HP'),
 (2541804,25418,0,6,100,1,5000,5000,5000,5000,1,-488,0,0,23,1,0,0,0,0,0,0,'Churn - Time Spacer and Say and Set Phase 2 (Phase 1)'),
 (2541805,25418,0,5,100,1,5000,5000,5000,5000,1,-489,0,0,23,1,0,0,0,0,0,0,'Churn - Time Spacer and Say and Set Phase 3 (Phase 2)'),
 (2541806,25418,0,3,100,1,7000,7000,7000,7000,22,0,0,0,24,0,0,0,0,0,0,0,'Churn - Time Spacer Set Phase 0 and then Evade (Phase 3)'),
@@ -21698,7 +21698,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2661601,26616,11,0,100,0,0,0,0,0,28,0,47972,0,0,0,0,0,0,0,0,0,'Blighted Elk - Remove Liquid Fire of Elune Aura on Spawn'),
 (2661602,26616,0,0,100,1,2000,5000,8000,12000,11,43506,0,32,0,0,0,0,0,0,0,0,'Blighted Elk - Cast Plague Blight'),
 (2661603,26616,6,0,100,0,0,0,0,0,22,1,0,0,0,0,0,0,0,0,0,0,'Blighted Elk - Set Phase 1 on Death'),
-(2661604,26616,8,2,100,0,46770,-1,0,0,11,47972,0,1,22,2,0,0,0,0,0,0,'Blighted Elk - Cast The Liquid Fire of Elune: Blue Fire and Set Phase 2 on Liquid Fire of Elune Spellhit (Quest: 12166)'),
+(2661604,26616,8,2,100,0,46770,-1,0,0,11,47972,0,1,33,27111,6,0,0,0,0,0,'Blighted Elk - Cast The Liquid Fire of Elune: Blue Fire and Set Phase 2 on Liquid Fire of Elune Spellhit (Quest: 12166)'),
 (2662101,26621,0,0,100,7,3000,6000,6000,9000,11,51917,1,0,0,0,0,0,0,0,0,0,'Ghoul Tormentor - Cast Cleave'),
 (2662102,26621,0,0,100,3,6000,9000,9000,12000,11,51917,1,0,0,0,0,0,0,0,0,0,'Ghoul Tormentor (Normal) - Cast Flesh Rot'),
 (2662103,26621,0,0,100,5,6000,9000,9000,12000,11,59007,1,0,0,0,0,0,0,0,0,0,'Ghoul Tormentor (Heroic) - Cast Flesh Rot'),
@@ -21766,7 +21766,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2664301,26643,11,0,100,0,0,0,0,0,28,0,47972,0,0,0,0,0,0,0,0,0,'Rabid Grizzly - Remove Liquid Fire of Elune Aura on Spawn'),
 (2664302,26643,0,0,100,1,2000,5000,9000,12000,11,51951,1,32,0,0,0,0,0,0,0,0,'Rabid Grizzly - Cast Rabies'),
 (2664303,26643,6,0,100,0,0,0,0,0,22,1,0,0,0,0,0,0,0,0,0,0,'Rabid Grizzly - Set Phase 1 on Death'),
-(2664304,26643,8,2,100,0,46770,-1,0,0,11,47972,0,1,22,2,0,0,0,0,0,0,'Rabid Grizzly - Cast The Liquid Fire of Elune: Blue Fire and Set Phase 2 on Liquid Fire of Elune Spellhit (Quest: 12166)'),
+(2664304,26643,8,2,100,0,46770,-1,0,0,11,47972,0,1,33,27112,6,0,0,0,0,0,'Rabid Grizzly - Cast The Liquid Fire of Elune: Blue Fire and Set Phase 2 on Liquid Fire of Elune Spellhit (Quest: 12166)'),
 (2664401,26644,9,0,100,1,0,5,5000,7000,11,12161,1,0,0,0,0,0,0,0,0,0,'Ursus Mauler - Cast Maul'),
 (2664601,26646,4,0,100,0,0,0,0,0,1,-810,0,0,0,0,0,0,0,0,0,0,'Saronite Horror - Yell on Aggro'),
 (2664602,26646,0,0,100,1,1000,3000,130000,140000,11,52342,0,0,0,0,0,0,0,0,0,0,'Saronite Horror - Cast Seething Evil'),
@@ -26712,7 +26712,20 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2883401,28834,9,0,100,1,0,20,0,0,21,1,0,0,40,1,0,0,20,1,0,0,'Scarlet Fleet Defender - Start Combat Movement and Set Melee Weapon Model and Start Melee Below 20 Yards'),
 (2883402,28834,9,0,100,1,20,70,2000,2500,11,52566,1,0,0,0,0,0,0,0,0,0,'Scarlet Fleet Defender - Cast Shoot'),
 (2883403,28834,9,0,100,1,70,150,0,0,21,1,0,0,40,1,0,0,20,1,0,0,'Scarlet Fleet Defender - Start Combat Movement and Set Melee Weapon Model and Start Melee above 70 Yards'),
-(3771101,37711,0,0,100,1031,3000,5000,15000,25000,11,70393,1,0,0,0,0,0,0,0,0,0,'Hungering Ghoul - Cast Devour Flesh');
+(3771101,37711,0,0,100,1031,3000,5000,15000,25000,11,70393,1,0,0,0,0,0,0,0,0,0,'Hungering Ghoul - Cast Devour Flesh'),
+(2551001,25510,8,0,100,1,45692,-1,0,0,1,-20250,0,0,48,2,0,0,0,0,0,0,'1st Kvaldir Vessel (The Serpent\'s Maw) - BOSS_EMOTE and Set Waypoint on Spellhit'),
+(2551101,25511,8,0,100,1,45692,-1,0,0,1,-20251,0,0,48,2,0,0,0,0,0,0,'2nd Kvaldir Vessel (The Kur Drakkar) - BOSS_EMOTE and Set Waypoint on Spellhit'),
+(2551201,25512,8,0,100,1,45692,-1,0,0,1,-20252,0,0,48,2,0,0,0,0,0,0,'3rd Kvaldir Vessel (Bor\'s Hammer) - BOSS_EMOTE and Set Waypoint on Spellhit'),
+(2551301,25513,8,0,100,1,45692,-1,0,0,1,-20253,0,0,48,2,0,0,0,0,0,0,'4th Kvaldir Vessel (Bor\'s Anvil) - BOSS_EMOTE and Set Waypoint on Spellhit'),
+(2541606,25416,2,0,100,0,10,0,0,0,24,0,0,0,0,0,0,0,0,0,0,0,'Simmer - Evade at 10% HP'),
+(2541607,25416,2,0,100,0,11,0,0,0,33,25416,1,0,0,0,0,0,0,0,0,0,'Simmer - Kill credit Q.11627 at 11% HP (work around)'),
+(2541808,25418,2,0,100,0,10,0,0,0,24,0,0,0,0,0,0,0,0,0,0,0,'Simmer -  Evade at 10% HP'),
+(2541809,25418,2,0,100,0,11,0,0,0,33,25418,1,0,0,0,0,0,0,0,0,0,'Churn - Kill credit Q.11627 at 11% HP (work around)'),
+(3019501,30195,8,0,100,1,22096,-1,0,0,1,-272326,-272327,-272328,0,0,0,0,0,0,0,0,'Random say on spell hit.'),
+(3019601,30196,8,0,100,1,22096,-1,0,0,1,-272327,-272328,-272329,0,0,0,0,0,0,0,0,'Random say on spell hit.'),
+(3019401,30194,8,0,100,1,22096,-1,0,0,1,-272326,-272327,-272328,0,0,0,0,0,0,0,0,'Random say on spell hit.'),
+(3018601,30186,8,0,100,1,22096,-1,0,0,1,-272327,-272328,-272329,0,0,0,0,0,0,0,0,'Random say on spell hit.'),
+(2572401,25724,8,0,100,1,45913,-1,0,0,37,0,0,0,11,42726,0,-1,0,0,0,0,'Kill/Cast on Spell Hit');
 /*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -26725,4 +26738,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15 13:58:05
+-- Dump completed on 2023-10-17 11:03:46

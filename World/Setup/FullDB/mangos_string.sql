@@ -7,7 +7,7 @@ TRUNCATE TABLE `mangos_string`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -82,7 +82,7 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (53,'Mail can\'t have more %u item stacks',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (54,'The new passwords do not match',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (55,'Your password can\'t be longer than 16 characters (client limit),
-\n\n\n password not changed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+\n\n\n\n password not changed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (56,'Current Message of the day: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (57,'Using World DB: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (58,'Using script library: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -720,7 +720,7 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (1003,'Account %s NOT deleted (unknown error)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1004,'Account created: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1005,'Account name cannot be longer than 16 characters (client limit),
-\n\n\n account not created!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+\n\n\n\n account not created!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1006,'Account with this name already exist!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1007,'Account %s NOT created (probably sql file format was updated)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1008,'Account %s NOT created (unknown error)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -894,7 +894,41 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (1634,'|cffffff00Halaa is defenseless!|r',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1635,'|cffffff00The Horde has collected 200 silithyst!|r',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1636,'|cffffff00The Alliance has collected 200 silithyst!|r',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-(1700,'|cffff0000[Server Announce]:|r%s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+(1700,'|cffff0000[Server Announce]:|r%s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(1707,'%s has been frozen ! Be careful : Effect will persist after logout or ban if not manually removed ! (use \".unfreezeplayer\" command to allow the player to move again)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_FREEZE_PLAYER'),
+(1708,'%s has been unfrozen.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_UNFREEZE_PLAYER'),
+(1709,'You cannot freeze %s since his security level is higher than yours.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_FREEZE_PLAYER_CANNOT_FREEZE_HIGHER_SECLEVEL'),
+(1710,'You cannot freeze yourself ! (What a strange idea by the way...)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_FREEZE_PLAYER_CANNOT_FREEZE_YOURSELF'),
+(1711,'A GM has frozen your character. From now, you cannot move, use spells or logout.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_FREEZE_PLAYER_YOU_HAVE_BEEN_FROZEN'),
+(1712,'You have been unfrozen. You can now move freely, use spells or even logout.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_FREEZE_PLAYER_YOU_HAVE_BEEN_UNFROZEN'),
+(1713,'You can only freeze online characters.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_FREEZE_PLAYER_PLAYER_NOT_FOUND'),
+(1714,'You can only unfreeze online characters.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_UNFREEZE_PLAYER_PLAYER_NOT_FOUND'),
+(1510,'Ticket %u from %s has been closed by <GM>%s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKETCLOSED_NAME'),
+(1511,'Ticket system is globally on, accepting all tickets',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKETS_SYSTEM_ON'),
+(1512,'Ticket system is globally off, not accepting tickets at all',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKETS_SYSTEM_OFF'),
+(1513,'You cant close a ticket for offline players',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKET_CANT_CLOSE'),
+(1514,'ID %u from %s (%s),
+\n\n\n\n\n changed %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKET_BRIEF_INFO'),
+(1515,'= Shown %u tickets out of total %u from online players.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKET_COUNT_ONLINE'),
+(1516,'ID %u from GUID %u (%s),
+\n\n\n\n\n changed %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKET_OFFLINE_INFO'),
+(1517,'= Shown %u tickets of total %u.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKET_COUNT_ALL'),
+(1518,'Informing you about arriving tickets is %s.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKET_ACCEPT_STATE'),
+(1519,'Response to your ticket',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKET_RESPOND_MAIL_SUBJECT'),
+(1520,'$B$BBest regards, $B$B<GM>%s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKET_RESPOND_MAIL_SIGNATURE'),
+(1521,'Your ticket has been closed.@@It has been serviced by <GM>%s, please check your ingame mailbox to see the answer.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_TICKETCLOSED_PLAYER_NOTIF'),
+(1522,'> %d Equiped items deleted for %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_ITEMS_EQUIPED'),
+(1523,'> %d items in equiped bags deleted for %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_ITEMS_BAGS'),
+(1524,'> %d items in bank deleted for %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_ITEMS_BANK'),
+(1525,'> %d keys in keyring deleted for %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_ITEMS_KEYRING'),
+(1526,'> %d items in vendors buyback deleted for %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_ITEMS_BUYBACK'),
+(1527,'> All items were reset for %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_ITEMS_ALL'),
+(1528,'> All items were reset (even bags : %d equiped & %d in bank) for %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_ITEMS_ALLBAGS'),
+(1529,'> %d COD mails deleted for %s.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_MAIL_COD'),
+(1530,'> %d GM mails deleted for %s.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_MAIL_GM'),
+(1531,'> %d mails from %s deleted for %s.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_MAIL_FROM'),
+(1532,'GM %s has deleted %d mails from your mailbox.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_MAIL_PLAYER_NOTIF'),
+(1533,'> Total : %d mails deleted for %s (including normal mails).',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_RESET_MAIL_RECAP');
 /*!40000 ALTER TABLE `mangos_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -907,4 +941,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15 13:58:16
+-- Dump completed on 2023-10-17 11:03:56

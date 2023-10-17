@@ -7,7 +7,7 @@ TRUNCATE TABLE `db_script_string`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1423,7 +1423,11 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000001235,'Psst... $r, over here! Next to the dead whale.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'Quest.11563 On accept.'),
 (2000006007,'Who dares defile the altar of Gorgrom the Dragon-Eater?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gorgrom SAY 1'),
 (2000006008,'I will crush it and flay it and eat its meat and crack its bones one by one when I am done.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gorgrom SAY 2'),
-(2000006009,'Misha lets out a loud roar as she rakes her claws against the gronn\'s altar.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,7933,2,0,35,'Misha EMOTE 1');
+(2000006009,'Misha lets out a loud roar as she rakes her claws against the gronn\'s altar.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,7933,2,0,35,'Misha EMOTE 1'),
+(2000006010,'I thank you, friend of Dalaran.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Evanor say 1'),
+(2000006011,'We mustn\'t tarry here... stay close - I\'ll take us somehwere safe',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Evanor say 2'),
+(2000006012,'Mages! Take wing!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Warmage Anzim yell on Q.11681 start.'),
+(2000006013,'For Dalaran! Attack!!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Warmage Archus.');
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1436,4 +1440,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15 13:58:08
+-- Dump completed on 2023-10-17 11:03:48

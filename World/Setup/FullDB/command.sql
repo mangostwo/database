@@ -7,7 +7,7 @@ TRUNCATE TABLE `command`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -97,42 +97,43 @@ INSERT INTO `command` (`id`, `command_text`, `security`, `help_text`) VALUES
 (115,'commands',0,'Syntax: .commands\r\n\r\nDisplay a list of available commands for your account level.'),
 (120,'cooldown',3,'Syntax: .cooldown [#spell_id]\r\n\r\nRemove all (if spell_id not provided) or #spel_id spell cooldown from selected character or you (if no selection).'),
 (125,'damage',3,'Syntax: .damage $damage_amount [$school [$spellid]]\r\n\r\nApply $damage to target. If not $school and $spellid provided then this flat clean melee damage without any modifiers. If $school provided then damage modified by armor reduction (if school physical),
-\n\n\n and target absorbing modifiers and result applied as melee damage to target. If spell provided then damage modified and applied as spell damage. $spellid can be shift-link.'),
+\n\n\n\n and target absorbing modifiers and result applied as melee damage to target. If spell provided then damage modified and applied as spell damage. $spellid can be shift-link.'),
 (130,'debug anim',2,'Syntax: .debug anim #emoteid\r\n\r\nPlay emote #emoteid for your character.'),
 (131,'debug arena',3,'Syntax: .debug arena\r\n\r\nToggle debug mode for arenas. In debug mode GM can start arena with single player.'),
 (132,'debug bg',3,'Syntax: .debug bg\r\n\r\nToggle debug mode for battlegrounds. In debug mode GM can start battleground with single player.'),
 (133,'debug getitemvalue',3,'Syntax: .debug getitemvalue #itemguid #field [int|hex|bit|float]\r\n\r\nGet the field #field of the item #itemguid in your inventroy.\r\n\r\nUse type arg for set output format: int (decimal number),
-\n\n\n hex (hex value),
-\n\n\n bit (bitstring),
-\n\n\n float. By default use integer output.'),
+\n\n\n\n hex (hex value),
+\n\n\n\n bit (bitstring),
+\n\n\n\n float. By default use integer output.'),
 (134,'debug getvalue',3,'Syntax: .debug getvalue #field [int|hex|bit|float]\r\n\r\nGet the field #field of the selected target. If no target is selected, get the content of your field.\r\n\r\nUse type arg for set output format: int (decimal number),
-\n\n\n hex (hex value),
-\n\n\n bit (bitstring),
-\n\n\n float. By default use integer output.'),
+\n\n\n\n hex (hex value),
+\n\n\n\n bit (bitstring),
+\n\n\n\n float. By default use integer output.'),
 (135,'debug moditemvalue',3,'Syntax: .debug moditemvalue #guid #field [int|float| &= | |= | &=~ ] #value\r\n\r\nModify the field #field of the item #itemguid in your inventroy by value #value. \r\n\r\nUse type arg for set mode of modification: int (normal add/subtract #value as decimal number),
-\n\n\n float (add/subtract #value as float number),
-\n\n\n &= (bit and, set to 0 all bits in value if it not set to 1 in #value as hex number),
-\n\n\n |= (bit or, set to 1 all bits in value if it set to 1 in #value as hex number),
-\n\n\n &=~ (bit and not, set to 0 all bits in value if it set to 1 in #value as hex number). By default expect integer add/subtract.'),
+\n\n\n\n float (add/subtract #value as float number),
+\n\n\n\n &= (bit and, set to 0 all bits in value if it not set to 1 in #value as hex number),
+\n\n\n\n |= (bit or, set to 1 all bits in value if it set to 1 in #value as hex number),
+\n\n\n\n &=~ (bit and not, set to 0 all bits in value if it set to 1 in #value as hex number). By default expect integer add/subtract.'),
 (136,'debug modvalue',3,'Syntax: .debug modvalue #field [int|float| &= | |= | &=~ ] #value\r\n\r\nModify the field #field of the selected target by value #value. If no target is selected, set the content of your field.\r\n\r\nUse type arg for set mode of modification: int (normal add/subtract #value as decimal number),
-\n\n\n float (add/subtract #value as float number),
-\n\n\n &= (bit and, set to 0 all bits in value if it not set to 1 in #value as hex number),
-\n\n\n |= (bit or, set to 1 all bits in value if it set to 1 in #value as hex number),
-\n\n\n &=~ (bit and not, set to 0 all bits in value if it set to 1 in #value as hex number). By default expect integer add/subtract.'),
+\n\n\n\n float (add/subtract #value as float number),
+\n\n\n\n &= (bit and, set to 0 all bits in value if it not set to 1 in #value as hex number),
+\n\n\n\n |= (bit or, set to 1 all bits in value if it set to 1 in #value as hex number),
+\n\n\n\n &=~ (bit and not, set to 0 all bits in value if it set to 1 in #value as hex number). By default expect integer add/subtract.'),
 (137,'debug play cinematic',1,'Syntax: .debug play cinematic #cinematicid\r\n\r\nPlay cinematic #cinematicid for you. You stay at place while your mind fly.'),
 (138,'debug play movie',1,'Syntax: .debug play movie #movieid\r\n\r\nPlay movie #movieid for you.'),
 (139,'debug play sound',1,'Syntax: .debug play sound #soundid\r\n\r\nPlay sound with #soundid.\r\nSound will be play only for you. Other players do not hear this.\r\nWarning: client may have more 5000 sounds...'),
 (141,'debug setitemvalue',3,'Syntax: .debug setitemvalue #guid #field [int|hex|bit|float] #value\r\n\r\nSet the field #field of the item #itemguid in your inventroy to value #value.\r\n\r\nUse type arg for set input format: int (decimal number),
-\n\n\n hex (hex value),
-\n\n\n bit (bitstring),
-\n\n\n float. By default expect integer input format.'),
+\n\n\n\n hex (hex value),
+\n\n\n\n bit (bitstring),
+\n\n\n\n float. By default expect integer input format.'),
 (142,'debug setvalue',3,'Syntax: .debug setvalue #field [int|hex|bit|float] #value\r\n\r\nSet the field #field of the selected target to value #value. If no target is selected, set the content of your field.\r\n\r\nUse type arg for set input format: int (decimal number),
-\n\n\n hex (hex value),
-\n\n\n bit (bitstring),
-\n\n\n float. By default expect integer input format.'),
+\n\n\n\n hex (hex value),
+\n\n\n\n bit (bitstring),
+\n\n\n\n float. By default expect integer input format.'),
 (143,'debug spellcoefs',3,'Syntax: .debug spellcoefs #spellid\r\n\r\nShow default calculated and DB stored coefficients for direct/dot heal/damage.'),
 (144,'debug spellmods',3,'Syntax: .debug spellmods (flat|pct) #spellMaskBitIndex #spellModOp #value\r\n\r\nSet at client side spellmod affect for spell that have bit set with index #spellMaskBitIndex in spell family mask for values dependent from spellmod #spellModOp to #value.'),
-(145,'delticket',2,'Syntax: .delticket all\r\n        .delticket #num\r\n        .delticket $character_name\r\n\rall to dalete all tickets at server, $character_name to delete ticket of this character, #num to delete ticket #num.'),
+(684,'ticket info',1,'Syntax: .ticket info\r\n\r\nInformation on the tickets and your relation to them.'),
+(685,'ticket meaccept',2,'Syntax: .ticket meaccept [(on|off)]\r\n\r\nSet you informing about incoming tickets, or show its status.'),
 (150,'demorph',2,'Syntax: .demorph\r\n\r\nDemorph the selected player.'),
 (155,'die',3,'Syntax: .die\r\n\r\nKill the selected player. If no player is selected, it will kill you.'),
 (160,'dismount',0,'Syntax: .dismount\r\n\r\nDismount you, if you are mounted.'),
@@ -267,7 +268,7 @@ INSERT INTO `command` (`id`, `command_text`, `security`, `help_text`) VALUES
 (402,'npc flag',2,'Syntax: .npc flag #npcflag\r\n\r\nSet the NPC flags of creature template of the selected creature and selected creature to #npcflag. NPC flags will applied to all creatures of selected creature template after server restart or grid unload/load.'),
 (403,'npc follow',2,'Syntax: .npc follow\r\n\r\nSelected creature start follow you until death/fight/etc.'),
 (404,'npc info',3,'Syntax: .npc info\r\n\r\nDisplay a list of details for the selected creature.\r\n\r\nThe list includes:-\r\nGUID, Faction, NPC flags, Entry ID, Model ID,\r\n- Level,\r\n- Health (current/maximum),
-\n\n\r\n- Field flags, dynamic flags, faction template,\r\n- Position information,\r\n- and the creature type, e.g. if the creature is a vendor.'),
+\n\n\n\r\n- Field flags, dynamic flags, faction template,\r\n- Position information,\r\n- and the creature type, e.g. if the creature is a vendor.'),
 (405,'npc move',2,'Syntax: .npc move [#creature_guid]\r\n\r\nMove the targeted creature spawn point to your coordinates.'),
 (406,'npc name',2,'Syntax: .npc name $name\r\n\r\nChange the name of the selected creature or character to $name.\r\n\r\nCommand disabled.'),
 (407,'npc playemote',3,'Syntax: .npc playemote #emoteid\r\n\r\nMake the selected creature emote with an emote of id #emoteid.'),
@@ -354,7 +355,9 @@ INSERT INTO `command` (`id`, `command_text`, `security`, `help_text`) VALUES
 (672,'tele del',3,'Syntax: .tele del $name\r\n\r\nRemove location with name $name for .tele command locations list.'),
 (673,'tele group',1,'Syntax: .tele group#location\r\n\r\nTeleport a selected player and his group members to a given location.'),
 (674,'tele name',1,'Syntax: .tele name [#playername] #location\r\n\r\nTeleport the given character to a given location. Character can be offline.'),
-(680,'ticket',2,'Syntax: .ticket on\r\n        .ticket off\r\n        .ticket #num\r\n        .ticket $character_name\r\n        .ticket respond #num $response\r\n        .ticket respond $character_name $response\r\n\r\non/off for GMs to show or not a new ticket directly, $character_name to show ticket of this character, #num to show ticket #num.'),
+(681,'ticket accept',3,'Syntax: .ticket accept (on|off)\r\n\r\nTurning on/off the whole ticket accepting system.'),
+(682,'ticket close',2,'Syntax: .ticket close (#ID|$name)\r\n\r\nClosing the ticket.'),
+(683,'ticket delete',3,'Syntax: .ticket delete (#ID|$name)\r\n\r\nDelete ticket from the list. It will reappear after server restart.'),
 (700,'titles add',2,'Syntax: .titles add #title\r\nAdd title #title (id or shift-link) to known titles list for selected player.'),
 (701,'titles current',2,'Syntax: .titles current #title\r\nSet title #title (id or shift-link) as current selected titl for selected player. If title not in known title list for player then it will be added to list.'),
 (702,'titles remove',2,'Syntax: .titles remove #title\r\n\r\nRemove title #title (id or shift-link) from known titles list for selected player.'),
@@ -374,7 +377,14 @@ INSERT INTO `command` (`id`, `command_text`, `security`, `help_text`) VALUES
 (800,'wp add',2,'Syntax: .wp add [Selected Creature or dbGuid] [pathId [wpOrigin] ]'),
 (801,'wp export',3,'Syntax: .wp export [#creature_guid or Select a Creature] $filename'),
 (803,'wp modify',2,'Syntax: .wp modify command [dbGuid, id] [value]\r\n\r\nwhere command must be one of: waittime  | scriptid | orientation | del | move\r\nIf no waypoint was selected, one can be chosen with dbGuid and id.\r\nThe commands have the following meaning:\r\n waittime (Set the time the npc will wait at a point (in ms))\r\n scriptid (Set the DB-Script that will be executed when the wp is reached)\r\n orientation (Set the orientation of this point) \r\n del (Remove the waypoint from the path)\r\n move (Move the wayoint to the current position of the player)'),
-(804,'wp show',2,'Syntax: .wp show command [dbGuid] [pathId [wpOrigin]\r\n\r\nwhere command can have one of the following values\r\non (to show all related wp)\r\nfirst (to see only first one)\r\nlast (to see only last one)\r\noff (to hide all related wp)\r\ninfo (to get more info about theses wp)\r\n\r\nFor using info you have to do first show on and than select a Visual-Waypoint and do the show info!\r\nwith pathId and wpOrigin you can specify which path to show (optional)');
+(804,'wp show',2,'Syntax: .wp show command [dbGuid] [pathId [wpOrigin]\r\n\r\nwhere command can have one of the following values\r\non (to show all related wp)\r\nfirst (to see only first one)\r\nlast (to see only last one)\r\noff (to hide all related wp)\r\ninfo (to get more info about theses wp)\r\n\r\nFor using info you have to do first show on and than select a Visual-Waypoint and do the show info!\r\nwith pathId and wpOrigin you can specify which path to show (optional)'),
+(808,'freezeplayer',2,'Syntax: .freezeplayer #playerName - Freezes a player and prevent him to move, use any spell or even logout. If no #playerName is provided, will freeze current selected player.Command has no effect if #playerName is not found, or if no player is selected.'),
+(809,'unfreezeplayer',2,'Syntax: .unfreezeplayer #playerName - Unfreezes a player, allowing him to move, use spells and logout.'),
+(686,'ticket onlinelist',2,'Syntax: .ticket onlinelist\r\n\r\nGet list of the tickets for online players only.'),
+(687,'ticket respond',2,'Syntax: .ticket respond (#ID|$name) $response_text\r\n\r\nSend your responce to the ticket as whisper chat.'),
+(688,'ticket show',2,'Syntax: .ticket show (#ID|$name)\r\n\r\nShow details about the ticket.'),
+(689,'ticket surveyclose',2,'Syntax: .ticket surveyclose (#ID|$name)\r\n\r\nClosing the ticket with the user survey.'),
+(690,'ticket list',2,'Syntax: .ticket list\r\n\r\nGet list of ticket IDs with player GUIDs and last change date.');
 /*!40000 ALTER TABLE `command` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -387,4 +397,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15 13:58:04
+-- Dump completed on 2023-10-17 11:03:45

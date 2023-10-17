@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_addon`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1751,7 +1751,7 @@ INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pv
 (21770,0,0,1,16,0,0,NULL),
 (21771,0,0,1,16,0,0,NULL),
 (23077,0,0,1,16,0,0,'34712'),
-(23078,0,0,1,16,0,0,'8279'),
+(23078,0,0,1,16,0,0,'34712'),
 (23125,0,0,1,16,0,0,NULL),
 (23126,0,0,1,16,0,0,NULL),
 (23127,0,0,1,16,0,0,NULL),
@@ -17042,4 +17042,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15 13:58:05
+-- Dump completed on 2023-10-17 11:03:45

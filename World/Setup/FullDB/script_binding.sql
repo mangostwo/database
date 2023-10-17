@@ -7,7 +7,7 @@ TRUNCATE TABLE `script_binding`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1534,7 +1534,9 @@ INSERT INTO `script_binding` (`type`, `ScriptName`, `bind`, `data`) VALUES
 (7,'world_map_ebon_hold',609,0),
 (7,'world_map_kalimdor',1,0),
 (7,'world_map_northrend',571,0),
-(7,'world_map_outland',530,0);
+(7,'world_map_outland',530,0),
+(4,'spell_create_bark_walkers',47550,0),
+(4,'spell_strength_ancients',47575,0);
 /*!40000 ALTER TABLE `script_binding` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1547,4 +1549,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15 13:58:22
+-- Dump completed on 2023-10-17 11:04:01

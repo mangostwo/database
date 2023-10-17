@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_ai_texts`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,7 +27,7 @@ TRUNCATE TABLE `creature_ai_texts`;
 LOCK TABLES `creature_ai_texts` WRITE;
 /*!40000 ALTER TABLE `creature_ai_texts` DISABLE KEYS */;
 INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES 
-(-272322,'%s appears very grateful to be free of the koi-koi spirit\'s influence.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,34,'21326'),
+(-272322,'The %s appears very grateful to be free of the koi-koi spirit\'s influence.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,34,'21326'),
 (-272321,'%s raises his shield in a vigorous defense!','0','0','0','0','0','0','0','0',0,2,0,0,'Coilskar Sorceress'),
 (-272320,'Filthy cretin. Your kind doesn\'t deserve to live. Have at thee!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'27232'),
 (-268321,'This transgression against the Blue Dragonsflight has been noted. I will take extra pleasure in separating the life energy from your body!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'26832'),
@@ -96,9 +96,9 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-1310,'Welcome to flavor country!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'11058'),
 (-1309,'Do as I say, Fly!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17994'),
 (-1308,'The Scarlet Crusade shall smite the wicked and drive evil from these lands!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Scarlet Monastery'),
-(-1307,'There is no escape for you.  The Crusade shall destroy all who carry the scourge\'s taint.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Scarlet Monastery'),
-(-1306,'You carry the taint of the scourge.  Prepare to enter the twisting nether.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Scarlet Monastery'),
-(-1305,'The light condemns all who harbor evil.  Now you will die!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Scarlet Monastery'),
+(-1307,'There is no escape for you. The Crusade shall destroy all who carry the scourge\'s taint.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Scarlet Monastery'),
+(-1306,'You carry the taint of the scourge. Prepare to enter the twisting nether.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Scarlet Monastery'),
+(-1305,'The light condemns all who harbor evil. Now you will die!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Scarlet Monastery'),
 (-1304,'The people of Kaskala are in your debt, $c.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'25322'),
 (-1303,'You have my gratitude, $c. I thought I\'d never be free.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'25321'),
 (-1302,'Death take me! I cannot go on! I have nothing left...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'14484, 14485'),
@@ -366,7 +366,7 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-1032,'These lands shall be cleansed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'1667'),
 (-1031,'These undead atrocities will be destroyed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'1667'),
 (-1030,'The Scarlet Crusade shall not fail in it\'s mission!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,0,'1667'),
-(-1029,'You carry the taint of the scourge.  Prepare to enter the twisting nether.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,0,'Common Scarlet Text'),
+(-1029,'You carry the taint of the scourge. Prepare to enter the twisting nether.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,0,'Common Scarlet Text'),
 (-1028,'The Scarlet Crusade shall smite the wicked and drive evil from these lands!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,0,'Common Scarlet Text'),
 (-1027,'For a limited time only, Crunchy Frog available exclusively here at the Darkmoon Faire.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'14845'),
 (-1026,'Darkmoon Dogs fresh off the grill. Come and get em while they\'re hot!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'14845'),
@@ -486,7 +486,7 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-912,'It should have been me!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'17073'),
 (-911,'<Sobbing> I hate graveyards. So many dead. And my sweet Luhanaa.....',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'17073'),
 (-910,'The %s seems overjoyed.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,4,'16534'),
-(-909,'The %s doesn\'t look like it minds the crystal\'s effect.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,22,'16534'),
+(-909,'The %s doen\'t look like it minds the crystal\'s effect.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,22,'16534'),
 (-908,'The %s nods appreciatively.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,2,'16534'),
 (-907,'The %s looks confused.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,6,'16534'),
 (-906,'The %s didn\'t like what just happened.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,18,'16534'),
@@ -708,7 +708,7 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-677,'Will the pain ever end?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18206'),
 (-676,'Help me!  Please help me!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18206'),
 (-675,'How can you just leave me here?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18206'),
-(-674,'For Kargath!  For Victory!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17264'),
+(-674,'For Kargath! For Victory!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17264'),
 (-673,'Obsidion, Rise and Serve your Master!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'8391'),
 (-672,'This world is OURS!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,1,0,'Common Orc Say'),
 (-671,'Incompetent fools! Auchindoun should\'ve been ours... look at yourselves scrambling like rats!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'22381'),
@@ -853,7 +853,7 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-532,'Stop!  Foolish $c, we cannot let you summon the creature Myzrael!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'2763'),
 (-531,'Take that!  The Drywhiskers will prevail!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Drywhisker'),
 (-530,'No!  Leave us!  We must not fail our task!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Drywhisker'),
-(-529,'Stand firm, brothers.  And don\'t worry!  Size is on our side!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Drywhisker'),
+(-529,'Stand firm, brothers. And don\'t worry! Size is on our side!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Drywhisker'),
 (-528,'Die!  You will not free Myzrael!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Drywhisker'),
 (-527,'The Great One will smash you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Drywhisker'),
 (-526,'%s summons a Blackhand Veteran to his aid!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'10681'),
@@ -920,15 +920,15 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-465,'Beast! Obey me! Kill them at once!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,10383,1,0,0,'17826'),
 (-464,'We fight to the death!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,10384,1,0,0,'17826'),
 (-463,'I will end this quickly...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,10385,1,0,0,'17826'),
-(-462,'The Council of Duskwood must take action.  Evil lingers in the air.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'269'),
+(-462,'The Council of Duskwood must take action. Evil lingers in the air.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'269'),
 (-461,'Aber?  Is that you...?  Oh...I\'m so hungry, Aber!  SO HUNGRY!!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'314'),
-(-460,'Wait...you are not my husband.  But he must have sent you.  And you...look..delicious!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'314'),
-(-459,'Undead are crawling all over the land.  Where is the Stormwind Army?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'263'),
-(-458,'The people of Darkshire expect more from the Council.  We cannot let them suffer from this unholy wrath which plagues us.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'269'),
+(-460,'Wait...you are not my husband. But he must have sent you. And you...look..delicious!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'314'),
+(-459,'Undead are crawling all over the land. Where is the Stormwind Army?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'263'),
+(-458,'The people of Darkshire expect more from the Council. We cannot let them suffer from this unholy wrath which plagues us.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'269'),
 (-457,'Our cause falls on deaf ears beyond the thick, stone walls of Stormwind.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'271'),
 (-456,'I fear something dark is coming.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'325'),
 (-455,'We need better representation from Stormwind. Our homes are falling to the undead.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'270'),
-(-454,'Constant bickering will get us nowhere.  We need to take action.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'269'),
+(-454,'Constant bickering will get us nowhere. We need to take action.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'269'),
 (-453,'The news from Stormwind does not bode well. . . .',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'271'),
 (-452,'The light appears to have forsaken us.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'325'),
 (-451,'Why haven\'t the Stormwind guards come?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'325'),
@@ -1191,10 +1191,10 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-194,'One day I\'ll be a real boy.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'2922'),
 (-193,'Gizmos... check. Doothingies... check. Wizzers... check.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'2922'),
 (-192,'It can get really hot here in the Badlands. But at least it\'s a dry heat.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'2922'),
-(-191,'The troggs...they never stop coming.  Die trogg!  Die!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Leprous Say'),
+(-191,'The troggs...they never stop coming. Die trogg! Die!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Leprous Say'),
 (-190,'No gnome will be left behind.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Leprous Say'),
-(-189,'This sickness clouds my vision, but I know you must be a trogg.  Die foul invader!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Leprous Say'),
-(-188,'A foul trogg if ever I saw one.  Die!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Leprous Say'),
+(-189,'This sickness clouds my vision, but I know you must be a trogg. Die foul invader!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Leprous Say'),
+(-188,'A foul trogg if ever I saw one. Die!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Leprous Say'),
 (-187,'%s calls for his worgs!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'19442'),
 (-186,'The living are here!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,6596,1,0,0,'10411'),
 (-185,'Confess and we shall set you free.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'4306'),
@@ -1265,9 +1265,9 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-119,'Just a taste... of what awaits you.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,11046,1,0,0,'17842'),
 (-118,'Reesh, hokta!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,11001,1,0,0,'17842'),
 (-117,'Abandon all hope! The Legion has returned to finish what was begun so many years ago. This time, there will be no escape!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,10999,1,0,0,'17842'),
-(-116,'What good does this violence serve?  What is done is done.  I have failed my people.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'19456'),
+(-116,'What good does this violence serve? What is done is done. I have failed my people.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'19456'),
 (-115,'Haven\'t you done enough harm?  Must you also disturb my slumber?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'19456'),
-(-114,'I cannot stand the pain.  I must find a new source.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,10,0,'Common Wretched Text'),
+(-114,'I cannot stand the pain. I must find a new source.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,10,0,'Common Wretched Text'),
 (-113,'More, more, more!  I must feed soon.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,10,0,'Common Wretched Text'),
 (-112,'Your world is ours now.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,11056,1,0,0,'17767'),
 (-111,'%s bursts, showering the area with arcane residue!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'15648'),
@@ -1384,7 +1384,15 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-272323,'They might have run all the other farmers off, but the Saldean\'s will never leave Westfall.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,0,'Farmer Saldean 233'),
 (-272324,'A bunch of thugs and thieves aren\'t going to get me to leave my land!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,0,'Farmer Saldean 233'),
 (-272325,'Now how am I supposed to get those mechanical wretches out of my fields?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,0,'Farmer Saldean 233'),
-(-20296,'%s whimpers.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'NPC 25850');
+(-20296,'%s whimpers.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'NPC 25850'),
+(-20253,'Bor\'s Anvil is engulfed in tuskarr fire!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'25513'),
+(-20252,'Bor\'s Hammer is engulfed in tuskarr fire!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'25512'),
+(-20251,'The Kur Drakkar is engulfed in tuskarr fire!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'25511'),
+(-20250,'The Serpent\'s Maw is engulfed in tuskarr fire!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'25510'),
+(-272326,'Let\'s do this!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Say'),
+(-272327,'Thank you $c, I owe you.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Say'),
+(-272328,'It\'s time for revenge!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Say'),
+(-272329,'Thanks, How can I help?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Say');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1397,4 +1405,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15 13:58:05
+-- Dump completed on 2023-10-17 11:03:46
