@@ -7,7 +7,7 @@ TRUNCATE TABLE `game_event_gameobject`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.11.1-MariaDB
+-- Server version	11.5.2-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24920,4 +24920,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-17 11:03:50
+-- Dump completed on 2024-08-29 23:44:38

@@ -7,7 +7,7 @@ TRUNCATE TABLE `conditions`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.11.1-MariaDB
+-- Server version	11.5.2-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1097,7 +1097,8 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (1791,8,9215,0,'Quest ID 9215 Rewarded'),
 (1792,8,9214,0,'Quest ID 9214 Rewarded'),
 (1793,-1,1791,1792,'(Quest ID 9215 Rewarded AND Quest ID 9214 Rewarded)'),
-(1794,-1,1787,1793,'((Quest ID 9146,9212,9215,9214 Rewarded');
+(1794,-1,1787,1793,'((Quest ID 9146,9212,9215,9214 Rewarded'),
+(1795,9,6571,0,'For showing gossip text when on Warsong Supplies quest.');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1110,4 +1111,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-17 11:03:45
+-- Dump completed on 2024-08-29 23:44:34

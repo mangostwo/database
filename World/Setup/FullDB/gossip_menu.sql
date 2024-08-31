@@ -7,7 +7,7 @@ TRUNCATE TABLE `gossip_menu`;
 --
 -- Host: localhost    Database: mangos2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.11.1-MariaDB
+-- Server version	11.5.2-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -4279,7 +4279,8 @@ INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALU
 (7160,8493,0,1794),
 (7160,8495,0,1790),
 (7160,8496,0,1793),
-(7160,8430,0,1787);
+(7160,8430,0,1787),
+(21232,5754,0,1795);
 /*!40000 ALTER TABLE `gossip_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -4292,4 +4293,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-17 11:03:52
+-- Dump completed on 2024-08-29 23:44:39

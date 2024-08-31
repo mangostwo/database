@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel22_03_014_Flying Machine.sql
+Rel22_03_020_WharfmasterLogzilGossip.sql
 
 You need to run the appriopriate updates in the zip file in the folder:
 
