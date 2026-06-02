@@ -2,7 +2,7 @@ If your database is a version prior to:
 
 Rel22_03_020_WharfmasterLogzilGossip.sql
 
-You need to run the appriopriate updates in the zip file in the folder:
+You need to run the appropriate updates in the zip file in the folder:
 
 Rel21_to_Base_Rel22_Updates
 
