@@ -27,8 +27,8 @@ BEGIN
     SET @cOldContent = '001';
 
     SET @cNewVersion = '22';
-    SET @cNewStructure = '07';
-    SET @cNewContent = '002';
+    SET @cNewStructure = '08';
+    SET @cNewContent = '001';
     SET @cNewDescription = 'Warden_Checks';
     SET @cNewComment = 'Create empty typed Warden catalogue for future core';
 
