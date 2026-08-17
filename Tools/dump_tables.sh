@@ -14,7 +14,21 @@ i=1
 
 do_dump_two() {
 
-mkdir -p ${DUMPDIR}
+mkdir -p "${DUMPDIR}"
+
+WARDEN_TABLES=
+for WARDEN_TABLE in warden warden_checks; do
+if mysqldump -Q -q -u"${USERNAME}" -p"${PASSWORD}" --no-data "${DB}" "${WARDEN_TABLE}" >/dev/null 2>&1; then
+WARDEN_TABLES="${WARDEN_TABLES} ${WARDEN_TABLE}"
+fi
+done
+
+if [ -z "${WARDEN_TABLES}" ]; then
+echo "Neither warden nor warden_checks exists in ${DB}; refusing an incomplete dump." >&2
+return 1
+fi
+
+rm -f "${DUMPDIR}/warden.sql" "${DUMPDIR}/warden_checks.sql"
 
 for TABLE in \
 `achievement_criteria_requirement` \
@@ -154,7 +168,7 @@ for TABLE in \
 `spell_threat` \
 `transports` \
 `vehicle_accessory` \
-`warden_checks` \
+${WARDEN_TABLES} \
 ; do
 
 echo "Dumping ${i}/139 ${TABLE}..."
