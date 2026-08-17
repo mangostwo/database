@@ -154,10 +154,10 @@ for TABLE in \
 `spell_threat` \
 `transports` \
 `vehicle_accessory` \
-`warden` \
+`warden_checks` \
 ; do
 
-echo "Dumping ${i}/139 ${TABLE}..."
+echo "Dumping ${i}/138 ${TABLE}..."
 
 echo "--
 -- Copyright (C) 2005-2024 MaNGOS <https://getmangos.eu/> <https://github.com/mangoszero>
