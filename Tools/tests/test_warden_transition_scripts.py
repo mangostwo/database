@@ -717,7 +717,6 @@ class BackupPublicationRollbackTests(unittest.TestCase):
         self.assertIn("recovery artifacts remain", rollback_failed)
 
     @unittest.skipUnless(os.name == "nt", "cmd.exe behavior requires Windows")
-    @unittest.skipUnless(os.name == "nt", "cmd.exe behavior requires Windows")
     def test_windows_incomplete_entry_recovery_refuses_without_mutation(self) -> None:
         region = batch_helper_region(BACKUP)
         region, probe_replacements = re.subn(
@@ -795,7 +794,7 @@ class BackupPublicationRollbackTests(unittest.TestCase):
                 ):
                     self.assertFalse((root / f"{table}.{suffix}").exists())
 
-
+    @unittest.skipUnless(os.name == "nt", "cmd.exe behavior requires Windows")
     def test_windows_publish_failure_restores_group_and_original_absence(self) -> None:
         region = batch_helper_region(BACKUP)
         region, probe_replacements = re.subn(
