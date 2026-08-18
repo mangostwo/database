@@ -23,6 +23,8 @@
 
 from pathlib import Path
 import re
+import shutil
+import subprocess
 import unittest
 
 
@@ -40,6 +42,28 @@ def shell_function(name: str) -> str:
     if not match:
         raise AssertionError(f"missing shell function {name}")
     return match.group(1)
+
+
+def batch_label(name: str, next_label: str) -> str:
+    match = re.search(
+        rf"(?ms)^:{re.escape(name)}\s*$\s*(.*?)^:{re.escape(next_label)}\s*$",
+        BACKUP,
+    )
+    if not match:
+        raise AssertionError(f"missing batch label {name}")
+    return match.group(1)
+
+
+def bash_executable() -> str:
+    bash = shutil.which("bash")
+    if bash:
+        return bash
+    git = shutil.which("git")
+    if git:
+        candidate = Path(git).resolve().parents[1] / "bin" / "bash.exe"
+        if candidate.is_file():
+            return str(candidate)
+    raise AssertionError("bash is required to validate dump_tables.sh")
 
 
 class CharacterUpdateRoutingTests(unittest.TestCase):
@@ -92,30 +116,110 @@ class WardenBackupRoutingTests(unittest.TestCase):
             len(self.EXPECTED_OPTIONAL_TABLES),
         )
 
-    def test_optional_outputs_cannot_resurrect_stale_tables(self) -> None:
-        self.assertIn('del /Q "%OPTIONALOUTPUT%"', BACKUP)
-        self.assertIn(
-            'move /Y "%OPTIONALREADY%" "%OPTIONALOUTPUT%" >nul', BACKUP
+    def test_script_returns_failure_to_automation(self) -> None:
+        self.assertIn('set "BACKUPRESULT=0"', BACKUP)
+        self.assertEqual(BACKUP.count('set "BACKUPRESULT=1"'), 2)
+        self.assertRegex(
+            BACKUP,
+            r"(?ms)^:finish\s*$\s*pause\s*exit /b %BACKUPRESULT%\s*$",
         )
-        self.assertIn('type "%OPTIONALTEMP%" >> "%OPTIONALREADY%"', BACKUP)
+
+    def test_optional_outputs_cannot_resurrect_stale_tables(self) -> None:
+        helper = batch_label("DumpOptionalTable", "patherror")
+        absent = helper[
+            helper.index('if "%OPTIONALFOUND%" == "0" (') :
+            helper.index('set "OPTIONALPARAMS="')
+        ]
+        self.assertRegex(
+            absent,
+            r'(?s)del /Q "%OPTIONALOUTPUT%"\s*'
+            r'if exist "%OPTIONALOUTPUT%" \(.*?exit /b 1',
+        )
+        self.assertIn(
+            'move /Y "%OPTIONALREADY%" "%OPTIONALOUTPUT%" >nul', helper
+        )
+        self.assertNotIn('>> "%OPTIONALOUTPUT%"', helper)
+
+    def test_data_only_assembly_failure_preserves_previous_output(self) -> None:
+        helper = batch_label("DumpOptionalTable", "patherror")
+        assembly = helper[
+            helper.index('if /I "%OPTIONALSTRUCTURE%" == "NO" (') :
+            helper.index('move /Y "%OPTIONALREADY%" "%OPTIONALOUTPUT%"')
+        ]
+        writes = [
+            '%ComSpec% /D /C echo -- ---------------------------------------- ^> "%OPTIONALREADY%"',
+            '%ComSpec% /D /C echo -- --        CLEAR DOWN THE TABLE        -- ^>^> "%OPTIONALREADY%"',
+            '%ComSpec% /D /C echo -- ---------------------------------------- ^>^> "%OPTIONALREADY%"',
+            '%ComSpec% /D /C echo TRUNCATE TABLE `%OPTIONALTABLE%`; ^>^> "%OPTIONALREADY%"',
+            '%ComSpec% /D /C type "%OPTIONALTEMP%" ^>^> "%OPTIONALREADY%"',
+        ]
+        for write in writes:
+            self.assertRegex(
+                assembly,
+                re.escape(write)
+                + r"\s*if errorlevel 1 goto DumpOptionalTableAssemblyFailed",
+            )
+        self.assertRegex(
+            assembly,
+            r'(?s)del /Q "%OPTIONALTEMP%"\s*'
+            r'if exist "%OPTIONALTEMP%" goto DumpOptionalTableAssemblyFailed',
+        )
+        self.assertIn(":DumpOptionalTableAssemblyFailed", BACKUP)
 
 
 class WardenUnixDumpRoutingTests(unittest.TestCase):
-    def test_existing_warden_tables_are_selected_and_stale_files_removed(self) -> None:
+    def test_warden_dumps_are_replaced_only_after_successful_staging(self) -> None:
         candidates = re.search(r"for WARDEN_TABLE in ([^;\n]+); do", DUMP)
         self.assertIsNotNone(candidates, "Warden table probe loop is missing")
         self.assertEqual(candidates.group(1).split(), ["warden", "warden_checks"])
         self.assertRegex(
             DUMP,
             r"(?s)for WARDEN_TABLE in warden warden_checks; do.*?"
-            r"mysqldump .*--no-data.*\$\{DB\}.*\$\{WARDEN_TABLE\}",
+            r"WARDEN_FOUND=.*?mysql .*information_schema\.tables",
         )
-        self.assertIn(
+        self.assertIn('case "${WARDEN_FOUND}" in', DUMP)
+        self.assertIn('> "${WARDEN_READY}"', DUMP)
+        stage = DUMP.index('> "${WARDEN_READY}"')
+        publish = DUMP.index(
+            'mv -f "${WARDEN_READY}" "${DUMPDIR}/${WARDEN_TABLE}.sql"'
+        )
+        stale_cleanup = DUMP.index(
+            'rm -f "${DUMPDIR}/${WARDEN_TABLE}.sql"', publish
+        )
+        self.assertLess(stage, publish)
+        self.assertLess(publish, stale_cleanup)
+        self.assertIn('if ! mysqldump ', DUMP)
+        self.assertIn('if ! mv -f "${WARDEN_READY}"', DUMP)
+        self.assertNotIn(
             'rm -f "${DUMPDIR}/warden.sql" "${DUMPDIR}/warden_checks.sql"',
             DUMP,
         )
-        self.assertIn("${WARDEN_TABLES} \\", DUMP)
+        self.assertNotIn("${WARDEN_TABLES} \\", DUMP)
+        self.assertRegex(
+            DUMP,
+            r"(?ms)^dump_warden_tables\(\)\s*\{.*?^\}\s*$",
+        )
         self.assertNotRegex(DUMP, r"(?m)^`warden(?:_checks)?` \\$")
+
+    def test_complete_unix_dump_script_parses_and_iterates_tables(self) -> None:
+        result = subprocess.run(
+            [bash_executable(), "-n", str(ROOT / "Tools" / "dump_tables.sh")],
+            capture_output=True,
+            check=False,
+            text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+        loop = re.search(r"(?ms)^for TABLE in [\\]\r?\n.*?^; do\s*$", DUMP)
+        self.assertIsNotNone(loop, "generic table loop is missing")
+        iteration = subprocess.run(
+            [bash_executable(), "-c", loop.group(0) + '\nprintf "%s\\n" "$TABLE"\ndone\n'],
+            capture_output=True,
+            check=False,
+            text=True,
+        )
+        self.assertEqual(iteration.returncode, 0, iteration.stderr)
+        self.assertGreater(len(iteration.stdout.splitlines()), 100)
 
 
 if __name__ == "__main__":
