@@ -34,6 +34,9 @@ ROOT = Path(__file__).resolve().parents[2]
 INSTALL = (ROOT / "InstallDatabases.sh").read_text(encoding="utf-8")
 BACKUP = (ROOT / "Tools" / "backupDB.cmd").read_text(encoding="utf-8")
 DUMP = (ROOT / "Tools" / "dump_tables.sh").read_text(encoding="utf-8")
+WARDEN_PROFILE_UPDATE = (
+    ROOT / "World" / "Updates" / "Rel22" / "Rel22_09_001_Warden_Check_Profiles.sql"
+)
 
 
 def shell_function(name: str) -> str:
@@ -1104,6 +1107,211 @@ class BackupPublicationRollbackTests(unittest.TestCase):
             self.assertIn("INSERT INTO sample VALUES\n(1);", published)
             self.assertFalse((root / "sample.sql.new").exists())
 
+
+class WardenProfileTransitionTests(unittest.TestCase):
+    _ROW_PATTERN = re.compile(
+        r"\(\s*(\d+)\s*,\s*(0x[0-9A-F]+)\s*,\s*(0x[0-9A-F]+)\s*,"
+        r"\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,"
+        r"\s*(\d+)\s*,\s*(X''|0x[0-9A-F]+)\s*,"
+        r"\s*(0x[0-9A-F]+|\d+)\s*,\s*(\d+)\s*,"
+        r"\s*(X''|0x[0-9A-F]+)\s*,\s*(X''|0x[0-9A-F]+)\s*,"
+        r"\s*'[^']*'\s*\)",
+        re.IGNORECASE,
+    )
+
+    @staticmethod
+    def update_sql() -> str:
+        if not WARDEN_PROFILE_UPDATE.is_file():
+            raise AssertionError(
+                f"missing Warden profile transition: {WARDEN_PROFILE_UPDATE}"
+            )
+        return WARDEN_PROFILE_UPDATE.read_text(encoding="utf-8")
+
+    @staticmethod
+    def binary_value(token: str) -> bytes:
+        if token.upper() == "X''":
+            return b""
+        return bytes.fromhex(token[2:])
+
+    def parsed_rows(self, sql: str) -> list[tuple[object, ...]]:
+        rows = []
+        for match in self._ROW_PATTERN.finditer(sql):
+            fields = match.groups()
+            rows.append(
+                (
+                    int(fields[0]),
+                    self.binary_value(fields[1]),
+                    self.binary_value(fields[2]),
+                    int(fields[3]),
+                    int(fields[4]),
+                    int(fields[5]),
+                    int(fields[6]),
+                    int(fields[7]),
+                    self.binary_value(fields[8]),
+                    int(fields[9], 0),
+                    int(fields[10]),
+                    self.binary_value(fields[11]),
+                    self.binary_value(fields[12]),
+                )
+            )
+        return rows
+
+    def test_transition_publishes_only_the_exact_wrath_profiles(self) -> None:
+        sql = self.update_sql()
+        rows = self.parsed_rows(sql)
+        locale_evidence = {
+            b"enUS": (
+                bytes.fromhex("8C7CED99F8DDDD48296551EFE05A2CF27B26F818"),
+                b"Okay",
+            ),
+            b"enGB": (
+                bytes.fromhex("8C7CED99F8DDDD48296551EFE05A2CF27B26F818"),
+                b"Okay",
+            ),
+            b"deDE": (
+                bytes.fromhex("0B4D01BDEB4F47DE030B57D81506093EB887EE0B"),
+                b"OK",
+            ),
+            b"esES": (
+                bytes.fromhex("20EC8371EC168B4723AF6DE3AFE81D46843726F4"),
+                b"Aceptar",
+            ),
+            b"esMX": (
+                bytes.fromhex("0E39F4AF09E3CF08925D41E61FBAC8EE16478FC9"),
+                b"Aceptar",
+            ),
+            b"frFR": (
+                bytes.fromhex("E6F5A0C5C63056F63097420AE29B47ACA2E4D496"),
+                b"OK",
+            ),
+            b"ruRU": (
+                bytes.fromhex("329BF203079002D36E05EBF54BD5746AA37E47C8"),
+                bytes.fromhex("D09ED09A"),
+            ),
+        }
+        mpq_request = b"DBFilesClient\\AreaTable.dbc"
+        mem_expected = bytes.fromhex(
+            "B9601AD300E8769DF9FFE851FBFFFF688C29AF0068D816AF00"
+            "B8B3120000E82DFDFFFFA3441AD300"
+        )
+        expected_rows = []
+        for locale, (mpq_expected, lua_expected) in locale_evidence.items():
+            profile = (12340, b"Win", locale)
+            expected_rows.extend(
+                (
+                    profile + (65536, 87, 1, 10, 0, b"", 0, 0, b"", b""),
+                    profile
+                    + (
+                        1,
+                        152,
+                        1,
+                        20,
+                        3,
+                        b"",
+                        0,
+                        0,
+                        mpq_request,
+                        mpq_expected,
+                    ),
+                    profile
+                    + (2, 139, 1, 30, 3, b"", 0, 0, b"OKAY", lua_expected),
+                    profile
+                    + (
+                        3,
+                        243,
+                        1,
+                        40,
+                        1,
+                        b"",
+                        0x007DA8C0,
+                        40,
+                        b"",
+                        mem_expected,
+                    ),
+                )
+            )
+
+        self.assertEqual(len(rows), 28)
+        self.assertCountEqual(rows, expected_rows)
+        self.assertEqual({row[2] for row in rows}, set(locale_evidence))
+        for locale in locale_evidence:
+            profile_rows = [row for row in rows if row[2] == locale]
+            self.assertEqual(len(profile_rows), 4)
+            self.assertTrue(all(row[5] == 1 for row in profile_rows))
+
+    def test_transition_preserves_unrelated_catalogue_rows(self) -> None:
+        sql = self.update_sql()
+        deletes = re.findall(r"(?is)\bDELETE\s+FROM\s+`warden_checks`.*?;", sql)
+        self.assertEqual(len(deletes), 1)
+        self.assertRegex(
+            deletes[0],
+            r"(?is)^DELETE\s+FROM\s+`warden_checks`\s+"
+            r"WHERE\s+`build`\s*=\s*12340\s+AND\s+"
+            r"`platform`\s*=\s*0x57696E\s*;$",
+        )
+        self.assertNotRegex(
+            sql,
+            r"(?i)\b(?:TRUNCATE|DROP)\s+(?:TABLE\s+)?`warden_checks`",
+        )
+
+    def test_all_profile_validations_are_scoped_to_wrath_windows(self) -> None:
+        sql = self.update_sql()
+        validation = re.search(
+            r"(?is)IF\s*\(SELECT COUNT\(\*\).*?"
+            r"SIGNAL SQLSTATE '45000'.*?;",
+            sql,
+        )
+        self.assertIsNotNone(validation)
+        validation_sql = validation.group(0)
+        queries = re.findall(
+            r"(?is)(?:FROM|JOIN)\s+`warden_checks`(.*?)(?=\)|GROUP\s+BY)",
+            validation_sql,
+        )
+        self.assertEqual(len(queries), 4)
+        for query in queries:
+            self.assertRegex(
+                query,
+                r"(?is)WHERE\s+`build`\s*=\s*12340\s+AND\s+"
+                r"`platform`\s*=\s*0x57696E\b",
+            )
+        self.assertRegex(validation_sql, r"(?is)COUNT\(\*\).*?<>\s*28")
+        self.assertRegex(
+            validation_sql,
+            r"(?is)COUNT\(DISTINCT\s+`build`,`platform`,`locale`\).*?<>\s*7",
+        )
+        self.assertRegex(
+            validation_sql,
+            r"(?is)HAVING\s+COUNT\(\*\)\s*<>\s*4\s+OR\s+"
+            r"SUM\(`enabled`\s*=\s*1\)\s*<>\s*4",
+        )
+
+    def test_transition_rolls_back_and_returns_failure_before_version_publish(
+        self,
+    ) -> None:
+        sql = self.update_sql()
+        self.assertRegex(
+            sql,
+            r"(?s)SET @cOldVersion\s*=\s*'22'.*?"
+            r"@cOldStructure\s*=\s*'08'.*?@cOldContent\s*=\s*'001'",
+        )
+        self.assertRegex(
+            sql,
+            r"(?s)SET @cNewVersion\s*=\s*'22'.*?"
+            r"@cNewStructure\s*=\s*'09'.*?@cNewContent\s*=\s*'001'",
+        )
+        handler = re.search(
+            r"(?is)DECLARE EXIT HANDLER FOR SQLEXCEPTION\s+BEGIN(.*?)END;",
+            sql,
+        )
+        self.assertIsNotNone(handler)
+        self.assertRegex(handler.group(1), r"(?i)\bROLLBACK\s*;")
+        self.assertRegex(handler.group(1), r"(?i)\bRESIGNAL\s*;")
+        self.assertIn("START TRANSACTION;", sql)
+        signal_offset = sql.index("SIGNAL SQLSTATE '45000'")
+        version_offset = sql.index("INSERT INTO `db_version`")
+        commit_offset = sql.index("COMMIT;", version_offset)
+        self.assertLess(signal_offset, version_offset)
+        self.assertLess(version_offset, commit_offset)
 
 
 if __name__ == "__main__":
