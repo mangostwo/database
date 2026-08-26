@@ -38,9 +38,9 @@ BEGIN
     IF (@cCurResult = @cOldResult) THEN
         START TRANSACTION;
 
-        -- Replace only this exact build/platform seed. Unrelated operator or
-        -- future-profile rows remain untouched and outside the validation
-        -- scope below.
+        -- Replace the complete 12340/Win seed, including any operator-added
+        -- rows in that scope. Rows for other profiles remain untouched, but a
+        -- profile absent from the paired core's module catalogue stops mangosd.
         DELETE FROM `warden_checks`
         WHERE `build` = 12340 AND `platform` = 0x57696E;
 
