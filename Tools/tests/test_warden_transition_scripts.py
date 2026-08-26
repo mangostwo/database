@@ -37,6 +37,9 @@ DUMP = (ROOT / "Tools" / "dump_tables.sh").read_text(encoding="utf-8")
 WARDEN_PROFILE_UPDATE = (
     ROOT / "World" / "Updates" / "Rel22" / "Rel22_09_001_Warden_Check_Profiles.sql"
 )
+WARDEN_ASIAN_PROFILE_UPDATE = (
+    ROOT / "World" / "Updates" / "Rel22" / "Rel22_09_002_Warden_Asian_Profiles.sql"
+)
 
 
 def shell_function(name: str) -> str:
@@ -1312,6 +1315,153 @@ class WardenProfileTransitionTests(unittest.TestCase):
         commit_offset = sql.index("COMMIT;", version_offset)
         self.assertLess(signal_offset, version_offset)
         self.assertLess(version_offset, commit_offset)
+
+
+class WardenAsianProfileTransitionTests(unittest.TestCase):
+    @staticmethod
+    def update_sql() -> str:
+        if not WARDEN_ASIAN_PROFILE_UPDATE.is_file():
+            raise AssertionError(
+                "missing Rel22_09_002 Asian Warden profile update"
+            )
+        return WARDEN_ASIAN_PROFILE_UPDATE.read_text(encoding="utf-8")
+
+    @staticmethod
+    def parsed_rows(sql: str) -> list[tuple[object, ...]]:
+        rows = []
+        for match in WardenProfileTransitionTests._ROW_PATTERN.finditer(sql):
+            fields = match.groups()
+            rows.append(
+                (
+                    int(fields[0]),
+                    WardenProfileTransitionTests.binary_value(fields[1]),
+                    WardenProfileTransitionTests.binary_value(fields[2]),
+                    int(fields[3]),
+                    int(fields[4]),
+                    int(fields[5]),
+                    int(fields[6]),
+                    int(fields[7]),
+                    WardenProfileTransitionTests.binary_value(fields[8]),
+                    int(fields[9], 0),
+                    int(fields[10]),
+                    WardenProfileTransitionTests.binary_value(fields[11]),
+                    WardenProfileTransitionTests.binary_value(fields[12]),
+                )
+            )
+        return rows
+
+    def test_update_adds_only_the_three_exact_asian_profiles(self) -> None:
+        sql = self.update_sql()
+        rows = self.parsed_rows(sql)
+        locale_evidence = {
+            b"koKR": (
+                bytes.fromhex("39BCDE7E67F7DA4A366D15007DBAF3D438338E00"),
+                bytes.fromhex("ED9995EC9DB8"),
+            ),
+            b"zhCN": (
+                bytes.fromhex("53538853E7026786EB30FCB247D7E8179A3CAAF8"),
+                bytes.fromhex("E7A1AEE5AE9A"),
+            ),
+            b"zhTW": (
+                bytes.fromhex("ED14F2C71688B1DE9660F9CE04A62D63A9EB297A"),
+                bytes.fromhex("E7A2BAE5AE9A"),
+            ),
+        }
+        mpq_request = b"DBFilesClient\\AreaTable.dbc"
+        mem_expected = bytes.fromhex(
+            "B9601AD300E8769DF9FFE851FBFFFF688C29AF0068D816AF00"
+            "B8B3120000E82DFDFFFFA3441AD300"
+        )
+        expected_rows = []
+        for locale, (mpq_expected, lua_expected) in locale_evidence.items():
+            profile = (12340, b"Win", locale)
+            expected_rows.extend(
+                (
+                    profile + (65536, 87, 1, 10, 0, b"", 0, 0, b"", b""),
+                    profile
+                    + (
+                        1,
+                        152,
+                        1,
+                        20,
+                        3,
+                        b"",
+                        0,
+                        0,
+                        mpq_request,
+                        mpq_expected,
+                    ),
+                    profile
+                    + (2, 139, 1, 30, 3, b"", 0, 0, b"OKAY", lua_expected),
+                    profile
+                    + (
+                        3,
+                        243,
+                        1,
+                        40,
+                        1,
+                        b"",
+                        0x007DA8C0,
+                        40,
+                        b"",
+                        mem_expected,
+                    ),
+                )
+            )
+
+        self.assertEqual(len(rows), 12)
+        self.assertCountEqual(rows, expected_rows)
+        self.assertEqual({row[2] for row in rows}, set(locale_evidence))
+
+    def test_update_preserves_existing_profiles_and_advances_content(self) -> None:
+        sql = self.update_sql()
+        self.assertNotIn("DELETE FROM `warden_checks`", sql)
+        self.assertIn("SET @cOldContent = '001';", sql)
+        self.assertIn("SET @cNewContent = '002';", sql)
+        self.assertIn("START TRANSACTION;", sql)
+        self.assertIn("ROLLBACK;", sql)
+        self.assertIn(
+            "Stop mangosd and deploy this update with the matching server revision",
+            sql,
+        )
+
+    def test_update_rejects_any_preexisting_asian_profile_rows(self) -> None:
+        sql = self.update_sql()
+        start = sql.index("        IF EXISTS (")
+        end = sql.index("        END IF;", start)
+        guard = sql[start:end]
+
+        self.assertRegex(
+            guard,
+            r"(?is)WHERE\s+`build`\s*=\s*12340\s+AND\s+"
+            r"`platform`\s*=\s*0x57696E\s+AND\s+`locale`\s+IN\s*\(",
+        )
+        for locale in ("0x6B6F4B52", "0x7A68434E", "0x7A685457"):
+            self.assertIn(locale, guard)
+        self.assertIn("SIGNAL SQLSTATE '45000'", guard)
+
+    def test_update_validates_all_twelve_rows_before_version_publish(self) -> None:
+        sql = self.update_sql()
+        validation_start = sql.index(
+            "        IF (SELECT COUNT(*) FROM `warden_checks`"
+        )
+        validation_end = sql.index("        END IF;", validation_start)
+        validation = sql[validation_start:validation_end]
+
+        self.assertRegex(validation, r"(?is)COUNT\(\*\).*?<>\s*12")
+        self.assertRegex(
+            validation,
+            r"(?is)COUNT\(DISTINCT\s+`build`,`platform`,`locale`\).*?<>\s*3",
+        )
+        self.assertRegex(
+            validation,
+            r"(?is)HAVING\s+COUNT\(\*\)\s*<>\s*4\s+OR\s+"
+            r"SUM\(`enabled`\s*=\s*1\)\s*<>\s*4",
+        )
+        self.assertLess(
+            sql.index("SIGNAL SQLSTATE '45000'", validation_start),
+            sql.index("INSERT INTO `db_version`"),
+        )
 
 
 if __name__ == "__main__":
